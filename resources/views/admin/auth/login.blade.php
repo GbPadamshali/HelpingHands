@@ -7,21 +7,21 @@
     <meta charset="UTF-8">
     <title>::Admin Login::</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="img/favicon.ico"/>
+    <link rel="shortcut icon" href="{{ asset('images/admin_images/favicon.ico') }}"/>
     <!-- Bootstrap -->
-    <link href="css/app.css" rel="stylesheet">
+    <link href="{{ asset('css/admin_css/app.css') }}" rel="stylesheet">
     <!-- end of bootstrap -->
     <!--page level css -->
-    <link type="text/css" href="css/font-awesome.min.css" rel="stylesheet"/>
-    <link href="vendors/iCheck/css/all.css" rel="stylesheet">
-    <link href="vendors/bootstrapvalidator/css/bootstrapValidator.min.css" rel="stylesheet"/>
-    <link href="css/login.css" rel="stylesheet">
+    <link type="text/css" href="{{ asset('css/admin_css/font-awesome.min.css') }}" rel="stylesheet"/>
+    <link href="{{ asset('admin_vendors/iCheck/css/all.css') }}" rel="stylesheet">
+    <link href="{{ asset('admin_vendors/bootstrapvalidator/css/bootstrapValidator.min.css') }}" rel="stylesheet"/>
+    <link href="{{ asset('css/admin_css/login.css') }}" rel="stylesheet">
     <!--end page level css-->
 </head>
 
 <body>
 <div class="preloader">
-    <div class="loader_img"><img src="img/loader.gif" alt="loading..." height="64" width="64"></div>
+    <div class="loader_img"><img src="{{ asset('images/admin_images/loader.gif') }}" alt="loading..." height="64" width="64"></div>
 </div>
 <div class="container">
 
@@ -93,12 +93,12 @@
     </div>
 
 </div>
-<script src="js/app.js" type="text/javascript"></script>
+<script src="{{ asset('js/admin_js/app.js') }}" type="text/javascript"></script>
 <!-- end of global js -->
 <!-- page level js -->
-<script type="text/javascript" src="vendors/iCheck/js/icheck.js"></script>
-<script src="vendors/bootstrapvalidator/js/bootstrapValidator.min.js" type="text/javascript"></script>
-<script type="text/javascript" src="js/custom_js/login2.js"></script>
+<script type="text/javascript" src="{{ asset('admin_vendors/iCheck/js/icheck.js') }}"></script>
+<script src="{{ asset('admin_vendors/bootstrapvalidator/js/bootstrapValidator.min.js') }}" type="text/javascript"></script>
+<script type="text/javascript" src="{{ asset('js/admin_js/custom_js/login2.js') }}"></script>
 <!-- end of page level js -->
 </body>
 

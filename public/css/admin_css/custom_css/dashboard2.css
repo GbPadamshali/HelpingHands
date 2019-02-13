@@ -147,7 +147,7 @@ body > .header .navbar .sidebar-toggle {
 
 /*weather*/
 .weather-widget {
-    background-image: url("../../img/weather.jpg");
+    background-image: url("/images/admin_images/weather.jpg");
     height: 355px;
     color: #fff;
 }

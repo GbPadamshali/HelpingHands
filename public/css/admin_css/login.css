@@ -7,7 +7,7 @@
 
 body {
     font-family: 'Open Sans' !important;
-    background: url(../img/light_grey.png);
+    background: url(/images/admin_images/light_grey.png);
     height: 100%;
     padding-top: 5%;
     padding-bottom: 3rem;
