@@ -8,7 +8,7 @@ $(document).ready(function () {
         $('.preloader').fadeOut();
     });
     //=================end of Preloader===========//
-    
+
     //Flat red color scheme for iCheck
     $('input[type="checkbox"], input[type="radio"]').iCheck({
         checkboxClass: 'icheckbox_minimal-blue',
@@ -22,20 +22,20 @@ $(document).ready(function () {
 
     $('#register_form').bootstrapValidator({
         fields: {
-            first_name: {
+            name: {
                 validators: {
                     notEmpty: {
                         message: 'The first name is required and cannot be empty'
                     }
                 }
             },
-            last_name: {
-                validators: {
-                    notEmpty: {
-                        message: 'The last name is required'
-                    }
-                }
-            },
+            // last_name: {
+            //     validators: {
+            //         notEmpty: {
+            //             message: 'The last name is required'
+            //         }
+            //     }
+            // },
             user_name: {
                 validators: {
                     notEmpty: {
@@ -88,7 +88,7 @@ $(document).ready(function () {
                     }
                 }
             },
-            phone: {
+            mobile: {
                 validators: {
                     notEmpty: {
                         message: 'The phone number is required and cannot be empty'

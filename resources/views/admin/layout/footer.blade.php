@@ -14,6 +14,16 @@
 <script type="text/javascript" src="{{ asset('admin_vendors/advanced_newsTicker/js/jquery.newsTicker.js') }}"></script>
 <script src="{{ asset('js/admin_js/dashboard2.js') }}" type="text/javascript"></script>
 <!-- end of page level js -->
+<script type="text/javascript" src="{{ asset('admin_vendors/datatables/js/jquery.dataTables.js') }}"></script>
+<script type="text/javascript" src="{{ asset('admin_vendors/datatables/js/dataTables.bootstrap4.js') }}"></script>
+<script type="text/javascript" src="{{ asset('admin_vendors/datatables/js/dataTables.rowReorder.js') }}"></script>
+<script type="text/javascript" src="{{ asset('admin_vendors/datatables/js/dataTables.scroller.js') }}"></script>
+<script type="text/javascript" src="{{ asset('admin_vendors/datatables/js/dataTables.colReorder.js') }}"></script>
+<script type="text/javascript" src="{{ asset('admin_vendors/datatables/js/dataTables.responsive.js') }}"></script>
+<script type="text/javascript" src="{{ asset('admin_vendors/datatables/js/buttons.colVis.js') }}"></script>
+<script type="text/javascript" src="{{ asset('admin_vendors/datatables/js/buttons.html5.js') }}"></script>
+<script type="text/javascript" src="{{ asset('admin_vendors/datatables/js/buttons.print.js') }}"></script>
+<script src="{{ asset('js/admin_js/custom_js/advanced_datatables.js') }}" type="text/javascript"></script>
 
 </body>
 

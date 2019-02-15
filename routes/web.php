@@ -17,8 +17,21 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::view('/dashboard', 'admin.dashboard');
+Route::group(['prefix' => 'admin'], function(){
+  // Auth Routes
+  Route::get('/login', 'AdminControllers\AdminAuthController@ShowLoginForm');
+  Route::post('/login', 'AdminControllers\AdminAuthController@Login')->name('admin.login');
+  Route::get('/register', 'AdminControllers\AdminAuthController@ShowRegistrationForm');
+  Route::post('/register', 'AdminControllers\AdminAuthController@Register')->name('admin.register');
+  Route::match(['get', 'post'], '/logout', 'AdminControllers\AdminAuthController@Logout')->name('admin.logout');
+  // Auth Routes
 
-Route::view('/login', 'admin.auth.login');
+  Route::group(['middleware' => 'auth'], function(){
+    Route::match(['get', 'post'], '/dashboard', 'AdminControllers\AdminAuthController@Dashboard')->name('admin.dashboard');
+    Route::resource('admins', 'AdminControllers\AdminsController');
+  });
+});
+
+// Route::view('/login', 'admin.auth.login');
 
 Route::get('/home', 'HomeController@index')->name('home');

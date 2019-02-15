@@ -5,7 +5,7 @@
 <!-- Mirrored from coreplusdemo.lorvent.com/login2.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 10 Feb 2019 18:47:12 GMT -->
 <head>
     <meta charset="UTF-8">
-    <title>::Admin Login::</title>
+    <title>Hepling Hands | Admin Login</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="{{ asset('images/admin_images/favicon.ico') }}"/>
     <!-- Bootstrap -->
@@ -59,12 +59,12 @@
                     </div> --}}
                     <div class="clearfix"></div>
                     <div class="col-12 col-sm-6 form_width">
-                        <form action="http://coreplusdemo.lorvent.com/index.html" id="authentication" class="login_validator">
+                        <form action="{{ route('admin.login') }}" id="authentication" method="post" class="login_validator"> {{ csrf_field() }}
                             <div class="form-group">
                                 <label for="email" class="sr-only"> E-mail</label>
                                 <div class="input-group  input-group-prepend">
                                     <span class="input-group-text border-right-0 rounded-left"><i class="fa fa-envelope text-primary"></i></span>
-                                    <input type="text" class="form-control  form-control-lg" id="email" name="username"
+                                    <input type="text" class="form-control  form-control-lg" id="email" name="email"
                                            placeholder="E-mail">
                                 </div>
                             </div>
@@ -83,6 +83,9 @@
                             </div> --}}
                             <div class="form-group">
                                 <button type="submit" class="btn btn-primary btn-block">Log In</button>
+                            </div>
+                            <div class="form-group">
+                                <a href="{{ url('admin/register') }}" class="btn btn-primary btn-block">Register</a>
                             </div>
                             <a href="forgot_password.html" id="forgot" class="forgot"> Forgot Password? </a>
                         </form>
