@@ -5,7 +5,7 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class Hospitals extends Model
+class UserDetails extends Model
 {
   use SoftDeletes;
 
@@ -17,8 +17,8 @@ class Hospitals extends Model
   protected $dates = ['deleted_at'];
 
   protected $fillable = [
-    'hospital_id', 'hospital_name', 'hospital_reg_id', 'type',
-    'hospital_image', 'image_path', 'hospital_banner', 'banner_path',
-    'address', 'landmark', 'area', 'city', 'state', 'country', 'pincode',
+    'user_id', 'first_name', 'last_name', 'gender', 'age',
+    'mobile', 'email', 'blood_group', 'dob', 'address', 'landmark',
+    'area', 'city', 'state', 'country', 'pincode'
   ];
 }

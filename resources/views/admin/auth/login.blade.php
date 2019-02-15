@@ -27,7 +27,7 @@
 
     <div class="card-header nocolor">
         <h2 class="text-center">
-            Log In or Sign UP
+            Log In or Sign Up
             {{-- <a href="register2.html">Sign Up</a> --}}
         </h2>
     </div>

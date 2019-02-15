@@ -29,6 +29,8 @@ Route::group(['prefix' => 'admin'], function(){
   Route::group(['middleware' => 'auth'], function(){
     Route::match(['get', 'post'], '/dashboard', 'AdminControllers\AdminAuthController@Dashboard')->name('admin.dashboard');
     Route::resource('admins', 'AdminControllers\AdminsController');
+    Route::resource('hospitals','AdminControllers\HospitalsController');
+    Route::resource('user-details', 'AdminControllers\UsersController');
   });
 });
 
