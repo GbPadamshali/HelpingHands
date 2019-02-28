@@ -3,7 +3,7 @@
   <div class="row">
       <div class="col-lg-12">
           <div class="card border-primary filterable">
-              <div class="card-header text-white bg-primary clearfix">
+              <div class="card-header text-white bg-primary clearfix  ">
                   <div class="card-title d-inline pull-left">
                       <i class="fa fa-fw fa-align-justify"></i> <b>Want to export data?</b>
                   </div>

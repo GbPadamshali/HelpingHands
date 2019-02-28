@@ -17,6 +17,7 @@ Route::get('/', function () {
 
 Auth::routes();
 
+// Admin Routes Starts
 Route::group(['prefix' => 'admin'], function(){
   // Auth Routes
   Route::get('/login', 'AdminControllers\AdminAuthController@ShowLoginForm');
@@ -29,10 +30,27 @@ Route::group(['prefix' => 'admin'], function(){
   Route::group(['middleware' => 'auth'], function(){
     Route::match(['get', 'post'], '/dashboard', 'AdminControllers\AdminAuthController@Dashboard')->name('admin.dashboard');
     Route::resource('admins', 'AdminControllers\AdminsController');
-    Route::resource('hospitals','AdminControllers\HospitalsController');
-    Route::resource('user-details', 'AdminControllers\UsersController');
   });
 });
+// Admin Routes end
+
+// Hospital Routes Starts
+  Route::group(['prefix' => 'hospital'], function(){
+    Route::view('/dashboard', 'hospital.dashboard');
+    Route::view('/all_doctor', 'hospital.doctors.all_doctors');
+    Route::view('/add_doctor', 'hospital.doctors.add_doctors');
+    Route::view('/all_department', 'hospital.Department.all_department');
+    Route::view('/add_department', 'hospital.Department.add_department');
+    Route::view('/all_nureses', 'hospital.Nureses.all_nureses');
+    Route::view('/add_nureses', 'hospital.Nureses.add_nureses');
+    Route::view('/all_recetionist', 'hospital.Receptionist.all_recetionist');
+    Route::view('/add_recetionist', 'hospital.Receptionist.add_recetionist');
+    Route::view('/all_hospital_staff', 'hospital.Hospital_staff.all_hospital_staff');
+    Route::view('/add_hospital_staff', 'hospital.Hospital_staff.add_hospital_staff');
+  });
+
+
+// Hospital Routes Ends
 
 // Route::view('/login', 'admin.auth.login');
 
