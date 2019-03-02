@@ -36,14 +36,7 @@ class HospitalsController extends Controller
      */
     public function store(Request $request)
     {
-        $input = $request->except(['_token']);
-        $hospital = Hospitals::create($input);
-        if (!$hospital) {
-          return redirect()->back()->with('error', 'Something went wrong, Please try again.');
-        } else {
-          return redirect('/admin/hospital')->with('success', 'Hospital has been added successfully.');
-        }
-
+        //
     }
 
     /**

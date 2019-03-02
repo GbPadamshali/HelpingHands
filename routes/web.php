@@ -15,6 +15,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::view('user-login-page', 'user.auth.login');
+
 Auth::routes();
 
 Route::group(['prefix' => 'admin'], function(){
