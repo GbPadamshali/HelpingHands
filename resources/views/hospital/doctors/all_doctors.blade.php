@@ -1,7 +1,7 @@
 @extends('hospital.layout.design')
 @section('content')
   <div class="card-body">
-    			<a class="btn btn-outline-primary btn-sm" href="{{ url('/add_doctor') }}">ADD DOCTOR</a>
+    			<a class="btn btn-outline-primary btn-sm" href="{{ route('doctors.create') }}">ADD DOCTOR</a>
     <table id="datatables-basic" class="table table-striped" style="width:100%">
       <thead>
         <tr>
@@ -24,7 +24,7 @@
           <td>2011/04/25</td>
           <td>$320,800</td>
           <td>OPD</td>
-          <td>	<a class="btn btn-outline-primary btn-sm" href="{{ url('/edit_doctor') }}">EDIT</a>    <a class="btn btn-outline-primary btn-sm" href="{{ url('/delete_doctor') }}">DELETE</a></td>
+          <td>	<a class="btn btn-outline-primary btn-sm" href="{{ url('#') }}">EDIT</a>    <a class="btn btn-outline-primary btn-sm" href="{{ url('#') }}">DELETE</a></td>
         </tr>
         <tr>
           <td>Garrett Winters</td>
@@ -34,7 +34,7 @@
           <td>2011/07/25</td>
           <td>$170,750</td>
           <td>OPD</td>
-          <td><a class="btn btn-outline-primary btn-sm" href="{{ url('/edit_doctor') }}">EDIT</a>    <a class="btn btn-outline-primary btn-sm" href="{{ url('/delete_doctor') }}">DELETE</a></td>
+          <td><a class="btn btn-outline-primary btn-sm" href="{{ url('#') }}">EDIT</a>    <a class="btn btn-outline-primary btn-sm" href="{{ url('#') }}">DELETE</a></td>
         </tr>
         <tr>
           <td>Ashton Cox</td>
@@ -44,13 +44,10 @@
           <td>2009/01/12</td>
           <td>$86,000</td>
           <td>OPD</td>
-          <td><a class="btn btn-outline-primary btn-sm" href="{{ url('/edit_doctor') }}">EDIT</a>     <a class="btn btn-outline-primary btn-sm" href="{{ url('/delete_doctor') }}">DELETE</a></td>
+          <td><a class="btn btn-outline-primary btn-sm" href="{{ url('#') }}">EDIT</a>     <a class="btn btn-outline-primary btn-sm" href="{{ url('#') }}">DELETE</a></td>
         </tr>
-
-
-
       </tbody>
-    
+
     </table>
         <script>
             document.addEventListener("DOMContentLoaded", function(event) {
