@@ -49,7 +49,7 @@
       <textarea class="form-control" name="validation-Address"></textarea>
     </div>
     <div class="form-group">
-      <label class="form-label">File</label>
+      <label class="form-label">photo</label>
       <div>
         <input type="file" class="validation-file" name="validation-file">
       </div>
