@@ -6,41 +6,11 @@
     <div class="form-group">
       <label class="form-label">First_name</label>
       <input type="text" class="form-control" name="first_name" placeholder="Name">
-      
+
     </div>
     <div class="form-group">
       <label class="form-label">Last_name</label>
       <input type="text" class="form-control" name="last_name" placeholder="Surname">
-    </div>
-    <div class="form-group">
-      <label class="form-label">Email</label>
-      <input type="text" class="form-control" name="email" placeholder="Email">
-
-    </div>
-    <div class="form-group">
-      <label class="form-label">Birthdate</label>
-      <input type="date" class="form-control" name="birthdate" placeholder="Age">
-    </div>
-    <div class="form-group">
-      <label class="form-label">Gender</label>
-      <div class="form-check">
-        <label class="form-check-label">
-<input class="form-check-input" type="radio" name="gender">Male
-</label>
-      </div>
-      <div class="form-check">
-        <label class="form-check-label">
-<input class="form-check-input" type="radio" name="gender">Female
-</label>
-      </div>
-      <div class="form-check disabled">
-        <label class="form-check-label">
-<input class="form-check-input" type="radio" name="gender">Others
-</label>
-      </div>
-    <div class="form-group">
-      <label class="form-label">Joining date</label>
-      <input type="date" class="form-control" name="joining_date" placeholder="joindate">
     </div>
     <div class="form-group">
       <label class="form-label">Qualifiaction</label>
@@ -52,7 +22,7 @@
     </div>
     <div class="form-group">
       <label class="form-label">Experience</label>
-      <input type="text" class="form-control" name="experience" placeholder="experince">
+      <input type="text" class="form-control" name="experience" placeholder="experience">
     </div>
     <div class="form-group">
       <label class="form-label">Select</label>
@@ -71,7 +41,7 @@
 
     <div class="form-group">
       <label class="form-label">Address</label>
-      <textarea class="form-control" name="Address"></textarea>
+      <textarea class="form-control" name="validation-Address"></textarea>
     </div>
     <div class="form-group">
       <label class="form-label">photo</label>
@@ -123,7 +93,7 @@
   									'birthdate': {
   										required: true
   									},
-  									'gender': {
+  									'validation-salary': {
   										required: true,
 
   									},
@@ -134,14 +104,14 @@
   										required: true,
   										minlength: 2
   									},
-  									'address': {
+  									'validation-select2': {
   										required: true
   									},
   									'validation-select2-multi': {
   										required: true,
   										minlength: 2
   									},
-  									'qualifiaction': {
+  									'validation-text': {
   										required: true
   									},
   									'validation-file': {
@@ -150,10 +120,7 @@
   									'gender': {
   										required: true
   									},
-  									'experience': {
-  										required: true
-  									},
-                    'specialization': {
+  									'validation-radios-custom': {
   										required: true
   									},
   									'validation-checkbox': {
