@@ -41,6 +41,8 @@ Route::group(['prefix' => 'admin'], function(){
     Route::view('/dashboard', 'hospital.dashboard');
     // Route::view('/all_doctor', 'hospital.doctors.all_doctors');
     // Route::view('/add_doctor', 'hospital.doctors.add_doctors');
+    Route::view('/edit_doctor', 'hospital.doctors.edit_doctors');
+
     Route::view('/all_department', 'hospital.Department.all_department');
     Route::view('/add_department', 'hospital.Department.add_department');
     Route::view('/all_nureses', 'hospital.Nureses.all_nureses');
@@ -52,6 +54,8 @@ Route::group(['prefix' => 'admin'], function(){
 
     Route::resource('doctors', 'HospitalControllers\DoctorsController');
     Route::resource('departments', 'HospitalControllers\DepartmentController');
+    Route::view('/login', 'hospital.auth.login');
+    Route::view('/register', 'hospital.auth.register');
   });
 
 
