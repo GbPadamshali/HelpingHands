@@ -16,7 +16,7 @@ Route::get('/', function () {
 });
 
 Route::view('user-login-page', 'user.auth.login');
-
+Route::view('dashboard', 'user.dashboard');
 Auth::routes();
 
 // Admin Routes Starts
