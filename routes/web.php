@@ -11,9 +11,9 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 Route::view('user-login-page', 'user.auth.login');
 
@@ -47,8 +47,8 @@ Route::group(['prefix' => 'admin'], function(){
     Route::view('/add_nureses', 'hospital.Nureses.add_nureses');
     Route::view('/all_recetionist', 'hospital.Receptionist.all_recetionist');
     Route::view('/add_recetionist', 'hospital.Receptionist.add_recetionist');
-    Route::view('/all_hospital_staff', 'hospital.Hospital_staff.all_hospital_staff');
-    Route::view('/add_hospital_staff', 'hospital.Hospital_staff.add_hospital_staff');
+    Route::view('/all_hospital_staff', 'hospital.hospital_staff.all_hospital_staff');
+    Route::view('/add_hospital_staff', 'hospital.hospital_staff.add_hospital_staff');
 
     Route::resource('doctors', 'HospitalControllers\DoctorsController');
     Route::resource('departments', 'HospitalControllers\DepartmentController');

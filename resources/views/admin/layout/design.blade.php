@@ -1,17 +1,15 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    @include('admin.layout.head')
-  </head>
-<body class="skin-coreplus">
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+  @include('admin.layout.head')
+</head>
 
-  @include('admin.layout.header')
+<body>
 
-  {{-- @include('admin.layout.sidebar') --}}
+  @include('admin.layout.header_sidebar')
 
   @yield('content')
 
   @include('admin.layout.footer')
 
-</body>
 </html>
