@@ -1,132 +1,166 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html class="no-js" lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <title>Helping Hands | Admin Registeration</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-    <link rel="shortcut icon" href="{{ asset('images/admin_images/favicon.ico') }}"/>
-    <!-- global css -->
-    <link href="{{ asset('css/admin_css/app.css') }}" rel="stylesheet">
-    <!-- end of global css -->
-    <!--page level css -->
-    <link rel="stylesheet" href="{{ asset('admin_vendors/iCheck/css/all.css') }}"/>
-    <link rel="stylesheet" href="{{ asset('admin_vendors/select2/css/select2.min.css') }}"/>
-    <link rel="stylesheet" href="{{ asset('admin_vendors/select2/css/select2-bootstrap.css') }}"/>
-    <link rel="stylesheet" type="text/css" href="{{ asset('css/admin_css/custom.css') }}">
-    <link href="{{ asset('css/admin_css/login.css') }}" rel="stylesheet">
-    <!--end of page level css-->
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Tournament | Registration</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- favicon
+		============================================ -->
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('images/admin_images/favicon.ico') }}">
+    <!-- Google Fonts
+		============================================ -->
+    <link href="https://fonts.googleapis.com/css?family=Play:400,700" rel="stylesheet">
+    <!-- Bootstrap CSS
+		============================================ -->
+    <link rel="stylesheet" href="{{ asset('css/admin_css/bootstrap.min.css') }}">
+    <!-- Bootstrap CSS
+		============================================ -->
+    <link rel="stylesheet" href="{{ asset('css/admin_css/font-awesome.min.css') }}">
+    <!-- owl.carousel CSS
+		============================================ -->
+    <link rel="stylesheet" href="{{ asset('css/admin_css/owl.carousel.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/admin_css/owl.theme.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/admin_css/owl.transitions.css') }}">
+    <!-- animate CSS
+		============================================ -->
+    {{-- <link rel="stylesheet" href="{{ asset('css/admin_css/animate.css') }}"> --}}
+    <!-- normalize CSS
+		============================================ -->
+    {{-- <link rel="stylesheet" href="{{ asset('css/admin_css/normalize.css') }}"> --}}
+    <!-- main CSS
+		============================================ -->
+    <link rel="stylesheet" href="{{ asset('css/admin_css/main.css') }}">
+    <!-- morrisjs CSS
+		============================================ -->
+    <link rel="stylesheet" href="{{ asset('css/admin_css/morrisjs/morris.css') }}">
+    <!-- mCustomScrollbar CSS
+		============================================ -->
+    {{-- <link rel="stylesheet" href="{{ asset('css/admin_css/scrollbar/jquery.mCustomScrollbar.min.css') }}"> --}}
+    <!-- metisMenu CSS
+		============================================ -->
+    {{-- <link rel="stylesheet" href="{{ asset('css/admin_css/metisMenu/metisMenu.min.css') }}"> --}}
+    {{-- <link rel="stylesheet" href="{{ asset('css/admin_css/metisMenu/metisMenu-vertical.css') }}"> --}}
+    <!-- calendar CSS
+		============================================ -->
+    {{-- <link rel="stylesheet" href="{{ asset('css/admin_css/calendar/fullcalendar.min.css') }}"> --}}
+    {{-- <link rel="stylesheet" href="{{ asset('css/admin_css/calendar/fullcalendar.print.min.css') }}"> --}}
+    <!-- forms CSS
+		============================================ -->
+    <link rel="stylesheet" href="{{ asset('css/admin_css/form/all-type-forms.css') }}">
+    <!-- style CSS
+		============================================ -->
+    <link rel="stylesheet" href="{{ asset('css/admin_css/style.css') }}">
+    <!-- responsive CSS
+		============================================ -->
+    <link rel="stylesheet" href="{{ asset('css/admin_css/responsive.css') }}">
+    <!-- modernizr JS
+		============================================ -->
+    <script src="{{ asset('js/admin_js/vendor/modernizr-2.8.3.min.js') }}"></script>
 </head>
 
 <body>
-<div class="preloader">
-    <div class="loader_img"><img src="{{ asset('images/admin_images/loader.gif') }}" alt="loading..." height="64" width="64"></div>
-</div>
-<div class="container">
-    <div class="row " id="form-login">
-        <div class="col-sm-12">
-            <div class="card-header nocolor">
-                <h2 class="text-center text-primary">
-                    Sign Up or Log In
-                </h2>
-            </div>
-            <div class="card-body social">
-                <div class="row">
-                    <div class="col-12 col-sm-8 col-md-8 col-lg-8 col-xl-8 offset-2">
-                        <form class="form-horizontal" method="post" action="{{ route('admin.register') }}" id="register_form"> {{ csrf_field() }}
-                            {{-- <!-- CSRF Token -->
-                            <input type="hidden" name="_token" value="sSAo7cToGJCJ2IBFgOpYbLNnqV5n8O4DdNG5jdez"/> --}}
-                            <div class="form-group row ">
-                                <label class="control-label col-sm-3" for="first_name">Name<sup>*</sup> :</label>
-                                <div class="col-sm-8">
-                                    <div class="input-group">
-                                        <span class="input-group-addon"> <i class="fa fa-fw fa-user-md text-primary"></i>
-                                        </span>
-                                        <input type="text" class="form-control" placeholder="Name" name="name"
-                                               id="name" value=""/>
-                                    </div>
+    <!--[if lt IE 8]>
+		<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+	<![endif]-->
+	<div class="error-pagewrap">
+		<div class="error-page-int">
+			<div class="text-center custom-login">
+				<h3>Registration</h3>
+				<p>This is the best app ever!</p>
+			</div>
+			<div class="content-error">
+				<div class="hpanel">
+                    <div class="panel-body">
+                        <form method="post" action="{{ url('/register') }}" id="loginForm"> {{ csrf_field() }}
+                            <div class="row">
+                                <div class="form-group col-lg-12">
+                                    <label>Username</label>
+                                    <input class="form-control" name="name">
                                 </div>
+                                <div class="form-group col-lg-6">
+                                    <label>Password</label>
+                                    <input type="password" class="form-control" name="password">
+                                </div>
+                                <div class="form-group col-lg-6">
+                                    <label>Repeat Password</label>
+                                    <input type="password" class="form-control" name="rpt_pass">
+                                </div>
+                                <div class="form-group col-lg-6">
+                                    <label>Email Address</label>
+                                    <input class="form-control" name="email">
+                                </div>
+                                <div class="form-group col-lg-6">
+                                    <label>Mobile</label>
+                                    <input class="form-control" name="mobile">
+                                </div>
+                                {{-- <div class="checkbox col-lg-12">
+                                    <input type="checkbox" class="i-checks" checked> Sigh up for our newsletter
+                                </div> --}}
                             </div>
-                            <div class="form-group row ">
-                                <label class="control-label col-sm-3" for="email">Email<sup>*</sup>  :</label>
-                                <div class="col-sm-8">
-                                    <div class="input-group">
-                                        <span class="input-group-addon">
-                                            <i class="fa fa-envelope text-primary"></i>
-                                        </span>
-                                        <input type="text" placeholder="Email Address" class="form-control" name="email"
-                                               id="email" value=""/>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-group row ">
-                                <label class="control-label col-sm-3" for="password">Password<sup>*</sup>  :</label>
-                                <div class="col-sm-8">
-                                    <div class="input-group">
-                                        <span class="input-group-text rounded-0">
-                                            <i class="fa fa-fw fa-key text-primary"></i>
-                                        </span>
-                                        <input type="password" placeholder="Password" class="form-control" name="password"
-                                               id="password"/>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-group row ">
-                                <label class="control-label col-sm-3" for="password_confirm">Confirm Password<sup>*</sup>  :</label>
-                                <div class="col-sm-8">
-                                    <div class="input-group">
-                                        <input type="password" placeholder="Confirm Password" class="form-control"
-                                               name="password_confirm" id="password_confirm"/>
-                                        <span class="input-group-text rounded-0">
-                                            <i class="fa fa-fw fa-key text-primary"></i>
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label class="control-label col-sm-3" for="phone">Mobile<sup>*</sup>  :</label>
-                                <div class="col-sm-8">
-                                    <div class="input-group">
-                                        <span class="input-group-text rounded-0">
-                                            <i class="fa fa-fw fa-phone text-primary"></i>
-                                        </span>
-                                        <input type="text" placeholder="Mobile Number" class="form-control" name="mobile"
-                                               id="mobile" value=""/>
-                                    </div>
-                                </div>
-                            </div>
-                            {{-- <div class="form-group row">
-                                <div class="offset-sm-3 col-12 col-md-9 agree">
-                                    <label class="checkbox-inline sr-only d-block"  for="terms">Agree to terms and conditions</label>
-                                    <input type="checkbox" value="1" name="terms" id="terms"/> &nbsp;
-                                    <label for="terms" class="agree "> I agree to Terms and Conditions.</label>
-                                </div>
-                            </div> --}}
-                            <div class="form-group row ">
-                                <div class="offset-sm-3 col-9">
-                                    <button type="submit" class="btn btn-primary">Register</button>
-                                    <input type="reset" class="btn btn-default" value="Reset" id="dee1"/>
-                                </div>
+                            <div class="text-center">
+                                <button class="btn btn-success loginbtn">Register</button>
+                                <button class="btn btn-default">Cancel</button>
                             </div>
                         </form>
                     </div>
                 </div>
-            </div>
-        </div>
+			</div>
+			{{-- <div class="text-center login-footer">
+				<p>Copyright © 2018. All rights reserved. Template by <a href="https://colorlib.com/wp/templates/">Colorlib</a></p>
+			</div> --}}
+		</div>
     </div>
-</div>
-<!-- global js -->
-<script src="{{ asset('js/admin_js/jquery.min.js') }}" type="text/javascript"></script>
-<script src="{{ asset('js/admin_js/bootstrap.min.js') }}" type="text/javascript"></script>
-<!-- end of global js -->
-<!-- begining of page level js -->
-<script src="{{ asset('admin_vendors/moment/js/moment.min.js') }}"></script>
-<script src="{{ asset('admin_vendors/select2/js/select2.js') }}"></script>
-<script src="{{ asset('admin_vendors/iCheck/js/icheck.js') }}"></script>
-<script src="{{ asset('admin_vendors/bootstrapvalidator/js/bootstrapValidator.min.js') }}" type="text/javascript"></script>
-<script src="{{ asset('js/admin_js/custom_js/register2.js') }}"></script>
-<!-- end of page level js -->
+    <!-- jquery
+		============================================ -->
+    <script src="{{ asset('js/admin_js/vendor/jquery-1.12.4.min.js') }}"></script>
+    <!-- bootstrap JS
+		============================================ -->
+    <script src="{{ asset('js/admin_js/bootstrap.min.js') }}"></script>
+    <!-- wow JS
+		============================================ -->
+    <script src="{{ asset('js/admin_js/wow.min.js') }}"></script>
+    <!-- price-slider JS
+		============================================ -->
+    {{-- <script src="{{ asset('js/admin_js/jquery-price-slider.js') }}"></script> --}}
+    <!-- meanmenu JS
+		============================================ -->
+    {{-- <script src="{{ asset('js/admin_js/jquery.meanmenu.js') }}"></script> --}}
+    <!-- owl.carousel JS
+		============================================ -->
+    {{-- <script src="{{ asset('js/admin_js/owl.carousel.min.js') }}"></script> --}}
+    <!-- sticky JS
+		============================================ -->
+    <script src="{{ asset('js/admin_js/jquery.sticky.js') }}"></script>
+    <!-- scrollUp JS
+		============================================ -->
+    {{-- <script src="{{ asset('js/admin_js/jquery.scrollUp.min.js') }}"></script> --}}
+    <!-- mCustomScrollbar JS
+		============================================ -->
+    {{-- <script src="{{ asset('js/admin_js/scrollbar/jquery.mCustomScrollbar.concat.min.js') }}"></script> --}}
+    {{-- <script src="{{ asset('js/admin_js/scrollbar/mCustomScrollbar-active.js') }}"></script> --}}
+    <!-- metisMenu JS
+		============================================ -->
+    {{-- <script src="{{ asset('js/admin_js/metisMenu/metisMenu.min.js') }}"></script> --}}
+    {{-- <script src="{{ asset('js/admin_js/metisMenu/metisMenu-active.js') }}"></script> --}}
+    <!-- tab JS
+		============================================ -->
+    {{-- <script src="{{ asset('js/admin_js/tab.js') }}"></script> --}}
+    <!-- icheck JS
+		============================================ -->
+    <script src="{{ asset('js/admin_js/icheck/icheck.min.js') }}"></script>
+    <script src="{{ asset('js/admin_js/icheck/icheck-active.js') }}"></script>
+    <!-- plugins JS
+		============================================ -->
+    <script src="{{ asset('js/admin_js/plugins.js') }}"></script>
+    <!-- main JS
+		============================================ -->
+    <script src="{{ asset('js/admin_js/main.js') }}"></script>
+    <!-- tawk chat JS
+		============================================ -->
+    {{-- <script src="{{ asset('js/admin_js/tawk-chat.js') }}"></script> --}}
 </body>
 
-
-<!-- Mirrored from coreplusdemo.lorvent.com/register2.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 10 Feb 2019 18:47:18 GMT -->
 </html>

@@ -4,30 +4,55 @@
   <form id="validation-form">
 
     <div class="form-group">
-      <label class="form-label">Name</label>
-      <input type="text" class="form-control" name="validation-name" placeholder="Name">
-      <small class="form-text text-muted">Example block-level help text here.</small>
+      <label class="form-label">First_name</label>
+      <input type="text" class="form-control" name="first_name" placeholder="Name">
+      
     </div>
     <div class="form-group">
-      <label class="form-label">Surname</label>
-      <input type="text" class="form-control" name="validation-surname" placeholder="Surname">
+      <label class="form-label">Last_name</label>
+      <input type="text" class="form-control" name="last_name" placeholder="Surname">
     </div>
     <div class="form-group">
       <label class="form-label">Email</label>
-      <input type="text" class="form-control" name="validation-email" placeholder="Email">
-      <small class="form-text text-muted">Example block-level help text here.</small>
+      <input type="text" class="form-control" name="email" placeholder="Email">
+
     </div>
     <div class="form-group">
-      <label class="form-label">Age</label>
-      <input type="number" class="form-control" name="validation-age" placeholder="Age">
+      <label class="form-label">Birthdate</label>
+      <input type="date" class="form-control" name="birthdate" placeholder="Age">
     </div>
     <div class="form-group">
-      <label class="form-label">Join date</label>
-      <input type="date" class="form-control" name="validation-joindate" placeholder="joindate">
+      <label class="form-label">Gender</label>
+      <div class="form-check">
+        <label class="form-check-label">
+<input class="form-check-input" type="radio" name="gender">Male
+</label>
+      </div>
+      <div class="form-check">
+        <label class="form-check-label">
+<input class="form-check-input" type="radio" name="gender">Female
+</label>
+      </div>
+      <div class="form-check disabled">
+        <label class="form-check-label">
+<input class="form-check-input" type="radio" name="gender">Others
+</label>
+      </div>
+    <div class="form-group">
+      <label class="form-label">Joining date</label>
+      <input type="date" class="form-control" name="joining_date" placeholder="joindate">
     </div>
     <div class="form-group">
-      <label class="form-label">Salary</label>
-      <input type="text" class="form-control" name="validation-salary" placeholder="salary">
+      <label class="form-label">Qualifiaction</label>
+      <input type="text" class="form-control" name="qualifiaction" placeholder="qualifiaction">
+    </div>
+    <div class="form-group">
+      <label class="form-label">Specialization</label>
+      <input type="text" class="form-control" name="specialization" placeholder="specialization">
+    </div>
+    <div class="form-group">
+      <label class="form-label">Experience</label>
+      <input type="text" class="form-control" name="experience" placeholder="experince">
     </div>
     <div class="form-group">
       <label class="form-label">Select</label>
@@ -46,12 +71,12 @@
 
     <div class="form-group">
       <label class="form-label">Address</label>
-      <textarea class="form-control" name="validation-Address"></textarea>
+      <textarea class="form-control" name="Address"></textarea>
     </div>
     <div class="form-group">
       <label class="form-label">photo</label>
       <div>
-        <input type="file" class="validation-file" name="validation-file">
+        <input type="file" class="validation-file" name="image">
       </div>
     </div>
       <button type="submit" class="btn btn-primary">Submit</button>
@@ -81,24 +106,24 @@
   								ignore: '.ignore, .select2-input',
   								focusInvalid: false,
   								rules: {
-  									'validation-email': {
+  									'email': {
   										required: true,
   										email: true
   									},
-  									'validation-name': {
+  									'first_name': {
   										required: true,
   										minlength: 6,
   										maxlength: 20
   									},
-  									'validation-surname': {
+  									'last_name': {
   										required: true,
-  										minlength: 6,
+  										minlength: 3,
   										maxlength: 20,
   									},
-  									'validation-age': {
+  									'birthdate': {
   										required: true
   									},
-  									'validation-salary': {
+  									'gender': {
   										required: true,
 
   									},
@@ -109,23 +134,26 @@
   										required: true,
   										minlength: 2
   									},
-  									'validation-select2': {
+  									'address': {
   										required: true
   									},
   									'validation-select2-multi': {
   										required: true,
   										minlength: 2
   									},
-  									'validation-text': {
+  									'qualifiaction': {
   										required: true
   									},
   									'validation-file': {
   										required: true
   									},
-  									'validation-radios': {
+  									'gender': {
   										required: true
   									},
-  									'validation-radios-custom': {
+  									'experience': {
+  										required: true
+  									},
+                    'specialization': {
   										required: true
   									},
   									'validation-checkbox': {

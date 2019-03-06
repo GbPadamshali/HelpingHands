@@ -31,7 +31,7 @@ class AdminAuthController extends Controller
         if (Auth::attempt($input)) {
           return redirect('/admin/dashboard');
         } else {
-          return redirect('/admin/login')->with('error', 'Please Check Your Credentials And Try Again');
+          return redirect('/admin/login')->with('error', 'Please check your credentials and try again');
         }
 
     }

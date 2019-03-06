@@ -1,620 +1,505 @@
 @extends('admin.layout.design')
 @section('content')
-    <aside class="right-side right-padding">
-
-        <section class="content-header">
-            <div class="row">
-                <div class="col-md-6 col-6">
-                    <div class="header-data">
-                        <h1>Dashboard</h1>
-                        <p>Welcome To Core Plus</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-6">
-                    <div class="header-charts">
-                        <div class="sparkline-chart pull-right d-none d-md-block">
-                            <div class="number" id="sparkline_line"></div>
-                            <small class="server-title">Server Load:</small>
+        <div class="analytics-sparkle-area">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                        <div class="analytics-sparkle-line reso-mg-b-30">
+                            <div class="analytics-content">
+                                <h5>Total Players</h5>
+                                <h2><span class="counter">550</span> <span class="tuition-fees">Tuition Fees</span></h2>
+                                {{-- <span class="text-success">20%</span>
+                                <div class="progress m-b-0">
+                                    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:20%;"> <span class="sr-only">20% Complete</span> </div>
+                                </div> --}}
+                            </div>
                         </div>
-                        <div class="sparkline-chart pull-right">
-                            <div class="number" id="sparkline_bar"></div>
-                            <small class="sales-title">Daily Sales:</small>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                        <div class="analytics-sparkle-line reso-mg-b-30">
+                            <div class="analytics-content">
+                                <h5>Total Sixes</h5>
+                                <h2><span class="counter">180</span> <span class="tuition-fees">Tuition Fees</span></h2>
+                                {{-- <span class="text-danger">30%</span>
+                                <div class="progress m-b-0">
+                                    <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:30%;"> <span class="sr-only">230% Complete</span> </div>
+                                </div> --}}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                        <div class="analytics-sparkle-line reso-mg-b-30 table-mg-t-pro dk-res-t-pro-30">
+                            <div class="analytics-content">
+                                <h5>Total Fours</h5>
+                                <h2><span class="counter">450</span> <span class="tuition-fees">Tuition Fees</span></h2>
+                                {{-- <span class="text-info">60%</span>
+                                <div class="progress m-b-0">
+                                    <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:60%;"> <span class="sr-only">20% Complete</span> </div>
+                                </div> --}}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                        <div class="analytics-sparkle-line table-mg-t-pro dk-res-t-pro-30">
+                            <div class="analytics-content">
+                                <h5>Total Matches</h5>
+                                <h2><span class="counter">80</span> <span class="tuition-fees">Tuition Fees</span></h2>
+                                {{-- <span class="text-inverse">80%</span>
+                                <div class="progress m-b-0">
+                                    <div class="progress-bar progress-bar-inverse" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:80%;"> <span class="sr-only">230% Complete</span> </div>
+                                </div> --}}
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
-        <section class="content">
-            <div class="row">
-                <div class="col-xl-8 col-lg-12 col-md-12 col-sm-12 col-12">
-                    <div class="card">
-                        <div class="card-header sales-header">
-                            <h3 class="heading_text card-title d-inline-block">Sales</h3>
-                            <span class="pull-right line-bar-charts">
-                                <button class="btn btn-sm btn-link chart_switch" data-chart="bar">Bar Chart</button>
-                                <button class="btn btn-sm btn-default chart_switch" data-chart="line">Line Chart
-                                </button>
-                            </span>
-                        </div>
-                        <div class="card-body">
-                            <div id="sales-line-bar" style="height:280px"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-12">
-                    <div class="card weather-widget mt-1">
-                        <div class="row weather-data">
-                            <div class="col-md-12 temperature">
-                                <h2>19<sup><sup>o</sup><sub>c</sub></sup></h2>
-                                <p class="location"><i class="fa fa-map-marker text-default" aria-hidden="true"></i>
-                                    Hong Kong, China</p>
-                                <p>Showers till tomorrow morning</p>
-                                <i class="wi wi-night-rain icon"></i>
-                            </div>
-                        </div>
-                        <div class="weather-footer">
-                            <div class="text-center row">
-                                <div class="col-lg-3 col-2 popup popup1 pr-0">
-                                    <h5>MON</h5>
-                                    <i class="wi wi-day-lightning"></i>
-                                    <p>21<sup>o<sub>c</sub></sup></p>
-                                </div>
-                                <div class="col-lg-3 col-2 popup pr-0">
-                                    <h5>TUE</h5>
-                                    <i class="wi wi-cloudy"></i>
-                                    <p>28<sup>o<sub>c</sub></sup></p>
-                                </div>
-                                <div class="col-lg-3 col-2 popup pr-0">
-                                    <h5>WED</h5>
-                                    <i class="wi wi-night-rain-mix"></i>
-                                    <p>26<sup>o<sub>c</sub></sup></p>
-                                </div>
-                                <div class="col-lg-3 col-2 popup pr-0">
-                                    <h5>THU</h5>
-                                    <i class="wi wi-day-sunny"></i>
-                                    <p>31<sup>o<sub>c</sub></sup></p>
-                                </div>
-                                <div class="col-2 d-xl-none d-lg-none d-md-block d-sm-block d-block popup pr-0">
-                                    <h5>FRI</h5>
-                                    <i class="wi wi-day-lightning"></i>
-                                    <p>24<sup>o<sub>c</sub></sup></p>
-                                </div>
-                                <div class="col-2 d-xl-none d-lg-none d-md-block d-sm-block d-block popup pl-0">
-                                    <h5>SAT</h5>
-                                    <i class="wi wi-night-alt-snow"></i>
-                                    <p>25<sup>o<sub>c</sub></sup></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-12">
-                    <div class="card">
-                        <div class="card-header d-inline-block">
-                            <h3 class="card-title">Live Views</h3>
-                        </div>
-                        <div class="card-body real-time">
-                            <div class="total-visits">
-                                <span>238</span>
-                                <small>visitors On-line</small>
-                                <div class="progress">
-                                    <div role="progressbar" aria-valuenow="17" aria-valuemin="0" aria-valuemax="100"
-                                         style="width: 23%;" class="progress-bar bg-info">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="visit-source">
-                                <div class="visit-count pull-left">
-                                    <small>82 <span>Direct</span></small>
-                                    <div class="progress">
-                                        <div role="progressbar" aria-valuenow="17" aria-valuemin="0" aria-valuemax="100"
-                                             style="width: 29.1%;" class="progress-bar bg-primary">
+        </div>
+        {{-- <div class="product-sales-area mg-tb-30">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-9 col-md-12 col-sm-12 col-xs-12">
+                        <div class="product-sales-chart">
+                            <div class="portlet-title">
+                                <div class="row">
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                        <div class="caption pro-sl-hd">
+                                            <span class="caption-subject"><b>University Earnings</b></span>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="visit-count pull-left">
-                                    <small>156 <span>Search</span></small>
-                                    <div class="progress">
-                                        <div role="progressbar" aria-valuenow="17" aria-valuemin="0" aria-valuemax="100"
-                                             style="width: 70.9%;" class="progress-bar bg-danger">
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                        <div class="actions graph-rp graph-rp-dl">
+                                            <p>All Earnings are in million $</p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="">
-                                <div class="visitors-os pull-left text-center">
-                                    <p>43.4%</p>
-                                    <span>Windows</span>
-                                </div>
-                                <div class="visitors-os pull-left text-center">
-                                    <p>32.4%</p>
-                                    <span>Mac Os</span>
-                                </div>
-                                <div class="visitors-os pull-left text-center">
-                                    <p>34.2%</p>
-                                    <span>Others</span>
-                                </div>
+                            <ul class="list-inline cus-product-sl-rp">
+                                <li>
+                                    <h5><i class="fa fa-circle" style="color: #006DF0;"></i>CSE</h5>
+                                </li>
+                                <li>
+                                    <h5><i class="fa fa-circle" style="color: #933EC5;"></i>Accounting</h5>
+                                </li>
+                                <li>
+                                    <h5><i class="fa fa-circle" style="color: #65b12d;"></i>Electrical</h5>
+                                </li>
+                            </ul>
+                            <div id="extra-area-chart" style="height: 356px;"></div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                        <div class="white-box analytics-info-cs mg-b-10 res-mg-b-30 res-mg-t-30 table-mg-t-pro-n tb-sm-res-d-n dk-res-t-d-n">
+                            <h3 class="box-title">Total Visit</h3>
+                            <ul class="list-inline two-part-sp">
+                                <li>
+                                    <div id="sparklinedash"></div>
+                                </li>
+                                <li class="text-right sp-cn-r"><i class="fa fa-level-up" aria-hidden="true"></i> <span class="counter text-success">1500</span></li>
+                            </ul>
+                        </div>
+                        <div class="white-box analytics-info-cs mg-b-10 res-mg-b-30 tb-sm-res-d-n dk-res-t-d-n">
+                            <h3 class="box-title">Page Views</h3>
+                            <ul class="list-inline two-part-sp">
+                                <li>
+                                    <div id="sparklinedash2"></div>
+                                </li>
+                                <li class="text-right graph-two-ctn"><i class="fa fa-level-up" aria-hidden="true"></i> <span class="counter text-purple">3000</span></li>
+                            </ul>
+                        </div>
+                        <div class="white-box analytics-info-cs mg-b-10 res-mg-b-30 tb-sm-res-d-n dk-res-t-d-n">
+                            <h3 class="box-title">Unique Visitor</h3>
+                            <ul class="list-inline two-part-sp">
+                                <li>
+                                    <div id="sparklinedash3"></div>
+                                </li>
+                                <li class="text-right graph-three-ctn"><i class="fa fa-level-up" aria-hidden="true"></i> <span class="counter text-info">5000</span></li>
+                            </ul>
+                        </div>
+                        <div class="white-box analytics-info-cs table-dis-n-pro tb-sm-res-d-n dk-res-t-d-n">
+                            <h3 class="box-title">Bounce Rate</h3>
+                            <ul class="list-inline two-part-sp">
+                                <li>
+                                    <div id="sparklinedash4"></div>
+                                </li>
+                                <li class="text-right graph-four-ctn"><i class="fa fa-level-down" aria-hidden="true"></i> <span class="text-danger"><span class="counter">18</span>%</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="traffic-analysis-area">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                        <div class="social-media-edu">
+                            <i class="fa fa-facebook"></i>
+                            <div class="social-edu-ctn">
+                                <h3>50k Likes</h3>
+                                <p>You main list growing</p>
                             </div>
-                            <div id='chart-live' class='chart half with-transitions'>
-                                <svg></svg>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                        <div class="social-media-edu twitter-cl res-mg-t-30 table-mg-t-pro-n">
+                            <i class="fa fa-twitter"></i>
+                            <div class="social-edu-ctn">
+                                <h3>30k followers</h3>
+                                <p>You main list growing</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                        <div class="social-media-edu linkedin-cl res-mg-t-30 res-tablet-mg-t-30 dk-res-t-pro-30">
+                            <i class="fa fa-linkedin"></i>
+                            <div class="social-edu-ctn">
+                                <h3>7k Connections</h3>
+                                <p>You main list growing</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                        <div class="social-media-edu youtube-cl res-mg-t-30 res-tablet-mg-t-30 dk-res-t-pro-30">
+                            <i class="fa fa-youtube"></i>
+                            <div class="social-edu-ctn">
+                                <h3>50k Subscribers</h3>
+                                <p>You main list growing</p>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-12">
-                    <div class="card panel-widget">
-                        <div class="card-header">
-                            <h3 class="card-title">Daily Traffic</h3>
+            </div>
+        </div>
+        <div class="library-book-area mg-t-30">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                        <div class="single-cards-item">
+                            <div class="single-product-image">
+                                <a href="#"><img src="{{ asset('images/admin_images/product/profile-bg.jpg') }}" alt=""></a>
+                            </div>
+                            <div class="single-product-text">
+                                <img src="{{ asset('images/admin_images/product/pro4.jpg')}}" alt="">
+                                <h4><a class="cards-hd-dn" href="#">Angela Dominic</a></h4>
+                                <h5>Web Designer & Developer</h5>
+                                <p class="ctn-cards">Lorem ipsum dolor sit amet, this is a consectetur adipisicing elit</p>
+                                <a class="follow-cards" href="#">Follow</a>
+                                <div class="row">
+                                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                                        <div class="cards-dtn">
+                                            <h3><span class="counter">199</span></h3>
+                                            <p>Articles</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                                        <div class="cards-dtn">
+                                            <h3><span class="counter">599</span></h3>
+                                            <p>Like</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                                        <div class="cards-dtn">
+                                            <h3><span class="counter">399</span></h3>
+                                            <p>Comment</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="card-header d-inline-block">
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                        <div class="single-review-st-item res-mg-t-30 table-mg-t-pro-n">
+                            <div class="single-review-st-hd">
+                                <h2>Reviews</h2>
+                            </div>
+                            <div class="single-review-st-text">
+                                <img src="{{ asset('images/admin_images/notification/1.jpg') }}" alt="">
+                                <div class="review-ctn-hf">
+                                    <h3>Sarah Graves</h3>
+                                    <p>Highly recommend</p>
+                                </div>
+                                <div class="review-item-rating">
+                                    <i class="educate-icon educate-star"></i>
+                                    <i class="educate-icon educate-star"></i>
+                                    <i class="educate-icon educate-star"></i>
+                                    <i class="educate-icon educate-star"></i>
+                                    <i class="educate-icon educate-star-half"></i>
+                                </div>
+                            </div>
+                            <div class="single-review-st-text">
+                                <img src="{{ asset('images/admin_images/notification/2.jpg') }}" alt="">
+                                <div class="review-ctn-hf">
+                                    <h3>Garbease sha</h3>
+                                    <p>Awesome Pro</p>
+                                </div>
+                                <div class="review-item-rating">
+                                    <i class="educate-icon educate-star"></i>
+                                    <i class="educate-icon educate-star"></i>
+                                    <i class="educate-icon educate-star"></i>
+                                    <i class="educate-icon educate-star"></i>
+                                    <i class="educate-icon educate-star-half"></i>
+                                </div>
+                            </div>
+                            <div class="single-review-st-text">
+                                <img src="{{ asset('images/admin_images/notification/3.jpg') }}" alt="">
+                                <div class="review-ctn-hf">
+                                    <h3>Gobetro pro</h3>
+                                    <p>Great Website</p>
+                                </div>
+                                <div class="review-item-rating">
+                                    <i class="educate-icon educate-star"></i>
+                                    <i class="educate-icon educate-star"></i>
+                                    <i class="educate-icon educate-star"></i>
+                                    <i class="educate-icon educate-star"></i>
+                                    <i class="educate-icon educate-star-half"></i>
+                                </div>
+                            </div>
+                            <div class="single-review-st-text">
+                                <img src="{{ asset('images/admin_images/notification/4.jpg') }}" alt="">
+                                <div class="review-ctn-hf">
+                                    <h3>Siam Graves</h3>
+                                    <p>That's Good</p>
+                                </div>
+                                <div class="review-item-rating">
+                                    <i class="educate-icon educate-star"></i>
+                                    <i class="educate-icon educate-star"></i>
+                                    <i class="educate-icon educate-star"></i>
+                                    <i class="educate-icon educate-star"></i>
+                                    <i class="educate-icon educate-star-half"></i>
+                                </div>
+                            </div>
+                            <div class="single-review-st-text">
+                                <img src="{{ asset('images/admin_images/notification/5.jpg') }}" alt="">
+                                <div class="review-ctn-hf">
+                                    <h3>Sarah Graves</h3>
+                                    <p>Highly recommend</p>
+                                </div>
+                                <div class="review-item-rating">
+                                    <i class="educate-icon educate-star"></i>
+                                    <i class="educate-icon educate-star"></i>
+                                    <i class="educate-icon educate-star"></i>
+                                    <i class="educate-icon educate-star"></i>
+                                    <i class="educate-icon educate-star-half"></i>
+                                </div>
+                            </div>
+                            <div class="single-review-st-text">
+                                <img src="{{ asset('images/admin_images/notification/6.jpg') }}" alt="">
+                                <div class="review-ctn-hf">
+                                    <h3>Julsha Grav</h3>
+                                    <p>Sei Hoise bro</p>
+                                </div>
+                                <div class="review-item-rating">
+                                    <i class="educate-icon educate-star"></i>
+                                    <i class="educate-icon educate-star"></i>
+                                    <i class="educate-icon educate-star"></i>
+                                    <i class="educate-icon educate-star"></i>
+                                    <i class="educate-icon educate-star-half"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                        <div class="single-product-item res-mg-t-30 table-mg-t-pro-n tb-sm-res-d-n dk-res-t-d-n">
+                            <div class="single-product-image">
+                                <a href="#"><img src="{{ asset('images/admin_images/product/book-4.jpg') }}" alt=""></a>
+                            </div>
+                            <div class="single-product-text edu-pro-tx">
+                                <h4><a href="#">Title Demo Here</a></h4>
+                                <h5>Lorem ipsum dolor sit amet, this is a consec tetur adipisicing elit</h5>
+                                <div class="product-price">
+                                    <h3>$45</h3>
+                                    <div class="single-item-rating">
+                                        <i class="educate-icon educate-star"></i>
+                                        <i class="educate-icon educate-star"></i>
+                                        <i class="educate-icon educate-star"></i>
+                                        <i class="educate-icon educate-star"></i>
+                                        <i class="educate-icon educate-star-half"></i>
+                                    </div>
+                                </div>
+                                <div class="product-buttons">
+                                    <button type="button" class="button-default cart-btn">Read More</button>
+                                    <button type="button" class="button-default"><i class="fa fa-heart"></i></button>
+                                    <button type="button" class="button-default"><i class="fa fa-share"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-sales-area mg-tb-30">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-9 col-md-12 col-sm-12 col-xs-12">
+                        <div class="product-sales-chart">
+                            <div class="portlet-title">
+                                <div class="row">
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                        <div class="caption pro-sl-hd">
+                                            <span class="caption-subject"><b>Adminsion Statistic</b></span>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                        <div class="actions graph-rp actions-graph-rp">
+                                            <a href="#" class="btn btn-dark btn-circle active tip-top" data-toggle="tooltip" title="Refresh">
+													<i class="fa fa-reply" aria-hidden="true"></i>
+												</a>
+                                            <a href="#" class="btn btn-blue-grey btn-circle active tip-top" data-toggle="tooltip" title="Delete">
+													<i class="fa fa-trash-o" aria-hidden="true"></i>
+												</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <ul class="list-inline cus-product-sl-rp">
+                                <li>
+                                    <h5><i class="fa fa-circle" style="color: #006DF0;"></i>Python</h5>
+                                </li>
+                                <li>
+                                    <h5><i class="fa fa-circle" style="color: #933EC5;"></i>PHP</h5>
+                                </li>
+                                <li>
+                                    <h5><i class="fa fa-circle" style="color: #65b12d;"></i>Java</h5>
+                                </li>
+                            </ul>
+                            <div id="morris-area-chart"></div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                        <div class="analysis-progrebar res-mg-t-30 mg-ub-10 res-mg-b-30 table-mg-t-pro-n tb-sm-res-d-n dk-res-t-d-n">
+                            <div class="analysis-progrebar-content">
+                                <h5>Usage</h5>
+                                <h2 class="storage-right"><span class="counter">90</span>%</h2>
+                                <div class="progress progress-mini ug-1">
+                                    <div style="width: 68%;" class="progress-bar"></div>
+                                </div>
+                                <div class="m-t-sm small">
+                                    <p>Server down since 1:32 pm.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="analysis-progrebar reso-mg-b-30 res-mg-b-30 mg-ub-10 tb-sm-res-d-n dk-res-t-d-n">
+                            <div class="analysis-progrebar-content">
+                                <h5>Memory</h5>
+                                <h2 class="storage-right"><span class="counter">70</span>%</h2>
+                                <div class="progress progress-mini ug-2">
+                                    <div style="width: 78%;" class="progress-bar"></div>
+                                </div>
+                                <div class="m-t-sm small">
+                                    <p>Server down since 12:32 pm.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="analysis-progrebar reso-mg-b-30 res-mg-b-30 res-mg-t-30 mg-ub-10 tb-sm-res-d-n dk-res-t-d-n">
+                            <div class="analysis-progrebar-content">
+                                <h5>Data</h5>
+                                <h2 class="storage-right"><span class="counter">50</span>%</h2>
+                                <div class="progress progress-mini ug-3">
+                                    <div style="width: 38%;" class="progress-bar progress-bar-danger"></div>
+                                </div>
+                                <div class="m-t-sm small">
+                                    <p>Server down since 8:32 pm.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="analysis-progrebar res-mg-t-30 table-dis-n-pro tb-sm-res-d-n dk-res-t-d-n">
+                            <div class="analysis-progrebar-content">
+                                <h5>Space</h5>
+                                <h2 class="storage-right"><span class="counter">40</span>%</h2>
+                                <div class="progress progress-mini ug-4">
+                                    <div style="width: 28%;" class="progress-bar progress-bar-danger"></div>
+                                </div>
+                                <div class="m-t-sm small">
+                                    <p>Server down since 5:32 pm.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="courses-area mg-b-15">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                        <div class="white-box">
+                            <h3 class="box-title">Browser Status</h3>
                             <ul class="basic-list">
-                                <li><img src="{{ asset('images/admin_images/chrome.png') }}" alt="chrome"> Chrome
-                                    <span class="right label bg-success pull-right">42.8%</span></li>
-                                <li><img src="{{ asset('images/admin_images/firefox.png') }}" alt="firefox">Firefox
-                                    <span class="right label bg-danger pull-right">16.9%</span></li>
-                                <li><img src="{{ asset('images/admin_images/safari.png') }}" alt="safari">Safari
-                                    <span class="right label bg-primary pull-right">15.5%</span></li>
-                                <li><img src="{{ asset('images/admin_images/opera.png') }}" alt="opera">Opera
-                                    <span class="right label bg-info pull-right">11.8%</span></li>
-                                <li><img src="{{ asset('images/admin_images/Ie.png') }}" alt="Internet Explorer">IE
-                                    <span class="right label bg-danger pull-right">3.2%</span></li>
-                                <li><img src="{{ asset('images/admin_images/mobile.png') }}" alt="mobile">Mobile
-                                    <span class="right label bg-warning pull-right">3%</span></li>
+                                <li>Google Chrome <span class="pull-right label-danger label-1 label">95.8%</span></li>
+                                <li>Mozila Firefox <span class="pull-right label-purple label-2 label">85.8%</span></li>
+                                <li>Apple Safari <span class="pull-right label-success label-3 label">23.8%</span></li>
+                                <li>Internet Explorer <span class="pull-right label-info label-4 label">55.8%</span></li>
+                                <li>Opera mini <span class="pull-right label-warning label-5 label">28.8%</span></li>
+                                <li>Mozila Firefox <span class="pull-right label-purple label-6 label">26.8%</span></li>
+                                <li>Safari <span class="pull-right label-purple label-7 label">31.8%</span></li>
                             </ul>
                         </div>
                     </div>
-                </div>
-                <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-12">
-                    <div class="card">
-                        <div class="card-header d-inline-block">
-                            <h3 class="card-title">Recent Activities</h3>
-                        </div>
-                        <div class="card-body">
-                            <ul class="auto-update">
+                    <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                        <div class="white-box res-mg-t-30 table-mg-t-pro-n">
+                            <h3 class="box-title">Visits from countries</h3>
+                            <ul class="country-state">
                                 <li>
-                                    <div class="activity">
-                                        <div class="activity-image pull-left">
-                                            <img src="{{ asset('images/admin_images/authors/avatar.jpg') }}" alt="profile-image"
-                                                 class="rounded-circle media-image">
-                                        </div>
-                                        <div class="activity-content pull-left">
-                                            <h5 class="heading text-primary">Praesent ornare nisl lorem</h5>
-                                            <p class="text-muted">
-                                                <small>7 min ago</small>
-                                            </p>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                                        </div>
+                                    <h2><span class="counter">1250</span></h2> <small>From Australia</small>
+                                    <div class="pull-right">75% <i class="fa fa-level-up text-danger ctn-ic-1"></i></div>
+                                    <div class="progress">
+                                        <div class="progress-bar progress-bar-danger ctn-vs-1" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:75%;"> <span class="sr-only">75% Complete</span></div>
                                     </div>
                                 </li>
                                 <li>
-                                    <div class="activity">
-                                        <div class="activity-image pull-left">
-                                            <img src="{{ asset('images/admin_images/authors/avatar2.jpg') }}" alt="profile-image"
-                                                 class="rounded-circle media-image">
-                                        </div>
-                                        <div class="activity-content pull-left">
-                                            <h5 class="heading text-primary">Nunc ultrices</h5>
-                                            <p class="text-muted">
-                                                <small>10 min ago</small>
-                                            </p>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                                        </div>
+                                    <h2><span class="counter">1050</span></h2> <small>From USA</small>
+                                    <div class="pull-right">48% <i class="fa fa-level-up text-success ctn-ic-2"></i></div>
+                                    <div class="progress">
+                                        <div class="progress-bar progress-bar-info ctn-vs-2" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:48%;"> <span class="sr-only">48% Complete</span></div>
                                     </div>
                                 </li>
                                 <li>
-                                    <div class="activity">
-                                        <div class="activity-image pull-left">
-                                            <img src="{{ asset('images/admin_images/authors/avatar3.jpg') }}" alt="profile-image"
-                                                 class="rounded-circle media-image">
-                                        </div>
-                                        <div class="activity-content pull-left">
-                                            <h5 class="heading text-primary">Praesent ornare nisl</h5>
-                                            <p class="text-muted">
-                                                <small>Yesterday at 10:20pm</small>
-                                            </p>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                                        </div>
+                                    <h2><span class="counter">6350</span></h2> <small>From Canada</small>
+                                    <div class="pull-right">55% <i class="fa fa-level-up text-success ctn-ic-3"></i></div>
+                                    <div class="progress">
+                                        <div class="progress-bar progress-bar-success ctn-vs-3" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:55%;"> <span class="sr-only">55% Complete</span></div>
                                     </div>
                                 </li>
                                 <li>
-                                    <div class="activity">
-                                        <div class="activity-image pull-left">
-                                            <img src="{{ asset('images/admin_images/authors/avatar4.jpg') }}" alt="profile-image"
-                                                 class="rounded-circle media-image">
-                                        </div>
-                                        <div class="activity-content pull-left">
-                                            <h5 class="heading text-primary">Nunc ultrices tortor eu</h5>
-                                            <p class="text-muted">
-                                                <small>2 days ago at 1:20pm</small>
-                                            </p>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                                        </div>
+                                    <h2><span class="counter">950</span></h2> <small>From India</small>
+                                    <div class="pull-right">33% <i class="fa fa-level-down text-success ctn-ic-4"></i></div>
+                                    <div class="progress">
+                                        <div class="progress-bar progress-bar-success ctn-vs-4" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:33%;"> <span class="sr-only">33% Complete</span></div>
                                     </div>
                                 </li>
                                 <li>
-                                    <div class="activity">
-                                        <div class="activity-image pull-left">
-                                            <img src="{{ asset('images/admin_images/authors/avatar5.jpg') }}" alt="profile-image"
-                                                 class="rounded-circle media-image">
-                                        </div>
-                                        <div class="activity-content pull-left">
-                                            <h5 class="heading text-primary">Praesent ornare nisl</h5>
-                                            <p class="text-muted">
-                                                <small>Just now</small>
-                                            </p>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="activity">
-                                        <div class="activity-image pull-left">
-                                            <img src="{{ asset('images/admin_images/authors/avatar7.jpg') }}" alt="profile-image"
-                                                 class="rounded-circle media-image">
-                                        </div>
-                                        <div class="activity-content pull-left">
-                                            <h5 class="heading text-primary">Nunc ultrices tortor eu massa</h5>
-                                            <p class="text-muted">
-                                                <small>2 min ago</small>
-                                            </p>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                                        </div>
+                                    <h2><span class="counter">3250</span></h2> <small>From Bangladesh</small>
+                                    <div class="pull-right">60% <i class="fa fa-level-up text-success ctn-ic-5"></i></div>
+                                    <div class="progress">
+                                        <div class="progress-bar progress-bar-inverse ctn-vs-5" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:60%;"> <span class="sr-only">60% Complete</span></div>
                                     </div>
                                 </li>
                             </ul>
                         </div>
                     </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-xl-6 col-lg-6 col-sm-12 col-12">
-                    <div class="card">
-                        <div class="card-header">
-                            <h3 class="card-title">Server Load</h3>
-                        </div>
-                        <div class="card-body">
-                            <div class="row">
-                                <div class="load-measure">
-                                    <h5>CPU Load:</h5>
-                                    <canvas id="cpu-load" height="300" width="300"></canvas>
-                                </div>
-                                <div class="load-measure">
-                                    <h5>Disk Space Used:</h5>
-                                    <canvas id="space-used" height="300" width="300"></canvas>
-                                </div>
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                        <div class="courses-inner res-mg-t-30 table-mg-t-pro-n tb-sm-res-d-n dk-res-t-d-n">
+                            <div class="courses-title">
+                                <a href="#"><img src="{{ asset('images/admin_images/courses/1.jpg') }}" alt="" /></a>
+                                <h2>Apps Development</h2>
                             </div>
-                        </div>
-
-                    </div>
-                </div>
-                <div class="col-xl-6 col-lg-6 col-sm-12 col-12">
-                    <div class="card panel-widget">
-                        <div class="card-header">
-                            <h3 class="card-title">To Do List</h3>
-                        </div>
-                        <div class="card-body tasks_list task-row">
-                            <form class="row list_of_items">
-                                <div class="todolist_list showactions">
-                                    <div class="col-md-9 col-sm-9 col-8 nopadmar custom_textbox1">
-                                        <div class="todoitemcheck checkbox checkbox-info">
-                                            <input type="checkbox" class="striked styled">
-                                            <label>
-                                            </label>
-                                        </div>
-                                        <div class="todotext  todoitemjs"> The Passage has a strong culture of volunteering
-                                        </div>
-                                    </div>
-                                    <div class="col-md-2  col-sm-2 col-3 todoitembtns">
-                                        <a href="#" class="tododelete redcolor pull-right">
-                                            <i class="fa fa-times showbtns" aria-hidden="true"></i>
-                                        </a>
-                                        <span class="striks pull-right showbtns">|</span>
-                                        <a href="#" class="todoedit pull-right">
-                                            <i class="fa fa-pencil showbtns" aria-hidden="true"></i>
-                                        </a>
-                                        <a href="#" class="un-do pull-right" hidden>
-                                            <i class="fa fa-repeat showbtns" aria-hidden="true"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="todolist_list showactions">
-                                    <div class="col-md-9 col-sm-9 col-8 nopadmar custom_textbox1">
-                                        <div class="todoitemcheck checkbox checkbox-info">
-                                            <input type="checkbox" class="striked">
-                                            <label>
-                                            </label>
-                                        </div>
-                                        <div class="todotext  todoitemjs">There are many variations of passages here
-                                        </div>
-                                    </div>
-                                    <div class="col-md-2  col-sm-2 col-3 todoitembtns">
-                                        <a href="#" class="tododelete redcolor pull-right">
-                                            <i class="fa fa-times showbtns" aria-hidden="true"></i>
-                                        </a>
-                                        <span class="striks pull-right showbtns">|</span>
-                                        <a href="#" class="todoedit pull-right">
-                                            <i class="fa fa-pencil showbtns" aria-hidden="true"></i>
-                                        </a>
-                                        <a href="#" class="un-do pull-right" hidden>
-                                            <i class="fa fa-repeat showbtns" aria-hidden="true"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="todolist_list showactions">
-                                    <div class="col-md-9 col-sm-9 col-8 nopadmar custom_textbox1">
-                                        <div class="todoitemcheck checkbox checkbox-info">
-                                            <input type="checkbox" class="striked">
-                                            <label>
-                                            </label>
-                                        </div>
-                                        <div class="todotext  todoitemjs">It has roots in a piece of classical Latin
-                                        </div>
-                                    </div>
-                                    <div class="col-md-2  col-sm-2 col-3 todoitembtns">
-                                        <a href="#" class="tododelete redcolor pull-right">
-                                            <i class="fa fa-times showbtns" aria-hidden="true"></i>
-                                        </a>
-                                        <span class="striks pull-right showbtns">|</span>
-                                        <a href="#" class="todoedit pull-right">
-                                            <i class="fa fa-pencil showbtns" aria-hidden="true"></i>
-                                        </a>
-                                        <a href="#" class="un-do pull-right" hidden>
-                                            <i class="fa fa-repeat showbtns" aria-hidden="true"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="todolist_list showactions">
-                                    <div class="col-md-9 col-sm-9 col-8 nopadmar custom_textbox1">
-                                        <div class="todoitemcheck checkbox checkbox-info">
-                                            <input type="checkbox" class="striked">
-                                            <label>
-                                            </label>
-                                        </div>
-                                        <div class="todotext  todoitemjs">Combined with a handful of model sentence
-                                        </div>
-                                    </div>
-                                    <div class="col-md-2  col-sm-2 col-3 todoitembtns">
-                                        <a href="#" class="tododelete redcolor pull-right">
-                                            <i class="fa fa-times showbtns" aria-hidden="true"></i>
-                                        </a>
-                                        <span class="striks pull-right showbtns">|</span>
-                                        <a href="#" class="todoedit pull-right">
-                                            <i class="fa fa-pencil showbtns" aria-hidden="true"></i>
-                                        </a>
-                                        <a href="#" class="un-do pull-right" hidden>
-                                            <i class="fa fa-repeat showbtns" aria-hidden="true"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </form>
-                            <div class="todolist_list adds task add_new">
-
-                                <form id="main_input_box" class="col-12 my-2 my-lg-0">
-                                    <div class="row">
-                                        <div class="form-group pull-left col-lg-9 col-md-8 col-sm-7 pr-md-0 col-12">
-                                            <label class="control-label sr-only" for="custom_textbox">Add Task</label>
-                                            <input id="custom_textbox" name="item" type="text" required
-                                                   placeholder="Add list item here" class="form-control mr-sm-2" aria-label="text"/>
-                                        </div>
-                                        <div class="col-lg-2 col-md-3 col-sm-3 pl-md-0  col-12">
-                                            <input type="submit" value="Add Task"
-                                                   class="btn btn-primary add_button add_task"/>
-                                            <input type="button" value="Save" class="btn btn-info save_todo"/>
-                                        </div>
-                                    </div>
-                                </form>
+                            <div class="courses-alaltic">
+                                <span class="cr-ic-r"><span class="course-icon"><i class="fa fa-clock"></i></span> 1 Year</span>
+                                <span class="cr-ic-r"><span class="course-icon"><i class="fa fa-heart"></i></span> 50</span>
+                                <span class="cr-ic-r"><span class="course-icon"><i class="fa fa-dollar"></i></span> 500</span>
                             </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row social_popup">
-                <div class="col-11 col-sm-10 col-md-6 offset-md-2 social_popup_icons">
-                    <div class="social-icons">
-                        <div><i class="fa fa-google google" aria-hidden="true"></i></div>
-                        <div><i class="fa fa-facebook facebook" aria-hidden="true"></i></div>
-                        <div><i class="fa fa-twitter twitter" aria-hidden="true"></i></div>
-                        <div><i class="fa fa-linkedin linkedin" aria-hidden="true"></i></div>
-                        <div><i class="fa fa-youtube-square youtube" aria-hidden="true"></i></div>
-                        <div><i class="fa fa-dribbble dribbble" aria-hidden="true"></i></div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- row -->
-            <div id="right">
-                <div id="slim2">
-                    <div class="rightsidebar-right">
-                        <div class="rightsidebar-right-content">
-                            <h5 class="rightsidebar-right-heading rightsidebar-right-heading-first text-uppercase text-xs">
-                                <i class="menu-icon  fa fa-fw fa-paw"></i> Contacts
-                            </h5>
-                            <ul class="list-unstyled margin-none">
-                                <li class="rightsidebar-contact-wrapper">
-                                    <a class="rightsidebar-contact" href="#">
-                                        <img src="{{ asset('images/admin_images/authors/avatar1.jpg') }}" height="20" width="20"
-                                             class="rounded-circle pull-right" alt="avatar-image">
-                                        <i class="fa fa-circle text-xs text-primary"></i> Alanis
-                                    </a>
-                                </li>
-                                <li class="rightsidebar-contact-wrapper">
-                                    <a class="rightsidebar-contact" href="#">
-                                        <img src="{{ asset('images/admin_images/authors/avatar.jpg') }}" height="20" width="20"
-                                             class="rounded-circle pull-right" alt="avatar-image">
-                                        <i class="fa fa-circle text-xs text-primary"></i> Rolando
-                                    </a>
-                                </li>
-                                <li class="rightsidebar-contact-wrapper">
-                                    <a class="rightsidebar-contact" href="#">
-                                        <img src="{{ asset('images/admin_images/authors/avatar2.jpg') }}" height="20" width="20"
-                                             class="rounded-circle pull-right" alt="avatar-image">
-                                        <i class="fa fa-circle text-xs text-primary"></i> Marlee
-                                    </a>
-                                </li>
-                                <li class="rightsidebar-contact-wrapper">
-                                    <a class="rightsidebar-contact" href="#">
-                                        <img src="{{ asset('images/admin_images/authors/avatar3.jpg') }}" height="20" width="20"
-                                             class="rounded-circle pull-right" alt="avatar-image">
-                                        <i class="fa fa-circle text-xs text-warning"></i> Marlee
-                                    </a>
-                                </li>
-                                <li class="rightsidebar-contact-wrapper">
-                                    <a class="rightsidebar-contact" href="#">
-                                        <img src="{{ asset('images/admin_images/authors/avatar4.jpg') }}" height="20" width="20"
-                                             class="rounded-circle pull-right" alt="avatar-image">
-                                        <i class="fa fa-circle text-xs text-danger"></i> Kamryn
-                                    </a>
-                                </li>
-                                <li class="rightsidebar-contact-wrapper">
-                                    <a class="rightsidebar-contact" href="#">
-                                        <img src="{{ asset('images/admin_images/authors/avatar5.jpg') }}" height="20" width="20"
-                                             class="rounded-circle pull-right" alt="avatar-image">
-                                        <i class="fa fa-circle text-xs text-muted"></i> Cielo
-                                    </a>
-                                </li>
-                                <li class="rightsidebar-contact-wrapper">
-                                    <a class="rightsidebar-contact" href="#">
-                                        <img src="{{ asset('images/admin_images/authors/avatar7.jpg') }}" height="20" width="20"
-                                             class="rounded-circle pull-right" alt="avatar-image">
-                                        <i class="fa fa-circle text-xs text-muted"></i> Charlene
-                                    </a>
-                                </li>
-                            </ul>
-                            <h5 class="rightsidebar-right-heading text-uppercase text-xs">
-                                <i class="fa fa-fw fa-tasks"></i> Tasks
-                            </h5>
-                            <ul class="list-unstyled m-t-25">
-                                <li>
-                                    <div>
-                                        <p>
-                                            <strong>Task 1</strong>
-                                            <small class="pull-right text-muted">
-                                                40% Complete
-                                            </small>
-                                        </p>
-                                        <div class="progress progress-xs progress-striped active">
-                                            <div class="progress-bar bg-success" role="progressbar"
-                                                 aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"
-                                                 style="width: 40%">
-                                                    <span class="sr-only">
-                                                        40% Complete (success)
-                                                    </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div>
-                                        <p>
-                                            <strong>Task 2</strong>
-                                            <small class="pull-right text-muted">
-                                                20% Complete
-                                            </small>
-                                        </p>
-                                        <div class="progress progress-xs progress-striped active">
-                                            <div class="progress-bar bg-info" role="progressbar"
-                                                 aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"
-                                                 style="width: 20%">
-                                                    <span class="sr-only">
-                                                        20% Complete
-                                                    </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div>
-                                        <p>
-                                            <strong>Task 3</strong>
-                                            <small class="pull-right text-muted">
-                                                60% Complete
-                                            </small>
-                                        </p>
-                                        <div class="progress progress-xs progress-striped active">
-                                            <div class="progress-bar bg-warning" role="progressbar"
-                                                 aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
-                                                 style="width: 60%">
-                                                    <span class="sr-only">
-                                                        60% Complete (warning)
-                                                    </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div>
-                                        <p>
-                                            <strong>Task 4</strong>
-                                            <small class="pull-right text-muted">
-                                                80% Complete
-                                            </small>
-                                        </p>
-                                        <div class="progress progress-xs progress-striped active">
-                                            <div class="progress-bar bg-danger" role="progressbar"
-                                                 aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"
-                                                 style="width: 80%">
-                                                    <span class="sr-only">
-                                                        80% Complete (danger)
-                                                    </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
-                            <h5 class="rightsidebar-right-heading text-uppercase text-xs">
-                                <i class="fa fa-fw fa-group"></i> Recent Activities
-                            </h5>
-                            <div>
-                                <ul class="list-unstyled">
-                                    <li class="rightsidebar-notification">
-                                        <a href="#">
-                                            <i class="fa fa-comment fa-fw text-primary"></i> New Comment
-                                        </a>
-                                    </li>
-                                    <li class="rightsidebar-notification">
-                                        <a href="#">
-                                            <i class="fa fa-twitter fa-fw text-success"></i> 3 New Followers
-                                        </a>
-                                    </li>
-                                    <li class="rightsidebar-notification">
-                                        <a href="#">
-                                            <i class="fa fa-envelope fa-fw text-info"></i> Message Sent
-                                        </a>
-                                    </li>
-                                    <li class="rightsidebar-notification">
-                                        <a href="#">
-                                            <i class="fa fa-tasks fa-fw text-warning"></i> New Task
-                                        </a>
-                                    </li>
-                                    <li class="rightsidebar-notification">
-                                        <a href="#">
-                                            <i class="fa fa-upload fa-fw text-danger"></i> Server Rebooted
-                                        </a>
-                                    </li>
-                                    <li class="rightsidebar-notification">
-                                        <a href="#">
-                                            <i class="fa fa-warning fa-fw text-primary"></i> Server Not Responding
-                                        </a>
-                                    </li>
-                                    <li class="rightsidebar-notification">
-                                        <a href="#">
-                                            <i class="fa fa-shopping-cart fa-fw text-success"></i> New Order Placed
-                                        </a>
-                                    </li>
-                                    <li class="rightsidebar-notification">
-                                        <a href="#">
-                                            <i class="fa fa-money fa-fw text-info"></i> Payment Received
-                                        </a>
-                                    </li>
-                                </ul>
+                            <div class="course-des">
+                                <p><span><i class="fa fa-clock"></i></span> <b>Duration:</b> 6 Months</p>
+                                <p><span><i class="fa fa-clock"></i></span> <b>Professor:</b> Jane Doe</p>
+                                <p><span><i class="fa fa-clock"></i></span> <b>Students:</b> 100+</p>
                             </div>
-                        </div>
-                    </div>
+                            <div class="product-buttons">
+                                <button type="button" class="button-default cart-btn">Read More</button>
+                            </div> --}}
+                        {{-- </div>
+                    </div> --}}
                 </div>
             </div>
-            <!-- right side bar end -->
-        </section>
-        <!-- /.content --> </aside>
-    <!-- /.right-side --> </div>
-<!-- ./wrapper -->
+        </div>
 @endsection
