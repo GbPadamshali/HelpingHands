@@ -36,7 +36,16 @@ Route::group(['prefix' => 'admin'], function(){
   Route::view('/add-doctor', 'admin.doctors.add-doctor');
   Route::view('/all-doctor', 'admin.doctors.all-doctor');
   Route::view('/edit-doctor', 'admin.doctors.edit-doctor');
-
+  Route::view('/add-admin', 'admin.admins.add-admin');
+  Route::view('/all-admin', 'admin.admins.all-admin');
+  Route::view('/edit-admin', 'admin.admins.edit-admin');
+  Route::view('/add-department', 'admin.departments.add-department');
+  Route::view('/all-department', 'admin.departments.all-department');
+  Route::view('/edit-department', 'admin.departments.edit-department');
+  Route::view('/add-role', 'admin.role.add-role');
+  Route::view('/all-role', 'admin.role.all-role');
+  Route::view('/edit-role', 'admin.role.edit-role');
+  
   // Auth Routes
 
   Route::group(['middleware' => 'auth'], function(){
