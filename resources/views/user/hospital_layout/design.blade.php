@@ -42,11 +42,11 @@
 </head>
 
 <body id='bg'>
-  @include('user.layout.header')
+  @include('user.hospital_layout.header')
 
   @yield('content')
 
-	@include('user.layout.footer')
+	@include('user.hospital_layout.footer')
 
 	<!-- scroll top button -->
 	<button class="scroltop fa fa-chevron-up" ></button>

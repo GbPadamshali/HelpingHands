@@ -27,6 +27,7 @@ Route::view('about-us', 'user.pages.about_us');
 Route::view('who-we-are', 'user.pages.who_we_are');
 Route::View('reports', 'user.hospital_layout.reports');
 Route::view('contact-us', 'user.pages.contact_us');
+Route::view('hospital-dashboard', 'user.hospital_pages.dashboard');
 Auth::routes();
 
 // Admin Routes Starts

@@ -36,7 +36,7 @@
                         <ul>
                             <li><i class="fa fa-map-marker"></i><strong>address</strong> Helping Hands </li>
                             <li><i class="fa fa-phone"></i><strong>phone</strong>0000-0000000 (24/7 Support Line)</li>
-                            <li><i class="fa fa-fax"></i><strong>Email</strong>info@helpinghands<br/>
+                            <li><i class="fa fa-fax"></i><strong>Email</strong>info@helpinghands.com<br/>
                           </li>
                         </ul>
                     </div>
