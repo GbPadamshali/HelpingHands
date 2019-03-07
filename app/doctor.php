@@ -19,6 +19,6 @@ class doctor extends Model
   protected $fillable = [
     'hospital_id', 'first_name', 'last_name', 'email', 'birthdate',
     'gender', 'joining_date', 'qualifiaction', 'specialization',
-    'experience', 'department_id', 'image_name', 'image_path'
+    'experience', 'department_id', 'image_name', 'image_path', 'address',
   ];
 }

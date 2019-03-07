@@ -1,12 +1,12 @@
 @extends('hospital.layout.design')
 @section('content')
 <div class="card-body">
-  <form id="validation-form">
+  <form id="validation-form" method="post" enctype="multipart/form-data" action="{{ route('doctors.store') }}"> {{ csrf_field() }}
 
     <div class="form-group">
       <label class="form-label">First_name</label>
       <input type="text" class="form-control" name="first_name" placeholder="Name">
-      
+
     </div>
     <div class="form-group">
       <label class="form-label">Last_name</label>
@@ -56,22 +56,22 @@
     </div>
     <div class="form-group">
       <label class="form-label">Select</label>
-      <select class="form-control" name="validation-select">
-<option value>Select Departmnet...</option>
-<optgroup label="Department">
-<option value="pitons">OPD</option>
-<option value="cams">ICU</option>
-<option value="nuts">laboratry</option>
-<option value="bolts">WARD</option>
-<option value="stoppers">laboratry</option>
-</optgroup>
+      <select class="form-control" name="department_id">
+        <option value>Select Departmnet...</option>
+        {{-- <optgroup label="Department"> --}}
+        <option value="OPD">OPD</option>
+        <option value="ICU">ICU</option>
+        <option value="Laboratry">Laboratry</option>
+        <option value="WARD">WARD</option>
+        <option value="Laboratry">Laboratry</option>
+        {{-- </optgroup> --}}
 
-</select>
+      </select>
     </div>
 
     <div class="form-group">
       <label class="form-label">Address</label>
-      <textarea class="form-control" name="Address"></textarea>
+      <textarea class="form-control" name="address"></textarea>
     </div>
     <div class="form-group">
       <label class="form-label">photo</label>
@@ -112,7 +112,7 @@
   									},
   									'first_name': {
   										required: true,
-  										minlength: 6,
+  										minlength: 3,
   										maxlength: 20
   									},
   									'last_name': {
