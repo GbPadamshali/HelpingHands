@@ -1,52 +1,52 @@
 @extends('hospital.layout.design')
 @section('content')
 <div class="card-body">
-  <form id="validation-form">
+  <form id="validation-form" method="post" enctype="multipart/form-data" action="{{ route('doctors.update', $doctor->id) }}"> {{ csrf_field() }}
 
     <div class="form-group">
-      <label class="form-label">First_name</label>
-      <input type="text" class="form-control" name="first_name" placeholder="Name">
+      <label class="form-label">First Name</label>
+      <input type="text" class="form-control" name="first_name" placeholder="Name" value="{{ $doctor->first_name }}">
 
     </div>
     <div class="form-group">
-      <label class="form-label">Last_name</label>
-      <input type="text" class="form-control" name="last_name" placeholder="Surname">
+      <label class="form-label">Last Name</label>
+      <input type="text" class="form-control" name="last_name" placeholder="Last Name" value="{{ $doctor->last_name }}">
     </div>
     <div class="form-group">
       <label class="form-label">Qualifiaction</label>
-      <input type="text" class="form-control" name="qualifiaction" placeholder="qualifiaction">
+      <input type="text" class="form-control" name="qualifiaction" placeholder="qualifiaction" value="{{ $doctor->qualifiaction }}">
     </div>
     <div class="form-group">
       <label class="form-label">Specialization</label>
-      <input type="text" class="form-control" name="specialization" placeholder="specialization">
+      <input type="text" class="form-control" name="specialization" placeholder="specialization" value="{{ $doctor->specialization }}">
     </div>
     <div class="form-group">
       <label class="form-label">Experience</label>
-      <input type="text" class="form-control" name="experience" placeholder="experience">
+      <input type="text" class="form-control" name="experience" placeholder="experience" value="{{ $doctor->experience }}">
     </div>
     <div class="form-group">
       <label class="form-label">Select</label>
-      <select class="form-control" name="validation-select">
-<option value>Select Departmnet...</option>
-<optgroup label="Department">
-<option value="pitons">OPD</option>
-<option value="cams">ICU</option>
-<option value="nuts">laboratry</option>
-<option value="bolts">WARD</option>
-<option value="stoppers">laboratry</option>
-</optgroup>
+      <select class="form-control" name="department_id">
+        <option value>Select Departmnet...</option>
+        {{-- <optgroup label="Department"> --}}
+        <option value="OPD">OPD</WARDoption>
+        <option value="ICU">ICU</option>
+        <option value="Laboratry">Laboratry</option>
+        <option value="WARD">WARD</option>
+        <option value="Laboratry">Laboratry</option>
+      {{-- </optgroup> --}}
 
-</select>
+    </select>
     </div>
 
     <div class="form-group">
       <label class="form-label">Address</label>
-      <textarea class="form-control" name="validation-Address"></textarea>
+      <textarea class="form-control" name="address">{{ $doctor->address }}</textarea>
     </div>
     <div class="form-group">
       <label class="form-label">photo</label>
       <div>
-        <input type="file" class="validation-file" name="image">
+        <input type="file" class="validation-file form-control" name="image">
       </div>
     </div>
       <button type="submit" class="btn btn-primary">Submit</button>
@@ -97,7 +97,7 @@
   										required: true,
 
   									},
-  									'validation-select': {
+  									'department_id': {
   										required: true
   									},
   									'validation-multiselect': {
@@ -111,7 +111,7 @@
   										required: true,
   										minlength: 2
   									},
-  									'validation-text': {
+  									'address': {
   										required: true
   									},
   									'validation-file': {
