@@ -16,7 +16,17 @@
 // });
 
 Route::view('user-login-page', 'user.auth.login');
-
+Route::view('dashboard', 'user.dashboard');
+Route::view('faq', 'user.pages.faq');
+Route::view('services', 'user.pages.services');
+Route::view('privacy-policy', 'user.pages.privacy_policy');
+Route::view('error-403', 'user.error.error_403');
+Route::view('error-404', 'user.error.error_404');
+Route::view('error-405', 'user.error.error_405');
+Route::view('about-us', 'user.pages.about_us');
+Route::view('who-we-are', 'user.pages.who_we_are');
+Route::View('reports', 'user.hospital_layout.reports');
+Route::view('contact-us', 'user.pages.contact_us');
 Auth::routes();
 
 // Admin Routes Starts
