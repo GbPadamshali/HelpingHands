@@ -63,10 +63,13 @@ Route::group(['prefix' => 'admin'], function(){
     Route::view('/all_hospital_staff', 'hospital.hospital_staff.all_hospital_staff');
     Route::view('/add_hospital_staff', 'hospital.hospital_staff.add_hospital_staff');
 
-    Route::resource('doctors', 'HospitalControllers\DoctorsController');
-    Route::resource('departments', 'HospitalControllers\DepartmentController');
     Route::view('/login', 'hospital.auth.login');
     Route::view('/register', 'hospital.auth.register');
+
+    Route::group(['middleware' => 'auth'], function(){
+      Route::resource('doctors', 'HospitalControllers\DoctorsController');
+      Route::resource('departments', 'HospitalControllers\DepartmentController');
+    });
   });
 
 
@@ -74,4 +77,4 @@ Route::group(['prefix' => 'admin'], function(){
 
 // Route::view('/login', 'admin.auth.login');
 
-Route::get('/home', 'HomeController@index')->name('home');
+// Route::get('/home', 'HomeController@index')->name('home');

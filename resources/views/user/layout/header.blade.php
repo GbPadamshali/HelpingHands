@@ -29,7 +29,7 @@
             <div class="main-bar clearfix ">
                 <div class="container clearfix">
                     <!-- website logo -->
-                    <div class="logo-header mostion"><a href="index-2.html"><img src="{{ asset('images/user_images/logo.png') }}" width="193" height="89" alt=""></a></div>
+                    <div class="logo-header mostion"><a href="index-2.html"><img src="{{ asset('images/user_images/logo.png') }}" width="193" height="89" alt="" style="height: 100px; width: 100px;"></a></div>
                     <!-- nav toggle button -->
 						<button class="navbar-toggler collapsed navicon justify-content-end" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
 							<span></span>

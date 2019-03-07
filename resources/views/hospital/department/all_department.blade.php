@@ -1,36 +1,26 @@
 @extends('hospital.layout.design')
 @section('content')
   <div class="card-body">
-    			<a class="btn btn-outline-primary btn-sm" href="{{ ('/add_department') }}">Add_department</a>
+    			<a class="btn btn-outline-primary btn-sm" href="{{ route('departments.create') }}">ADD DEPARTMENT</a><br><br>
     <table id="datatables-basic" class="table table-striped" style="width:100%">
       <thead>
         <tr>
-          <th>Department Name</th>
+          <th>Department</th>
           <th>Describtion</th>
           <th>Actions</th>
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td>Tiger Nixon</td>
-          <td>this is highly equpment laboratry</td>
-          <td><a href="#">edit</a>         \          <a href="#">delete</a></td>
-        </tr>
-        <tr>
-          <td>Garrett Winters</td>
-          <td>Accountant is my try </td>
-          <td><a href="#">edit</a>         \          <a href="#">delete</a></td>
-        </tr>
-
+        @foreach ($departments as $department)
+          <tr>
+            <td>{{ $department->department }}</td>
+            <td>{{ $department->description }}</td>
+            <td>	<a class="btn btn-outline-primary btn-sm" href="{{ route('departments.edit', $department->id) }}">EDIT</a>  <hr>  <a class="btn btn-outline-primary btn-sm" href="{{ route('departments.destroy', $department->id) }}">DELETE</a></td>
+          </tr>
+        @endforeach
       </tbody>
-      <tfoot>
-        <tr>
-          <th>Department Name</th>
-          <th>Describtion</th>
-           <th>Actions</th>
-        </tr>
-      </tfoot>
     </table>
+    {{ $departments->links() }}
         <script>
             document.addEventListener("DOMContentLoaded", function(event) {
               // Datatables basic

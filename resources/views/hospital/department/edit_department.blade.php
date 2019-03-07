@@ -1,16 +1,16 @@
 @extends('hospital.layout.design')
 @section('content')
 <div class="card-body">
-  <form id="validation-form" method="post" action='{{ route('departments.store') }}'> {{ csrf_field() }}
+  <form id="validation-form" method="post" action='{{ route('departments.update', $department->id) }}'> {{ csrf_field() }}
 
     <div class="form-group">
       <label class="form-label">Department</label>
-      <input type="text" class="form-control" name="department" placeholder="Department">
+      <input type="text" class="form-control" name="department" placeholder="Department" value="{{ $department->department }}">
       {{-- <small class="form-text text-muted">Example block-level help text here.</small> --}}
     </div>
     <div class="form-group">
       <label class="form-label">Description</label>
-      <input type="textarea" class="form-control" name="description" placeholder="Description">
+      <input type="textarea" class="form-control" name="description" placeholder="Description" value="{{ $department->description }}">
     </div>
 
       <button type="submit" class="btn btn-primary">Submit</button>

@@ -16,7 +16,8 @@ class DepartmentController extends Controller
      */
     public function index()
     {
-        return redirect('hospital/all_department');
+        $departments = Department::where('hospital_id', Auth::User()->id)->paginate(2);
+        return view('hospital.department.all_department')->with(compact('departments'));
     }
 
     /**
@@ -26,7 +27,7 @@ class DepartmentController extends Controller
      */
     public function create()
     {
-        //
+        return view('hospital.department.add_department');
     }
 
     /**
@@ -37,7 +38,16 @@ class DepartmentController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $user = Auth::User()->id;
+        $input = $request->all();
+        $input['hospital_id'] = $user;
+        $department = Department::create($input);
+        if (!$department) {
+          return redirect()->back()->with('error', 'Requested department does not added successfully!!!');
+        } else {
+          return redirect('hospital/departments')->with('success', 'Requested department has been added successfully!!!');
+        }
+
     }
 
     /**
@@ -59,7 +69,8 @@ class DepartmentController extends Controller
      */
     public function edit($id)
     {
-        //
+        $department = Department::where('id', $id)->first();
+        return view('hospital.department.edit_department')->with(compact('department'));
     }
 
     /**
@@ -71,7 +82,14 @@ class DepartmentController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $input = $request->except('_token');
+        $department = Department::where('id', $id)->update($input);
+        if (!$department) {
+          return redirect()->back()->with('error', 'Requested department does not updated successfully!!!');
+        } else {
+          return redirect('hospital/departments')->with('success', 'Requested department has been updated successfully!!');
+        }
+
     }
 
     /**
@@ -82,6 +100,7 @@ class DepartmentController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $department = Department::where('id', $id)->delete();
+        return redirect('hospital/departments')->with('success', 'Requested department has been removed successfully!!!');
     }
 }
