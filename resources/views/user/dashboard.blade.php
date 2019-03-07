@@ -1,4 +1,5 @@
-
+@extends('user.layout.design')
+@section('content')
     <!-- Content -->
     <div class="page-content">
         <!-- Slider -->
@@ -345,36 +346,36 @@
 						<div class="counter-style-1 m-b30">
 							<div class="">
 								<i class="icon flaticon-bar-chart text-white"></i>
-								<span class="counter">7652</span>
+								<span class="counter">8</span>
 							</div>
-							<span class="counter-text">Completed Projects</span>
+							<span class="counter-text">Hospitals</span>
 						</div>
 					</div>
 					<div class="col-lg-3 col-md-6 col-sm-6">
 						<div class="counter-style-1 m-b30">
 							<div class="">
 								<i class="icon flaticon-social text-white"></i>
-								<span class="counter">4562</span>
+								<span class="counter">8</span>
 							</div>
-							<span class="counter-text">Happy Clients</span>
+							<span class="counter-text">Users</span>
 						</div>
 					</div>
 					<div class="col-lg-3 col-md-6 col-sm-6">
 						<div class="counter-style-1 m-b30">
 							<div class="">
 								<i class="icon flaticon-file text-white"></i>
-								<span class="counter">3569</span>
+								<span class="counter">7</span>
 							</div>
-							<span class="counter-text">Questions Answered</span>
+							<span class="counter-text">Locations</span>
 						</div>
 					</div>
 					<div class="col-lg-3 col-md-6 col-sm-6">
 						<div class="counter-style-1 m-b30">
 							<div class="">
 								<i class="icon flaticon-pencil text-white"></i>
-								<span class="counter">2089</span>
+								<span class="counter">7</span>
 							</div>
-							<span class="counter-text">Ordered Coffee's</span>
+							<span class="counter-text">Recnetly Added's</span>
 						</div>
 					</div>
 				</div>
@@ -457,7 +458,7 @@
         <div class="section-full content-inner bg-gray">
             <div class="container">
                 <div class="section-head text-center ">
-                    <h3 class="h3 text-uppercase">Meet Our  <span class="text-primary">Doctors</span></h3>
+                    <h3 class="h3 text-uppercase">New Added  <span class="text-primary">Hospitals</span></h3>
                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry has been the industry's standard dummy text ever since the been when an unknown printer.</p>
                 </div>
                 <div class="section-content text-center ">
@@ -466,13 +467,13 @@
 							<div class="dez-box">
 								<div class="dez-media"> <a href="#"><img src="{{ asset('images/user_images/our-team/pic13.jpg') }}" alt=""></a> </div>
 								<div class="dez-info p-a30 bg-white">
-									<h4 class="dez-title m-t0 m-b15"><a href="#">Nashid Martines</a></h4>
-									<ul class="dez-social-icon border dez-social-icon-lg">
+									<h4 class="dez-title m-t0 m-b15"><a href="#">Shalby Hospitals</a></h4>
+									{{-- <ul class="dez-social-icon border dez-social-icon-lg">
 										<li><a href="javascript:void(0);" class="fa fa-facebook fb-btn"></a></li>
 										<li><a href="javascript:void(0);" class="fa fa-twitter tw-btn"></a></li>
 										<li><a href="javascript:void(0);" class="fa fa-linkedin link-btn"></a></li>
 										<li><a href="javascript:void(0);" class="fa fa-pinterest-p pin-btn"></a></li>
-									</ul>
+									</ul> --}}
 								</div>
 							</div>
 						</div>
@@ -481,13 +482,13 @@
 							<div class="dez-box">
 								<div class="dez-media"> <a href="#"><img src="{{ asset('images/user_images/our-team/pic14.jpg') }}" alt=""></a> </div>
 								<div class="dez-info p-a30 bg-white">
-									<h4 class="dez-title m-t0 m-b15"><a href="#">Nashid Martines</a></h4>
-									<ul class="dez-social-icon border dez-social-icon-lg">
+									<h4 class="dez-title m-t0 m-b15"><a href="#">Vedant Multispeciality</a></h4>
+									{{-- <ul class="dez-social-icon border dez-social-icon-lg">
 										<li><a href="javascript:void(0);" class="fa fa-facebook fb-btn"></a></li>
 										<li><a href="javascript:void(0);" class="fa fa-twitter tw-btn"></a></li>
 										<li><a href="javascript:void(0);" class="fa fa-linkedin link-btn"></a></li>
 										<li><a href="javascript:void(0);" class="fa fa-pinterest-p pin-btn"></a></li>
-									</ul>
+									</ul> --}}
 								</div>
 							</div>
 						</div>
@@ -496,13 +497,13 @@
 							<div class="dez-box">
 								<div class="dez-media"> <a href="#"><img src="{{ asset('images/user_images/our-team/pic15.jpg') }}" alt=""></a> </div>
 								<div class="dez-info p-a30 bg-white">
-									<h4 class="dez-title m-t0 m-b15"><a href="#">Nashid Martines</a></h4>
-									<ul class="dez-social-icon border dez-social-icon-lg">
+									<h4 class="dez-title m-t0 m-b15"><a href="#">Uma hospital</a></h4>
+									{{-- <ul class="dez-social-icon border dez-social-icon-lg">
 										<li><a href="javascript:void(0);" class="fa fa-facebook fb-btn"></a></li>
 										<li><a href="javascript:void(0);" class="fa fa-twitter tw-btn"></a></li>
 										<li><a href="javascript:void(0);" class="fa fa-linkedin link-btn"></a></li>
 										<li><a href="javascript:void(0);" class="fa fa-pinterest-p pin-btn"></a></li>
-									</ul>
+									</ul> --}}
 								</div>
 							</div>
 						</div>
@@ -511,13 +512,13 @@
 							<div class="dez-box">
 								<div class="dez-media"> <a href="#"><img src="{{ asset('images/user_images/our-team/pic16.jpg') }}" alt=""></a> </div>
 								<div class="dez-info p-a30 bg-white">
-									<h4 class="dez-title m-t0 m-b15"><a href="#">Nashid Martines</a></h4>
-									<ul class="dez-social-icon border dez-social-icon-lg">
+									<h4 class="dez-title m-t0 m-b15"><a href="#">Setu Surgical Hospital</a></h4>
+									{{-- <ul class="dez-social-icon border dez-social-icon-lg">
 										<li><a href="javascript:void(0);" class="fa fa-facebook fb-btn"></a></li>
 										<li><a href="javascript:void(0);" class="fa fa-twitter tw-btn"></a></li>
 										<li><a href="javascript:void(0);" class="fa fa-linkedin link-btn"></a></li>
 										<li><a href="javascript:void(0);" class="fa fa-pinterest-p pin-btn"></a></li>
-									</ul>
+									</ul> --}}
 								</div>
 							</div>
 						</div>
@@ -530,7 +531,7 @@
 		<div class="section-full bg-white content-inner-1 bg-img-fix overlay-black-dark" style="background-image:url(images/user_images/background/bg1.jpg);">
             <div class="container">
                 <div class="section-head text-center text-white">
-                    <h3 class="h3 text-uppercase">Recent Blog</h3>
+                    <h3 class="h3 text-uppercase">Popular Hospital</h3>
                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry has been the industry's standard dummy text ever since the been when an unknown printer.</p>
                 </div>
                 <div class="section-content">
@@ -541,16 +542,16 @@
 									<a href="#"><img src="{{ asset('images/user_images/our-services/service/pic2.jpg') }}" alt=""></a>
 								</div>
 								<div class="dez-info p-a20 border-1 bg-white">
-									<h4 class="dez-title m-t15"><a href="#">Provide qualtiy productivity..</a></h4>
+									<h4 class="dez-title m-t15"><a href="#">Uma Hospital</a></h4>
 									<p class="m-b10">Lorem ipsum dolor Fusce varius euismod lacus eget feugiat rorem ipsum dolor consectetur Fusce varius [...]</p>
 									<a href="#" class="site-button-link black m-b10">Read More</a>
 									<div class="dez-divider bg-gray m10"><i class="icon-dot c-square"></i></div>
 									<div class="dez-post-meta ">
-                                        <ul>
+                                        {{-- <ul>
                                             <li class=""> <i class="fa fa-calendar"></i><strong>10 Aug</strong> <span> 2016</span> </li>
                                             <li class="post-author"><i class="fa fa-user"></i>By <a href="#">Jone</a> </li>
                                             <li class="post-comment"><i class="fa fa-comments"></i> <a href="#">0</a> </li>
-                                        </ul>
+                                        </ul> --}}
                                     </div>
 								</div>
 							</div>
@@ -561,16 +562,16 @@
 									<a href="#"><img src="{{ asset('images/user_images/our-services/service/pic3.jpg') }}" alt=""></a>
 								</div>
 								<div class="dez-info p-a20 border-1 bg-white">
-									<h4 class="dez-title m-t15"><a href="#">Provide qualtiy productivity..</a></h4>
+									<h4 class="dez-title m-t15"><a href="#">Vedant Multispeciality</a></h4>
 									<p class="m-b10">Lorem ipsum dolor Fusce varius euismod lacus eget feugiat rorem ipsum dolor consectetur Fusce varius [...]</p>
 									<a href="#" class="site-button-link black m-b10">Read More</a>
 									<div class="dez-divider bg-gray m10"><i class="icon-dot c-square"></i></div>
 									<div class="dez-post-meta ">
-                                        <ul>
+                                        {{-- <ul>
                                             <li class=""> <i class="fa fa-calendar"></i><strong>10 Aug</strong> <span> 2016</span> </li>
                                             <li class="post-author"><i class="fa fa-user"></i>By <a href="#">Jone</a> </li>
                                             <li class="post-comment"><i class="fa fa-comments"></i> <a href="#">0</a> </li>
-                                        </ul>
+                                        </ul> --}}
                                     </div>
 								</div>
 							</div>
@@ -581,16 +582,16 @@
 									<a href="#"><img src="{{ asset('images/user_images/our-services/service/pic4.jpg') }}" alt=""></a>
 								</div>
 								<div class="dez-info p-a20 border-1 bg-white">
-									<h4 class="dez-title m-t15"><a href="#">Provide qualtiy productivity..</a></h4>
+									<h4 class="dez-title m-t15"><a href="#">Shalby Hospital</a></h4>
 									<p class="m-b10">Lorem ipsum dolor Fusce varius euismod lacus eget feugiat rorem ipsum dolor consectetur Fusce varius [...]</p>
 									<a href="#" class="site-button-link black m-b10">Read More</a>
 									<div class="dez-divider bg-gray m10"><i class="icon-dot c-square"></i></div>
 									<div class="dez-post-meta ">
-                                        <ul>
+                                        {{-- <ul>
                                             <li class=""> <i class="fa fa-calendar"></i><strong>10 Aug</strong> <span> 2016</span> </li>
                                             <li class="post-author"><i class="fa fa-user"></i>By <a href="#">Jone</a> </li>
                                             <li class="post-comment"><i class="fa fa-comments"></i> <a href="#">0</a> </li>
-                                        </ul>
+                                        </ul> --}}
                                     </div>
 								</div>
 							</div>
@@ -716,48 +717,5 @@
     </div>
     <!-- Content END-->
 
-    <!-- scroll top button -->
-    <button class="scroltop fa fa-chevron-up" ></button>
-</div>
-<!-- JavaScript  files ========================================= -->
-<script src="{{ asset('js/user_js/jquery.min.js') }}"></script><!-- JQUERY.MIN JS -->
-<script src="{{ asset('user_plugins/bootstrap/js/popper.min.js') }}"></script><!-- BOOTSTRAP.MIN JS -->
-<script src="{{ asset('user_plugins/bootstrap/js/bootstrap.min.js') }}"></script><!-- BOOTSTRAP.MIN JS -->
-<script src="{{ asset('user_plugins/bootstrap-select/bootstrap-select.min.js') }}"></script><!-- FORM JS -->
-<script src="{{ asset('user_plugins/bootstrap-touchspin/jquery.bootstrap-touchspin.js') }}"></script><!-- FORM JS -->
-<script src="{{ asset('user_plugins/magnific-popup/magnific-popup.js') }}"></script><!-- MAGNIFIC POPUP JS -->
-<script src="{{ asset('user_plugins/counter/waypoints-min.js') }}"></script><!-- WAYPOINTS JS -->
-<script src="{{ asset('user_plugins/counter/counterup.min.js') }}"></script><!-- COUNTERUP JS -->
-<script src="{{ asset('user_plugins/imagesloaded/imagesloaded.js') }}"></script><!-- IMAGESLOADED -->
-<script src="{{ asset('user_plugins/masonry/masonry-3.1.4.js') }}"></script><!-- MASONRY -->
-<script src="{{ asset('user_plugins/masonry/masonry.filter.js') }}"></script><!-- MASONRY -->
-<script src="{{ asset('user_plugins/owl-carousel/owl.carousel.js') }}"></script><!-- OWL SLIDER -->
-<script src="{{ asset('js/user_js/custom.js') }}"></script><!-- CUSTOM FUCTIONS  -->
-<script src="{{ asset('js/user_js/dz.carousel.js') }}"></script><!-- SORTCODE FUCTIONS  -->
-{{-- <script src="./../www.google.com/recaptcha/api.js'></script> <!-- Google API For Recaptcha  --> --}}
-<script src=" {{ asset('js/user_js/dz.ajax.js') }}"></script><!-- CONTACT JS  -->
-<script src="{{ asset('user_plugins/switcher/js/switcher.js') }}"></script><!-- SWITCHER JS  -->
-<!-- revolution JS FILES -->
-<script  src="{{ asset('user_plugins/revolution/revolution/js/jquery.themepunch.tools.min.js') }}"></script>
-<script  src="{{ asset('user_plugins/revolution/revolution/js/jquery.themepunch.revolution.min.js') }}"></script>
-<!-- Slider revolution 5.0 Extensions  (Load Extensions only on Local File Systems !  The following part can be removed on Server for On Demand Loading) -->
-<script  src="{{ asset('user_plugins/revolution/revolution/js/extensions/revolution.extension.actions.min.js') }}"></script>
-<script  src="{{ asset('user_plugins/revolution/revolution/js/extensions/revolution.extension.carousel.min.js') }}"></script>
-<script  src="{{ asset('user_plugins/revolution/revolution/js/extensions/revolution.extension.kenburn.min.js') }}"></script>
-<script  src="{{ asset('user_plugins/revolution/revolution/js/extensions/revolution.extension.layeranimation.min.js') }}"></script>
-<script  src="{{ asset('user_plugins/revolution/revolution/js/extensions/revolution.extension.migration.min.js') }}"></script>
-<script  src="{{ asset('user_plugins/revolution/revolution/js/extensions/revolution.extension.navigation.min.js') }}"></script>
-<script  src="{{ asset('user_plugins/revolution/revolution/js/extensions/revolution.extension.parallax.min.js') }}"></script>
-<script  src="{{ asset('user_plugins/revolution/revolution/js/extensions/revolution.extension.slideanims.min.js') }}"></script>
-<script  src="{{ asset('user_plugins/revolution/revolution/js/extensions/revolution.extension.video.min.js') }}"></script>
-<script  src="{{ asset('js/user_js/rev.slider.js') }}"></script>
-<script>
-jQuery(document).ready(function() {
-	'use strict';
-	dz_rev_slider_2();
-});	/*ready*/
-</script>
-</body>
 
-<!-- Mirrored from medico.dexignlab.com/xhtml/index-5.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 23 Feb 2019 10:55:45 GMT -->
-</html>
+@endsection

@@ -7,7 +7,7 @@
                 <div class="row d-flex justify-content-between">
                     <div class="dez-topbar-left">
                         <ul class="social-line text-center pull-right">
-                            <li><a href="javascript:void(0);"><i class="fa fa-phone"></i> <span>+0 123-456-7890</span> </a></li>
+                            <li><a href="javascript:void(0);"><i class="fa fa-phone"></i> <span>+0 000-000-0000</span> </a></li>
                             <li><a href="{{ url('/dashboard') }}"><i class="fa fa-clock-o"></i> <span>helpinghands.com</span></a></li>
                             {{-- <li><a href="javascript:void(0);"><i class="fa fa-envelope-o"></i> <span>Mon - Fri: 08.00 - 17.00</span></a></li> --}}
                         </ul>
