@@ -22,7 +22,7 @@
 
 	<!-- PAGE TITLE HERE -->
 	<title>Helping Hands</title>
-
+{{-- yo --}}
 	<!-- MOBILE SPECIFIC -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
