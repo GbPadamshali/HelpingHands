@@ -1,9 +1,10 @@
-<div class="footer-copyright-area" style="margin-bottom: 0">
+{{-- <div class="footer-copyright-area" style="bottom: 0; width: 80%;"> --}}
+<div class="footer-copyright-area">
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-12">
                 <div class="footer-copy-right">
-                    <p>Presented by <a href="{{ url('/dashboard') }}">Tournament</a></p>
+                    <p>Designed & Developed by <a href="{{ url('admin/dashboard') }}"><b>HelpingHands</b></a></p>
                 </div>
             </div>
         </div>

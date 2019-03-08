@@ -15,6 +15,8 @@
 //     return view('welcome');
 // });
 
+Route::permanentRedirect('/', '/dashboard');
+
 Route::view('user-login-page', 'user.auth.login');
 Route::view('dashboard', 'user.dashboard');
 Route::view('faq', 'user.pages.faq');
@@ -31,6 +33,7 @@ Route::view('hospital-dashboard', 'user.hospital_pages.dashboard');
 Auth::routes();
 
 // Admin Routes Starts
+// Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'admin']], function(){
 Route::group(['prefix' => 'admin'], function(){
   // Auth Routes
   Route::get('/login', 'AdminControllers\AdminAuthController@ShowLoginForm');
@@ -56,12 +59,13 @@ Route::group(['prefix' => 'admin'], function(){
   Route::view('/add-role', 'admin.role.add-role');
   Route::view('/all-role', 'admin.role.all-role');
   Route::view('/edit-role', 'admin.role.edit-role');
-  
+
   // Auth Routes
 
-  Route::group(['middleware' => 'auth'], function(){
+  Route::group(['middleware' => ['auth', 'admin']], function(){
     Route::match(['get', 'post'], '/dashboard', 'AdminControllers\AdminAuthController@Dashboard')->name('admin.dashboard');
     Route::resource('admins', 'AdminControllers\AdminsController');
+    Route::resource('ad-doctors', 'AdminControllers\DoctorController');
   });
 });
 // Admin Routes end
