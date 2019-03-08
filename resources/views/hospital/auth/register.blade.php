@@ -34,33 +34,33 @@
 									<form  id="validation-form">
 										<div class="form-group">
 											<label>Name</label>
-											<input class="form-control form-control-lg" type="text" name="hospital name" placeholder="Enter your hospital name" />
+											<input class="form-control form-control-lg" type="text" name="hospital name" placeholder="Enter your hospital name"  required/>
 										</div>
 										 <div class="form-group">
                                     <label >Text area</label>
 
-                                        <textarea class="form-control" rows="5" name="hospital address" placeholder="Enter your hospital address"  ></textarea>
+                                        <textarea class="form-control" rows="5" name="hospital address" placeholder="Enter your hospital address"  required></textarea>
                                     </div>
 										<div class="form-group">
 											<label>Registration no.</label>
-											<input class="form-control form-control-lg" type="text" name="reg.no." placeholder="Enter your hospital gov registration number" />
+											<input class="form-control form-control-lg" type="text" name="reg.no." placeholder="Enter your hospital gov registration number" required/>
 										</div>
 										<div class="form-group">
 											<label>Email</label>
-											<input class="form-control form-control-lg" type="email" name="email" placeholder="Enter your email" />
+											<input class="form-control form-control-lg" type="email" name="email" placeholder="Enter your email" required/>
 										</div>
 										<div class="form-group">
 											<label>Phone No.</label>
-											<input class="form-control form-control-lg" type="tel" name="phoneno." placeholder="Enter your phone number" />
+											<input class="form-control form-control-lg" type="tel" name="phoneno." placeholder="Enter your phone number" required/>
 										</div>
 
 										<div class="form-group">
 											<label>Password</label>
-											<input class="form-control form-control-lg" type="password" name="password" placeholder="Enter password" />
+											<input class="form-control form-control-lg" type="password" name="password" placeholder="Enter password" required/>
 										</div>
 										<label>comformPassword</label>
 										 <div class="form-group">
-                                            <input class="form-control" type="password" required="" placeholder="Confirm Password">
+                                            <input class="form-control" type="password" required="" placeholder="Confirm Password" required>
                                          </div>
                                    </div>
                     <div class="form-group">

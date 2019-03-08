@@ -17,15 +17,14 @@
           </div>
         </a>
         <a class="nav-link nav-link-user dropdown-toggle d-none d-sm-inline-block" href="#" data-toggle="dropdown">
-          <img src="{{ asset('images/hospital_images/avatars/avatar-5.jpg' )}}" class="avatar img-fluid rounded mr-1" alt="Kathy Davis" /> <span class="text-dark">Kathy Davis</span>
+          <img src="{{ asset('images/user_images/hospital_logo/logo1.png' )}}" class="avatar img-fluid rounded mr-1" alt="ABC hospital" /> <span class="text-dark">ABC hospital</span>
         </a>
         <div class="dropdown-menu dropdown-menu-right">
           <a class="dropdown-item" href="pages-profile.html">Profile</a>
-          <a class="dropdown-item" href="#">Analytics</a>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="pages-settings.html">Settings & Privacy</a>
+          <a class="dropdown-item" href="pages-settings.html">settings</a>
           <a class="dropdown-item" href="#">Help</a>
-          <a class="dropdown-item" href="#">Sign out</a>
+          <a class="dropdown-item" href="#">logout</a>
         </div>
       </li>
 
