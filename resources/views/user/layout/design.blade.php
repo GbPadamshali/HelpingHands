@@ -21,6 +21,7 @@
 	<link rel="shortcut icon" type="image/x-icon" href="{{ asset('images/user_images/favicons/favicon-96x96.png') }}" />
 
 	<!-- PAGE TITLE HERE -->
+	{{-- only comment --}}
 	<title>Helping Hands</title>
 {{-- yo --}}
 	<!-- MOBILE SPECIFIC -->

@@ -1,10 +1,10 @@
-@extends('admin_layout.design')
+@extends('admin.layout.design')
 @section('content')
     <div class="row">
       <div class="content-error">
         <div class="hpanel">
                     <div class="panel-body">
-                        <form action="{{ route('teams.store') }}" id="loginForm" method="post" enctype="multipart/form-data">
+                        <form action="{{ url('#') }}" id="loginForm" method="post" enctype="multipart/form-data">
                           {{ csrf_field() }}
                           <div class="text-left">
                             <h3><u>ADD TEAM</u></h3>

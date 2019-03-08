@@ -27,6 +27,11 @@
                           <span class="educate-icon educate-student icon-wrap sub-icon-mg" aria-hidden="true"></span>
                           <span class="mini-click-non">Teams</span></a>
                     </li>
+                    <li>
+                        <a title="User" href="{{ url('admin/all-user') }}" aria-expanded="false">
+                          <span class="educate-icon educate-student icon-wrap sub-icon-mg" aria-hidden="true"></span>
+                          <span class="mini-click-non">user</span></a>
+                    </li>
                     {{-- <li>
                         <a title="Tournaments" href="{{ route('tournaments.index') }}" aria-expanded="false">
                           <span class="educate-icon educate-event icon-wrap sub-icon-mg" aria-hidden="true"></span>
@@ -86,6 +91,8 @@
                                             {{-- <li class="nav-item"><a href="{{ route('players.index') }}" class="nav-link">Players</a>
                                             </li> --}}
                                             <li class="nav-item"><a href="{{ url('#') }}" class="nav-link">Teams</a>
+                                            </li>
+                                            <li class="nav-item"><a href="{{ url('admin/all-user') }}" class="nav-link">Users</a>
                                             </li>
                                             {{-- <li class="nav-item"><a href="{{ route('tournaments.index') }}" class="nav-link">Tournament</a>
                                             </li>
@@ -223,7 +230,8 @@
                                             <li class="nav-item">
                                                 <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle">
                           <img src="{{ asset('images/admin_images/product/pro4.jpg') }}" alt="" />
-                          <span class="admin-name">{{ Auth::User()->name }}</span>
+
+                          <span class="admin-name">XYZ</span>
                           <i class="fa fa-angle-down edu-icon edu-down-arrow"></i>
                         </a>
                                                 <ul role="menu" class="dropdown-header-top author-log dropdown-menu animated zoomIn">
@@ -696,6 +704,7 @@
                                     <li><a href="{{ url('/dashboard') }}">Dashboard</a></li>
                                     {{-- <li><a href="{{ route('players.index') }}">Players</a></li> --}}
                                     <li><a href="{{ url('#') }}">Teams</a></li>
+                                    <li><a href="{{ url('admin/all-user') }}">Users</a></li>
                                     {{-- <li><a href="{{ route('tournaments.index') }}">Tournaments</a></li>
                                     <li><a href="{{ route('match.index') }}">Matches</a></li> --}}
                                     <li><a href="{{ route('admin.logout') }}">Logout</a></li>
