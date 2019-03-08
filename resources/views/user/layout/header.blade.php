@@ -61,6 +61,8 @@
 										                    <li><a href="index-6.html">5. Surgery Hospital</a></li>
                                     </ul> --}}
                                 </li>
+                                <li> <a href="{{ url('user-login-page') }}">LOGIN<i class="fa fa-chevron-down"></i></a> </li>
+                                <li> <a href="{{ url('user-signup-page') }}">SIGNUP<i class="fa fa-chevron-down"></i></a></li>
                                 {{-- <li> <a href="javascript:;">Features<i class="fa fa-chevron-down"></i></a>
                                     <ul class="sub-menu">
                                         <li> <a href="javascript:;">Header Style Light</a>

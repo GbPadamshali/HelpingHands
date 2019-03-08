@@ -15,11 +15,12 @@
 	<meta name="format-detection" content="telephone=no">
 
 	<!-- FAVICONS ICON -->
-	<link rel="icon" href="https://s3.ap-south-1.amazonaws.com/dzon-html/medico/xhtml/images/favicon.ico" type="image/x-icon" />
-	<link rel="shortcut icon" type="image/x-icon" href="{{ asset('images/user_images/favicon.png') }}" />
-
+	<link rel="icon" href="{{ asset('images/user_images/hospital_favicons/favicon.ico') }}" type="image/x-icon" />
+	<link rel="shortcut icon" type="image/x-icon" href="{{ asset('images/user_images/hospital_favicons/favicon-16x16.png') }}" />
+  <link rel="shortcut icon" type="image/x-icon" href="{{ asset('images/user_images/hospital_favicons/favicon-32x32.png') }}" />
+  <link rel="shortcut icon" type="image/x-icon" href="{{ asset('images/user_images/hospital_favicons/favicon-96x196.png') }}" />
 	<!-- PAGE TITLE HERE -->
-	<title>MediCo. - Doctor HTML Template</title>
+	<title>ABC. - Multispeciality Hospital</title>
 
 	<!-- MOBILE SPECIFIC -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">

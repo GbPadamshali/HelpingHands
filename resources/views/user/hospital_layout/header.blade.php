@@ -5,13 +5,13 @@
         <div class="top-bar">
             <div class="container">
                 <div class="row d-flex justify-content-between">
-                    <div class="dez-topbar-left">
+                    {{-- <div class="dez-topbar-left">
                         <ul class="social-line text-center pull-right">
                             <li><a href="javascript:void(0);"><i class="fa fa-phone"></i> <span>+0 000-000-0000</span> </a></li>
                             <li><a href="{{ url('/dashboard') }}"><i class="fa fa-clock-o"></i> <span>helpinghands.com</span></a></li>
-                            {{-- <li><a href="javascript:void(0);"><i class="fa fa-envelope-o"></i> <span>Mon - Fri: 08.00 - 17.00</span></a></li> --}}
+                            <li><a href="javascript:void(0);"><i class="fa fa-envelope-o"></i> <span>Mon - Fri: 08.00 - 17.00</span></a></li>
                         </ul>
-                    </div>
+                    </div> --}}
                     {{-- <div class="dez-topbar-right">
                         <ul class="social-line text-center pull-right">
                             <li><a href="javascript:void(0);" class="fa fa-facebook"></a></li>
@@ -29,7 +29,7 @@
             <div class="main-bar clearfix ">
                 <div class="container clearfix">
                     <!-- website logo -->
-                    <div class="logo-header mostion"><a href="index-2.html"><img src="{{ asset('images/user_images/logo.png') }}" width="193" height="89" alt=""></a></div>
+                    <div class="logo-header mostion"><a href="index-2.html"><img src="{{ asset('images/user_images/hospital_logo/logo1.png') }}" style="height: 80px; width: 100px;" alt=""></a></div>
                     <!-- nav toggle button -->
 						<button class="navbar-toggler collapsed navicon justify-content-end" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
 							<span></span>

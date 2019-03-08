@@ -16,6 +16,7 @@
 // });
 
 Route::view('user-login-page', 'user.auth.login');
+Route::view('user-signup-page', 'user.auth.signup');
 Route::view('dashboard', 'user.dashboard');
 Route::view('faq', 'user.pages.faq');
 Route::view('services', 'user.pages.services');
@@ -56,7 +57,7 @@ Route::group(['prefix' => 'admin'], function(){
   Route::view('/add-role', 'admin.role.add-role');
   Route::view('/all-role', 'admin.role.all-role');
   Route::view('/edit-role', 'admin.role.edit-role');
-  
+
   // Auth Routes
 
   Route::group(['middleware' => 'auth'], function(){

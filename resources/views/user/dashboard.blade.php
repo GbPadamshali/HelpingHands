@@ -53,8 +53,8 @@
 										data-paddingbottom="[0,0,0,0]"
 										data-paddingleft="[0,0,0,0]"
 
-										style="z-index: 5; min-width: 720px; max-width: 720px; white-space: normal; font-size: 60px; line-height: 70px;  color: rgba(255, 255, 255, 1.00);font-family:'Raleway',sans-serif;border-width:0px;letter-spacing:10px; font-weight:300;">WELCOME<br/>
-							 TO HOSPITAL</div>
+										style="z-index: 5; min-width: 720px; max-width: 720px; white-space: normal; font-size: 60px; line-height: 70px;  color: rgba(255, 255, 255, 1.00);font-family:'Raleway',sans-serif;border-width:0px;letter-spacing:10px; font-weight:300;">WELCOME TO<br/>
+							 HELPING HANDS</div>
 
 									<!-- LAYER NR. 2 -->
 									<div class="tp-caption   rs-parallaxlevel-4"
@@ -99,10 +99,10 @@
 										data-paddingbottom="[0,0,0,0]"
 										data-paddingleft="[30,30,30,30]"
 
-										style="z-index: 7; white-space: nowrap; font-size: 15px; line-height: 40px; font-weight: 700; color: rgba(0, 0, 0, 1.00);font-family:'Raleway',sans-serif;background-color:rgba(255, 255, 255, 1.00);border-color:rgba(0, 0, 0, 1.00);border-width:0px;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;">READ MORE </div>
+										style="z-index: 7; white-space: nowrap; font-size: 15px; line-height: 40px; font-weight: 700; color: rgba(0, 0, 0, 1.00);font-family:'Raleway',sans-serif;background-color:rgba(255, 255, 255, 1.00);border-color:rgba(0, 0, 0, 1.00);border-width:0px;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;">EXPLORE </div>
 								</li>
 								<!-- SLIDE  -->
-								<li data-index="rs-3240" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="default"  data-thumb="images/user_images/main-slider/slide9.jpg"  data-rotate="0"  data-saveperformance="off"  data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+								{{-- <li data-index="rs-3240" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="default"  data-thumb="images/user_images/main-slider/slide9.jpg"  data-rotate="0"  data-saveperformance="off"  data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
 									<!-- MAIN IMAGE -->
 									<img src="{{ asset('/images/user_images/main-slider/slide9.jpg') }}"  alt=""  data-lazyload="images/user_images/main-slider/slide9.jpg" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="3" class="rev-slidebg" data-no-retina>
 									<!-- LAYERS -->
@@ -145,8 +145,8 @@
 										data-paddingbottom="[0,0,0,0]"
 										data-paddingleft="[0,0,0,0]"
 
-										style="z-index: 8; min-width: 720px; max-width: 720px; white-space: normal; font-size: 60px; line-height: 70px; font-weight: 300; color: rgba(255, 255, 255, 1.00);font-family:'Raleway',sans-serif;border-width:0px;letter-spacing:10px;">WELCOME<br/>
-							 TO HOSPITAL</div>
+										style="z-index: 8; min-width: 720px; max-width: 720px; white-space: normal; font-size: 60px; line-height: 70px; font-weight: 300; color: rgba(255, 255, 255, 1.00);font-family:'Raleway',sans-serif;border-width:0px;letter-spacing:10px;">WELCOME TO<br/>
+							 HELPING HANDS</div>
 
 									<!-- LAYER NR. 5 -->
 									<div class="tp-caption   rs-parallaxlevel-4"
@@ -191,10 +191,10 @@
 										data-paddingbottom="[0,0,0,0]"
 										data-paddingleft="[30,30,30,30]"
 
-										style="z-index: 10; white-space: nowrap; font-size: 15px; line-height: 40px; font-weight: 700; color: rgba(0, 0, 0, 1.00);font-family:'Raleway',sans-serif;background-color:rgba(255, 255, 255, 1.00);border-color:rgba(0, 0, 0, 1.00);border-width:0px;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;">READ MORE </div>
-								</li>
+										style="z-index: 10; white-space: nowrap; font-size: 15px; line-height: 40px; font-weight: 700; color: rgba(0, 0, 0, 1.00);font-family:'Raleway',sans-serif;background-color:rgba(255, 255, 255, 1.00);border-color:rgba(0, 0, 0, 1.00);border-width:0px;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;">EXPLORE </div>
+								</li> --}}
 								<!-- SLIDE  -->
-								<li data-index="rs-3241" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="default"  data-thumb="images/main-slider/slide10.jpg"  data-rotate="0"  data-saveperformance="off"  data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+								{{-- <li data-index="rs-3241" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="default"  data-thumb="images/main-slider/slide10.jpg"  data-rotate="0"  data-saveperformance="off"  data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
 									<!-- MAIN IMAGE -->
 									<img src="{{ asset('images/user_images/main-slider/slide10.jpg') }}"  alt=""  data-lazyload="images/user_images/main-slider/slide10.jpg" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="3" class="rev-slidebg" data-no-retina>
 									<!-- LAYERS -->
@@ -237,8 +237,8 @@
 										data-paddingbottom="[0,0,0,0]"
 										data-paddingleft="[0,0,0,0]"
 
-										style="z-index: 11; min-width: 720px; max-width: 720px; white-space: normal; font-size: 60px; line-height: 70px; font-weight: 300; color: rgba(255, 255, 255, 1.00);font-family:'Raleway',sans-serif;border-width:0px;letter-spacing:10px;">WELCOME<br/>
-							 TO HOSPITAL </div>
+										style="z-index: 11; min-width: 720px; max-width: 720px; white-space: normal; font-size: 60px; line-height: 70px; font-weight: 300; color: rgba(255, 255, 255, 1.00);font-family:'Raleway',sans-serif;border-width:0px;letter-spacing:10px;">WELCOME TO<br/>
+							 HELPING HANDS </div>
 
 									<!-- LAYER NR. 8 -->
 									<div class="tp-caption   rs-parallaxlevel-4"
@@ -283,8 +283,8 @@
 										data-paddingbottom="[0,0,0,0]"
 										data-paddingleft="[30,30,30,30]"
 
-										style="z-index: 13; white-space: nowrap; font-size: 15px; line-height: 40px; font-weight: 700; color: rgba(0, 0, 0, 1.00);font-family:'Raleway',sans-serif;background-color:rgba(255, 255, 255, 1.00);border-color:rgba(0, 0, 0, 1.00);border-width:0px;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;">READ MORE </div>
-								</li>
+										style="z-index: 13; white-space: nowrap; font-size: 15px; line-height: 40px; font-weight: 700; color: rgba(0, 0, 0, 1.00);font-family:'Raleway',sans-serif;background-color:rgba(255, 255, 255, 1.00);border-color:rgba(0, 0, 0, 1.00);border-width:0px;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;">EXPLORE </div>
+								</li> --}}
 							</ul>
 							<div class="tp-bannertimer" style="height: 8px; background-color: rgba(255, 255, 255, 0.25);"></div>
 						</div>
@@ -383,7 +383,7 @@
         </div>
         <!-- Why Choose Us END -->
         <!-- About Company -->
-        <div class="section-full content-inner bg-white">
+        {{-- <div class="section-full content-inner bg-white">
             <div class="container">
                 <div class="section-content">
                     <div class="row">
@@ -452,7 +452,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> --}}
         <!-- About Company END -->
         <!-- Team member -->
         <div class="section-full content-inner bg-gray">
@@ -465,7 +465,7 @@
                     <div class="row">
                         <div class="col-lg-3 col-md-6 col-sm-6 m-b15">
 							<div class="dez-box">
-								<div class="dez-media"> <a href="#"><img src="{{ asset('images/user_images/our-team/pic13.jpg') }}" alt=""></a> </div>
+								<div class="dez-media"> <a href="#"><img src="{{ asset('images/user_images/hospital_images/h_img 1.jpg') }}" alt=""></a> </div>
 								<div class="dez-info p-a30 bg-white">
 									<h4 class="dez-title m-t0 m-b15"><a href="#">Shalby Hospitals</a></h4>
 									{{-- <ul class="dez-social-icon border dez-social-icon-lg">
@@ -480,7 +480,7 @@
 
                         <div class="col-lg-3 col-md-6 col-sm-6 m-b15">
 							<div class="dez-box">
-								<div class="dez-media"> <a href="#"><img src="{{ asset('images/user_images/our-team/pic14.jpg') }}" alt=""></a> </div>
+								<div class="dez-media"> <a href="#"><img src="{{  asset('images/user_images/hospital_images/h_img 2.jpg') }}" alt=""></a> </div>
 								<div class="dez-info p-a30 bg-white">
 									<h4 class="dez-title m-t0 m-b15"><a href="#">Vedant Multispeciality</a></h4>
 									{{-- <ul class="dez-social-icon border dez-social-icon-lg">
@@ -495,7 +495,7 @@
 
 						<div class="col-lg-3 col-md-6 col-sm-6 m-b15">
 							<div class="dez-box">
-								<div class="dez-media"> <a href="#"><img src="{{ asset('images/user_images/our-team/pic15.jpg') }}" alt=""></a> </div>
+								<div class="dez-media"> <a href="#"><img src="{{  asset('images/user_images/hospital_images/h_img 3.jpg') }}" alt=""></a> </div>
 								<div class="dez-info p-a30 bg-white">
 									<h4 class="dez-title m-t0 m-b15"><a href="#">Uma hospital</a></h4>
 									{{-- <ul class="dez-social-icon border dez-social-icon-lg">
@@ -510,7 +510,7 @@
 
 						<div class="col-lg-3 col-md-6 col-sm-6 m-b15">
 							<div class="dez-box">
-								<div class="dez-media"> <a href="#"><img src="{{ asset('images/user_images/our-team/pic16.jpg') }}" alt=""></a> </div>
+								<div class="dez-media"> <a href="#"><img src="{{  asset('images/user_images/hospital_images/h_img 4.jpg') }}" alt=""></a> </div>
 								<div class="dez-info p-a30 bg-white">
 									<h4 class="dez-title m-t0 m-b15"><a href="#">Setu Surgical Hospital</a></h4>
 									{{-- <ul class="dez-social-icon border dez-social-icon-lg">
@@ -539,7 +539,7 @@
                         <div class="item">
 							<div class="dez-box">
 								<div class="dez-media">
-									<a href="#"><img src="{{ asset('images/user_images/our-services/service/pic2.jpg') }}" alt=""></a>
+									<a href="#"><img src="{{ asset('images/user_images/hospital_images/h_img 3.jpg') }}" alt=""></a>
 								</div>
 								<div class="dez-info p-a20 border-1 bg-white">
 									<h4 class="dez-title m-t15"><a href="#">Uma Hospital</a></h4>
@@ -559,7 +559,7 @@
 						<div class="item">
 							<div class="dez-box">
 								<div class="dez-media">
-									<a href="#"><img src="{{ asset('images/user_images/our-services/service/pic3.jpg') }}" alt=""></a>
+									<a href="#"><img src="{{ asset('images/user_images/hospital_images/h_img 2.jpg') }}" alt=""></a>
 								</div>
 								<div class="dez-info p-a20 border-1 bg-white">
 									<h4 class="dez-title m-t15"><a href="#">Vedant Multispeciality</a></h4>
@@ -579,7 +579,7 @@
 						<div class="item">
 							<div class="dez-box">
 								<div class="dez-media">
-									<a href="#"><img src="{{ asset('images/user_images/our-services/service/pic4.jpg') }}" alt=""></a>
+									<a href="#"><img src="{{ asset('images/user_images/hospital_images/h_img 1.jpg') }}" alt=""></a>
 								</div>
 								<div class="dez-info p-a20 border-1 bg-white">
 									<h4 class="dez-title m-t15"><a href="#">Shalby Hospital</a></h4>
