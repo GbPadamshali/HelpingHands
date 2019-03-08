@@ -61,6 +61,34 @@
 										                    <li><a href="index-6.html">5. Surgery Hospital</a></li>
                                     </ul> --}}
                                 </li>
+                                <li> <a href="javascript:;">Services<i class="fa fa-chevron-down"></i></a>
+                                    <ul class="sub-menu">
+
+
+                                                <li><a href="#">Multispeciality</a></li>
+                                                <li><a href="#">Orthopedic</a></li>
+                                                <li><a href="#">Dental</a></li>
+                                                <li><a href="#">Maternity</a></li>
+                                                <li><a href="#">Laboratry</a></li>
+                                                <li><a href="#">Pharmacy</a></li>
+                                                <li><a href="#">Canteen</a></li>
+
+                                          </ul>
+                                        <li> <a href="javascript:;">Facility<i class="fa fa-chevron-down"></i></a>
+                                              <ul class="sub-menu">
+
+
+                                                          <li><a href="#">24x7 Suport</a></li>
+                                                          <li><a href="#">OPD/OT</a></li>
+                                                          <li><a href="#">Emergency Services</a></li>
+                                                          <li><a href="#">Cashless</a></li>
+                                                          <li><a href="#">Mediclain</a></li>
+                                                          {{-- <li><a href=-<"#">Pharmacy</a></li>
+                                                          <li><a href=-<"#">Canteen</a></li> --}}
+
+                                                    </ul>
+
+
                                 {{-- <li> <a href="javascript:;">Features<i class="fa fa-chevron-down"></i></a>
                                     <ul class="sub-menu">
                                         <li> <a href="javascript:;">Header Style Light</a>
@@ -250,7 +278,9 @@
                                         </li>
                                     </ul>
                                 </li> --}}
-                                <li> <a href="#">Contact us <i class="fa fa-chevron-down"></i></a>
+                                <li> <a href="#">Booking<i class="fa fa-chevron-down"></i></a>
+                                </li>
+                                <li> <a href="{{ url('h-contact-us') }}">Contact us <i class="fa fa-chevron-down"></i></a>
                                     {{-- <ul class="sub-menu">
                                         <li><a href="contact.html">Contact us 1</a></li>
                                         <li><a href="contact-2.html">Contact us 2</a></li>
@@ -258,6 +288,7 @@
                                         <li><a href="contact-4.html">Contact us 4</a></li>
                                     </ul> --}}
                                 </li>
+
                             </ul>
                     </div>
                 </div>

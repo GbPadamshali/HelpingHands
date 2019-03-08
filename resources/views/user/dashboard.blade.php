@@ -100,7 +100,7 @@
 										data-paddingleft="[30,30,30,30]"
 
 										style="z-index: 7; white-space: nowrap; font-size: 15px; line-height: 40px; font-weight: 700; color: rgba(0, 0, 0, 1.00);font-family:'Raleway',sans-serif;background-color:rgba(255, 255, 255, 1.00);border-color:rgba(0, 0, 0, 1.00);border-width:0px;outline:none;box-shadow:none; box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;">
-                    <a href="{{ url('hospital-dashboard') }}">EXPLORE</a>
+                    <a href="{{ url('abc-hospital-dashboard') }}">EXPLORE</a>
                   </div>
 								</li>
 								<!-- SLIDE  -->
