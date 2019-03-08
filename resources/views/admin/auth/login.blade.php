@@ -1,110 +1,154 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html class="no-js" lang="en">
 
-
-<!-- Mirrored from coreplusdemo.lorvent.com/login2.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 10 Feb 2019 18:47:12 GMT -->
 <head>
-    <meta charset="UTF-8">
-    <title>Hepling Hands | Admin Login</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="{{ asset('images/admin_images/favicon.ico') }}"/>
-    <!-- Bootstrap -->
-    <link href="{{ asset('css/admin_css/app.css') }}" rel="stylesheet">
-    <!-- end of bootstrap -->
-    <!--page level css -->
-    <link type="text/css" href="{{ asset('css/admin_css/font-awesome.min.css') }}" rel="stylesheet"/>
-    <link href="{{ asset('admin_vendors/iCheck/css/all.css') }}" rel="stylesheet">
-    <link href="{{ asset('admin_vendors/bootstrapvalidator/css/bootstrapValidator.min.css') }}" rel="stylesheet"/>
-    <link href="{{ asset('css/admin_css/login.css') }}" rel="stylesheet">
-    <!--end page level css-->
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>HelpingHands | Login</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- favicon
+		============================================ -->
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('images/admin_images/favicon.ico') }}">
+    <!-- Google Fonts
+		============================================ -->
+    <link href="https://fonts.googleapis.com/css?family=Play:400,700" rel="stylesheet">
+    <!-- Bootstrap CSS
+		============================================ -->
+    <link rel="stylesheet" href="{{ asset('css/admin_css/bootstrap.min.css') }}">
+    <!-- Bootstrap CSS
+		============================================ -->
+    <link rel="stylesheet" href="{{ asset('css/admin_css/font-awesome.min.css') }}">
+    <!-- owl.carousel CSS
+		============================================ -->
+    <link rel="stylesheet" href="{{ asset('css/admin_css/owl.carousel.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/admin_css/owl.theme.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/admin_css/owl.transitions.css') }}">
+    <!-- animate CSS
+		============================================ -->
+    <link rel="stylesheet" href="{{ asset('css/admin_css/animate.css') }}">
+    <!-- normalize CSS
+		============================================ -->
+    <link rel="stylesheet" href="{{ asset('css/admin_css/normalize.css') }}">
+    <!-- main CSS
+		============================================ -->
+    <link rel="stylesheet" href="{{ asset('css/admin_css/main.css') }}">
+    <!-- morrisjs CSS
+		============================================ -->
+    <link rel="stylesheet" href="{{ asset('css/admin_css/morrisjs/morris.css') }}">
+    <!-- mCustomScrollbar CSS
+		============================================ -->
+    <link rel="stylesheet" href="{{ asset('css/admin_css/scrollbar/jquery.mCustomScrollbar.min.css') }}">
+    <!-- metisMenu CSS
+		============================================ -->
+    <link rel="stylesheet" href="{{ asset('css/admin_css/metisMenu/metisMenu.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/admin_css/metisMenu/metisMenu-vertical.css') }}">
+    <!-- calendar CSS
+		============================================ -->
+    <link rel="stylesheet" href="{{ asset('css/admin_css/calendar/fullcalendar.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/admin_css/calendar/fullcalendar.print.min.css') }}">
+    <!-- forms CSS
+		============================================ -->
+    <link rel="stylesheet" href="{{ asset('css/admin_css/form/all-type-forms.css') }}">
+    <!-- style CSS
+		============================================ -->
+    <link rel="stylesheet" href="{{ asset('css/admin_css/style.css') }}">
+    <!-- responsive CSS
+		============================================ -->
+    <link rel="stylesheet" href="{{ asset('css/admin_css/responsive.css') }}">
+    <!-- modernizr JS
+		============================================ -->
+    <script src="{{ asset('js/admin_js/vendor/modernizr-2.8.3.min.js') }}"></script>
 </head>
 
 <body>
-<div class="preloader">
-    <div class="loader_img"><img src="{{ asset('images/admin_images/loader.gif') }}" alt="loading..." height="64" width="64"></div>
-</div>
-<div class="container">
-
-    <div class="card-header nocolor">
-        <h2 class="text-center">
-            Log In or Sign UP
-            {{-- <a href="register2.html">Sign Up</a> --}}
-        </h2>
-    </div>
-    <div class="row">
-        <div class="col-md-10 ml-auto">
-            <div class="card-body social">
-                {{-- <div class="row">
-                    <div class="col-12 col-sm-3">
-                        <a href="#" class="btn btn-lg btn-block btn-facebook"> <i class="fa fa-facebook-square fa-lg"></i>
-                            <span class="hidden-sm hidden-xs">Facebook</span>
-                        </a>
-                    </div>
-                    <div class="col-12 col-sm-3">
-                        <a href="#" class="btn btn-lg btn-block btn-twitter"> <i class="fa fa-twitter-square fa-lg"></i>
-                            <span class="hidden-sm hidden-xs">Twitter</span>
-                        </a>
-                    </div>
-                    <div class="col-12 col-sm-3">
-                        <a href="#" class="btn btn-lg btn-block btn-google">
-                            <i class="fa fa-google-plus-square fa-lg"></i>
-                            <span class="hidden-sm hidden-xs">Google+</span>
-                        </a>
-                    </div>
-                </div>
-                <div class="clearfix">
-                    <div class="col-12 col-sm-9">
-                        <hr class="omb_hrOr">
-                        <span class="omb_spanOr">or</span>
-                    </div> --}}
-                    <div class="clearfix"></div>
-                    <div class="col-12 col-sm-6 form_width">
-                        <form action="{{ route('admin.login') }}" id="authentication" method="post" class="login_validator"> {{ csrf_field() }}
+    <!--[if lt IE 8]>
+		<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+	<![endif]-->
+	<div class="error-pagewrap">
+		<div class="error-page-int">
+			<div class="text-center m-b-md custom-login">
+				<h3>PLEASE LOGIN TO APP</h3>
+				<p>This is the best app ever!</p>
+			</div>
+			<div class="content-error">
+				<div class="hpanel">
+                    <div class="panel-body">
+                        <form action="{{ url('/admin/login') }}" id="loginForm" method="post"> {{ csrf_field() }}
                             <div class="form-group">
-                                <label for="email" class="sr-only"> E-mail</label>
-                                <div class="input-group  input-group-prepend">
-                                    <span class="input-group-text border-right-0 rounded-left"><i class="fa fa-envelope text-primary"></i></span>
-                                    <input type="text" class="form-control  form-control-lg" id="email" name="email"
-                                           placeholder="E-mail">
-                                </div>
+                                <label class="control-label" for="email">Email</label>
+                                <input type="text" placeholder="example@gmail.com" title="Please enter you email" required="" value="" name="email" id="email" class="form-control">
+                                {{-- <span class="help-block small">Your unique username to app</span> --}}
                             </div>
                             <div class="form-group">
-                                <label for="password" class="sr-only">Password</label>
-                                <div class="input-group input-group-prepend">
-                                    <span class="input-group-text border-right-0 rounded-left"><i class="fa fa-lock text-primary"></i></span>
-                                    <input type="password" class="form-control form-control-lg" id="password"
-                                           name="password" placeholder="Password">
-                                </div>
+                                <label class="control-label" for="password">Password</label>
+                                <input type="password" title="Please enter your password" placeholder="******" required="" value="" name="password" id="password" class="form-control">
+                                {{-- <span class="help-block small">Yur strong password</span> --}}
                             </div>
-                            {{-- <div class="form-group checkbox">
-                                <label for="remember">
-                                    <input type="checkbox" name="remember" id="remember"> Remember Me
-                                </label>
+                            {{-- <div class="checkbox login-checkbox">
+                                <label>
+										              <input type="checkbox" class="i-checks"> Remember me </label>
+                                <p class="help-block small">(if this is a private computer)</p>
                             </div> --}}
-                            <div class="form-group">
-                                <button type="submit" class="btn btn-primary btn-block">Log In</button>
-                            </div>
-                            <div class="form-group">
-                                <a href="{{ url('admin/register') }}" class="btn btn-primary btn-block">Register</a>
-                            </div>
-                            <a href="forgot_password.html" id="forgot" class="forgot"> Forgot Password? </a>
+                            <input type="submit" class="btn btn-success btn-block loginbtn" value="Login" />
+                            <a class="btn btn-default btn-block" href="{{ url('/admin/register') }}">Register</a>
                         </form>
                     </div>
                 </div>
-            </div>
-        </div>
+			</div>
+			<div class="text-center login-footer">
+				{{-- <p>Copyright © 2018. All rights reserved. Template by <a href="https://colorlib.com/wp/templates/">Colorlib</a></p> --}}
+			</div>
+		</div>
     </div>
-
-</div>
-<script src="{{ asset('js/admin_js/app.js') }}" type="text/javascript"></script>
-<!-- end of global js -->
-<!-- page level js -->
-<script type="text/javascript" src="{{ asset('admin_vendors/iCheck/js/icheck.js') }}"></script>
-<script src="{{ asset('admin_vendors/bootstrapvalidator/js/bootstrapValidator.min.js') }}" type="text/javascript"></script>
-<script type="text/javascript" src="{{ asset('js/admin_js/custom_js/login2.js') }}"></script>
-<!-- end of page level js -->
+    <!-- jquery
+		============================================ -->
+    <script src="{{ asset('js/admin_js/vendor/jquery-1.12.4.min.js') }}"></script>
+    <!-- bootstrap JS
+		============================================ -->
+    <script src="{{ asset('js/admin_js/bootstrap.min.js') }}"></script>
+    <!-- wow JS
+		============================================ -->
+    <script src="{{ asset('js/admin_js/wow.min.js') }}"></script>
+    <!-- price-slider JS
+		============================================ -->
+    <script src="{{ asset('js/admin_js/jquery-price-slider.js') }}"></script>
+    <!-- meanmenu JS
+		============================================ -->
+    <script src="{{ asset('js/admin_js/jquery.meanmenu.js') }}"></script>
+    <!-- owl.carousel JS
+		============================================ -->
+    <script src="{{ asset('js/admin_js/owl.carousel.min.js') }}"></script>
+    <!-- sticky JS
+		============================================ -->
+    <script src="{{ asset('js/admin_js/jquery.sticky.js') }}"></script>
+    <!-- scrollUp JS
+		============================================ -->
+    <script src="{{ asset('js/admin_js/jquery.scrollUp.min.js') }}"></script>
+    <!-- mCustomScrollbar JS
+		============================================ -->
+    <script src="{{ asset('js/admin_js/scrollbar/jquery.mCustomScrollbar.concat.min.js') }}"></script>
+    <script src="{{ asset('js/admin_js/scrollbar/mCustomScrollbar-active.js') }}"></script>
+    <!-- metisMenu JS
+		============================================ -->
+    <script src="{{ asset('js/admin_js/metisMenu/metisMenu.min.js') }}"></script>
+    <script src="{{ asset('js/admin_js/metisMenu/metisMenu-active.js') }}"></script>
+    <!-- tab JS
+		============================================ -->
+    <script src="{{ asset('js/admin_js/tab.js') }}"></script>
+    <!-- icheck JS
+		============================================ -->
+    <script src="{{ asset('js/admin_js/icheck/icheck.min.js') }}"></script>
+    <script src="{{ asset('js/admin_js/icheck/icheck-active.js') }}"></script>
+    <!-- plugins JS
+		============================================ -->
+    <script src="{{ asset('js/admin_js/plugins.js') }}"></script>
+    <!-- main JS
+		============================================ -->
+    <script src="{{ asset('js/admin_js/main.js') }}"></script>
+    <!-- tawk chat JS
+		============================================ -->
+    <script src="{{ asset('js/admin_js/tawk-chat.js') }}"></script>
 </body>
 
-
-<!-- Mirrored from coreplusdemo.lorvent.com/login2.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 10 Feb 2019 18:47:14 GMT -->
 </html>

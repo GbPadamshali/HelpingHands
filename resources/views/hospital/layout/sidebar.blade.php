@@ -10,19 +10,20 @@
         Main
       </li>
       <li class="sidebar-item active">
-        <a href="#dashboards" data-toggle="collapse" class="font-weight-bold sidebar-link">
-          <i class="align-middle" data-feather="home"></i> <span class="align-middle">Dashboard</span>
-          <span class="sidebar-badge badge badge-primary">14</span>
-        </a>
-          <li class="sidebar-item"><a class="sidebar-link" href="{{ url('/dashboard') }}">Defult</a></li>
-          <li class="sidebar-item"><a class="sidebar-link" href="{{ url('/all_doctors') }}">Doctor</a></li>
-          <li class="sidebar-item"><a class="sidebar-link" href="{{ url('/all_nureses') }}">Nureses</a></li>
-          <li class="sidebar-item"><a class="sidebar-link" href="{{ url('/all_department') }}">Department</a></li>
-          <li class="sidebar-item"><a class="sidebar-link" href="{{ url('/all_recetionist') }}">Receptionist</a></li>
+        {{-- <a href="{{ url('/hospital/dashboard') }}" data-toggle="collapse" class="font-weight-bold sidebar-link">
+          <i class="align-middle" data-feather="home"></i>
+          {{-- <span class="align-middle">Dashboard</span>
+          {{-- <span class="sidebar-badge badge badge-primary">14</span>
+        </a> --}}
+          <li class="sidebar-item"><a class="sidebar-link" href="{{ url('/hospital/dashboard') }}"><i class="align-middle" data-feather="home"></i>Dashboard</a></li>
+          <li class="sidebar-item"><a class="sidebar-link" href="{{ route('doctors.index') }}"><i class="align-middle" data-feather="user"></i>Doctor</a></li>
+          <li class="sidebar-item"><a class="sidebar-link" href="{{ url('/hospital/all_nureses') }}"><i class="align-middle" data-feather="smile"></i>Nureses</a></li>
+          <li class="sidebar-item"><a class="sidebar-link" href="{{ route('departments.index') }}"><i class="align-middle" data-feather="command"></i>Department</a></li>
+          <li class="sidebar-item"><a class="sidebar-link" href="{{ url('/hospital/all_recetionist') }}"><i class="align-middle" data-feather="edit-3"></i>Receptionist</a></li>
 
 
 
-    <div class="sidebar-cta">
+    {{-- <div class="sidebar-cta">
       <button type="button" class="close sidebar-cta-close" aria-label="Close">
         <span aria-hidden="true">&times;</span>
       </button>
@@ -33,6 +34,6 @@
         </div>
         <a href="#" class="btn btn-outline-primary">Upgrade</a>
       </div>
-    </div>
+    </div> --}}
   </div>
 </nav>

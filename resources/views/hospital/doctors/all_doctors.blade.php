@@ -2,53 +2,40 @@
 @section('content')
   <div class="card-body">
     			<a class="btn btn-outline-primary btn-sm" href="{{ route('doctors.create') }}">ADD DOCTOR</a>
+          <br><br>
     <table id="datatables-basic" class="table table-striped" style="width:100%">
       <thead>
         <tr>
-          <th>Name</th>
-          <th>Surname</th>
+          <th>First Name</th>
+          <th>Last Name</th>
           <th>Email</th>
-          <th>Age</th>
-          <th>Join date</th>
-          <th>Salary</th>
+          <th>Birth Date</th>
+          <th>Joining Date</th>
+          <th>Qualification</th>
           <th>Department</th>
+          <th>Specialization</th>
+          <th>Experience</th>
           <th>Actions</th>
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td>Tiger Nixon</td>
-          <td>System Architect</td>
-          <td>Edinburgh</td>
-          <td>61</td>
-          <td>2011/04/25</td>
-          <td>$320,800</td>
-          <td>OPD</td>
-          <td>	<a class="btn btn-outline-primary btn-sm" href="{{ url('#') }}">EDIT</a>    <a class="btn btn-outline-primary btn-sm" href="{{ url('#') }}">DELETE</a></td>
-        </tr>
-        <tr>
-          <td>Garrett Winters</td>
-          <td>Accountant</td>
-          <td>Tokyo</td>
-          <td>63</td>
-          <td>2011/07/25</td>
-          <td>$170,750</td>
-          <td>OPD</td>
-          <td><a class="btn btn-outline-primary btn-sm" href="{{ url('#') }}">EDIT</a>    <a class="btn btn-outline-primary btn-sm" href="{{ url('#') }}">DELETE</a></td>
-        </tr>
-        <tr>
-          <td>Ashton Cox</td>
-          <td>Junior Technical Author</td>
-          <td>San Francisco</td>
-          <td>66</td>
-          <td>2009/01/12</td>
-          <td>$86,000</td>
-          <td>OPD</td>
-          <td><a class="btn btn-outline-primary btn-sm" href="{{ url('#') }}">EDIT</a>     <a class="btn btn-outline-primary btn-sm" href="{{ url('#') }}">DELETE</a></td>
-        </tr>
+        @foreach ($doctors as $doctor)
+          <tr>
+            <td>{{ $doctor->first_name }}</td>
+            <td>{{ $doctor->last_name }}</td>
+            <td>{{ $doctor->email }}</td>
+            <td>{{ $doctor->birthdate }}</td>
+            <td>{{ $doctor->joining_date }}</td>
+            <td>{{ $doctor->qualifiaction }}</td>
+            <td>{{ $doctor->department_id }}</td>
+            <td>{{ $doctor->specialization }}</td>
+            <td>{{ $doctor->experience }}</td>
+            <td>	<a class="btn btn-outline-primary btn-sm" href="{{ route('doctors.edit', $doctor->id) }}">EDIT</a>  <hr>  <a class="btn btn-outline-primary btn-sm" href="{{ route('doctors.destroy', $doctor->id) }}">DELETE</a></td>
+          </tr>
+        @endforeach
       </tbody>
-
     </table>
+    {{ $doctors->links() }}
         <script>
             document.addEventListener("DOMContentLoaded", function(event) {
               // Datatables basic

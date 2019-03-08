@@ -15,11 +15,13 @@
 	<meta name="format-detection" content="telephone=no">
 
 	<!-- FAVICONS ICON -->
-	<link rel="icon" href="https://s3.ap-south-1.amazonaws.com/dzon-html/medico/xhtml/images/favicon.ico" type="image/x-icon" />
-	<link rel="shortcut icon" type="image/x-icon" href="{{ asset('/images/user_images/favicon.png') }}" />
+	<link rel="icon" href="{{ asset('/images/user_images/favicons/favicon.ico') }}" type="image/x-icon" />
+	<link rel="shortcut icon" type="image/x-icon" href="{{ asset('images/user_images/favicons/favicon16x16.png') }}" />
+  <link rel="shortcut icon" type="image/x-icon" href="{{ asset('/images/user_images/favicons/favicon32x32.png') }}" />
+  <link rel="shortcut icon" type="image/x-icon" href="{{ asset('/images/user_images/favicons/favicon96x96.png') }}" />
 
 	<!-- PAGE TITLE HERE -->
-	<title>MediCo. - Doctor HTML Template</title>
+	<title>Helping Hands | Login</title>
 
 	<!-- MOBILE SPECIFIC -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -43,8 +45,8 @@
         <div class="login-form relative z-index3 ">
             <div class="tab-content nav">
                 <div id="login" class="tab-pane active text-center">
-                    <form class="p-a30 dez-form  m-t100"> {{ csrf_field() }}
-                        <h3 class="form-title m-t0">Sign In</h3>
+                    <form class="p-a30 dez-form  m-t100" method="post" action="#"> {{ csrf_field() }}
+                        <h3 class="form-title m-t0">Log In</h3>
                         <div class="dez-separator-outer m-b5">
                             <div class="dez-separator bg-primary style-liner"></div>
                         </div>
@@ -56,14 +58,16 @@
                             <input name="dzName" required="" class="form-control " placeholder="Type Password" type="password"/>
                         </div>
                         <div class="form-group text-left">
-                            <button class="site-button dz-xs-flex">login</button>
-                            <label>
+                            {{-- <button class="site-button dz-xs-flex">login</button> --}}
+														<input type="submit" class="site-button dz-xs-flex" value="Login"/>
+                            {{-- <label>
                             <input id="check1" type="checkbox">
-							<label for="check1">Remember me</label>
-                            </label>
-                            <a data-toggle="tab" href="#forgot-password" class="m-l15"><i class="fa fa-unlock-alt"></i> Forgot Password</a> </div>
+														<label for="check1">Remember me</label>
+                            </label> --}}
+                            {{-- <a data-toggle="tab" href="#forgot-password" class="m-l15"><i class="fa fa-unlock-alt"></i> Forgot Password</a> </div> --}}
                     </form>
-                    <div class="bg-primary p-a15 "> <a data-toggle="tab" href="#developement-1" class="text-white">Create an account</a> </div>
+										<hr>
+                    <div class="bg-primary p-a15 "> <a data-toggle="tab" href="{{ url('user-signup-page') }}" class="text-white">Create an account</a> </div>
                 </div>
                 <div id="forgot-password" class="tab-pane fade ">
                     <form class="p-a30 dez-form m-t100 text-center"> {{ csrf_field() }}

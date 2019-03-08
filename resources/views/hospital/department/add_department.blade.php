@@ -1,16 +1,16 @@
 @extends('hospital.layout.design')
 @section('content')
 <div class="card-body">
-  <form id="validation-form">
+  <form id="validation-form" method="post" action='{{ route('departments.store') }}'> {{ csrf_field() }}
 
     <div class="form-group">
-      <label class="form-label">Department_Name</label>
-      <input type="text" class="form-control" name="validation-department_name" placeholder="Department_Name">
-      <small class="form-text text-muted">Example block-level help text here.</small>
+      <label class="form-label">Department</label>
+      <input type="text" class="form-control" name="department" placeholder="Department">
+      {{-- <small class="form-text text-muted">Example block-level help text here.</small> --}}
     </div>
     <div class="form-group">
-      <label class="form-label">Department_Description</label>
-      <input type="textarea" class="form-control" name="validation-departmentDescription" placeholder="Department_Description">
+      <label class="form-label">Description</label>
+      <input type="textarea" class="form-control" name="description" placeholder="Description">
     </div>
 
       <button type="submit" class="btn btn-primary">Submit</button>
@@ -41,70 +41,11 @@
                     ignore: '.ignore, .select2-input',
                     focusInvalid: false,
                     rules: {
-                      'validation-email': {
+                      'department': {
                         required: true,
-                        email: true
                       },
-                      'validation-department_name': {
-                        required: true,
-                        minlength: 6,
-                        maxlength: 20
-                      },
-                      'validation-surname': {
-                        required: true,
-                        minlength: 6,
-                        maxlength: 20,
-                      },
-                      'validation-age': {
+                      'description': {
                         required: true
-                      },
-                      'validation-salary': {
-                        required: true,
-
-                      },
-                      'validation-select': {
-                        required: true
-                      },
-                      'validation-multiselect': {
-                        required: true,
-                        minlength: 2
-                      },
-                      'validation-select2': {
-                        required: true
-                      },
-                      'validation-select2-multi': {
-                        required: true,
-                        minlength: 2
-                      },
-                      'validation-departmentDescription': {
-                        required: true
-                      },
-                      'validation-file': {
-                        required: true
-                      },
-                      'validation-radios': {
-                        required: true
-                      },
-                      'validation-radios-custom': {
-                        required: true
-                      },
-                      'validation-checkbox': {
-                        required: true
-                      },
-                      'validation-checkbox-custom': {
-                        required: true
-                      },
-                      'validation-checkbox-group-1': {
-                        require_from_group: [1, 'input[name="validation-checkbox-group-1"], input[name="validation-checkbox-group-2"]']
-                      },
-                      'validation-checkbox-group-2': {
-                        require_from_group: [1, 'input[name="validation-checkbox-group-1"], input[name="validation-checkbox-group-2"]']
-                      },
-                      'validation-checkbox-custom-group-1': {
-                        require_from_group: [1, 'input[name="validation-checkbox-custom-group-1"], input[name="validation-checkbox-custom-group-2"]']
-                      },
-                      'validation-checkbox-custom-group-2': {
-                        require_from_group: [1, 'input[name="validation-checkbox-custom-group-1"], input[name="validation-checkbox-custom-group-2"]']
                       }
                     },
                     // Errors
