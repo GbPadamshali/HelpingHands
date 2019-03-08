@@ -8,8 +8,8 @@
                   <div class="sparkline13-list">
                       <div class="sparkline13-hd">
                           <div class="main-sparkline13-hd">
-                              <h1>ALL <span class="table-project-n">DOCTOR</span></h1>
-                              <button type="button" class="btn btn-custon-rounded-four btn-primary" onclick="location.href='{{ url('#') }}'">All DOCTOR</button>
+                              <h1>ALL <span class="table-project-n">DOCTORS</span></h1>
+                              <button type="button" class="btn btn-custon-rounded-four btn-primary" onclick="location.href='{{ route('ad-doctors.create') }}'">ADD DOCTOR</button>
                           </div>
                       </div>
                       <div class="sparkline13-graph">
@@ -30,23 +30,26 @@
                                       </tr>
                                   </thead>
                                   <tbody>
+                                    @foreach ($doctors as $doctor)
 
+                                    @endforeach
                                       <tr>
-                                        <td>id</td>
-                                        <td>Govinda</td>
-                                        <td>Padamshali</td>
-                                        <td>gbpadamshali@gmail.com</td>
-                                        <td>01/12/1997</td>
-                                        <td>M.B.B.S.</td>
-                                        <td>cancer specialist</td>
-                                        <td>b/09,Akash appartment,Govinda nagar,Nr.Sahu road,Smit-380026</td>
+                                        <td>{{ $doctor->id }}</td>
+                                        <td>{{ $doctor->first_name }}</td>
+                                        <td>{{ $doctor->last_name }}</td>
+                                        <td>{{ $doctor->email }}</td>
+                                        <td>{{ $doctor->birthdate }}</td>
+                                        <td>{{ $doctor->qualifiaction }}</td>
+                                        <td>{{ $doctor->specialization }}</td>
+                                        <td>{{ $doctor->address }}</td>
                                           <td>
-                                            <button type="button" class="btn btn-primary" onclick="location.href='{{ url('#') }}'">Edit</button><hr>
-                                            <button type="button" class="btn btn-danger" onclick="location.href='{{ url('#') }}'">Delete</button>
+                                            <button type="button" class="btn btn-primary" onclick="location.href='{{ route('ad-doctors.edit', $doctor->id) }}'">Edit</button><hr>
+                                            <button type="button" class="btn btn-danger" onclick="location.href='{{ route('ad-doctors.destroy', $doctor->id) }}'">Delete</button>
                                           </td>
                                       </tr>
 
                                   </tbody>
+                                  {{ $doctors->links() }}
                               </table>
                           </div>
                       </div>

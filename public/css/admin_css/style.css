@@ -42,7 +42,7 @@
 /*----------------------------------------*/
 /*  1. Common
 /*----------------------------------------*/
-html, body {height: 100%; font-family: 'Roboto', sans-serif;font-weight:400;background:#F6F8FA;}
+html, body {height: 100%; font-family: 'Roboto', sans-serif;font-weight:400;background:#F6F8FA; overflow-x: hidden;}
 .floatleft {float:left}
 .floatright {float:right}
 .alignleft {float:left;margin-right:15px;margin-bottom: 15px}
@@ -3723,12 +3723,26 @@ div#sparklinehome canvas {
     background-color: #86bc42;
 }
 .footer-copyright-area {
-    background: #006DF0;
+    /* background: #006DF0;
 	  padding: 20px 0px;
     text-align: center;
     bottom: 0;
     position: absolute;
-    width: -webkit-fill-available;
+    width: -webkit-fill-available; */
+
+    background: #006DF0;
+	  /* padding: 20px 20px 20px 20px;
+    margin: 0px 10px;  */
+    margin-bottom: 5px;
+    padding-bottom: 20px;
+    padding-top: 0px;
+    text-align: center;
+    bottom: 0;
+    position: fixed;
+    height: 10px;
+    width: 100%;
+    /* margin-bottom: 1px; */
+    /* width: -webkit-fill-available; */
 }
 .message-single-top h1, .notification-single-top h1 {
     border-bottom: 1px solid #F6F8FA;

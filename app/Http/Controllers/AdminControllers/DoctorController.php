@@ -1,21 +1,13 @@
 <?php
 
-namespace App\Http\Controllers\HospitalControllers;
+namespace App\Http\Controllers\AdminControllers;
 
-use File;
 use Auth;
-use Image;
-use Validator;
 use App\doctor;
-use App\Department;
 use Illuminate\Http\Request;
-use Illuminate\Http\UploadedFile;
-use Illuminate\Image\ImageManager;
 use App\Http\Controllers\Controller;
-use Illuminate\Filesystem\Filesystem;
-use Illuminate\Support\Facades\Input;
 
-class DoctorsController extends Controller
+class DoctorController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -24,8 +16,8 @@ class DoctorsController extends Controller
      */
     public function index()
     {
-        $doctors = doctor::where('hospital_id', 1)->paginate(2);
-        return view('hospital.doctors.all_doctors')->with(compact('doctors'));
+        $doctors = doctor::paginate(1);
+        return view('admin.doctors.all-doctor')->with(compact('doctors'));
     }
 
     /**
@@ -35,7 +27,7 @@ class DoctorsController extends Controller
      */
     public function create()
     {
-        return view('hospital.doctors.add_doctors');
+        return view('admin.doctors.add-doctor');
     }
 
     /**
@@ -47,10 +39,8 @@ class DoctorsController extends Controller
     public function store(Request $request)
     {
         $user = Auth::User();
-        // $hospital_id = Auth::
         $input = $request->all();
-        // return $input;
-        // return $request;
+
         $image_tmp = Input::file('image');
         $extension = $request->image->getClientOriginalName();
         $filename = now()->timestamp.$extension;
@@ -72,9 +62,8 @@ class DoctorsController extends Controller
         if (!$doctor) {
           return redirect()->back()->with('error', 'Doctor has been not added successfully!!');
         } else {
-          return redirect('hospital/doctors');
+          return redirect('admin/ad-doctors');
         }
-
     }
 
     /**
@@ -85,7 +74,7 @@ class DoctorsController extends Controller
      */
     public function show($id)
     {
-        return view('hospital.doctors.all_doctors');
+        //
     }
 
     /**
@@ -97,7 +86,7 @@ class DoctorsController extends Controller
     public function edit($id)
     {
         $doctor = doctor::where('id', $id)->first();
-        return view('hospital.doctors.edit_doctors')->with(compact('doctor'));
+        return view('admin.doctors.edit-doctor')->with(compact('doctor'));
     }
 
     /**
@@ -109,42 +98,41 @@ class DoctorsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $user = Auth::User();
+      $user = Auth::User();
 
-        $input = $request->except(['_token']);
-        // return $input;
-        $input['hospital_id'] = $user->id;
-        // $input['department_id'] = 1;
+      $input = $request->except(['_token']);
+      // return $input;
+      $input['hospital_id'] = $user->id;
+      // $input['department_id'] = 1;
 
-        $image_tmp = Input::file('image');
-        $extension = $request->image->getClientOriginalName();
-        $filename = now()->timestamp.$extension;
-        $path = 'images/uploaded_images/doctors/';
-        $image_path = $path.$filename;
-        if ($request->hasFile('image')) {
-          // Resize images
-          if (!File::exists(public_path().'/'.$path)) {
-            File::makeDirectory(public_path().'/'.$path, 0777, true);
-            Image::make($image_tmp)->save($image_path);
-          }
+      $image_tmp = Input::file('image');
+      $extension = $request->image->getClientOriginalName();
+      $filename = now()->timestamp.$extension;
+      $path = 'images/uploaded_images/doctors/';
+      $image_path = $path.$filename;
+      if ($request->hasFile('image')) {
+        // Resize images
+        if (!File::exists(public_path().'/'.$path)) {
+          File::makeDirectory(public_path().'/'.$path, 0777, true);
           Image::make($image_tmp)->save($image_path);
-
-          unset($input['image']);
-          $input['image_name'] = $filename;
-          $input['image_path'] = $image_path;
-          // return $input;
-        } else {
-          unset($input['image']);
-          $input['image_name'] = $filename;
-          $input['image_path'] = $image_path;
         }
-        $doctor = doctor::where('id', $id)->update($input);
-        if (!$doctor) {
-          return redirect()->back()->with('error', 'Doctor details has not been updated successfully!!!');
-        } else {
-          return redirect('hospital/doctors')->with('success', 'Doctor details has been updated successfully!!!');
-        }
+        Image::make($image_tmp)->save($image_path);
 
+        unset($input['image']);
+        $input['image_name'] = $filename;
+        $input['image_path'] = $image_path;
+        // return $input;
+      } else {
+        unset($input['image']);
+        $input['image_name'] = $filename;
+        $input['image_path'] = $image_path;
+      }
+      $doctor = doctor::where('id', $id)->update($input);
+      if (!$doctor) {
+        return redirect()->back()->with('error', 'Doctor details has not been updated successfully!!!');
+      } else {
+        return redirect('admin/ad-doctors')->with('success', 'Doctor details has been updated successfully!!!');
+      }
     }
 
     /**

@@ -16,14 +16,14 @@
           {{-- <span class="sidebar-badge badge badge-primary">14</span>
         </a> --}}
           <li class="sidebar-item"><a class="sidebar-link" href="{{ url('/hospital/dashboard') }}"><i class="align-middle" data-feather="home"></i>Dashboard</a></li>
-          <li class="sidebar-item"><a class="sidebar-link" href="{{ url('/hospital/all_doctor') }}"><i class="align-middle" data-feather="user"></i>Doctor</a></li>
+          <li class="sidebar-item"><a class="sidebar-link" href="{{ route('doctors.index') }}"><i class="align-middle" data-feather="user"></i>Doctor</a></li>
           <li class="sidebar-item"><a class="sidebar-link" href="{{ url('/hospital/all_nureses') }}"><i class="align-middle" data-feather="smile"></i>Nureses</a></li>
-          <li class="sidebar-item"><a class="sidebar-link" href="{{ url('/hospital/all_department') }}"><i class="align-middle" data-feather="command"></i>Department</a></li>
+          <li class="sidebar-item"><a class="sidebar-link" href="{{ route('departments.index') }}"><i class="align-middle" data-feather="command"></i>Department</a></li>
           <li class="sidebar-item"><a class="sidebar-link" href="{{ url('/hospital/all_recetionist') }}"><i class="align-middle" data-feather="edit-3"></i>Receptionist</a></li>
 
 
 
-    <div class="sidebar-cta">
+    {{-- <div class="sidebar-cta">
       <button type="button" class="close sidebar-cta-close" aria-label="Close">
         <span aria-hidden="true">&times;</span>
       </button>
@@ -34,6 +34,6 @@
         </div>
         <a href="#" class="btn btn-outline-primary">Upgrade</a>
       </div>
-    </div>
+    </div> --}}
   </div>
 </nav>

@@ -14,7 +14,8 @@ class AdminsController extends Controller
      */
     public function index()
     {
-        return view('admin.all-admins');
+        $users = User::where('type', 'ADMIN')->paginate(1);
+        return view('admin.admins.all-admin')->with(compact('users'));
     }
 
     /**
@@ -24,7 +25,7 @@ class AdminsController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.admins.add-admin');
     }
 
     /**
