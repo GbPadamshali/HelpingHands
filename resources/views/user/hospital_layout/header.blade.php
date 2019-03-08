@@ -52,14 +52,14 @@
                     <!-- main nav -->
                     <div class="header-nav navbar-collapse collapse justify-content-end" id="navbarNavDropdown">
                         <ul class=" nav navbar-nav">
-                                <li> <a href="javascript:;">Home<i class="fa fa-chevron-down"></i></a>
-                                    <ul class="sub-menu">
+                                <li> <a href="{{ url('hospital-dashboard') }}">Home<i class="fa fa-chevron-down"></i></a>
+                                    {{-- <ul class="sub-menu">
                                         <li><a href="index-2.html">1. Dentist Center</a> </li>
                                         <li><a href="index-3.html">2. ENT Hospital</a></li>
                                         <li><a href="index-4.html">3. Pregnancy Center</a></li>
                                         <li><a href="index-5.html">4. Cardiology</a></li>
 										                    <li><a href="index-6.html">5. Surgery Hospital</a></li>
-                                    </ul>
+                                    </ul> --}}
                                 </li>
                                 {{-- <li> <a href="javascript:;">Features<i class="fa fa-chevron-down"></i></a>
                                     <ul class="sub-menu">
@@ -250,13 +250,13 @@
                                         </li>
                                     </ul>
                                 </li> --}}
-                                <li> <a href="javascript:;">Contact us <i class="fa fa-chevron-down"></i></a>
-                                    <ul class="sub-menu">
+                                <li> <a href="#">Contact us <i class="fa fa-chevron-down"></i></a>
+                                    {{-- <ul class="sub-menu">
                                         <li><a href="contact.html">Contact us 1</a></li>
                                         <li><a href="contact-2.html">Contact us 2</a></li>
                                         <li><a href="contact-3.html">Contact us 3</a></li>
                                         <li><a href="contact-4.html">Contact us 4</a></li>
-                                    </ul>
+                                    </ul> --}}
                                 </li>
                             </ul>
                     </div>
