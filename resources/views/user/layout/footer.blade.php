@@ -69,19 +69,19 @@
                         </div>
                     </div>
                 </div> --}}
-                <div class="col-lg-8 col-md-6">
+                {{-- <div class="col-lg-8 col-md-6">
                     <div class="newsLetter-bx m-t20 m-b10">
           <form class="dzSubscribe" action="http://medico.dexignlab.com/xhtml/script/mailchamp.php" method="post">
             <div class="dzSubscribeMsg"></div>
-            {{-- <div class="input-group">
+            <div class="input-group">
               <input name="dzEmail" required="required" class="form-control" placeholder="Your Email Id" type="email">
               <span class="input-group-btn">
                 <button name="submit" value="Submit" type="submit" class="site-button m-l10">Submit</button>
               </span>
-            </div> --}}
+            </div>
           </form>
                     </div>
-                </div>
+                </div> --}}
             </div>
         </div>
     </div>
@@ -93,12 +93,12 @@
         {{-- <span>Copyright © 2017 DexignZone</span> --}}
       </div>
                 <div class="col-lg-4 col-md-4 text-center">
-        <span> Design By Helping Hands </span>
+        <span> Design & Maintained By HelpingHands </span>
       </div>
-                <div class="col-lg-4 col-md-4 text-right">
-        <a href="about-2.html"> About</a>
-        <a href="help.html"> Help Desk</a>
-        <a href="privacy-policy.html"> Privacy Policy</a>
+      <div class="col-lg-4 col-md-4 text-right">
+          <a href="{{ url('/about-us') }}">About</a>
+          {{-- <a href="help.html"> Help Desk</a>
+          <a href="privacy-policy.html"> Privacy Policy</a> --}}
       </div>
             </div>
         </div>

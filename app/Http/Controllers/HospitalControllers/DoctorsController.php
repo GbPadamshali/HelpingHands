@@ -140,9 +140,9 @@ class DoctorsController extends Controller
         }
         $doctor = doctor::where('id', $id)->update($input);
         if (!$doctor) {
-          return redirect('doctors.index')->with('error', 'Doctor details has not been updated successfully!!!');
+          return redirect()->back()->with('error', 'Doctor details has not been updated successfully!!!');
         } else {
-          return redirect()->back()->with('success', 'Doctor details has been updated successfully!!!');
+          return redirect('hospital/doctors')->with('success', 'Doctor details has been updated successfully!!!');
         }
 
 
