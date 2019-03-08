@@ -10,6 +10,7 @@
                             <h3><u>ADD ADMIN</u></h3>
                           </di>
                             <div class="row">
+                              <!--  -->
                                 <div class="form-group col-lg-6">
                                     <label>Name</label>
                                     <input class="form-control" name="name" id="name" required>
