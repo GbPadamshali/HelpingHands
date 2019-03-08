@@ -70,7 +70,7 @@
             <a href="#" class="list-group-item">
               <div class="row no-gutters align-items-center">
                 <div class="col-2">
-                  <img src="{{ asset('images/avatars/avatar-4.jpg') }}" class="avatar img-fluid rounded-circle" alt="Marie Salter">
+                  <img src="{{ asset('images/hospital_images/avatars/avatar-4.jpg') }}" class="avatar img-fluid rounded-circle" alt="Marie Salter">
                 </div>
                 <div class="col-10 pl-2">
                   <div class="text-dark">Marie Salter</div>
