@@ -9,7 +9,7 @@
                       <div class="sparkline13-hd">
                           <div class="main-sparkline13-hd">
                               <h1>ALL <span class="table-project-n">DEPARTMENT</span></h1>
-                              <button type="button" class="btn btn-custon-rounded-four btn-primary" onclick="location.href='{{ url('#') }}'">All Department</button>
+                              <button type="button" class="btn btn-custon-rounded-four btn-primary" onclick="location.href='{{ route('ad-departments.create') }}'">Add Department</button>
                           </div>
                       </div>
                       <div class="sparkline13-graph">
@@ -26,20 +26,21 @@
                                       </tr>
                                   </thead>
                                   <tbody>
-
+                                    @foreach ($departments as $department)
                                       <tr>
-                                        <td>govind9686</td>
-                                        <td>hsk12344566</td>
-                                        <td>staff</td>
-                                        <td>describe an description in detail</td>
+                                        <td>{{ $department->id }}</td>
+                                        <td>{{ $department->hospital_id }}</td>
+                                        <td>{{ $department->department }}</td>
+                                        <td>{{ $department->description }}</td>
                                           <td>
-                                            <button type="button" class="btn btn-primary" onclick="location.href='{{ url('#') }}'">Edit</button><hr>
-                                            <button type="button" class="btn btn-danger" onclick="location.href='{{ url('#') }}'">Delete</button>
+                                            <button type="button" class="btn btn-primary" onclick="location.href='{{ route('ad-departments.edit', $department->id) }}'">Edit</button><hr>
+                                            <button type="button" class="btn btn-danger" onclick="location.href='{{ route('ad-departments.destroy', $department->id) }}'">Delete</button>
                                           </td>
                                       </tr>
-
+                                    @endforeach
                                   </tbody>
                               </table>
+                              {{ $departments->links() }}
                           </div>
                       </div>
 

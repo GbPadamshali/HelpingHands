@@ -67,6 +67,8 @@ Route::group(['prefix' => 'admin'], function(){
     Route::match(['get', 'post'], '/dashboard', 'AdminControllers\AdminAuthController@Dashboard')->name('admin.dashboard');
     Route::resource('admins', 'AdminControllers\AdminsController');
     Route::resource('ad-doctors', 'AdminControllers\DoctorController');
+    Route::resource('ad-departments', 'AdminControllers\DepartmentController');
+    Route::resource('staff-members', 'AdminControllers\StaffController');
   });
 });
 // Admin Routes end
