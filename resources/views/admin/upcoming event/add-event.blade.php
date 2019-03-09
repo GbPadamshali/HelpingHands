@@ -7,28 +7,28 @@
                         <form action="{{ url('#') }}" id="loginForm" method="post" enctype="multipart/form-data">
                           {{ csrf_field() }}
                           <div class="text-left">
-                            <h3><u>ADD DEPARTMENT</u></h3>
+                            <h3><u>ADD EVENT</u></h3>
                           </di>
                             <div class="row">
-                              <div class="form-group col-lg-6">
-                                  <label>Id</label>
-                                  <input class="form-control"name="id" id="id" required>
-                              </div>
                                 <div class="form-group col-lg-6">
-                                    <label>Hospital Id</label>
-                                    <input class="form-control"name="hopital id" id="hospital id" required>
+                                    <label> Event Name</label>
+                                    <input class="form-control" name="event name" id="event name" required>
                                 </div>
                                 <div class="form-group col-lg-6">
-                                    <label>Role</label>
-                                    <input class="form-control"name="department" id="role" required>
+                                    <label>Event type</label>
+                                    <input class="form-control" name="event type" id="event type" required>
                                 </div>
                                 <div class="form-group col-lg-6">
-                                    <label>Desciption</label>
-                                    <input class="form-control" name="description" id="description" required>
+                                    <label>Event Date</label>
+                                    <input class="form-control" name="event date" id="event date" required>
+                                </div>
+                                <div class="form-group col-lg-6">
+                                    <label>Event Banner</label>
+                                    <input class="form-control" name="event banner" id="event banner" required>
                                 </div>
                             </div>
                             <div class="text-center">
-                                <button class="btn btn-success loginbtn">ADD DEPARTMENT</button>
+                                <button class="btn btn-success loginbtn">ADD EVENT</button>
                             </div>
                         </form>
                     </div>
