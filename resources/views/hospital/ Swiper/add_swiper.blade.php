@@ -3,11 +3,11 @@
   <div class="d-table-cell align-middle">
 
     <div class="text-center mt-4">
-      <h1 class="h2">ADD RECETIONIST </h1>
+      <h1 class="h2">ADD SWIPER </h1>
 
     </div>
 <div class="card-body">
-  <form id="validation-form" method="post" enctype="multipart/form-data"
+  <form id="validation-form" method="post" enctype="multipart/form-data" >
 
     <div class="form-group">
       <label class="form-label">First name</label>

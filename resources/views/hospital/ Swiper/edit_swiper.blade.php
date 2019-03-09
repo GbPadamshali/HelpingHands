@@ -3,11 +3,11 @@
   <div class="d-table-cell align-middle">
 
     <div class="text-center mt-4">
-      <h1 class="h2">ADD RECETIONIST </h1>
+      <h1 class="h2">EDIT SWIPER </h1>
 
     </div>
 <div class="card-body">
-  <form id="validation-form" method="post" enctype="multipart/form-data"
+  <form id="validation-form" method="post" enctype="multipart/form-data" >
 
     <div class="form-group">
       <label class="form-label">First name</label>
@@ -18,50 +18,19 @@
       <label class="form-label">Last name</label>
       <input type="text" class="form-control" name="last_name" id="last name" required>
     </div>
-    <div class="form-group">
-      <label class="form-label">Email</label>
-      <input type="text" class="form-control" name="email" id="email" required>
 
-    </div>
-    <div class="form-group">
-      <label class="form-label">Birthdate</label>
-      <input type="date" class="form-control" name="birthdate" id="age" required>
-    </div>
     <div class="form-group">
       <label class="form-label">Address</label>
       <textarea class="form-control" name="address" required   id="address"></textarea>
     </div>
 
-    <div class="form-group">
-      <label class="form-label">Joining date</label>
-      <input type="date" class="form-control" name="joining_date" id="joining date" required>
-    </div>
+
     <div class="form-group">
       <label class="form-label">Qualifiaction</label>
       <input type="text" class="form-control" name="qualifiaction" id="qualifiaction" required>
     </div>
     <div class="form-group">
-      <label class="form-label">Left date</label>
-      <input type="date" class="form-control" name="left_date" id="left date" required>
-    </div>
-    iv class="form-group">
-      <label class="form-label">Gender</label>
-      <div class="form-check">
-        <label class="form-check-label">
-<input class="form-check-input" type="radio" name="gender" id="1" required>Male
-</label>
-      </div>
-      <div class="form-check">
-        <label class="form-check-label">
-<input class="form-check-input" type="radio" name="gender" id="2" required>Female
-</label>
-      </div>
-      <div class="form-check disabled">
-        <label class="form-check-label">
-<input class="form-check-input" type="radio" name="gender" id="3" required>Other
-</label>
-      </div>
-      </div>
+
     <div class="form-group">
       <label class="form-label">Experience</label>
       <input type="text" class="form-control" name="experience" id="experince" required>
@@ -100,5 +69,6 @@
   </form>
 
 </div>
+
 </div>
 @endsection
