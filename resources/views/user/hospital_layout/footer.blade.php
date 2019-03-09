@@ -5,8 +5,8 @@
             <div class="row">
                 <div class="col-lg-3 col-md-6 col-sm-6 footer-col-4">
                     <div class="widget widget_about">
-                        <div class="logo-footer"><img src="images/user_images/footer-logo.png" alt=""></div>
-                        <p class="m-t40"><strong>MediCo.</strong>  Lorem ipsum dolor sit amet, cons ectetur elit. Vestibulum nec odios Suspe ndisse cursus.  cons ectetur elit. Vestibulum nec odios Lorem ipsum dolor sit amet, cons ectetur elit. Vestibulum nec.</p>
+                        <div class="logo-footer"><img src="{{ asset('images/user_images/hospital_logo/logo1.png') }}" alt=""></div>
+                        <p class="m-t40"><strong>ABC.</strong>  Lorem ipsum dolor sit amet, cons ectetur elit. Vestibulum nec odios Suspe ndisse cursus.  cons ectetur elit. Vestibulum nec odios Lorem ipsum dolor sit amet, cons ectetur elit. Vestibulum nec.</p>
                         {{-- <ul class="dez-social-icon border dez-social-icon-lg">
                             <li><a href="javascript:void(0);" class="fa fa-facebook fb-btn"></a></li>
                             <li><a href="javascript:void(0);" class="fa fa-twitter tw-btn"></a></li>

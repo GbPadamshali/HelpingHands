@@ -71,7 +71,7 @@
 	<script src="{{ asset('js/user_js/dz.carousel.js')}}"></script><!-- SORTCODE FUCTIONS  -->
 	{{-- <script src='../../www.google.com/recaptcha/api.js'></script> <!-- Google API For Recaptcha  --> --}}
 	<script src="{{ asset('js/user_js/dz.ajax.js') }}"></script><!-- CONTACT JS  -->
-	<script src="{{ asset('user_plugins/switcher/js/switcher.js') }}"></script><!-- SWITCHER JS  -->
+	{{-- <script src="{{ asset('user_plugins/switcher/js/switcher.js') }}"></script><!-- SWITCHER JS  --> --}}
 	<!-- revolution JS FILES -->
 	<script  src="{{ asset('user_plugins/revolution/revolution/js/jquery.themepunch.tools.min.js') }}"></script>
 	<script  src="{{ asset('user_plugins/revolution/revolution/js/jquery.themepunch.revolution.min.js') }}"></script>

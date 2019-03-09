@@ -1,5 +1,11 @@
 @extends('hospital.layout.design')
 @section('content')
+  <div class="d-table-cell align-middle">
+
+    <div class="text-center mt-4">
+      <h1 class="h2">EDIT DOCTOR </h1>
+
+    </div>
 <div class="card-body">
   <form id="validation-form" method="post" enctype="multipart/form-data" action="{{ route('doctors.update', $doctor->id) }}"> {{ csrf_field() }}
 
@@ -168,5 +174,6 @@
   							});
   						});
   					</script>
+</div>
 </div>
 @endsection

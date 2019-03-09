@@ -12,14 +12,15 @@
                             <div class="row">
                                 <div class="form-group col-lg-6">
                                     <label>First Name</label>
-                                    <input class="form-control"first name="first name" id="first name" required>
+                                    <input type="text" class="form-control"first name="first name" id="first name" required>
                                 </div>
                                 <div class="form-group col-lg-6">
                                     <label>Last Name</label>
-                                    <input class="form-control"last name="last name" id="last name" required>
+                                    <input type="text" class="form-control"last name="last name" id="last name" required>
                                 </div>
                                 <div class="form-group col-lg-6">
                                     <label>Email</label>
+<<<<<<< HEAD
                                     <input class="form-control"name="email" id="email" required>
                                 </div>
                                 <div class="form-group col-lg-6">
@@ -49,6 +50,37 @@
                                 <div class="form-group col-lg-6">
                                     <label>Address</label>
                                     <input class="form-control"name="address" id="address" required>
+=======
+                                    <input type="email" class="form-control" name="email" id="email" required>
+                                </div>
+                                <div class="form-group col-lg-6">
+                                    <label>Birthdate</label>
+                                    <input type="date" class="form-control" name="birthdate" id="birthdate" required>
+                                </div>
+                                <div class="form-group col-lg-6">
+                                    <label>Gender</label>
+                                    <input type="radio" class="form-control" name="gender" genderid="" required>
+                                </div>
+                                <div class="form-group col-lg-6">
+                                    <label>Joining Date</label>
+                                    <input type="datetime" class="form-control"first name="Joining date" id="joining date" required>
+                                </div>
+                                <div class="form-group col-lg-6">
+                                    <label>Qualification</label>
+                                    <input type="text" class="form-control"first name="qualifiaction" id="qualification" required>
+                                </div>
+                                <div class="form-group col-lg-6">
+                                    <label>Specializtion</label>
+                                    <input type="text" class="form-control"first name="specialization" id="specialization" required>
+                                </div>
+                                <div class="form-group col-lg-6">
+                                    <label>Experience</label>
+                                    <input type="text" class="form-control"first name="experience" id="experience" required>
+                                </div>
+                                <div class="form-group col-lg-6">
+                                    <label>Address</label>
+                                    <input type="textarea" class="form-control"first name="address" id="address" required>
+>>>>>>> c4c693d835d555f7989ce69b156793afa5a88406
                                 </div>
                             </div>
                             <div class="text-center">
