@@ -87,6 +87,13 @@ Route::group(['prefix' => 'admin'], function(){
     Route::view('/add_recetionist', 'hospital.Receptionist.add_recetionist');
     Route::view('/all_hospital_staff', 'hospital.hospital_staff.all_hospital_staff');
     Route::view('/add_hospital_staff', 'hospital.hospital_staff.add_hospital_staff');
+    Route::view('/add_report', 'hospital.report.add_report');
+    Route::view('/add_swiper', 'hospital.Swiper.add_swiper');
+    Route::view('/add_wardboy', 'hospital.Wardboy.add_wardboy');
+    Route::view('/add_x-ray_technician', 'hospital.X-RAY_technician.add_x-ray_technician');
+    Route::view('/add_pharmacy_staff', 'hospital.Pharmacy_staff.add_pharmacy_staff');
+
+
 
     Route::view('/login', 'hospital.auth.login');
     Route::view('/register', 'hospital.auth.register');
