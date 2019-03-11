@@ -29,7 +29,7 @@
             <div class="main-bar clearfix ">
                 <div class="container clearfix">
                     <!-- website logo -->
-                    <div class="logo-header mostion"><a href="index-2.html"><img src="{{ asset('images/user_images/hospital_logo/logo1.png') }}" style="height: 80px; width: 100px;" alt=""></a></div>
+                    <div class="logo-header mostion"><a href="{{ url('abc-hospital') }}"><img src="{{ asset('images/user_images/hospital_logo/logo1.png') }}" style="height: 80px; width: 100px;" alt=""></a></div>
                     <!-- nav toggle button -->
 						<button class="navbar-toggler collapsed navicon justify-content-end" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
 							<span></span>
@@ -52,7 +52,7 @@
                     <!-- main nav -->
                     <div class="header-nav navbar-collapse collapse justify-content-end" id="navbarNavDropdown">
                         <ul class=" nav navbar-nav">
-                                <li> <a href="{{ url('hospital-dashboard') }}">Home<i class="fa fa-chevron-down"></i></a>
+                                <li> <a href="{{ url('abc-hospital') }}">Home<i class="fa fa-chevron-down"></i></a>
                                     {{-- <ul class="sub-menu">
                                         <li><a href="index-2.html">1. Dentist Center</a> </li>
                                         <li><a href="index-3.html">2. ENT Hospital</a></li>
@@ -278,7 +278,7 @@
                                         </li>
                                     </ul>
                                 </li> --}}
-                                <li> <a href="#">Booking<i class="fa fa-chevron-down"></i></a>
+                                <li> <a href="booking">Booking<i class="fa fa-chevron-down"></i></a>
                                 </li>
                                 <li> <a href="{{ url('h-contact-us') }}">Contact us <i class="fa fa-chevron-down"></i></a>
                                     {{-- <ul class="sub-menu">

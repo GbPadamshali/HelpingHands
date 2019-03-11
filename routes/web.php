@@ -22,6 +22,7 @@ Route::view('user-signup-page', 'user.auth.signup');
 Route::view('dashboard', 'user.dashboard');
 Route::view('faq', 'user.pages.faq');
 Route::view('services', 'user.pages.services');
+Route::view('subscribe', 'user.pages.pricing_table');
 Route::view('privacy-policy', 'user.pages.privacy_policy');
 Route::view('error-403', 'user.error.error_403');
 Route::view('error-404', 'user.error.error_404');
@@ -32,6 +33,7 @@ Route::View('reports', 'user.hospital_layout.reports');
 Route::view('contact-us', 'user.pages.contact_us');
 Route::view('abc-hospital', 'user.hospital_pages.dashboard');
 Route::view('h-contact-us', 'user.hospital_pages.h_contact_us');
+Route::view('booking', 'user.hospital_pages.booking');
 Auth::routes();
 
 // Admin Routes Starts
