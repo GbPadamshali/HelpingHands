@@ -7,9 +7,9 @@
 
     </div> --}}
 <div class="card-body">
-  <form id="validation-form" method="post" action="{{ route('ho-wardboys.store') }}" enctype="multipart/form-data">
+  <form id="validation-form" method="post" action="{{ route('ho-x-ray-techs.store') }}" enctype="multipart/form-data">
     {{ csrf_field() }}
-    <input type="hidden" value="6" name="staff_role"/>
+    <input type="hidden" value="5" name="staff_role"/>
     <div class="form-group">
       <label class="form-label">First name</label>
       <input type="text" class="form-control" name="first_name" id="first_name" required>

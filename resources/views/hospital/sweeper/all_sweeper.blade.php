@@ -1,7 +1,7 @@
 @extends('hospital.layout.design')
 @section('content')
   <div class="card-body">
-    			<a class="btn btn-outline-primary btn-sm" href="{{ route('ho-wardboys.create') }}">Add Technician</a> <br><br>
+    			<a class="btn btn-outline-primary btn-sm" href="{{ route('ho-sweepers.create') }}">Add Sweeper</a> <br><br>
     <table id="datatables-basic" class="table table-striped" style="width:100%">
       <thead>
         <tr>
@@ -17,33 +17,33 @@
         </tr>
       </thead>
       <tbody>
-        @foreach ($wardboys as $wardboy)
+        @foreach ($sweepers as $sweeper)
           <tr>
-            <td>{{ $wardboy->first_name }}</td>
-            <td>{{ $wardboy->last_name }}</td>
-            <td>{{ $wardboy->email }}</td>
-            <td>{{ $wardboy->joining_date }}</td>
-            <td>{{ $wardboy->qualification }}</td>
-            <td>{{ $wardboy->experience }}</td>
-            @if ($wardboy->status == 1)
+            <td>{{ $sweeper->first_name }}</td>
+            <td>{{ $sweeper->last_name }}</td>
+            <td>{{ $sweeper->email }}</td>
+            <td>{{ $sweeper->joining_date }}</td>
+            <td>{{ $sweeper->qualification }}</td>
+            <td>{{ $sweeper->experience }}</td>
+            @if ($sweeper->status == 1)
               <td>WORKING</td>
-            @elseif ($wardboy->status == 2)
+            @elseif ($sweeper->status == 2)
               <td>LEFT</td>
-            @elseif ($wardboy->status == 3)
+            @elseif ($sweeper->status == 3)
               <td>ON HOLD</td>
-            @elseif ($wardboy->status == 4)
+            @elseif ($sweeper->status == 4)
               <td>ON LEAVE</td>
             @endif
-            <td>{{ $wardboy->mobile }}</td>
+            <td>{{ $sweeper->mobile }}</td>
             <td>
-              <a href="{{ route('ho-wardboys.edit', $wardboy->id) }}">EDIT</a>/
-              <a href="{{ route('ho-wardboys.destroy', $wardboy->id) }}" style="color: #ff1717;">DELETE</a>
+              <a href="{{ route('ho-sweepers.edit', $sweeper->id) }}">EDIT</a>/
+              <a href="{{ route('ho-sweepers.destroy', $sweeper->id) }}" style="color: #ff1717;">DELETE</a>
             </td>
           </tr>
         @endforeach
       </tbody>
     </table>
-    {{ $wardboys->links() }}
+    {{ $sweepers->links() }}
         <script>
             document.addEventListener("DOMContentLoaded", function(event) {
               // Datatables basic

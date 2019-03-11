@@ -1,47 +1,49 @@
 @extends('hospital.layout.design')
 @section('content')
   <div class="card-body">
-    			<a class="btn btn-outline-primary btn-sm" href="{{ url('/add_nureses') }}">Add_nureses</a>
+    			<a class="btn btn-outline-primary btn-sm" href="{{ route('ho-pharmacy-staff.create') }}">Add Pharmacist</a> <br><br>
     <table id="datatables-basic" class="table table-striped" style="width:100%">
       <thead>
         <tr>
-              <th>first_nameD</th>
-              <th>last_name</th>
-              <th>email</th>
-              <th>birthdate</th>
-              <th>address</th>
-              <th>joining_date</th>
-              <th>qualification</th></th>
-              <th>left_date</th>
-              <th>gender</th>
-              <th>experience</th>
-              <th>status</th>
-              <th>mobile</th>
-              <th>maritial_status</th>
+              <th>First Name</th>
+              <th>Last Name</th>
+              <th>Email</th>
+              <th>Joining Date</th>
+              <th>Qualification</th>
+              <th>Experience</th>
+              <th>Status</th>
+              <th>Mobile</th>
               <th>Actions</th>
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td>Tiger Nixon</td>
-          <td>Architect</td>
-          <td>abc@gmail.com</td>
-          <td>01/01/2101</td>
-          <td>ahmedabad</td>
-          <td>12/2/2017</td>
-          <td>xyz</td>
-          <td>4/5/2019</td>
-          <td>male</td>
-          <td>xyz</td>
-          <td>xyz</td>
-          <td>xyz</td>
-          <td>xyz</td>
-          <td><a href="#">edit</a>         \          <a href="#">delete</a></td>
-        </tr>
-
+        @foreach ($pharmacists as $pharmacist)
+          <tr>
+            <td>{{ $pharmacist->first_name }}</td>
+            <td>{{ $pharmacist->last_name }}</td>
+            <td>{{ $pharmacist->email }}</td>
+            <td>{{ $pharmacist->joining_date }}</td>
+            <td>{{ $pharmacist->qualification }}</td>
+            <td>{{ $pharmacist->experience }}</td>
+            @if ($pharmacist->status == 1)
+              <td>WORKING</td>
+            @elseif ($pharmacist->status == 2)
+              <td>LEFT</td>
+            @elseif ($pharmacist->status == 3)
+              <td>ON HOLD</td>
+            @elseif ($pharmacist->status == 4)
+              <td>ON LEAVE</td>
+            @endif
+            <td>{{ $pharmacist->mobile }}</td>
+            <td>
+              <a href="{{ route('ho-pharmacy-staff.edit', $pharmacist->id) }}">EDIT</a>/
+              <a href="{{ route('ho-pharmacy-staff.destroy', $pharmacist->id) }}" style="color: #ff1717;">DELETE</a>
+            </td>
+          </tr>
+        @endforeach
       </tbody>
-
     </table>
+    {{ $pharmacists->links() }}
         <script>
             document.addEventListener("DOMContentLoaded", function(event) {
               // Datatables basic

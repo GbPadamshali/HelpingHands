@@ -1,7 +1,7 @@
 @extends('hospital.layout.design')
 @section('content')
   <div class="card-body">
-    			<a class="btn btn-outline-primary btn-sm" href="{{ route('ho-wardboys.create') }}">Add Technician</a> <br><br>
+    			<a class="btn btn-outline-primary btn-sm" href="{{ route('ho-x-ray-techs.create') }}">Add Technician</a> <br><br>
     <table id="datatables-basic" class="table table-striped" style="width:100%">
       <thead>
         <tr>
@@ -17,33 +17,33 @@
         </tr>
       </thead>
       <tbody>
-        @foreach ($wardboys as $wardboy)
+        @foreach ($x_ray_techs as $x_ray_tech)
           <tr>
-            <td>{{ $wardboy->first_name }}</td>
-            <td>{{ $wardboy->last_name }}</td>
-            <td>{{ $wardboy->email }}</td>
-            <td>{{ $wardboy->joining_date }}</td>
-            <td>{{ $wardboy->qualification }}</td>
-            <td>{{ $wardboy->experience }}</td>
-            @if ($wardboy->status == 1)
+            <td>{{ $x_ray_tech->first_name }}</td>
+            <td>{{ $x_ray_tech->last_name }}</td>
+            <td>{{ $x_ray_tech->email }}</td>
+            <td>{{ $x_ray_tech->joining_date }}</td>
+            <td>{{ $x_ray_tech->qualification }}</td>
+            <td>{{ $x_ray_tech->experience }}</td>
+            @if ($x_ray_tech->status == 1)
               <td>WORKING</td>
-            @elseif ($wardboy->status == 2)
+            @elseif ($x_ray_tech->status == 2)
               <td>LEFT</td>
-            @elseif ($wardboy->status == 3)
+            @elseif ($x_ray_tech->status == 3)
               <td>ON HOLD</td>
-            @elseif ($wardboy->status == 4)
+            @elseif ($x_ray_tech->status == 4)
               <td>ON LEAVE</td>
             @endif
-            <td>{{ $wardboy->mobile }}</td>
+            <td>{{ $x_ray_tech->mobile }}</td>
             <td>
-              <a href="{{ route('ho-wardboys.edit', $wardboy->id) }}">EDIT</a>/
-              <a href="{{ route('ho-wardboys.destroy', $wardboy->id) }}" style="color: #ff1717;">DELETE</a>
+              <a href="{{ route('ho-x-ray-techs.edit', $x_ray_tech->id) }}">EDIT</a>/
+              <a href="{{ route('ho-x-ray-techs.destroy', $x_ray_tech->id) }}" style="color: #ff1717;">DELETE</a>
             </td>
           </tr>
         @endforeach
       </tbody>
     </table>
-    {{ $wardboys->links() }}
+    {{ $x_ray_techs->links() }}
         <script>
             document.addEventListener("DOMContentLoaded", function(event) {
               // Datatables basic

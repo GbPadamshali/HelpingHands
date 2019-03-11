@@ -3,19 +3,23 @@
   <div class="d-table-cell align-middle">
 
     <div class="text-center mt-4">
-      <h1 class="h2">ADD REPORT </h1>
+      <h3 class="h2">ADD REPORT </h3>
 
     </div>
 <div class="card-body">
   <form id="validation-form" method="post" enctype="multipart/form-data" >
 
     <div class="form-group">
+      <label class="form-label">Patient id</label>
+      <input type="text" class="form-control" name="patient_id" id="patient_id"required>
+    </div>
+    <div class="form-group">
       <label class="form-label">Report name</label>
-      <input type="text" class="form-control" name="report_name" id="report name" required>
+      <input type="text" class="form-control" name="report_name" id="report_name" required>
   </div>
   <div class="form-group">
     <label class="form-label">Report types</label>
-    <select class="form-control" name="report types"  required>
+    <select class="form-control" name="report_type" required>
       <option value>Select types...</option>
       {{-- <optgroup label="Department"> --}}
       <option value="Blood Report" id="1">Blood Report</option>)
@@ -40,15 +44,11 @@
 
     <div class="form-group">
       <label class="form-label">Issued on</label>
-      <input type="date" class="form-control" name="issued_on" id="issued on" required>
+      <input type="date" class="form-control" name="issued_on" id="issued_on" required>
     </div>
     <div class="form-group">
       <label class="form-label">Supervisor name</label>
       <input type="text" class="form-control" name="supervisor" id="supervisor" required>
-    </div>
-    <div class="form-group">
-      <label class="form-label">Patient id</label>
-      <input type="text" class="form-control" name="patient_id" id="patient id"required>
     </div>
 
     <div class="form-group">

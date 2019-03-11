@@ -4,7 +4,7 @@
       <div class="content-error">
         <div class="hpanel">
                     <div class="panel-body">
-                        <form action="{{ url('#') }}" id="loginForm" method="post" enctype="multipart/form-data">
+                        <form action="{{ route('ad-doctors.store') }}" id="loginForm" method="post" enctype="multipart/form-data">
                           {{ csrf_field() }}
                           <div class="text-left">
                             <h3><u>ADD DOCTOR</u></h3>
@@ -58,12 +58,14 @@
                                     <input type="date" class="form-control" name="birthdate" id="birthdate" required>
                                 </div>
                                 <div class="form-group col-lg-6">
-                                    <label>Gender</label>
-                                    <input type="radio" class="form-control" name="gender" genderid="" required>
+                                    <label>Gender</label><br>
+                                    <input type="radio" name="gender" value="1" required>Male <br>
+                                    <input type="radio" name="gender" value="2" required>Female <br>
+                                    <input type="radio" name="gender" value="3" required>Other <br>
                                 </div>
                                 <div class="form-group col-lg-6">
                                     <label>Joining Date</label>
-                                    <input type="datetime" class="form-control"first name="Joining date" id="joining date" required>
+                                    <input type="date" class="form-control"first name="joining_date" id="joining date" required>
                                 </div>
                                 <div class="form-group col-lg-6">
                                     <label>Qualification</label>

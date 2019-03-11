@@ -1,7 +1,7 @@
 @extends('hospital.layout.design')
 @section('content')
   <div class="card-body">
-    			<a class="btn btn-outline-primary btn-sm" href="{{ route('ho-wardboys.create') }}">Add Technician</a> <br><br>
+    			<a class="btn btn-outline-primary btn-sm" href="{{ route('ho-nurses.create') }}">Add Nurse</a> <br><br>
     <table id="datatables-basic" class="table table-striped" style="width:100%">
       <thead>
         <tr>
@@ -17,33 +17,33 @@
         </tr>
       </thead>
       <tbody>
-        @foreach ($wardboys as $wardboy)
+        @foreach ($nurses as $nurse)
           <tr>
-            <td>{{ $wardboy->first_name }}</td>
-            <td>{{ $wardboy->last_name }}</td>
-            <td>{{ $wardboy->email }}</td>
-            <td>{{ $wardboy->joining_date }}</td>
-            <td>{{ $wardboy->qualification }}</td>
-            <td>{{ $wardboy->experience }}</td>
-            @if ($wardboy->status == 1)
+            <td>{{ $nurse->first_name }}</td>
+            <td>{{ $nurse->last_name }}</td>
+            <td>{{ $nurse->email }}</td>
+            <td>{{ $nurse->joining_date }}</td>
+            <td>{{ $nurse->qualification }}</td>
+            <td>{{ $nurse->experience }}</td>
+            @if ($nurse->status == 1)
               <td>WORKING</td>
-            @elseif ($wardboy->status == 2)
+            @elseif ($nurse->status == 2)
               <td>LEFT</td>
-            @elseif ($wardboy->status == 3)
+            @elseif ($nurse->status == 3)
               <td>ON HOLD</td>
-            @elseif ($wardboy->status == 4)
+            @elseif ($nurse->status == 4)
               <td>ON LEAVE</td>
             @endif
-            <td>{{ $wardboy->mobile }}</td>
+            <td>{{ $nurse->mobile }}</td>
             <td>
-              <a href="{{ route('ho-wardboys.edit', $wardboy->id) }}">EDIT</a>/
-              <a href="{{ route('ho-wardboys.destroy', $wardboy->id) }}" style="color: #ff1717;">DELETE</a>
+              <a href="{{ route('ho-nurses.edit', $nurse->id) }}">EDIT</a>/
+              <a href="{{ route('ho-nurses.destroy', $nurse->id) }}" style="color: #ff1717;">DELETE</a>
             </td>
           </tr>
         @endforeach
       </tbody>
     </table>
-    {{ $wardboys->links() }}
+    {{ $nurses->links() }}
         <script>
             document.addEventListener("DOMContentLoaded", function(event) {
               // Datatables basic

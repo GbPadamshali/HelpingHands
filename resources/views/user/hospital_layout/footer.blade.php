@@ -20,12 +20,13 @@
                         <h4 class="m-b15 text-uppercase">Our services</h4>
                         <div class="dez-separator bg-primary"></div>
                         <ul>
-                            <li><a href="#">Login</a></li>
-                            <li><a href="#">Sign Up</a></li>
-                            <li><a href="#">Serve Hospitality</a></li>
-                            <li><a href="#">FAQ</a></li>
-                            <li><a href="#">Support</a></li>
-                            <li><a href="#">Privacy Policy</a></li>
+                          <li><a href="#">Multispeciality</a></li>
+                          <li><a href="#">Orthopedic</a></li>
+                          <li><a href="#">Dental</a></li>
+                          <li><a href="#">Maternity</a></li>
+                          <li><a href="#">Laboratry</a></li>
+                          <li><a href="#">Pharmacy</a></li>
+                          <li><a href="#">Canteen</a></li>
                         </ul>
                     </div>
                 </div>
@@ -34,9 +35,9 @@
                         <h4 class="m-b15 text-uppercase">Contact us</h4>
                         <div class="dez-separator bg-primary"></div>
                         <ul>
-                            <li><i class="fa fa-map-marker"></i><strong>address</strong> Helping Hands </li>
+                            <li><i class="fa fa-map-marker"></i><strong>address</strong> 21 Greens Road RD 2, Ruawai 0592 </li>
                             <li><i class="fa fa-phone"></i><strong>phone</strong>0000-0000000 (24/7 Support Line)</li>
-                            <li><i class="fa fa-fax"></i><strong>Email</strong>info@helpinghands<br/>
+                            <li><i class="fa fa-fax"></i><strong>Email</strong>info@abc.com<br/>
                           </li>
                         </ul>
                     </div>
@@ -93,7 +94,7 @@
         {{-- <span>Copyright © 2017 DexignZone</span> --}}
       </div>
                 <div class="col-lg-4 col-md-4 text-center">
-        <span> Design By Helping Hands </span>
+        <span> Design & Developed By Helping Hands </span>
       </div>
                 <div class="col-lg-4 col-md-4 text-right">
         <a href="about-2.html"> About</a>
