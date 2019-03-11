@@ -61,14 +61,21 @@ Route::group(['prefix' => 'admin'], function(){
   Route::view('/add-role', 'admin.role.add-role');
   Route::view('/all-role', 'admin.role.all-role');
   Route::view('/edit-role', 'admin.role.edit-role');
-
-  // Auth Routes
-
-  Route::group(['middleware' => ['auth', 'admin']], function(){
-    Route::match(['get', 'post'], '/dashboard', 'AdminControllers\AdminAuthController@Dashboard')->name('admin.dashboard');
-    Route::resource('admins', 'AdminControllers\AdminsController');
-    Route::resource('ad-doctors', 'AdminControllers\DoctorController');
-  });
+  Route::view('/add-staff', 'admin.staff.add-staff');
+  Route::view('/all-staff', 'admin.staff.all-staff');
+  Route::view('/edit-staff', 'admin.staff.edit-staff');
+  Route::view('/all-report', 'admin.hospital-report.all-report');
+  Route::view('/add-report', 'admin.hospital-report.add-report');
+  Route::view('/edit-report', 'admin.hospital-report.edit-report');
+  Route::view('/add-event', 'admin.upcoming event.add-event');
+  Route::view('/all-event', 'admin.upcoming event.all-event');
+  Route::view('/edit-event', 'admin.upcoming event.edit-event');
+  Route::view('/add-report-type', 'admin.report type.add-report-type');
+  Route::view('/all-report-type', 'admin.report type.all-report-type');
+  Route::view('/edit-report-type', 'admin.report type.edit-report-type');
+  Route::view('/all-reports', 'admin.reports.all-reports');
+  Route::view('/reply-report', 'admin.reports.reply-report');
+// ]);
 });
 // Admin Routes end
 

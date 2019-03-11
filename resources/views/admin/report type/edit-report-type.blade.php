@@ -7,28 +7,20 @@
                         <form action="{{ url('#') }}" id="loginForm" method="post" enctype="multipart/form-data">
                           {{ csrf_field() }}
                           <div class="text-left">
-                            <h3><u>ADD DEPARTMENT</u></h3>
+                            <h3><u>EDIT REPORT TYPE</u></h3>
                           </di>
                             <div class="row">
                               <div class="form-group col-lg-6">
-                                  <label>Id</label>
-                                  <input class="form-control"name="id" id="id" required>
+                                  <label>Report Name</label>
+                                  <input class="form-control"report name="name" id="report name" required>
                               </div>
                                 <div class="form-group col-lg-6">
-                                    <label>Hospital Id</label>
-                                    <input class="form-control"name="hopital id" id="hospital id" required>
-                                </div>
-                                <div class="form-group col-lg-6">
-                                    <label>Role</label>
-                                    <input class="form-control"name="department" id="role" required>
-                                </div>
-                                <div class="form-group col-lg-6">
-                                    <label>Desciption</label>
+                                    <label>Description</label>
                                     <input class="form-control" name="description" id="description" required>
                                 </div>
                             </div>
                             <div class="text-center">
-                                <button class="btn btn-success loginbtn">ADD DEPARTMENT</button>
+                                <button class="btn btn-success loginbtn">EDIT REPORT TYPE</button>
                             </div>
                         </form>
                     </div>

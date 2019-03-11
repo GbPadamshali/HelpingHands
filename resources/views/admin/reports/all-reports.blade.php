@@ -8,8 +8,8 @@
                   <div class="sparkline13-list">
                       <div class="sparkline13-hd">
                           <div class="main-sparkline13-hd">
-                              <h1>ALL <span class="table-project-n">ROLE</span></h1>
-                              <button type="button" class="btn btn-custon-rounded-four btn-primary" onclick="location.href='{{ url('/admin/add-role') }}'">ADD ROLE</button>
+                              <h1>ALL <span class="table-project-n">REPORTS</span></h1>
+                              <button type="button" class="btn btn-custon-rounded-four btn-primary" onclick="location.href='{{ url('/admin/add-report') }}'">ADD REPORTS </button>
                           </div>
                       </div>
                       <div class="sparkline13-graph">
@@ -18,22 +18,23 @@
                                   data-cookie-id-table="saveId" data-show-export="false" data-click-to-select="true" data-toolbar="#toolbar">
                                   <thead>
                                       <tr>
-                                          <th data-field="id" data-editable="false">Id
-                                          <th data-field="hospital id" data-editable="false">Hospital Id
-                                          <th data-field="role" data-editable="false">Role</th>
-                                          <th data-field="description" data-editable="false">Description</th>
+                                          <th data-field="id">ID</th>
+                                          <th data-field="user id">USER ID</th>
+                                          <th data-field="report message">REPORT MESSAGE</th>
+                                          <th data-field="status">STATUS</th>
                                           <th data-field="action">Action</th>
                                       </tr>
                                   </thead>
                                   <tbody>
 
                                       <tr>
-                                        <td>govind9686</td>
-                                        <td>hsk12344566</td>
-                                        <td>compounder</td>
-                                        <td>describe an description in detail</td>
+                                          <td>bgh524623</td>
+                                          <td>gb254626kj</td>
+                                          <td>Report are commmented</td>
+                                          <td>PENDING</td>
                                           <td>
-                                            <button type="button" class="btn btn-primary" onclick="location.href='{{ url('#') }}'">Edit</button><hr>
+                                            <button type="button" class="btn btn-primary" onclick="location.href='{{ url('#') }}'">Reply</button>
+                                            <button type="button" class="btn btn-secondary" onclick="location.href='{{ url('#') }}'">Refuse</button>
                                             <button type="button" class="btn btn-danger" onclick="location.href='{{ url('#') }}'">Delete</button>
                                           </td>
                                       </tr>

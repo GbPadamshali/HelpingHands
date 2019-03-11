@@ -9,7 +9,7 @@
                       <div class="sparkline13-hd">
                           <div class="main-sparkline13-hd">
                               <h1>ALL <span class="table-project-n">DEPARTMENT</span></h1>
-                              <button type="button" class="btn btn-custon-rounded-four btn-primary" onclick="location.href='{{ url('#') }}'">All Department</button>
+                              <button type="button" class="btn btn-custon-rounded-four btn-primary" onclick="location.href='{{ url('/admin/add-department') }}'">ADD DEPARTMENT</button>
                           </div>
                       </div>
                       <div class="sparkline13-graph">
