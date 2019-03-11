@@ -30,7 +30,7 @@
                     <li>
                         <a title="User" href="{{ url('admin/all-user') }}" aria-expanded="false">
                           <span class="educate-icon educate-student icon-wrap sub-icon-mg" aria-hidden="true"></span>
-                          <span class="mini-click-non">user</span></a>
+                          <span class="mini-click-non">User</span></a>
                     </li>
                     {{-- <li>
                         <a title="Tournaments" href="{{ route('tournaments.index') }}" aria-expanded="false">
@@ -47,6 +47,47 @@
                           <span class="educate-icon educate-event icon-wrap sub-icon-mg" aria-hidden="true"></span>
                           <span class="mini-click-non">Sponsors</span></a>
                     </li> --}}
+                    <li>
+                        <a title="Matches" href="{{ url('admin/all-admin') }}" aria-expanded="false">
+                          <span class="educate-icon educate-event icon-wrap sub-icon-mg" aria-hidden="true"></span>
+                          <span class="mini-click-non">Admins </span></a>
+                    </li>
+
+                    <li>
+                        <a title="Matches" href="{{ url('/admin/all-report') }}" aria-expanded="false">
+                          <span class="educate-icon educate-event icon-wrap sub-icon-mg" aria-hidden="true"></span>
+                          <span class="mini-click-non">Hospital-report</span></a>
+                    </li>
+                    <li>
+                        <a title="Matches" href="{{ url('/admin/all-department') }}" aria-expanded="false">
+                          <span class="educate-icon educate-event icon-wrap sub-icon-mg" aria-hidden="true"></span>
+                          <span class="mini-click-non">Departments</span></a>
+                    </li>
+                    <li>
+                        <a title="Matches" href="{{ url('/admin/all-report-type') }}" aria-expanded="false">
+                          <span class="educate-icon educate-event icon-wrap sub-icon-mg" aria-hidden="true"></span>
+                          <span class="mini-click-non">Report type</span></a>
+                    </li>
+                    <li>
+                        <a title="Matches" href="{{ url('/admin/all-reports') }}" aria-expanded="false">
+                          <span class="educate-icon educate-event icon-wrap sub-icon-mg" aria-hidden="true"></span>
+                          <span class="mini-click-non">Reports</span></a>
+                    </li>
+                    <li>
+                        <a title="Matches" href="{{ url('/admin/all-role') }}" aria-expanded="false">
+                          <span class="educate-icon educate-event icon-wrap sub-icon-mg" aria-hidden="true"></span>
+                          <span class="mini-click-non">Role</span></a>
+                    </li>
+                    <li>
+                        <a title="Matches" href="{{ url('/admin/all-staff') }}" aria-expanded="false">
+                          <span class="educate-icon educate-event icon-wrap sub-icon-mg" aria-hidden="true"></span>
+                          <span class="mini-click-non">Staff</span></a>
+                    </li>
+                    <li>
+                        <a title="Matches" href="{{ url('/admin/all-event') }}" aria-expanded="false">
+                          <span class="educate-icon educate-event icon-wrap sub-icon-mg" aria-hidden="true"></span>
+                          <span class="mini-click-non">Upcoming Event</span></a>
+                    </li>
                     <li>
                         <a title="Logout" href="{{ route('admin.logout') }}" aria-expanded="false">
                           <span class="educate-icon educate-home icon-wrap sub-icon-mg" aria-hidden="true"></span>
