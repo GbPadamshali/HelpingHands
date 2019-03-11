@@ -20,7 +20,7 @@
   <link rel="shortcut icon" type="image/x-icon" href="{{ asset('images/user_images/hospital_favicons/favicon-32x32.png') }}" />
   <link rel="shortcut icon" type="image/x-icon" href="{{ asset('images/user_images/hospital_favicons/favicon-96x196.png') }}" />
 	<!-- PAGE TITLE HERE -->
-	<title>ABC. - Multispeciality Hospital</title>
+	<title>ABC - Multispeciality Hospital</title>
 
 	<!-- MOBILE SPECIFIC -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">

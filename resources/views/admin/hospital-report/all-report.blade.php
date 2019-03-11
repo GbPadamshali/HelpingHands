@@ -8,8 +8,8 @@
                   <div class="sparkline13-list">
                       <div class="sparkline13-hd">
                           <div class="main-sparkline13-hd">
-                              <h1>ALL <span class="table-project-n">ADMIN</span></h1>
-                              <button type="button" class="btn btn-custon-rounded-four btn-primary" onclick="location.href='{{ url('/admin/add-admin') }}'">ADD ADMIN</button>
+                              <h1>ALL <span class="table-project-n">REPORT</span></h1>
+                              <button type="button" class="btn btn-custon-rounded-four btn-primary" onclick="location.href='{{ url('/admin/add-report') }}'">ADD REPORT</button>
                           </div>
                       </div>
                       <div class="sparkline13-graph">
@@ -18,22 +18,26 @@
                                   data-cookie-id-table="saveId" data-show-export="false" data-click-to-select="true" data-toolbar="#toolbar">
                                   <thead>
                                       <tr>
-                                          <th data-field="id">ID</th>
+                                          <th data-field="report name">REPORT NAME</th>
                                           <th data-field="name" data-editable="false">Name</th>
-                                          <th data-field="email" data-editable="false">Email</th>
-                                          <th data-field="mobile" data-editable="false">Mobile</th>
-                                          <th data-field="password" data-editable="false">Password</th>
+                                          <th data-field="type" data-editable="false">TYPE</th>
+                                          <th data-field="issued on" data-editable="false">ISSSUEDD ON</th>
+                                          <th data-field="supervisor name" data-editable="false">SUPERVISOR NAME</th>
+                                          <th data-field="patient id" data-editable="false">PATIENT ID</th>
+                                          <th data-field="file" data-editable="false">FILE</th>
                                           <th data-field="action">Action</th>
                                       </tr>
                                   </thead>
                                   <tbody>
 
                                       <tr>
-                                          <td>id</td>
+                                          <td>thyroid</td>
                                           <td>Govinda</td>
-                                          <td>gbpadamshali@gmail.com</td>
-                                          <td>7016002663</td>
-                                          <td>govinda7</td>
+                                          <td>blood report</td>
+                                          <td>26/02/2001</td>
+                                          <td>akash</td>
+                                          <td>2546358</td>
+                                          <td>regular</td>
 
                                           <td>
                                             <button type="button" class="btn btn-primary" onclick="location.href='{{ url('#') }}'">Edit</button>

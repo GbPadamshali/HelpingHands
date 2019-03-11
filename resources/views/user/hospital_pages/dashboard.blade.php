@@ -102,7 +102,7 @@
 										data-paddingbottom="[0,0,0,0]"
 										data-paddingleft="[30,30,30,30]"
 
-										style="z-index: 7; white-space: nowrap; font-size: 15px; line-height: 40px; font-weight: 700; color: rgba(0, 0, 0, 1.00);font-family:'Raleway',sans-serif;background-color:rgba(255, 255, 255, 1.00);border-color:rgba(0, 0, 0, 1.00);border-width:0px;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;">READ MORE </div>
+										style="z-index: 7; white-space: nowrap; font-size: 15px; line-height: 40px; font-weight: 700; color: rgba(0, 0, 0, 1.00);font-family:'Raleway',sans-serif;background-color:rgba(255, 255, 255, 1.00);border-color:rgba(0, 0, 0, 1.00);border-width:0px;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;">Make An Appointment </div>
 								</li>
 								<!-- SLIDE  -->
 								<li data-index="rs-3240" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="default"  data-thumb="images/user_images/main-slider/slide9.jpg"  data-rotate="0"  data-saveperformance="off"  data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
@@ -506,7 +506,7 @@
         <div class="section-full bg-white content-inner-1 bg-img-fix overlay-black-dark" style="background-image:url(images/user_images/background/bg1.jpg);">
                 <div class="container">
                     <div class="section-head text-center text-white">
-                        <h3 class="h3 text-uppercase">Popular Hospital</h3>
+                        <h3 class="h3 text-uppercase">Meet Our Doctors</h3>
                         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry has been the industry's standard dummy text ever since the been when an unknown printer.</p>
                     </div>
                     <div class="section-content">
@@ -517,7 +517,7 @@
     									<a href="#"><img src="{{ asset('images/user_images/our-services/service/pic2.jpg') }}" alt=""></a>
     								</div>
     								<div class="dez-info p-a20 border-1 bg-white">
-    									<h4 class="dez-title m-t15"><a href="#">Uma Hospital</a></h4>
+    									<h4 class="dez-title m-t15"><a href="#">Doctor 1</a></h4>
     									<p class="m-b10">Lorem ipsum dolor Fusce varius euismod lacus eget feugiat rorem ipsum dolor consectetur Fusce varius [...]</p>
     									<a href="#" class="site-button-link black m-b10">Read More</a>
     									<div class="dez-divider bg-gray m10"><i class="icon-dot c-square"></i></div>
@@ -537,7 +537,7 @@
     									<a href="#"><img src="{{ asset('images/user_images/our-services/service/pic3.jpg') }}" alt=""></a>
     								</div>
     								<div class="dez-info p-a20 border-1 bg-white">
-    									<h4 class="dez-title m-t15"><a href="#">Vedant Multispeciality</a></h4>
+    									<h4 class="dez-title m-t15"><a href="#">Doctor 2</a></h4>
     									<p class="m-b10">Lorem ipsum dolor Fusce varius euismod lacus eget feugiat rorem ipsum dolor consectetur Fusce varius [...]</p>
     									<a href="#" class="site-button-link black m-b10">Read More</a>
     									<div class="dez-divider bg-gray m10"><i class="icon-dot c-square"></i></div>
@@ -557,7 +557,7 @@
     									<a href="#"><img src="{{ asset('images/user_images/our-services/service/pic4.jpg') }}" alt=""></a>
     								</div>
     								<div class="dez-info p-a20 border-1 bg-white">
-    									<h4 class="dez-title m-t15"><a href="#">Shalby Hospital</a></h4>
+    									<h4 class="dez-title m-t15"><a href="#">Doctor 3</a></h4>
     									<p class="m-b10">Lorem ipsum dolor Fusce varius euismod lacus eget feugiat rorem ipsum dolor consectetur Fusce varius [...]</p>
     									<a href="#" class="site-button-link black m-b10">Read More</a>
     									<div class="dez-divider bg-gray m10"><i class="icon-dot c-square"></i></div>

@@ -8,8 +8,8 @@
                   <div class="sparkline13-list">
                       <div class="sparkline13-hd">
                           <div class="main-sparkline13-hd">
-                              <h1>ALL <span class="table-project-n">ADMIN</span></h1>
-                              <button type="button" class="btn btn-custon-rounded-four btn-primary" onclick="location.href='{{ url('/admin/add-admin') }}'">ADD ADMIN</button>
+                              <h1>ALL <span class="table-project-n">EVENT</span></h1>
+                              <button type="button" class="btn btn-custon-rounded-four btn-primary" onclick="location.href='{{ url('/admin/add-event') }}'">ADD EVENT</button>
                           </div>
                       </div>
                       <div class="sparkline13-graph">
@@ -18,22 +18,20 @@
                                   data-cookie-id-table="saveId" data-show-export="false" data-click-to-select="true" data-toolbar="#toolbar">
                                   <thead>
                                       <tr>
-                                          <th data-field="id">ID</th>
-                                          <th data-field="name" data-editable="false">Name</th>
-                                          <th data-field="email" data-editable="false">Email</th>
-                                          <th data-field="mobile" data-editable="false">Mobile</th>
-                                          <th data-field="password" data-editable="false">Password</th>
+                                          <th data-field="event name" data-editable="false">Event Name</th>
+                                          <th data-field="event type" data-editable="false">Event Type</th>
+                                          <th data-field="event date" data-editable="false">Event Date</th>
+                                          <th data-field="event banner" data-editable="false">Event Banner</th>
                                           <th data-field="action">Action</th>
                                       </tr>
                                   </thead>
                                   <tbody>
 
                                       <tr>
-                                          <td>id</td>
-                                          <td>Govinda</td>
-                                          <td>gbpadamshali@gmail.com</td>
-                                          <td>7016002663</td>
-                                          <td>govinda7</td>
+                                          <td>Zegnite</td>
+                                          <td>zonal level</td>
+                                          <td>18/03/2019</td>
+                                          <td>powered by helping hands</td>
 
                                           <td>
                                             <button type="button" class="btn btn-primary" onclick="location.href='{{ url('#') }}'">Edit</button>
