@@ -16,11 +16,24 @@
                               </div>
                                 <div class="form-group col-lg-6">
                                     <label>Name</label>
-                                    <input class="form-control" name="name" id="name" required>
+                                    <input class="form-control" name="name" id="patient_name" required>
                                 </div>
                                 <div class="form-group col-lg-6">
                                     <label>Type</label>
                                     <input class="form-control" name="type" id="type" required>
+
+
+          <p>
+             <label>Select list</label>
+             <select id="myList" class="form-control custom-select-value col-lg-6">
+               <option value = "1">one</option>
+               <option value = "2">two</option>
+               <option value = "3">three</option>
+               <option value = "4">four</option>
+             </select>
+          </p>
+
+
                                 </div>
                                 <div class="form-group col-lg-6">
                                     <label>Issued on</label>
@@ -37,6 +50,7 @@
                                 <div class="form-group col-lg-6">
                                     <label>File</label>
                                     <input class="form-control" name="file" id="file" required>
+                                    <input type="file" name=fileToUpload id="fileToUpload">
                                 </div>
                             </div>
                             <div class="text-center">

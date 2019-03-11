@@ -11,7 +11,7 @@
 	<meta name="description" content="Responsive Bootstrap 4 Admin Template">
 	<meta name="author" content="Bootlab">
 
-	<title>Helping Hands | Hospital</title>
+	<title>ABC Hospital</title>
 
 	<link href="{{ asset('css/hospital_css/app.css') }}" rel="stylesheet">
 

@@ -3,11 +3,11 @@
 namespace App\Http\Controllers\AdminControllers;
 
 use Auth;
-use App\User;
+use App\Staff;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
-class UsersController extends Controller
+class StaffController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,8 +16,8 @@ class UsersController extends Controller
      */
     public function index()
     {
-        $users = User::paginate(2);
-        return view('admin.users.all-user')->with(compact('users'));
+        $members = Staff::paginate(2);
+        return view('admin.staff.all-staff')->with(compact('members'));
     }
 
     /**
@@ -27,7 +27,7 @@ class UsersController extends Controller
      */
     public function create()
     {
-        return view('admin.users.add-users');
+        return view('admin.staff.add-staff');
     }
 
     /**
@@ -38,15 +38,14 @@ class UsersController extends Controller
      */
     public function store(Request $request)
     {
-        $user = Auth::User();
-
         $input = $request->all();
-        $user = User::create($input);
+        $input['hospital_id'] = 1;
 
-        if (!$user) {
-          return redirect()->back()->with('error', 'Requested User has been not added successfully!!!');
+        $member = Staff::create($input);
+        if (!$member) {
+          return view('admin.staff.all-staff')->with('error', 'Requested Satff Member has not been adeed successfully!!!');
         } else {
-          return redirect('admin/ad-users')->with('success', 'Requested User has been added successfully!!');
+          return redirect()->back()->with('success', 'Requested staff member has been added successfully!!!');
         }
 
     }
@@ -70,8 +69,8 @@ class UsersController extends Controller
      */
     public function edit($id)
     {
-        $user = User::where('id', $id)->first();
-        return view('admin.users.edit-user')->with(compact('user'));
+        $member = Staff::where('id', $id)->first();
+        return view('admin.staff.edit-staff')->with(compact('member'));
     }
 
     /**
@@ -83,14 +82,15 @@ class UsersController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $user = Auth::User();
-        $input = $request->except('_token');
-        $user = User::where('id', $id)->update($input);
+        $input = $request()->except('_token');
+        $input['hospital_id'] = 1;
 
-        if (!$user) {
-          return redirect()->back()->with('error', 'Requested User has not been updated successfully!!!');
+        $member = Staff::where('id', $id)->update($input);
+
+        if (!$member) {
+          return redirect('admin/staff-members')->with('error', 'Requested Staff Member has been not updated successfully!!!');
         } else {
-          return redirect('admin/ad-users')->with('success', 'Requested User has been updated successfully!!!');
+          return redirect()->back()->with('success', 'Requested staff member has been updated successfully!!!');
         }
 
     }
@@ -103,7 +103,7 @@ class UsersController extends Controller
      */
     public function destroy($id)
     {
-        $use = User::where('id', $id)->delete();
-        return redirect()->back()->with('success', 'Requested user has been deleted successfully!!!');
+        $member = Staff::where('id', $id)->delete();
+        return redirect('admin/staff-members')->with('success', 'Requested staff member has been deleted successfully!!!');
     }
 }
