@@ -48,18 +48,6 @@ Route::group(['prefix' => 'admin'], function(){
   Route::view('/add-user', 'admin.users.add-user');
   Route::view('/all-user', 'admin.users.all-user');
   Route::view('/edit-user', 'admin.users.edit-user');
-  Route::view('/add-doctor', 'admin.doctors.add-doctor');
-  Route::view('/all-doctor', 'admin.doctors.all-doctor');
-  Route::view('/edit-doctor', 'admin.doctors.edit-doctor');
-  Route::view('/add-admin', 'admin.admins.add-admin');
-  Route::view('/all-admin', 'admin.admins.all-admin');
-  Route::view('/edit-admin', 'admin.admins.edit-admin');
-  Route::view('/add-department', 'admin.departments.add-department');
-  Route::view('/all-department', 'admin.departments.all-department');
-  Route::view('/edit-department', 'admin.departments.edit-department');
-  Route::view('/add-role', 'admin.role.add-role');
-  Route::view('/all-role', 'admin.role.all-role');
-  Route::view('/edit-role', 'admin.role.edit-role');
 
   // Auth Routes
 
@@ -69,6 +57,7 @@ Route::group(['prefix' => 'admin'], function(){
     Route::resource('ad-doctors', 'AdminControllers\DoctorController');
     Route::resource('ad-departments', 'AdminControllers\DepartmentController');
     Route::resource('staff-members', 'AdminControllers\StaffController');
+    Route::resource('ad-roles', 'AdminControllers\RoleController');
   });
 });
 // Admin Routes end
@@ -82,19 +71,30 @@ Route::group(['prefix' => 'admin'], function(){
 
     Route::view('/all_department', 'hospital.Department.all_department');
     Route::view('/add_department', 'hospital.Department.add_department');
-    Route::view('/all_nureses', 'hospital.Nureses.all_nureses');
-    Route::view('/add_nureses', 'hospital.Nureses.add_nureses');
-    Route::view('/all_recetionist', 'hospital.Receptionist.all_recetionist');
-    Route::view('/add_recetionist', 'hospital.Receptionist.add_recetionist');
+    Route::view('/all_nurses', 'hospital.nurses.all_nurses');
+    Route::view('/add_nurses', 'hospital.nurses.add_nurses');
+    Route::view('/edit_nurses', 'hospital.nurses.edit_nurses');
+    Route::view('/all_recetionist', 'hospital.receptionist.all_recetionist');
+    Route::view('/add_recetionist', 'hospital.receptionist.add_recetionist');
+    Route::view('/edit_recetionist', 'hospital.receptionist.edit_recetionist');
     Route::view('/all_hospital_staff', 'hospital.hospital_staff.all_hospital_staff');
     Route::view('/add_hospital_staff', 'hospital.hospital_staff.add_hospital_staff');
+    Route::view('/edit_hospital_staff', 'hospital.hospital_staff.edit_hospital_staff');
+    Route::view('/all_report', 'hospital.report.all_report');
     Route::view('/add_report', 'hospital.report.add_report');
-    Route::view('/add_swiper', 'hospital.Swiper.add_swiper');
-    Route::view('/add_wardboy', 'hospital.Wardboy.add_wardboy');
-    Route::view('/add_x-ray_technician', 'hospital.X-RAY_technician.add_x-ray_technician');
-    Route::view('/add_pharmacy_staff', 'hospital.Pharmacy_staff.add_pharmacy_staff');
-
-
+    Route::view('/edit_report', 'hospital.report.edit_report');
+    Route::view('/all_sweeper', 'hospital.swiper.all_sweeper');
+    Route::view('/add_sweeper', 'hospital.swiper.add_sweeper');
+    Route::view('/edit_sweeper', 'hospital.swiper.edit_sweeper');
+    Route::view('/all_wardboy', 'hospital.wardboy.all_wardboy');
+    Route::view('/add_wardboy', 'hospital.wardboy.add_wardboy');
+    Route::view('/edit_wardboy', 'hospital.wardboy.edit_wardboy');
+    Route::view('/all_x-ray_technician', 'hospital.x-ray-staff.all_x-ray_staff');
+    Route::view('/add_x-ray_technician', 'hospital.x-ray-staff.add_x-ray_staff');
+    Route::view('/edit_x-ray_technician', 'hospital.x-ray-staff.edit_x-ray_staff');
+    Route::view('/all_pharmacy_staff', 'hospital.pharmacy_staff.all_pharmacy_staff');
+    Route::view('/add_pharmacy_staff', 'hospital.pharmacy_staff.add_pharmacy_staff');
+    Route::view('/edit_pharmacy_staff', 'hospital.pharmacy_staff.edit_pharmacy_staff');
 
     Route::view('/login', 'hospital.auth.login');
     Route::view('/register', 'hospital.auth.register');
@@ -102,6 +102,12 @@ Route::group(['prefix' => 'admin'], function(){
     Route::group(['middleware' => 'auth'], function(){
       Route::resource('doctors', 'HospitalControllers\DoctorsController');
       Route::resource('departments', 'HospitalControllers\DepartmentController');
+      Route::resource('ho-nurses', 'HospitalControllers\NursingStaffController');
+      Route::resource('ho-pharmacy-staff', 'HospitalControllers\PharmacyStaffController');
+      Route::resource('ho-receptionists', 'HospitalControllers\ReceptionistController');
+      Route::resource('ho-sweepers', 'HospitalControllers\SweeperController');
+      Route::resource('ho-x-ray-techs', 'HospitalControllers\X_RayStaffController');
+      Route::resource('ho-wardboys', 'HospitalControllers\WardboyController');
     });
   });
 

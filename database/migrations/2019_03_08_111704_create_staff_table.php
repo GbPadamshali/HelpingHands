@@ -28,7 +28,7 @@ class CreateStaffTable extends Migration
             $table->string('experience');
             $table->text('address');
             $table->date('joining_date');
-            $table->date('left_date');
+            $table->date('left_date')->nullable();
             $table->tinyInteger('status'); // 1 = Working, 2 = Left, 3 = OnHold, 4 = OnLeave
             $table->timestamps();
             $table->Softdeletes();

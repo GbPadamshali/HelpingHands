@@ -9,7 +9,7 @@
                       <div class="sparkline13-hd">
                           <div class="main-sparkline13-hd">
                               <h1>ALL <span class="table-project-n">ROLE</span></h1>
-                              <button type="button" class="btn btn-custon-rounded-four btn-primary" onclick="location.href='{{ url('#') }}'">All ROLE</button>
+                              <button type="button" class="btn btn-custon-rounded-four btn-primary" onclick="location.href='{{ route('ad-roles.create') }}'">ADD ROLE</button>
                           </div>
                       </div>
                       <div class="sparkline13-graph">
@@ -26,20 +26,21 @@
                                       </tr>
                                   </thead>
                                   <tbody>
-
+                                    @foreach ($roles as $role)
                                       <tr>
-                                        <td>govind9686</td>
-                                        <td>hsk12344566</td>
-                                        <td>compounder</td>
-                                        <td>describe an description in detail</td>
+                                        <td>{{ $role->id }}</td>
+                                        <td>{{ $role->hospital_id }}</td>
+                                        <td>{{ $role->role }}</td>
+                                        <td>{{ $role->description }}</td>
                                           <td>
-                                            <button type="button" class="btn btn-primary" onclick="location.href='{{ url('#') }}'">Edit</button><hr>
-                                            <button type="button" class="btn btn-danger" onclick="location.href='{{ url('#') }}'">Delete</button>
+                                            <button type="button" class="btn btn-primary" onclick="location.href='{{ route('ad-roles.edit', $role->id) }}'">Edit</button><hr>
+                                            <button type="button" class="btn btn-danger" onclick="location.href='{{ route('ad-roles.destroy', $role->id) }}'">Delete</button>
                                           </td>
                                       </tr>
-
+                                    @endforeach
                                   </tbody>
                               </table>
+                              {{ $roles->links() }}
                           </div>
                       </div>
 

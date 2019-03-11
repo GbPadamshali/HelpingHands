@@ -3,11 +3,11 @@
 namespace App\Http\Controllers\AdminControllers;
 
 use Auth;
-use App\User;
+use App\role;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
-class UsersController extends Controller
+class RoleController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,8 +16,8 @@ class UsersController extends Controller
      */
     public function index()
     {
-        $users = User::paginate(2);
-        return view('admin.users.all-user')->with(compact('users'));
+        $roles = role::paginate(2);
+        return view('admin.role.all-role')->with(compact('roles'));
     }
 
     /**
@@ -27,7 +27,7 @@ class UsersController extends Controller
      */
     public function create()
     {
-        return view('admin.users.add-users');
+        return view('admin.role.add-role');
     }
 
     /**
@@ -39,14 +39,14 @@ class UsersController extends Controller
     public function store(Request $request)
     {
         $user = Auth::User();
-
         $input = $request->all();
-        $user = User::create($input);
 
-        if (!$user) {
-          return redirect()->back()->with('error', 'Requested User has been not added successfully!!!');
+        $role = role::create($input);
+
+        if (!$role) {
+          return redirect()->back()->with('error', 'Requested Role has not been added successfully!!!');
         } else {
-          return redirect('admin/ad-users')->with('success', 'Requested User has been added successfully!!');
+          return redirect('admin/ad-roles')->with('success', 'Requested role has been added successfully!!!');
         }
 
     }
@@ -70,8 +70,8 @@ class UsersController extends Controller
      */
     public function edit($id)
     {
-        $user = User::where('id', $id)->first();
-        return view('admin.users.edit-user')->with(compact('user'));
+        $role = role::where('id', $id)->first();
+        return view('admin.role.edit-role')->with(compact('role'));
     }
 
     /**
@@ -83,14 +83,13 @@ class UsersController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $user = Auth::User();
         $input = $request->except('_token');
-        $user = User::where('id', $id)->update($input);
+        $role = role::where('id', $id)->update($input);
 
-        if (!$user) {
-          return redirect()->back()->with('error', 'Requested User has not been updated successfully!!!');
+        if (!$role) {
+          return redirect()->back()->with('error', 'Requested role has not been updated successfully!!!');
         } else {
-          return redirect('admin/ad-users')->with('success', 'Requested User has been updated successfully!!!');
+          return redirect('admin/ad-roles')->with('Requested Role has been updated successfully!!!');
         }
 
     }
@@ -103,7 +102,7 @@ class UsersController extends Controller
      */
     public function destroy($id)
     {
-        $use = User::where('id', $id)->delete();
-        return redirect()->back()->with('success', 'Requested user has been deleted successfully!!!');
+        $role = role::where('id', $id)->delete();
+        return redirect()->back()->with('success', 'Requested Role has been deleted successfully!!!');
     }
 }

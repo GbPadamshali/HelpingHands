@@ -43,7 +43,7 @@ class StaffController extends Controller
 
         $member = Staff::create($input);
         if (!$member) {
-          return view('admin.staff.all-staff'->with('error', 'Requested Satff Member has not been adeed successfully!!!');
+          return view('admin.staff.all-staff')->with('error', 'Requested Satff Member has not been adeed successfully!!!');
         } else {
           return redirect()->back()->with('success', 'Requested staff member has been added successfully!!!');
         }

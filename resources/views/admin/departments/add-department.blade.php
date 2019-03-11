@@ -12,19 +12,19 @@
                             <div class="row">
                                 <div class="form-group col-lg-6">
                                     <label>Hospital Id</label>
-                                    <input class="form-control"name="hopital id" id="hospital id" required>
+                                    <input class="form-control"name="hospital_id" id="hospital_id" required>
                                 </div>
                                 <div class="form-group col-lg-6">
-                                    <label>Role</label>
-                                    <input class="form-control"name="department" id="role" required>
+                                    <label>Department</label>
+                                    <input class="form-control"name="department" id="department" required>
                                 </div>
                                 <div class="form-group col-lg-12">
-                                    <label>Desciption</label>
+                                    <label>Description</label>
                                     <input class="form-control" name="description" id="description" required>
                                 </div>
                             </div>
                             <div class="text-center">
-                                <input type="submit" class="btn btn-success loginbtn" value="ADD DEPARTMENT"> 
+                                <input type="submit" class="btn btn-success loginbtn" value="ADD DEPARTMENT">
                             </div>
                         </form>
                     </div>

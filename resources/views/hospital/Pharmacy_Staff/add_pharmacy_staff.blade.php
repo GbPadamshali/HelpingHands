@@ -2,21 +2,22 @@
 @section('content')
   <div class="d-table-cell align-middle">
 
-    <div class="text-center mt-4">
-      <h1 class="h2">ADD PHARMACY STAFF </h1>
+    {{-- <div class="text-center mt-4">
+      <h1 class="h2">ADD NURSES </h1>
 
-    </div>
+    </div> --}}
 <div class="card-body">
-  <form id="validation-form" method="post" enctype="multipart/form-data" >
-
+  <form id="validation-form" method="post" action="{{ route('ho-pharmacy-staff.store') }}" enctype="multipart/form-data" >
+    {{ csrf_field() }}
+    <input type="hidden" value="2" name="staff_role"/>
     <div class="form-group">
       <label class="form-label">First name</label>
-      <input type="text" class="form-control" name="first_name" id="first name" required>
+      <input type="text" class="form-control" name="first_name" id="first_name" required>
 
     </div>
     <div class="form-group">
       <label class="form-label">Last name</label>
-      <input type="text" class="form-control" name="last_name" id="last name" required>
+      <input type="text" class="form-control" name="last_name" id="last_name" required>
     </div>
     <div class="form-group">
       <label class="form-label">Email</label>
@@ -25,80 +26,57 @@
     </div>
     <div class="form-group">
       <label class="form-label">Birthdate</label>
-      <input type="date" class="form-control" name="birthdate" id="age" required>
+      <input type="date" class="form-control" name="birthdate" id="birthdate" required>
     </div>
     <div class="form-group">
       <label class="form-label">Address</label>
-      <textarea class="form-control" name="address" required   id="address"></textarea>
+      <textarea class="form-control" name="address" required id="address"></textarea>
     </div>
 
     <div class="form-group">
       <label class="form-label">Joining date</label>
-      <input type="date" class="form-control" name="joining_date" id="joining date" required>
+      <input type="date" class="form-control" name="joining_date" id="joining_date" required>
     </div>
     <div class="form-group">
-      <label class="form-label">Qualifiaction</label>
-      <input type="text" class="form-control" name="qualifiaction" id="qualifiaction" required>
+      <label class="form-label">Qualification</label>
+      <input type="text" class="form-control" name="qualification" id="qualification" required>
     </div>
     <div class="form-group">
       <label class="form-label">Left date</label>
-      <input type="date" class="form-control" name="left_date" id="left date" required>
+      <input type="date" class="form-control" name="left_date" id="left_date">
     </div>
-    iv class="form-group">
-      <label class="form-label">Gender</label>
-      <div class="form-check">
-        <label class="form-check-label">
-<input class="form-check-input" type="radio" name="gender" id="1" required>Male
-</label>
-      </div>
-      <div class="form-check">
-        <label class="form-check-label">
-<input class="form-check-input" type="radio" name="gender" id="2" required>Female
-</label>
-      </div>
-      <div class="form-check disabled">
-        <label class="form-check-label">
-<input class="form-check-input" type="radio" name="gender" id="3" required>Other
-</label>
-      </div>
-      </div>
     <div class="form-group">
       <label class="form-label">Experience</label>
       <input type="text" class="form-control" name="experience" id="experince" required>
     </div>
-  {{--   <div class="form-group">
-      <label class="form-label">Select</label>
-      <select class="form-control" name="department id"  required>
-        <option value>Select Departmnet...</option>
-        {{-- <optgroup label="Department"> --}}
-    {{--    <option value="OPD" id="1">OPD</option>
-        <option value="ICU" id="2">ICU</option>
-        <option value="Laboratry" id="3">Laboratry</option>
-        <option value="WARD" id="4">WARD</option>
-        <option value="Laboratry" id="5">Laboratry</option> --}}
-        {{-- </optgroup>
-
-     </select>--}}
     </div>
-
     <div class="form-group">
-      <label class="form-label">status</label>
-      <textarea class="form-control" name="status" required   id="status"></textarea>
+      <label class="form-label">Marital Status</label><br>
+      {{-- <textarea class="form-control" name="maritial_status" required id="maritial_status"> --}}
+      Married <input type="radio" name="marital_status" value="1"><br>
+      Unmarried <input type="radio" name="marital_status" value="2"><br>
+      Divorsed <input type="radio" name="marital_status" value="3"><br>
+      Not Specified <input type="radio" name="marital_status" value="4"><br><br>
+    </div>
+    <div class="form-group">
+      <label class="form-label">Gender</label> <br>
+      Male <input type="radio" name="gender" value="1"><br>
+      Female <input type="radio" name="gender" value="2"><br>
+      Other <input type="radio" name="gender" value="3"><br>
+    </div>
       <div class="form-group">
         <label class="form-label">Mobile</label>
         <input type="text" class="form-control" name="mobile" id="mobile" required>
       </div>
-      <div class="form-group">
-        <label class="form-label"> maritial_status
-</label>
-        <input type="text" class="form-control" name=" maritial_status
-" id=" maritial_status
-" required>
-      </div>
-
-      <button type="submit" class="btn btn-primary">Submit</button>
+      {{-- <div class="form-group">
+        <label class="form-label"> maritial_status</label>
+        <input type="text" class="form-control" name="maritial_status" id=" maritial_status" required>
+      </div> --}}
+      <input type="submit" class="btn btn-primary" value="Submit" />
+      {{-- <button type="submit" class="btn btn-primary">Submit</button> --}}
   </form>
 
 </div>
 </div>
+
 @endsection

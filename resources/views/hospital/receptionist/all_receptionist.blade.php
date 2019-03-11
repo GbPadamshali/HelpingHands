@@ -1,7 +1,7 @@
 @extends('hospital.layout.design')
 @section('content')
   <div class="card-body">
-    			<a class="btn btn-outline-primary btn-sm" href="{{ route('ho-wardboys.create') }}">Add Technician</a> <br><br>
+    			<a class="btn btn-outline-primary btn-sm" href="{{ route('ho-receptionists.create') }}">Add Receptionist</a> <br><br>
     <table id="datatables-basic" class="table table-striped" style="width:100%">
       <thead>
         <tr>
@@ -17,33 +17,33 @@
         </tr>
       </thead>
       <tbody>
-        @foreach ($wardboys as $wardboy)
+        @foreach ($receptionists as $receptionist)
           <tr>
-            <td>{{ $wardboy->first_name }}</td>
-            <td>{{ $wardboy->last_name }}</td>
-            <td>{{ $wardboy->email }}</td>
-            <td>{{ $wardboy->joining_date }}</td>
-            <td>{{ $wardboy->qualification }}</td>
-            <td>{{ $wardboy->experience }}</td>
-            @if ($wardboy->status == 1)
+            <td>{{ $receptionist->first_name }}</td>
+            <td>{{ $receptionist->last_name }}</td>
+            <td>{{ $receptionist->email }}</td>
+            <td>{{ $receptionist->joining_date }}</td>
+            <td>{{ $receptionist->qualification }}</td>
+            <td>{{ $receptionist->experience }}</td>
+            @if ($receptionist->status == 1)
               <td>WORKING</td>
-            @elseif ($wardboy->status == 2)
+            @elseif ($receptionist->status == 2)
               <td>LEFT</td>
-            @elseif ($wardboy->status == 3)
+            @elseif ($receptionist->status == 3)
               <td>ON HOLD</td>
-            @elseif ($wardboy->status == 4)
+            @elseif ($receptionist->status == 4)
               <td>ON LEAVE</td>
             @endif
-            <td>{{ $wardboy->mobile }}</td>
+            <td>{{ $receptionist->mobile }}</td>
             <td>
-              <a href="{{ route('ho-wardboys.edit', $wardboy->id) }}">EDIT</a>/
-              <a href="{{ route('ho-wardboys.destroy', $wardboy->id) }}" style="color: #ff1717;">DELETE</a>
+              <a href="{{ route('ho-receptionists.edit', $receptionist->id) }}">EDIT</a>/
+              <a href="{{ route('ho-receptionists.destroy', $receptionist->id) }}" style="color: #ff1717;">DELETE</a>
             </td>
           </tr>
         @endforeach
       </tbody>
     </table>
-    {{ $wardboys->links() }}
+    {{ $receptionists->links() }}
         <script>
             document.addEventListener("DOMContentLoaded", function(event) {
               // Datatables basic

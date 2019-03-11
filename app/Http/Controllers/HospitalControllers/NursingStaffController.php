@@ -1,13 +1,13 @@
 <?php
 
-namespace App\Http\Controllers\AdminControllers;
+namespace App\Http\Controllers\HospitalControllers;
 
 use Auth;
-use App\User;
+use App\Staff;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
-class UsersController extends Controller
+class NursingStaffController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,8 +16,8 @@ class UsersController extends Controller
      */
     public function index()
     {
-        $users = User::paginate(2);
-        return view('admin.users.all-user')->with(compact('users'));
+        $nurses = Staff::where(['hospital_id' => 1, 'staff_role' => 1])->paginate(2);
+        return view('hospital.nurses.all_nurses')->with(compact('nurses'));
     }
 
     /**
@@ -27,7 +27,7 @@ class UsersController extends Controller
      */
     public function create()
     {
-        return view('admin.users.add-users');
+        return view('hospital.nurses.add_nurses');
     }
 
     /**
@@ -38,15 +38,24 @@ class UsersController extends Controller
      */
     public function store(Request $request)
     {
+      // IMPORTANT CODE FOR URL IDENTIFICATION
+      // $req = $request->url();
+      // if (strripos($req, 'hospital') !== false) {
+      //   return 'Success';
+      // } else {
+      //   return 'Failed';
+      // }
+      // return $check;
         $user = Auth::User();
-
         $input = $request->all();
-        $user = User::create($input);
+        $input['hospital_id'] = 1;
+        $input['status'] = 1;
+        $nurse = Staff::create($input);
 
-        if (!$user) {
-          return redirect()->back()->with('error', 'Requested User has been not added successfully!!!');
+        if (!$nurse) {
+          return redirect()->back()->with('error', 'Requested Nurse has not been added successfully!!!');
         } else {
-          return redirect('admin/ad-users')->with('success', 'Requested User has been added successfully!!');
+          return redirect('hospital/ho-nurses')->with('success', 'Requested Nurse has been added successfully!!!');
         }
 
     }
@@ -70,8 +79,8 @@ class UsersController extends Controller
      */
     public function edit($id)
     {
-        $user = User::where('id', $id)->first();
-        return view('admin.users.edit-user')->with(compact('user'));
+        $nurse = Staff::where('id', $id)->first();
+        return view('hospital.nurses.edit_nurses')->with(compact('nurse'));
     }
 
     /**
@@ -85,12 +94,13 @@ class UsersController extends Controller
     {
         $user = Auth::User();
         $input = $request->except('_token');
-        $user = User::where('id', $id)->update($input);
 
-        if (!$user) {
-          return redirect()->back()->with('error', 'Requested User has not been updated successfully!!!');
+        $nurse = Staff::where('id', $id)->update($input);
+
+        if (!$nurse) {
+          return redirect()->back()->with('error', 'Requested Nurse has not been updated successfully!!!');
         } else {
-          return redirect('admin/ad-users')->with('success', 'Requested User has been updated successfully!!!');
+          return redirect('hospital/ho-nurses')->with('success', 'Requested Nurse has been updated successfully!!!');
         }
 
     }
@@ -103,7 +113,7 @@ class UsersController extends Controller
      */
     public function destroy($id)
     {
-        $use = User::where('id', $id)->delete();
-        return redirect()->back()->with('success', 'Requested user has been deleted successfully!!!');
+        $nurse = Staff::where('id', $id)->delete();
+        return redirect()->back()->with('success', 'Requested Nurse has been deleted successfully!!!');
     }
 }

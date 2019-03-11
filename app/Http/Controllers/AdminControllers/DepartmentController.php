@@ -40,12 +40,13 @@ class DepartmentController extends Controller
     {
         $user = Auth::User();
 
+        $input = $request->all();
         $department = Department::create($input);
 
         if (!$department) {
           return redirect()->back()->with('error', 'Requested department has not been added successfully!!!');
         } else {
-          return route('ad-departments.index')->with('success', 'Requested department has been added successfully!!!');
+          return redirect('admin/ad-departments')->with('success', 'Requested department has been added successfully!!!');
         }
 
     }
@@ -69,7 +70,8 @@ class DepartmentController extends Controller
      */
     public function edit($id)
     {
-        //
+        $department = Department::where('id', $id)->first();
+        return view('admin.departments.edit-department')->with(compact('department'));
     }
 
     /**
@@ -81,7 +83,16 @@ class DepartmentController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $user = Auth::User();
+        $input = $request->except('_token');
+        $department = Department::where('id', $id)->update($input);
+
+        if (!$department) {
+          return redirect()->back()->with('error', 'Requested department has not been updated successfully!!!');
+        } else {
+          return redirect('admin/ad-departments')->with('success', 'Requested department has been updated successfully!!!');
+        }
+
     }
 
     /**
@@ -92,6 +103,7 @@ class DepartmentController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $department = Department::where('id', $id)->delete();
+        return redirect()->back()->with('success', 'Requested department has been deleted successfully!!!');
     }
 }

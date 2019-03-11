@@ -1,7 +1,7 @@
 @extends('hospital.layout.design')
 @section('content')
   <div class="card-body">
-    			<a class="btn btn-outline-primary btn-sm" href="{{ url('/add_nureses') }}">Add_nureses</a>
+    			<a class="btn btn-outline-primary btn-sm" href="{{ url('hospital/add_report') }}">Add Report</a>
     <table id="datatables-basic" class="table table-striped" style="width:100%">
       <thead>
         <tr>
