@@ -12,7 +12,7 @@
                             <div class="row">
                               <div class="form-group col-lg-6">
                                   <label>Report Name</label>
-                                  <input class="form-control"report name="name" id="report name" required>
+                                  <input class="form-control"report name="name" id="name" required>
                               </div>
                                 <div class="form-group col-lg-6">
                                     <label>Description</label>
@@ -20,7 +20,8 @@
                                 </div>
                             </div>
                             <div class="text-center">
-                                <button class="btn btn-success loginbtn">ADD REPORT TYPE</button>
+                                <!-- <button class="btn btn-success loginbtn">ADD REPORT TYPE</button> -->
+                                <input type="submit" class="btn btn-success loginbtn" value="Submit" />
                             </div>
                         </form>
                     </div>
