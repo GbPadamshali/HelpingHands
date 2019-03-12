@@ -38,6 +38,7 @@ Auth::routes();
 // Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'admin']], function(){
 Route::group(['prefix' => 'admin'], function(){
   // Auth Routes
+  Route::match(['get', 'post'], '/dashboard', 'AdminControllers\AdminAuthController@Dashboard')->name('admin.dashboard');
   Route::get('/login', 'AdminControllers\AdminAuthController@ShowLoginForm');
   Route::post('/login', 'AdminControllers\AdminAuthController@Login')->name('admin.login');
   Route::get('/register', 'AdminControllers\AdminAuthController@ShowRegistrationForm');
@@ -49,11 +50,29 @@ Route::group(['prefix' => 'admin'], function(){
   Route::view('/add-user', 'admin.users.add-user');
   Route::view('/all-user', 'admin.users.all-user');
   Route::view('/edit-user', 'admin.users.edit-user');
+  Route::view('/add-admin', 'admin.admins.add-admin');
+  Route::view('/all-admin', 'admin.admins.all-admin');
+  Route::view('/edit-admin', 'admin.admins.edit-admin');
+  Route::view('/add-department', 'admin.departments.add-department');
+  Route::view('/all-department', 'admin.departments.all-department');
+  Route::view('/edit-department', 'admin.departments.edit-department');
+  Route::view('/add-doctor', 'admin.doctors.add-doctor');
+  Route::view('/all-doctor', 'admin.doctors.all-doctor');
+  Route::view('/edit-doctor', 'admin.doctors.edit-doctor');
+  Route::view('/add-report', 'admin.hospital-report.add-report');
+  Route::view('/all-report', 'admin.hospital-report.all-report');
+  Route::view('/edit-report', 'admin.hospital-report.edit-report');
+  Route::view('/add-report', 'admin.report type.add-report');
+  Route::view('/all-report', 'admin.report type.all-report');
+  Route::view('/edit-report', 'admin.report type.edit-report');
+
+
+
+
 
   // Auth Routes
 
   Route::group(['middleware' => ['auth', 'admin']], function(){
-    Route::match(['get', 'post'], '/dashboard', 'AdminControllers\AdminAuthController@Dashboard')->name('admin.dashboard');
     Route::resource('admins', 'AdminControllers\AdminsController');
     Route::resource('ad-doctors', 'AdminControllers\DoctorController');
     Route::resource('ad-departments', 'AdminControllers\DepartmentController');

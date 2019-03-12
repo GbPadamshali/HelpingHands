@@ -6,8 +6,8 @@
                     <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
                         <div class="analytics-sparkle-line reso-mg-b-30">
                             <div class="analytics-content">
-                                <h5>Total Players</h5>
-                                <h2><span class="counter">550</span> <span class="tuition-fees">Tuition Fees</span></h2>
+                                <h5>Users</h5>
+                                <h2><span class="counter">95632486</span> <span class="tuition-fees">Tution Fees</span></h2>
                                 {{-- <span class="text-success">20%</span>
                                 <div class="progress m-b-0">
                                     <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:20%;"> <span class="sr-only">20% Complete</span> </div>
@@ -18,8 +18,8 @@
                     <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
                         <div class="analytics-sparkle-line reso-mg-b-30">
                             <div class="analytics-content">
-                                <h5>Total Sixes</h5>
-                                <h2><span class="counter">180</span> <span class="tuition-fees">Tuition Fees</span></h2>
+                                <h5>Admins</h5>
+                                <h2><span class="counter">10</span> <span class="tuition-fees">Tution Fees</span></h2>
                                 {{-- <span class="text-danger">30%</span>
                                 <div class="progress m-b-0">
                                     <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:30%;"> <span class="sr-only">230% Complete</span> </div>
@@ -30,8 +30,8 @@
                     <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
                         <div class="analytics-sparkle-line reso-mg-b-30 table-mg-t-pro dk-res-t-pro-30">
                             <div class="analytics-content">
-                                <h5>Total Fours</h5>
-                                <h2><span class="counter">450</span> <span class="tuition-fees">Tuition Fees</span></h2>
+                                <h5>Doctors</h5>
+                                <h2><span class="counter">176</span> <span class="tuition-fees">Tuition Fees</span></h2>
                                 {{-- <span class="text-info">60%</span>
                                 <div class="progress m-b-0">
                                     <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:60%;"> <span class="sr-only">20% Complete</span> </div>
@@ -42,8 +42,8 @@
                     <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
                         <div class="analytics-sparkle-line table-mg-t-pro dk-res-t-pro-30">
                             <div class="analytics-content">
-                                <h5>Total Matches</h5>
-                                <h2><span class="counter">80</span> <span class="tuition-fees">Tuition Fees</span></h2>
+                                <h5>Staff</h5>
+                                <h2><span class="counter">786</span> <span class="tuition-fees">Tuition Fees</span></h2>
                                 {{-- <span class="text-inverse">80%</span>
                                 <div class="progress m-b-0">
                                     <div class="progress-bar progress-bar-inverse" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:80%;"> <span class="sr-only">230% Complete</span> </div>
