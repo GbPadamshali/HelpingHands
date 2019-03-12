@@ -10,11 +10,28 @@
 									<div class="row">
 										<div class="col-8">
 											<h3 class="mb-2">4.562</h3>
-											<div class="mb-0">Sales Today</div>
+											<div class="mb-0">Active Doctors</div>
 										</div>
 										<div class="col-4 ml-auto text-right">
 											<div class="d-inline-block mt-2">
-												<i class="feather-lg text-primary" data-feather="truck"></i>
+												<i class="feather-lg text-primary" data-feather="users"></i>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-12 col-md-6 col-xl d-flex">
+							<div class="card flex-fill">
+								<div class="card-body py-4">
+									<div class="row">
+										<div class="col-8">
+											<h3 class="mb-2">4.562</h3>
+											<div class="mb-0">Active Patient</div>
+										</div>
+										<div class="col-4 ml-auto text-right">
+											<div class="d-inline-block mt-2">
+												<i class="feather-lg text-primary" data-feather="users"></i>
 											</div>
 										</div>
 									</div>
@@ -27,28 +44,29 @@
 									<div class="row">
 										<div class="col-8">
 											<h3 class="mb-2">27.424</h3>
-											<div class="mb-0">Visitors Today</div>
+											<div class="mb-0">Pharmachist</div>
 										</div>
 										<div class="col-4 ml-auto text-right">
 											<div class="d-inline-block mt-2">
-												<i class="feather-lg text-warning" data-feather="activity"></i>
+												<i class="feather-lg text-warning" data-feather="users"></i>
 											</div>
 										</div>
 									</div>
 								</div>
 							</div>
 						</div>
+						<hr>
 						<div class="col-12 col-md-6 col-xl d-flex">
 							<div class="card flex-fill">
 								<div class="card-body py-4">
 									<div class="row">
 										<div class="col-8">
 											<h3 class="mb-2">$ 29.200</h3>
-											<div class="mb-0">Total Earnings</div>
+											<div class="mb-0">Receptionist</div>
 										</div>
 										<div class="col-4 ml-auto text-right">
 											<div class="d-inline-block mt-2">
-												<i class="feather-lg text-danger" data-feather="dollar-sign"></i>
+												<i class="feather-lg text-danger" data-feather="users"></i>
 											</div>
 										</div>
 									</div>

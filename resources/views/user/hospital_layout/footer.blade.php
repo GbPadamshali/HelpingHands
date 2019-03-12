@@ -94,7 +94,7 @@
         {{-- <span>Copyright © 2017 DexignZone</span> --}}
       </div>
                 <div class="col-lg-4 col-md-4 text-center">
-        <span> Design & Developed By Helping Hands </span>
+        <span> Design & Developed By><a href="{{ url('dashboard') }}" style="color:#ffffff"> Helping Hands </a> </span>
       </div>
                 <div class="col-lg-4 col-md-4 text-right">
         <a href="about-2.html"> About</a>
