@@ -15,14 +15,18 @@ class CreateHospitalsTable extends Migration
     {
         Schema::create('hospitals', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('hospital_id');
-            $table->string('hospital_name');
-            $table->string('hospital_reg_id');
+            $table->string('user_id');
+            $table->string('reg_no');
+            $table->string('name');
+            $table->string('email');
+            $table->string('contact_no', 15);
             $table->string('type');
-            $table->string('hospital_image');
+            $table->string('image_name');
             $table->string('image_path');
-            $table->string('hospital_banner');
+            $table->string('banner_name');
             $table->string('banner_path');
+            $table->string('logo_name');
+            $table->string('logo_path');
             $table->string('address');
             $table->string('landmark');
             $table->string('area');

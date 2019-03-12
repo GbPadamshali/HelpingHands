@@ -9,7 +9,7 @@
                       <div class="sparkline13-hd">
                           <div class="main-sparkline13-hd">
                               <h1>ALL <span class="table-project-n">EVENT</span></h1>
-                              <button type="button" class="btn btn-custon-rounded-four btn-primary" onclick="location.href='{{ url('/admin/add-event') }}'">ADD EVENT</button>
+                              <button type="button" class="btn btn-custon-rounded-four btn-primary" onclick="location.href='{{ route('ad-upcoming-events.create') }}'">ADD EVENT</button>
                           </div>
                       </div>
                       <div class="sparkline13-graph">
@@ -18,6 +18,8 @@
                                   data-cookie-id-table="saveId" data-show-export="false" data-click-to-select="true" data-toolbar="#toolbar">
                                   <thead>
                                       <tr>
+                                          <th data-field="id" data-editable="false">ID</th>
+                                          <th data-field="hospital_id" data-editable="false">Hospital ID</th>
                                           <th data-field="event name" data-editable="false">Event Name</th>
                                           <th data-field="event type" data-editable="false">Event Type</th>
                                           <th data-field="event date" data-editable="false">Event Date</th>
@@ -26,21 +28,23 @@
                                       </tr>
                                   </thead>
                                   <tbody>
-
+                                    @foreach ($events as $event)
                                       <tr>
-                                          <td>Zegnite</td>
-                                          <td>zonal level</td>
-                                          <td>18/03/2019</td>
-                                          <td>powered by helping hands</td>
-
+                                          <td>{{ $event->id }}</td>
+                                          <td>{{ $event->hospital_id }}</td>
+                                          <td>{{ $event->event_name }}</td>
+                                          <td>{{ $event->event_type }}</td>
+                                          <td>{{ $event->event_date }}</td>
+                                          <td>{{ $event->banner_name }}</td>
                                           <td>
-                                            <button type="button" class="btn btn-primary" onclick="location.href='{{ url('#') }}'">Edit</button>
-                                            <button type="button" class="btn btn-danger" onclick="location.href='{{ url('#') }}'">Delete</button>
+                                            <button type="button" class="btn btn-primary" onclick="location.href='{{ route('ad-upcoming-events.edit', $event->id) }}'">Edit</button>
+                                            <button type="button" class="btn btn-danger" onclick="location.href='{{ route('ad-upcoming-events.destroy', $event->id) }}'">Delete</button>
                                           </td>
                                       </tr>
-
+                                    @endforeach
                                   </tbody>
                               </table>
+                              {{ $events->links() }}
                           </div>
                       </div>
 

@@ -28,6 +28,11 @@
                           <span class="mini-click-non">Teams</span></a>
                     </li>
                     <li>
+                        <a title="Teams" href="{{ route('ad-doctors.index') }}" aria-expanded="false">
+                          <span class="educate-icon educate-student icon-wrap sub-icon-mg" aria-hidden="true"></span>
+                          <span class="mini-click-non">Doctors</span></a>
+                    </li>
+                    <li>
                         <a title="User" href="{{ url('admin/all-user') }}" aria-expanded="false">
                           <span class="educate-icon educate-student icon-wrap sub-icon-mg" aria-hidden="true"></span>
                           <span class="mini-click-non">User</span></a>
@@ -84,7 +89,7 @@
                           <span class="mini-click-non">Staff</span></a>
                     </li>
                     <li>
-                        <a title="Matches" href="{{ url('/admin/all-event') }}" aria-expanded="false">
+                        <a title="Matches" href="{{ route('ad-upcoming-events.index') }}" aria-expanded="false">
                           <span class="educate-icon educate-event icon-wrap sub-icon-mg" aria-hidden="true"></span>
                           <span class="mini-click-non">Upcoming Event</span></a>
                     </li>

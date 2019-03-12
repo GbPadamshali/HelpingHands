@@ -5,7 +5,7 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class Hospitals extends Model
+class UpComingEvent extends Model
 {
   use SoftDeletes;
 
@@ -17,9 +17,7 @@ class Hospitals extends Model
   protected $dates = ['deleted_at'];
 
   protected $fillable = [
-    'user_id', 'reg_no', 'name', 'email', 'contact_no', 'type',
-    'image_name', 'image_path', 'banner_name', 'banner_path',
-    'logo_Name', 'logo_path', 'address', 'landmark', 'area',
-    'city', 'state', 'country', 'pincode',
+    'hospital_id', 'event_name', 'event_type',
+    'event_date', 'banner_name', 'banner_path',
   ];
 }

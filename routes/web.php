@@ -59,6 +59,8 @@ Route::group(['prefix' => 'admin'], function(){
     Route::resource('ad-departments', 'AdminControllers\DepartmentController');
     Route::resource('staff-members', 'AdminControllers\StaffController');
     Route::resource('ad-roles', 'AdminControllers\RoleController');
+    Route::resource('ad-hospital-reports', 'AdminControllers\HospitalReportController');
+    Route::resource('ad-upcoming-events', 'AdminControllers\UpComingEventsController');
   });
 });
 // Admin Routes end
