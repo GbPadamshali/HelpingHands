@@ -29,7 +29,7 @@
             <td>remark </td>
 
             <td>
-                  <a  class="btn btn-success">Taken</a>
+                  <a   href="{{ url('hospital/view-today-appointment') }}"class="btn btn-success">Taken</a>
                   <a  class="btn btn-success">Process</a>
                   <a  class="btn btn-warning">Cancel</a>
             </td>
