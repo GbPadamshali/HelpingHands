@@ -500,7 +500,7 @@
 								</div>
 							</div>
 						</div>
-						<hr>
+						
 						<div class="col-12 col-md-6 col-xl d-flex">
 							<div class="card flex-fill">
 								<div class="card-body py-4">

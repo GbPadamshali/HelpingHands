@@ -21,9 +21,7 @@
                                 <div class="form-group col-lg-6">
                                     <label>Type</label>
                                     <input class="form-control" name="type" id="type" required>
-
-
-          <p>
+        <p>
              <label>Select list</label>
              <select id="myList" class="form-control custom-select-value col-lg-6">
                <option value = "1">one</option>
@@ -32,12 +30,11 @@
                <option value = "4">four</option>
              </select>
           </p>
-
-
                                 </div>
                                 <div class="form-group col-lg-6">
                                     <label>Issued on</label>
                                     <input class="form-control" name="issued on" id="issued on" required>
+                                    $date = date("Y-m-d H:i:s");
                                 </div>
                                 <div class="form-group col-lg-6">
                                     <label>Supervisor Name</label>
