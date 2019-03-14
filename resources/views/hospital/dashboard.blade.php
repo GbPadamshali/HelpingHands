@@ -1,7 +1,500 @@
 @extends('hospital.layout.design')
 @section('content')
-			<main class="content">
-				<div class="container-fluid p-0">
+
+	<div class="row clearfix">
+			<div class="col-lg-3 col-md-12">
+
+					<div class="row clearfix">
+							<div class="col-lg-12 col-md-6">
+									<div class="card top_counter">
+											<div class="body">
+													<div id="top_counter1" class="carousel vert slide" data-ride="carousel" data-interval="2500">
+															<div class="carousel-inner">
+																	<div class="carousel-item active">
+																			<i class="feather-lg text-primary" data-feather="users"></i>
+																			<div class="content">
+																					<div class="text">Total Patient</div>
+																					<h5 class="number">215</h5>
+																			</div>
+																	</div>
+																	<div class="carousel-item">
+																			<i class="feather-lg text-primary" data-feather="user"></i>
+																			<div class="content">
+																					<div class="text">New Patient</div>
+																					<h5 class="number">21</h5>
+																			</div>
+																	</div>
+															</div>
+													</div>
+													<hr>
+													<div id="top_counter2" class="carousel vert slide" data-ride="carousel" data-interval="2100">
+															<div class="carousel-inner">
+																	<div class="carousel-item active">
+																			<i class="feather-lg text-primary" data-feather="command"></i>
+																			<div class="content">
+																					<div class="text">Operations</div>
+																					<h5 class="number">06</h5>
+																			</div>
+																	</div>
+																	<div class="carousel-item">
+																			<i class="feather-lg text-primary" data-feather="command"></i>
+																			<div class="content">
+																					<div class="text">Surgery</div>
+																					<h5 class="number">04</h5>
+																			</div>
+																	</div>
+																	<div class="carousel-item">
+																		<i class="feather-lg text-primary" data-feather="command"></i>
+																			<div class="content">
+																					<div class="text">Treatment</div>
+																					<h5 class="number">23</h5>
+																			</div>
+																	</div>
+															</div>
+													</div>
+											</div>
+									</div>
+							</div>
+							<div class="col-lg-12 col-md-6">
+									<div class="card top_counter">
+											<div class="body">
+													<div id="top_counter3" class="carousel vert slide" data-ride="carousel" data-interval="2300">
+															<div class="carousel-inner">
+																	<div class="carousel-item active">
+																			<i class="feather-lg text-primary" data-feather="eye"></i>
+																			<div class="content">
+																					<div class="text">Total Visitors</div>
+																					<h5 class="number">10K</h5>
+																			</div>
+																	</div>
+																	<div class="carousel-item">
+																			<i class="feather-lg text-primary" data-feather="eye"></i>
+																			<div class="content">
+																					<div class="text">Today Visitors</div>
+																					<h5 class="number">142</h5>
+																			</div>
+																	</div>
+																	<div class="carousel-item">
+																			<i class="feather-lg text-primary" data-feather="users"></i>
+																			<div class="content">
+																					<div class="text">Month Visitors</div>
+																					<h5 class="number">2,087</h5>
+																			</div>
+																	</div>
+															</div>
+													</div>
+													<hr>
+													 <i class="feather-lg text-primary" data-feather="briefcase"></i>
+													<div class="content">
+															<div class="text">Revenue</div>
+															<h5 class="number">$18,925</h5>
+													</div>
+											</div>
+									</div>
+							</div>
+							<div class="col-lg-12 col-md-12">
+									<div class="card top_counter">
+											<div class="body">
+													<i class="feather-lg text-primary" data-feather="smile"></i>
+													<div class="content">
+															<div class="text">Happy Clients</div>
+															<h5 class="number">528</h5>
+													</div>
+													<hr>
+													<i class="feather-lg text-primary" data-feather="smile"></i>
+													<div class="content">
+															<div class="text">Smiley Faces</div>
+															<h5 class="number">2,528</h5>
+													</div>
+											</div>
+									</div>
+							</div>
+					</div>
+			</div>
+			<div class="col-lg-9 col-md-12">
+					<div class="card">
+						<div class="body">
+								<div class="row clearfix">
+
+										<div class="col-md-4">
+											<div class="card flex-fill">
+												<div class="card-body py-4">
+													<div class="row">
+														<div class="col-8">
+															<h3 class="mb-2">562</h3>
+															<div class="mb-0">Active Patient</div>
+														</div>
+														<div class="col-4 ml-auto text-right">
+															<div class="d-inline-block mt-2">
+																<i class="feather-lg text-primary" data-feather="users"></i>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-4">
+											<div class="card flex-fill">
+												<div class="card-body py-4">
+													<div class="row">
+														<div class="col-8">
+															<h3 class="mb-2">15</h3>
+															<div class="mb-0">Active Doctors</div>
+														</div>
+														<div class="col-4 ml-auto text-right">
+															<div class="d-inline-block mt-2">
+																<i class="feather-lg text-primary" data-feather="users"></i>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-4">
+											<div class="card flex-fill">
+												<div class="card-body py-4">
+													<div class="row">
+														<div class="col-8">
+															<h3 class="mb-2">12</h3>
+															<div class="mb-0">Pharmachist</div>
+														</div>
+														<div class="col-4 ml-auto text-right">
+															<div class="d-inline-block mt-2">
+																<i class="feather-lg text-warning" data-feather="users"></i>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<hr>
+										<div class="col-md-4">
+											<div class="card flex-fill">
+												<div class="card-body py-4">
+													<div class="row">
+														<div class="col-8">
+															<h3 class="mb-2">6</h3>
+															<div class="mb-0">Receptionist</div>
+														</div>
+														<div class="col-4 ml-auto text-right">
+															<div class="d-inline-block mt-2">
+																<i class="feather-lg text-danger" data-feather="users"></i>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-4">
+											<div class="card flex-fill">
+												<div class="card-body py-4">
+													<div class="row">
+														<div class="col-8">
+															<h3 class="mb-2">$ 20</h3>
+															<div class="mb-0">Active Nurses</div>
+														</div>
+														<div class="col-4 ml-auto text-right">
+															<div class="d-inline-block mt-2">
+																<i class="feather-lg text-danger" data-feather="users"></i>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-4">
+											<div class="card flex-fill">
+												<div class="card-body py-4">
+													<div class="row">
+														<div class="col-8">
+															<h3 class="mb-2">67</h3>
+															<div class="mb-0">Pending Orders</div>
+														</div>
+														<div class="col-4 ml-auto text-right">
+															<div class="d-inline-block mt-2">
+																<i class="feather-lg text-success" data-feather="shopping-cart"></i>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+								</div>
+
+								<h5 class="card-title mb-0">Schedule</h5>
+							</div>
+							<div class="p-4 border-bottom">
+								<h2>You have 2 appointments today!</h2>
+								<p class="mb-0 text-sm">Your next meeting is in 3 hours. Check your <a href="#">schedule</a> to see the details.</p>
+							</div>
+							<div class="card-body">
+								<ul class="timeline">
+									<li class="timeline-item">
+										<strong>Chat with Andrew and Marie</strong>
+										<span class="float-right text-muted text-sm">45m ago</span>
+										<p>Nam pretium turpis et arcu. Duis arcu tortor, suscipit eget, imperdiet nec, imperdiet iaculis, ipsum...</p>
+									</li>
+									<li class="timeline-item">
+										<strong>The big launch</strong>
+										<span class="float-right text-muted text-sm">2h ago</span>
+										<p>Sed aliquam ultrices mauris. Integer ante arcu, accumsan a, consectetuer eget, posuere ut, mauris...</p>
+									</li>
+									<li class="timeline-item">
+										<strong>Coffee break</strong>
+										<span class="float-right text-muted text-sm">3h ago</span>
+										<p>Curabitur ligula sapien, tincidunt non, euismod vitae, posuere imperdiet, leo. Maecenas malesuada. Praesent congue erat at massa...</p>
+									</li>
+									<li class="timeline-item">
+										<strong>Conference call with Andrew</strong>
+										<span class="float-right text-muted text-sm">5h ago</span>
+										<p>Aenean posuere, tortor sed cursus feugiat, nunc augue blandit nunc, eu sollicitudin urna dolor sagittis lacus...</p>
+									</li>
+								</ul>
+							</div>
+							<div class="row">
+									<div class="col-md-12 col-sm-12">
+											<div class="card  card-box">
+													<div class="card-head">
+															<header>ADMIT PATIENT LIST</header>
+
+													</div>
+													<div class="card-body ">
+														<div class="table-wrap">
+							<div class="table-responsive">
+								<table class="table display product-overview mb-30" id="support_table">
+									<thead>
+										<tr>
+											<th>No</th>
+											<th>Name</th>
+											<th>Assigned Doctor</th>
+											<th>Date Of Admit</th>
+											<th>Diseases</th>
+											<th>Room No</th>
+											<th>Edit</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>1</td>
+											<td>Jens Brincker</td>
+											<td>Dr.Kenny Josh</td>
+											<td>27/05/2016</td>
+											<td>
+												<span class="label label-sm label-success">Influenza</span>
+											</td>
+											<td>101</td>
+											<td>	<a class="btn btn-outline-primary btn-sm" href="{{ ('#') }}">EDIT</a>  <hr>  <a class="btn btn-outline-primary btn-sm" href="{{ ('#') }}">DELETE</a></td>
+										</tr>
+										<tr>
+											<td>2</td>
+											<td>Mark Hay</td>
+											<td>Dr. Mark</td>
+											<td>26/05/2017</td>
+											<td>
+												<span class="label label-sm label-warning"> Cholera </span>
+											</td>
+											<td>105</td>
+											<td>	<a class="btn btn-outline-primary btn-sm" href="{{ ('#') }}">EDIT</a>  <hr>  <a class="btn btn-outline-primary btn-sm" href="{{ ('#') }}">DELETE</a></td>
+										</tr>
+										<tr>
+											<td>3</td>
+											<td>Anthony Davie</td>
+											<td>Dr.Cinnabar</td>
+											<td>21/05/2016</td>
+											<td>
+												<span class="label label-sm label-success ">Amoebiasis</span>
+											</td>
+											<td>106</td>
+												<td>	<a class="btn btn-outline-primary btn-sm" href="{{ ('#') }}">EDIT</a>  <hr>  <a class="btn btn-outline-primary btn-sm" href="{{ ('#') }}">DELETE</a></td>
+										</tr>
+										<tr>
+											<td>4</td>
+											<td>David Perry</td>
+											<td>Dr.Felix </td>
+											<td>20/04/2016</td>
+											<td>
+												<span class="label label-sm label-danger">Jaundice</span>
+											</td>
+											<td>105</td>
+											<td>	<a class="btn btn-outline-primary btn-sm" href="{{ ('#') }}">EDIT</a>  <hr>  <a class="btn btn-outline-primary btn-sm" href="{{ ('#') }}">DELETE</a></td>
+										</tr>
+											<tr>
+											<td>5</td>
+											<td>Anthony Davie</td>
+											<td>Dr.Beryl</td>
+											<td>24/05/2016</td>
+											<td>
+												<span class="label label-sm label-success ">Leptospirosis</span>
+											</td>
+											<td>102</td>
+												<td>	<a class="btn btn-outline-primary btn-sm" href="{{ ('#') }}">EDIT</a>  <hr>  <a class="btn btn-outline-primary btn-sm" href="{{ ('#') }}">DELETE</a></td>
+											</tr>
+											<tr>
+											<td>6</td>
+											<td>Alan Gilchrist</td>
+											<td>Dr.Joshep</td>
+											<td>22/05/2016</td>
+											<td>
+												<span class="label label-sm label-warning ">Hepatitis</span>
+											</td>
+											<td>103</td>
+											<td>	<a class="btn btn-outline-primary btn-sm" href="{{ ('#') }}">EDIT</a>  <hr>  <a class="btn btn-outline-primary btn-sm" href="{{ ('#') }}">DELETE</a></td>
+												</tr>
+													<tr>
+														<td>7</td>
+											<td>Mark Hay</td>
+											<td>Dr.Jayesh</td>
+											<td>18/06/2016</td>
+											<td>
+												<span class="label label-sm label-success ">Typhoid</span>
+											</td>
+											<td>107</td>
+										<td>	<a class="btn btn-outline-primary btn-sm" href="{{ ('#') }}">EDIT</a>  <hr>  <a class="btn btn-outline-primary btn-sm" href="{{ ('#') }}">DELETE</a></td>
+										</tr>
+											<tr>
+											<td>8</td>
+											<td>Sue Woodger</td>
+											<td>Dr.Sharma</td>
+											<td>17/05/2016</td>
+											<td>
+												<span class="label label-sm label-danger">Malaria</span>
+											</td>
+											<td>108</td>
+											<td>	<a class="btn btn-outline-primary btn-sm" href="{{ ('#') }}">EDIT</a>  <hr>  <a class="btn btn-outline-primary btn-sm" href="{{ ('#') }}">DELETE</a></td>
+									</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+													</div>
+											</div>
+									</div>
+							</div>
+						</div>
+					</div>
+				</div>
+{{-- 			<div class="row">
+						<div class="col-md-12 col-sm-12">
+								<div class="card  card-box">
+										<div class="card-head">
+												<header>ADMIT PATIENT LIST</header>
+
+										</div>
+										<div class="card-body ">
+											<div class="table-wrap">
+				<div class="table-responsive">
+					<table class="table display product-overview mb-30" id="support_table">
+						<thead>
+							<tr>
+								<th>No</th>
+								<th>Name</th>
+								<th>Assigned Doctor</th>
+								<th>Date Of Admit</th>
+								<th>Diseases</th>
+								<th>Room No</th>
+								<th>Edit</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>1</td>
+								<td>Jens Brincker</td>
+								<td>Dr.Kenny Josh</td>
+								<td>27/05/2016</td>
+								<td>
+									<span class="label label-sm label-success">Influenza</span>
+								</td>
+								<td>101</td>
+								<td>	<a class="btn btn-outline-primary btn-sm" href="{{ ('#') }}">EDIT</a>  <hr>  <a class="btn btn-outline-primary btn-sm" href="{{ ('#') }}">DELETE</a></td>
+							</tr>
+							<tr>
+								<td>2</td>
+								<td>Mark Hay</td>
+								<td>Dr. Mark</td>
+								<td>26/05/2017</td>
+								<td>
+									<span class="label label-sm label-warning"> Cholera </span>
+								</td>
+								<td>105</td>
+								<td>	<a class="btn btn-outline-primary btn-sm" href="{{ ('#') }}">EDIT</a>  <hr>  <a class="btn btn-outline-primary btn-sm" href="{{ ('#') }}">DELETE</a></td>
+							</tr>
+							<tr>
+								<td>3</td>
+								<td>Anthony Davie</td>
+								<td>Dr.Cinnabar</td>
+								<td>21/05/2016</td>
+								<td>
+									<span class="label label-sm label-success ">Amoebiasis</span>
+								</td>
+								<td>106</td>
+									<td>	<a class="btn btn-outline-primary btn-sm" href="{{ ('#') }}">EDIT</a>  <hr>  <a class="btn btn-outline-primary btn-sm" href="{{ ('#') }}">DELETE</a></td>
+							</tr>
+							<tr>
+								<td>4</td>
+								<td>David Perry</td>
+								<td>Dr.Felix </td>
+								<td>20/04/2016</td>
+								<td>
+									<span class="label label-sm label-danger">Jaundice</span>
+								</td>
+								<td>105</td>
+								<td>	<a class="btn btn-outline-primary btn-sm" href="{{ ('#') }}">EDIT</a>  <hr>  <a class="btn btn-outline-primary btn-sm" href="{{ ('#') }}">DELETE</a></td>
+							</tr>
+								<tr>
+								<td>5</td>
+								<td>Anthony Davie</td>
+								<td>Dr.Beryl</td>
+								<td>24/05/2016</td>
+								<td>
+									<span class="label label-sm label-success ">Leptospirosis</span>
+								</td>
+								<td>102</td>
+									<td>	<a class="btn btn-outline-primary btn-sm" href="{{ ('#') }}">EDIT</a>  <hr>  <a class="btn btn-outline-primary btn-sm" href="{{ ('#') }}">DELETE</a></td>
+								</tr>
+								<tr>
+								<td>6</td>
+								<td>Alan Gilchrist</td>
+								<td>Dr.Joshep</td>
+								<td>22/05/2016</td>
+								<td>
+									<span class="label label-sm label-warning ">Hepatitis</span>
+								</td>
+								<td>103</td>
+								<td>	<a class="btn btn-outline-primary btn-sm" href="{{ ('#') }}">EDIT</a>  <hr>  <a class="btn btn-outline-primary btn-sm" href="{{ ('#') }}">DELETE</a></td>
+									</tr>
+										<tr>
+											<td>7</td>
+								<td>Mark Hay</td>
+								<td>Dr.Jayesh</td>
+								<td>18/06/2016</td>
+								<td>
+									<span class="label label-sm label-success ">Typhoid</span>
+								</td>
+								<td>107</td>
+							<td>	<a class="btn btn-outline-primary btn-sm" href="{{ ('#') }}">EDIT</a>  <hr>  <a class="btn btn-outline-primary btn-sm" href="{{ ('#') }}">DELETE</a></td>
+							</tr>
+								<tr>
+								<td>8</td>
+								<td>Sue Woodger</td>
+								<td>Dr.Sharma</td>
+								<td>17/05/2016</td>
+								<td>
+									<span class="label label-sm label-danger">Malaria</span>
+								</td>
+								<td>108</td>
+								<td>	<a class="btn btn-outline-primary btn-sm" href="{{ ('#') }}">EDIT</a>  <hr>  <a class="btn btn-outline-primary btn-sm" href="{{ ('#') }}">DELETE</a></td>
+						</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+										</div>
+								</div>
+						</div>
+				</div>
+
+
+	{{--						<div class="container-fluid p-0">
 
 					<div class="row">
 						<div class="col-12 col-md-6 col-xl d-flex">
@@ -55,7 +548,7 @@
 								</div>
 							</div>
 						</div>
-						<hr>
+						
 						<div class="col-12 col-md-6 col-xl d-flex">
 							<div class="card flex-fill">
 								<div class="card-body py-4">
@@ -108,8 +601,8 @@
 							</div>
 						</div>
 					</div>
-
-					<div class="row">
+{{--
+		 			<div class="row">
 						<div class="col-12 col-lg-8 d-flex">
 							<div class="card flex-fill w-100">
 								<div class="card-header">
@@ -243,6 +736,7 @@
 								});
 							</script>
 						</div>
+
 						<div class="col-12 col-lg-4 d-flex">
 							<div class="card flex-fill w-100">
 								<div class="card-header">
@@ -663,7 +1157,7 @@
 							</div>
 						</div>
 					</div>
+--}}
 
-				</div>
-			</main>
+
 @endsection
