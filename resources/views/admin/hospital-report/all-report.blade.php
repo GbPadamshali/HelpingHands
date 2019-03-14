@@ -40,7 +40,7 @@
                                           <td>regular</td>
 
                                           <td>
-                                            <button type="button" class="btn btn-primary" onclick="location.href='{{ url('#') }}'">view</button>
+                                            <button type="button" class="btn btn-primary" onclick="location.href='{{ url('#') }}'">view</button><Hr>
                                             <button type="button" class="btn btn-danger" onclick="location.href='{{ url('#') }}'">Download</button>
                                           </td>
                                       </tr>

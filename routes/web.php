@@ -62,9 +62,12 @@ Route::group(['prefix' => 'admin'], function(){
   Route::view('/add-report', 'admin.hospital-report.add-report');
   Route::view('/all-report', 'admin.hospital-report.all-report');
   Route::view('/edit-report', 'admin.hospital-report.edit-report');
-  Route::view('/add-report', 'admin.report type.add-report');
-  Route::view('/all-report', 'admin.report type.all-report');
-  Route::view('/edit-report', 'admin.report type.edit-report');
+  Route::view('/add-report-type', 'admin.report type.add-report-type');
+  Route::view('/all-report-type', 'admin.report type.all-report-type');
+  Route::view('/edit-report-type', 'admin.report type.edit-report-type');
+  Route::view('/report-report', 'admin.team.report-report');
+
+
 
 
 
