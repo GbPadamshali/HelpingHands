@@ -1,7 +1,7 @@
 <nav class="sidebar sidebar-sticky">
   <div class="sidebar-content  js-simplebar">
     <a class="sidebar-brand" href="{{ url('hospital/dashboard') }}">
-      <i class="align-middle" data-feather="layers"></i>
+      <img src="{{ asset('images/user_images/logo.png') }}" style="height: 80px; width: 100px;" alt=""/>
       <span class="align-middle">HelpingHands</span>
     </a>
 
@@ -23,14 +23,16 @@
           <li class="sidebar-item"><a class="sidebar-link" href="{{ route('ho-wardboys.index') }}"><i class="align-middle" data-feather="user"></i>Wardboy</a></li>
           <li class="sidebar-item"><a class="sidebar-link" href="{{ route('ho-pharmacy-staff.index') }}"><i class="align-middle" data-feather="user"></i>Pharmacy Staff</a></li>
         </ul>
+        </li>
            <li class="sidebar-item"><a class="sidebar-link" href="{{ route('departments.index') }}"><i class="align-middle" data-feather="command"></i>Department</a></li>
-          <li class="sidebar-item"><a class="sidebar-link" href="{{ url('/hospital/all_report') }}"><i class="align-middle" data-feather="file-text"></i>Report</a></li>
-          <li class="sidebar-item"><a class="sidebar-link" href="{{ url('hospital/room') }}"><i class="align-middle" data-feather="home"></i>Room</a></li>
-          {{-- <li class="sidebar-item"><a class="sidebar-link" href="{{ url('#') }}"><i class="align-middle" data-feather="eye"></i>Upcoming Event</a></li>
-          <li class="sidebar-item"><a class="sidebar-link" href="{{ url('#') }}"><i class="align-middle" data-feather="home"></i>patient</a></li>
-          <li class="sidebar-item"><a class="sidebar-link" href="{{ url('#') }}"><i class="align-middle" data-feather="home"></i>Room</a></li>
-          <li class="sidebar-item"><a class="sidebar-link" href="{{ url('#') }}"><i class="align-middle" data-feather="home"></i>Wards</a></li>
-          <li class="sidebar-item"><a class="sidebar-link" href="{{ url('#') }}"><i class="align-middle" data-feather="thermometer"></i>Todays appointments</a></li> --}}
+           <li class="sidebar-item"><a class="sidebar-link" href="{{ url('/hospital/all_report') }}"><i class="align-middle" data-feather="file-text"></i>Report</a></li>
+           <li class="sidebar-item"><a class="sidebar-link" href="{{ url('hospital/all-room') }}"><i class="align-middle" data-feather="home"></i>Room</a></li>
+           <li class="sidebar-item"><a class="sidebar-link" href="{{ url('hospital/all-upcoming-event') }}"><i class="align-middle" data-feather="eye"></i>Upcoming Event</a></li>
+           <li class="sidebar-item"><a class="sidebar-link" href="{{ url('hospital/all-patient') }}"><i class="align-middle" data-feather="home"></i>Patient</a></li>
+           <li class="sidebar-item"><a class="sidebar-link" href="{{ url('hospital/all-appointment') }}"><i class="align-middle" data-feather="thermometer"></i> Appointments</a></li>
+           <li class="sidebar-item"><a class="sidebar-link" href="{{ url('hospital/all-today-appointment') }}"><i class="align-middle" data-feather="thermometer"></i> Today's appointments</a></li>
+           <li class="sidebar-item"><a class="sidebar-link" href="{{ url('hospital/all-facility') }}"><i class="align-middle" data-feather="feather"></i> Facility</a></li>
+           <li class="sidebar-item"><a class="sidebar-link" href="{{ url('hospital/all-service') }}"><i class="align-middle" data-feather="star"></i> Service</a></li>
     {{-- <div class="sidebar-cta">
       <button type="button" class="close sidebar-cta-close" aria-label="Close">
         <span aria-hidden="true">&times;</span>

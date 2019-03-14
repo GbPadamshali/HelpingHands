@@ -98,7 +98,27 @@ Route::group(['prefix' => 'admin'], function(){
     Route::view('/all_pharmacy_staff', 'hospital.pharmacy_staff.all_pharmacy_staff');
     Route::view('/add_pharmacy_staff', 'hospital.pharmacy_staff.add_pharmacy_staff');
     Route::view('/edit_pharmacy_staff', 'hospital.pharmacy_staff.edit_pharmacy_staff');
-      Route::view('/room', 'hospital.room.room');
+      Route::view('/add-room', 'hospital.room.add_room');
+      Route::view('/all-room', 'hospital.room.all_room');
+      Route::view('/edit-room', 'hospital.room.edit_room');
+      Route::view('/edit-patient', 'hospital.patients.edit_patient');
+      Route::view('/add-patient', 'hospital.patients.add_patient');
+      Route::view('/all-patient', 'hospital.patients.all_patient');
+      Route::view('/all-upcoming-event', 'hospital.upcoming_events.all_upcoming_event');
+      Route::view('/add-upcoming-event', 'hospital.upcoming_events.add_upcoming_event');
+      Route::view('/edit-upcoming-event', 'hospital.upcoming_events.edit_upcoming_event');
+      Route::view('/all-appointment', 'hospital.appointments.all_appointment');
+      Route::view('/add-appointment', 'hospital.appointments.add_appointment');
+      Route::view('/edit-appointment', 'hospital.appointments.edit_appointment');
+      Route::view('/edit-service', 'hospital.services.edit_service');
+      Route::view('/all-service', 'hospital.services.all_service');
+      Route::view('/add-service', 'hospital.services.add_service');
+      Route::view('/add-facility', 'hospital.facility.add_facility');
+      Route::view('/all-facility', 'hospital.facility.all_facility');
+      Route::view('/edit-facility', 'hospital.facility.edit_facility');
+      Route::view('/all-today-appointment', 'hospital.today_appointment.all_todays_appointment');
+        Route::view('/view-today-appointment', 'hospital.today_appointment.view_today_appointment');
+
 
     Route::view('/login', 'hospital.auth.login');
     Route::view('/register', 'hospital.auth.register');
