@@ -9,8 +9,7 @@
                       <div class="sparkline13-hd">
                           <div class="main-sparkline13-hd">
                               <h2><u>VIEW REPORT</u></h2> <br>
-                              <button type="button" class="btn btn-danger" onclick="location.href='{{ url('#') }}'">Download</button>
-                              <!-- <button type="button" class="btn btn-custon-rounded-four btn-primary" onclick="location.href='{{ url('/admin/add-report') }}'">ADD REPORT</button> -->
+                             <button type="button" class="btn btn-danger" onclick="location.href='{{ url('#') }}'">DOWNLOAD</button>
                           </div>
                       </div>
                       <div class="sparkline13-graph">
@@ -22,20 +21,21 @@
                                           <td><h4> :- thyroid</h4></td>
                                       </tr>
                                       <tr>
-                                          <td><b>PATIENT_NAME</b></td>
-                                          <td>:- dhruv</td>
+                                          <td><h3><b>PATIENT_NAME</h3></b></td>
+                                          <td><h4>:- dhruv</h4></td>
                                       </tr>
                                       <tr>
-                                          <td><b>PATIENT_ID</b></td>
-                                          <td>:- shvp879065</td>
+                                          <td><h3><b>PATIENT_ID<h3></b></td>
+                                          <td><h4>:- shvp879065</h4></td>
                                       </tr>
                                       <tr>
-                                          <td><b>REPORT_DETAILS</b></td>
-                                          <td>:- positive urea negative changes</td>
+                                          <td><h3><b>REPORT_DETAILS</h3></b></td>
+                                          <td><h4>:- positive urea negative changes</h4></td>
                                       </tr>
-                                      <!-- <tr> -->
-                                      <!-- <button type="button" class="btn btn-danger" onclick="location.href='{{ url('#') }}'">Download</button> -->
-                                    <!-- </tr> -->
+                                      <!-- <tr>
+                                      <button type="button" class="btn btn-danger btn-large" onclick="location.href='{{ url('#') }}'">Download</button>
+                                      </tr> -->
+
                                   </tbody>
                                   </table>
                           </div>

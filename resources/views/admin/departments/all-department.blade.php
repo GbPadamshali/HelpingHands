@@ -18,29 +18,28 @@
                                   data-cookie-id-table="saveId" data-show-export="false" data-click-to-select="true" data-toolbar="#toolbar">
                                   <thead>
                                       <tr>
-                                          <th data-field="id" data-editable="false">Id
-                                          <th data-field="hospital id" data-editable="false">Hospital Id
-                                          <th data-field="role" data-editable="false">department</th>
+                                          <th data-field="id">ID</th>
+                                          <th data-field="hospital_id" data-editable="false">Hospital_Id</th>
+                                          <th data-field="department" data-editable="false">Department</th>
                                           <th data-field="description" data-editable="false">Description</th>
                                           <th data-field="action">Action</th>
                                       </tr>
                                   </thead>
                                   <tbody>
-                                    @foreach ($departments as $department)
+
                                       <tr>
-                                        <td>{{ $department->id }}</td>
-                                        <td>{{ $department->hospital_id }}</td>
-                                        <td>{{ $department->department }}</td>
-                                        <td>{{ $department->description }}</td>
+                                          <td>id</td>
+                                          <td>Gov25451</td>
+                                          <td>service</td>
+                                          <td>explain in details</td>
                                           <td>
-                                            <button type="button" class="btn btn-primary" onclick="location.href='{{ route('ad-departments.edit', $department->id) }}'">Edit</button><hr>
-                                            <button type="button" class="btn btn-danger" onclick="location.href='{{ route('ad-departments.destroy', $department->id) }}'">Delete</button>
+                                            <button type="button" class="btn btn-primary" onclick="location.href='{{ url('#') }}'">Edit</button>
+                                            <button type="button" class="btn btn-danger" onclick="location.href='{{ url('#') }}'">Delete</button>
                                           </td>
                                       </tr>
-                                    @endforeach
+
                                   </tbody>
                               </table>
-                              {{ $departments->links() }}
                           </div>
                       </div>
 

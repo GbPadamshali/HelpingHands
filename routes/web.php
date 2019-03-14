@@ -68,13 +68,18 @@ Route::group(['prefix' => 'admin'], function(){
   Route::view('/add-report-type', 'admin.report type.add-report-type');
   Route::view('/all-report-type', 'admin.report type.all-report-type');
   Route::view('/edit-report-type', 'admin.report type.edit-report-type');
-  Route::view('/report-report', 'admin.team.report-report');
-
-
-
-
-
-
+  Route::view('/view-report', 'admin.reports.view-report');
+  Route::view('/all-reports', 'admin.reports.all-reports');
+  Route::view('/reply-report', 'admin.reports.reply-report');
+  Route::view('/add-role', 'admin.role.add-role');
+  Route::view('/all-role', 'admin.role.all-role');
+  Route::view('/edit-role', 'admin.role.edit-role');
+  Route::view('/all-staff', 'admin.staff.all-staff');
+  Route::view('/add-staff', 'admin.staff.add-staff');
+  Route::view('/edit-staff', 'admin.staff.edit-staff');
+  Route::view('/all-event', 'admin.upcoming event.all-event');
+  Route::view('/add-event', 'admin.upcoming event.add-event');
+  Route::view('/edit-event', 'admin.upcoming event.edit-event');
 
   // Auth Routes
 
