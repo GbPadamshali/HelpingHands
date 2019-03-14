@@ -506,7 +506,7 @@
         <div class="section-full bg-white content-inner-1 bg-img-fix overlay-black-dark" style="background-image:url(images/user_images/background/bg1.jpg);">
                 <div class="container">
                     <div class="section-head text-center text-white">
-                        <h3 class="h3 text-uppercase">Meet Our Doctors</h3>
+                        <h3 class="h3 text-uppercase">Available Doctors</h3>
                         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry has been the industry's standard dummy text ever since the been when an unknown printer.</p>
                     </div>
                     <div class="section-content">

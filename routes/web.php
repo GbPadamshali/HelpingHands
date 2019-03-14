@@ -22,6 +22,7 @@ Route::view('user-signup-page', 'user.auth.signup');
 Route::view('dashboard', 'user.dashboard');
 Route::view('faq', 'user.pages.faq');
 Route::view('services', 'user.pages.services');
+Route::view('subscribe', 'user.pages.pricing_table');
 Route::view('privacy-policy', 'user.pages.privacy_policy');
 Route::view('error-403', 'user.error.error_403');
 Route::view('error-404', 'user.error.error_404');
@@ -32,6 +33,8 @@ Route::View('reports', 'user.hospital_layout.reports');
 Route::view('contact-us', 'user.pages.contact_us');
 Route::view('abc-hospital', 'user.hospital_pages.dashboard');
 Route::view('h-contact-us', 'user.hospital_pages.h_contact_us');
+Route::view('booking', 'user.hospital_pages.booking');
+
 Auth::routes();
 
 // Admin Routes Starts
@@ -118,19 +121,20 @@ Route::group(['prefix' => 'admin'], function(){
     Route::view('/all_pharmacy_staff', 'hospital.pharmacy_staff.all_pharmacy_staff');
     Route::view('/add_pharmacy_staff', 'hospital.pharmacy_staff.add_pharmacy_staff');
     Route::view('/edit_pharmacy_staff', 'hospital.pharmacy_staff.edit_pharmacy_staff');
+      Route::view('/room', 'hospital.room.room');
 
     Route::view('/login', 'hospital.auth.login');
     Route::view('/register', 'hospital.auth.register');
 
     Route::group(['middleware' => 'auth'], function(){
-      Route::resource('doctors', 'HospitalControllers\DoctorsController');
-      Route::resource('departments', 'HospitalControllers\DepartmentController');
-      Route::resource('ho-nurses', 'HospitalControllers\NursingStaffController');
-      Route::resource('ho-pharmacy-staff', 'HospitalControllers\PharmacyStaffController');
-      Route::resource('ho-receptionists', 'HospitalControllers\ReceptionistController');
-      Route::resource('ho-sweepers', 'HospitalControllers\SweeperController');
-      Route::resource('ho-x-ray-techs', 'HospitalControllers\X_RayStaffController');
-      Route::resource('ho-wardboys', 'HospitalControllers\WardboyController');
+    Route::resource('doctors', 'HospitalControllers\DoctorsController');
+    Route::resource('departments', 'HospitalControllers\DepartmentController');
+    Route::resource('ho-nurses', 'HospitalControllers\NursingStaffController');
+    Route::resource('ho-pharmacy-staff', 'HospitalControllers\PharmacyStaffController');
+    Route::resource('ho-receptionists', 'HospitalControllers\ReceptionistController');
+    Route::resource('ho-sweepers', 'HospitalControllers\SweeperController');
+    Route::resource('ho-x-ray-techs', 'HospitalControllers\X_RayStaffController');
+    Route::resource('ho-wardboys', 'HospitalControllers\WardboyController');
     });
   });
 

@@ -22,6 +22,7 @@
                         <div class="dez-separator bg-primary"></div>
                         <ul>
                             <li><a href="{{ url('user-login-page') }}">Login</a></li>
+                            {{-- <li><a href="{{ url('subscribe') }}">Subscription</a></li> --}}
                             <li><a href="{{ url('user-signup-page') }}">Sign Up</a></li>
                             <li><p href="#">Serve Hospitality</p></li>
                             {{-- <li><a href="#">FAQ</a></li> --}}

@@ -22,18 +22,18 @@
 					<div class="d-table-cell align-middle">
 
 						<div class="text-center mt-4">
-							<h1 class="h2">Welcome to Hospital sighIn page </h1>
+							<h1 class="h2">Sign in to your account to continue </h1>
 							<p class="lead">
-								Sign in to your account to continue
+
 							</p>
 						</div>
 
 						<div class="card">
 							<div class="card-body">
 								<div class="m-sm-4">
-									<div class="text-center">
+									{{-- <div class="text-center">
 										<img src="{{ asset('images/hospital_images/avatars/avatar.jpg') }}" alt="Andrew Jones" class="img-fluid rounded-circle" width="132" height="132" />
-									</div>
+									</div> --}}
 									<form>
 										<div class="form-group">
 											<label>Email</label>
@@ -43,23 +43,23 @@
 											<label>Password</label>
 											<input class="form-control form-control-lg" type="password" name="password" placeholder="Enter your password" required />
 											<small>
-            <a href="{{ url('#') }}">Forgot password?</a>
+            {{-- <a href="{{ url('#') }}">Forgot password?</a> --}}
           </small>
 										</div>
-										<div>
+										{{-- <div>
 											<div class="custom-control custom-checkbox align-items-center">
 												<input type="checkbox" class="custom-control-input" value="remember-me" name="remember-me" checked>
 												<label class="custom-control-label text-small">Remember me next time</label>
 											</div>
-										</div>
+										</div> --}}
 										<div class="text-center mt-3">
 											<a href="{{ url('/hospital/dashboard') }}" class="btn btn-lg btn-primary">Sign in</a>
 											<!-- <button type="submit" class="btn btn-lg btn-primary">Sign in</button> -->
-										</div>
+										{{-- </div>
                     <div class="text-center mt-3">
 											<a href="{{ url('/hospital/register') }}" class="btn btn-lg btn-primary">New Register</a>
 											<!-- <button type="submit" class="btn btn-lg btn-primary">Sign in</button> -->
-										</div>
+										</div> --}}
 									</form>
 								</div>
 							</div>
