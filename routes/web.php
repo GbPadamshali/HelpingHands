@@ -99,7 +99,7 @@ Route::group(['prefix' => 'admin'], function(){
     Route::view('/all_pharmacy_staff', 'hospital.pharmacy_staff.all_pharmacy_staff');
     Route::view('/add_pharmacy_staff', 'hospital.pharmacy_staff.add_pharmacy_staff');
     Route::view('/edit_pharmacy_staff', 'hospital.pharmacy_staff.edit_pharmacy_staff');
-    Route::view('settings', 'hospital.settings.settings');
+      Route::view('/room', 'hospital.room.room');
 
     Route::view('/login', 'hospital.auth.login');
     Route::view('/register', 'hospital.auth.register');

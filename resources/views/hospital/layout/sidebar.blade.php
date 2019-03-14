@@ -26,6 +26,7 @@
         </ul>
 
           <li class="sidebar-item"><a class="sidebar-link" href="{{ url('/hospital/all_report') }}"><i class="align-middle" data-feather="file-text"></i>Report</a></li>
+          <li class="sidebar-item"><a class="sidebar-link" href="{{ url('hospital/room') }}"><i class="align-middle" data-feather="home"></i>Room</a></li>
           {{-- <li class="sidebar-item"><a class="sidebar-link" href="{{ url('#') }}"><i class="align-middle" data-feather="eye"></i>Upcoming Event</a></li>
           <li class="sidebar-item"><a class="sidebar-link" href="{{ url('#') }}"><i class="align-middle" data-feather="home"></i>patient</a></li>
           <li class="sidebar-item"><a class="sidebar-link" href="{{ url('#') }}"><i class="align-middle" data-feather="home"></i>Room</a></li>
