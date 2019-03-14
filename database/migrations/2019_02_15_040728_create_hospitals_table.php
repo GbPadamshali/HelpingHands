@@ -20,6 +20,8 @@ class CreateHospitalsTable extends Migration
             $table->string('name');
             $table->string('email');
             $table->string('contact_no', 15);
+            $table->string('tag_line')->nullable();
+            $table->text('description')->nullble();
             $table->string('type');
             $table->string('image_name');
             $table->string('image_path');
@@ -34,6 +36,7 @@ class CreateHospitalsTable extends Migration
             $table->string('state');
             $table->string('country');
             $table->integer('pincode');
+            $table->string('slug');
             $table->timestamps();
             $table->SoftDeletes();
         });

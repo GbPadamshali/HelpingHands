@@ -34,6 +34,7 @@ Route::view('contact-us', 'user.pages.contact_us');
 Route::view('abc-hospital', 'user.hospital_pages.dashboard');
 Route::view('h-contact-us', 'user.hospital_pages.h_contact_us');
 Route::view('booking', 'user.hospital_pages.booking');
+Route::get('hospital/{id}', 'UserControllers\HospitalDashboardController@HospitalDashboard');
 Auth::routes();
 
 // Admin Routes Starts
