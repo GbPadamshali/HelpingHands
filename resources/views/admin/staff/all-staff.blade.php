@@ -17,43 +17,40 @@
                               <table id="table" data-toggle="table" data-pagination="true" data-search="true" data-show-columns="true" data-show-pagination-switch="true" data-show-refresh="true" data-key-events="true" data-show-toggle="false" data-resizable="true" data-cookie="true"
                                   data-cookie-id-table="saveId" data-show-export="false" data-click-to-select="true" data-toolbar="#toolbar">
                                   <thead>
-                                      <tr>
-                                          <th data-field="id">ID</th>
-                                          <th data-field="first name" data-editable="false">First Name</th>
-                                          <th data-field="last name" data-editable="false">Last Name</th>
-                                          <th data-field="email" data-editable="false">Email</th>
-                                          <th data-field="moile" data-editable="false">Mobile</th>
-                                          <th data-field="birthdate" data-editable="false">Birthdate</th>
-                                          <th data-field="staff role" data-editable="false">Staff role</th>
-                                          <th data-field="qualification" data-editable="false">Qualification</th>
-                                          <th data-field="experience" data-editable="false">Experience</th>
-                                          <th data-field="address" data-editable="false">Address</th>
-                                          <th data-field="action">Action</th>
-                                      </tr>
+                                    <tr>
+                                        <th data-field="id">ID</th>
+                                        <th data-field="first name" data-editable="false">First Name</th>
+                                        <th data-field="last name" data-editable="false">Last Name</th>
+                                        <th data-field="email" data-editable="false">Email</th>
+                                        <th data-field="moile" data-editable="false">Mobile</th>
+                                        <th data-field="birthdate" data-editable="false">Birthdate</th>
+                                        <th data-field="staff role" data-editable="false">Staff role</th>
+                                        <th data-field="qualification" data-editable="false">Qualification</th>
+                                        <th data-field="experience" data-editable="false">Experience</th>
+                                        <th data-field="address" data-editable="false">Address</th>
+                                        <th data-field="action">Action</th>
+                                    </tr>
                                   </thead>
                                   <tbody>
-                                    @foreach ($staff as $staff)
 
-                                    @endforeach
                                       <tr>
-                                        <td>{{ $Staff->id }}</td>
-                                        <td>{{ $Staff->first_name }}</td>
-                                        <td>{{ $Staff->last_name }}</td>
-                                        <td>{{ $Staff->email }}</td>
-                                        <td>{{ $Staff->mobile }}</td>
-                                        <td>{{ $Staff->birthdate }}</td>
-                                        <td>{{ $Staff->staff role }}</td>
-                                        <td>{{ $Staff->qualifiaction }}</td>
-                                        <td>{{ $Staff->specialization }}</td>
-                                        <td>{{ $Staff->address }}</td>
+                                          <td>id</td>
+                                          <td>govinda</td>
+                                          <td>padamshali</td>
+                                          <td>gbpadamshali@gmail.com</td>
+                                          <td>21562562</td>
+                                          <td>12/02/1369</td>
+                                          <td>seviceman</td>
+                                          <td>12th pass</td>
+                                          <td>2 yrs</td>
+                                          <td>b/9,ishan colony,ahmedabad</td>
                                           <td>
-                                            <button type="button" class="btn btn-primary" onclick="location.href='{{ route('ad-staff.edit', $staff->id) }}'">Edit</button><hr>
-                                            <button type="button" class="btn btn-danger" onclick="location.href='{{ route('ad-staff.destroy', $staff->id) }}'">Delete</button>
+                                            <button type="button" class="btn btn-primary" onclick="location.href='{{ url('#') }}'">Edit</button>
+                                            <button type="button" class="btn btn-danger" onclick="location.href='{{ url('#') }}'">Delete</button>
                                           </td>
                                       </tr>
 
                                   </tbody>
-                                  {{ $Staff->links() }}
                               </table>
                           </div>
                       </div>

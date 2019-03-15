@@ -1,122 +1,13 @@
 @extends('hospital.layout.design')
 @section('content')
+	<div class="row clearfix" >
 
-	<div class="row clearfix">
-			<div class="col-lg-3 col-md-12">
 
-					<div class="row clearfix">
-							<div class="col-lg-12 col-md-6">
-									<div class="card top_counter">
-											<div class="body">
-													<div id="top_counter1" class="carousel vert slide" data-ride="carousel" data-interval="2500">
-															<div class="carousel-inner">
-																	<div class="carousel-item active">
-																			<i class="feather-lg text-primary" data-feather="users"></i>
-																			<div class="content">
-																					<div class="text">Total Patient</div>
-																					<h5 class="number">215</h5>
-																			</div>
-																	</div>
-																	<div class="carousel-item">
-																			<i class="feather-lg text-primary" data-feather="user"></i>
-																			<div class="content">
-																					<div class="text">New Patient</div>
-																					<h5 class="number">21</h5>
-																			</div>
-																	</div>
-															</div>
-													</div>
-													<hr>
-													<div id="top_counter2" class="carousel vert slide" data-ride="carousel" data-interval="2100">
-															<div class="carousel-inner">
-																	<div class="carousel-item active">
-																			<i class="feather-lg text-primary" data-feather="command"></i>
-																			<div class="content">
-																					<div class="text">Operations</div>
-																					<h5 class="number">06</h5>
-																			</div>
-																	</div>
-																	<div class="carousel-item">
-																			<i class="feather-lg text-primary" data-feather="command"></i>
-																			<div class="content">
-																					<div class="text">Surgery</div>
-																					<h5 class="number">04</h5>
-																			</div>
-																	</div>
-																	<div class="carousel-item">
-																		<i class="feather-lg text-primary" data-feather="command"></i>
-																			<div class="content">
-																					<div class="text">Treatment</div>
-																					<h5 class="number">23</h5>
-																			</div>
-																	</div>
-															</div>
-													</div>
-											</div>
-									</div>
-							</div>
-							<div class="col-lg-12 col-md-6">
-									<div class="card top_counter">
-											<div class="body">
-													<div id="top_counter3" class="carousel vert slide" data-ride="carousel" data-interval="2300">
-															<div class="carousel-inner">
-																	<div class="carousel-item active">
-																			<i class="feather-lg text-primary" data-feather="eye"></i>
-																			<div class="content">
-																					<div class="text">Total Visitors</div>
-																					<h5 class="number">10K</h5>
-																			</div>
-																	</div>
-																	<div class="carousel-item">
-																			<i class="feather-lg text-primary" data-feather="eye"></i>
-																			<div class="content">
-																					<div class="text">Today Visitors</div>
-																					<h5 class="number">142</h5>
-																			</div>
-																	</div>
-																	<div class="carousel-item">
-																			<i class="feather-lg text-primary" data-feather="users"></i>
-																			<div class="content">
-																					<div class="text">Month Visitors</div>
-																					<h5 class="number">2,087</h5>
-																			</div>
-																	</div>
-															</div>
-													</div>
-													<hr>
-													 <i class="feather-lg text-primary" data-feather="briefcase"></i>
-													<div class="content">
-															<div class="text">Revenue</div>
-															<h5 class="number">$18,925</h5>
-													</div>
-											</div>
-									</div>
-							</div>
-							<div class="col-lg-12 col-md-12">
-									<div class="card top_counter">
-											<div class="body">
-													<i class="feather-lg text-primary" data-feather="smile"></i>
-													<div class="content">
-															<div class="text">Happy Clients</div>
-															<h5 class="number">528</h5>
-													</div>
-													<hr>
-													<i class="feather-lg text-primary" data-feather="smile"></i>
-													<div class="content">
-															<div class="text">Smiley Faces</div>
-															<h5 class="number">2,528</h5>
-													</div>
-											</div>
-									</div>
-							</div>
-					</div>
-			</div>
-			<div class="col-lg-9 col-md-12">
+			<div class="col-lg-12 col-md-12">
 					<div class="card">
 						<div class="body">
 								<div class="row clearfix">
-
-										<div class="col-md-4">
+                   <div class="col-md-3" style="margin-top: 10px; margin-left: 10px;">
 											<div class="card flex-fill">
 												<div class="card-body py-4">
 													<div class="row">
@@ -133,7 +24,7 @@
 												</div>
 											</div>
 										</div>
-										<div class="col-md-4">
+										<div class="col-md-4" style="margin-top: 10px;" >
 											<div class="card flex-fill">
 												<div class="card-body py-4">
 													<div class="row">
@@ -150,7 +41,7 @@
 												</div>
 											</div>
 										</div>
-										<div class="col-md-4">
+										<div class="col-md-4" style="margin-top: 10px;">
 											<div class="card flex-fill">
 												<div class="card-body py-4">
 													<div class="row">
@@ -168,7 +59,7 @@
 											</div>
 										</div>
 										<hr>
-										<div class="col-md-4">
+										<div class="col-md-4" style="margin-top: 10px; margin-left: 10px;">
 											<div class="card flex-fill">
 												<div class="card-body py-4">
 													<div class="row">
@@ -185,12 +76,12 @@
 												</div>
 											</div>
 										</div>
-										<div class="col-md-4">
+										<div class="col-md-3" style="margin-top: 10px;">
 											<div class="card flex-fill">
 												<div class="card-body py-4">
 													<div class="row">
 														<div class="col-8">
-															<h3 class="mb-2">$ 20</h3>
+															<h3 class="mb-2"> 20</h3>
 															<div class="mb-0">Active Nurses</div>
 														</div>
 														<div class="col-4 ml-auto text-right">
@@ -202,32 +93,94 @@
 												</div>
 											</div>
 										</div>
-										<div class="col-md-4">
+										<div class="col-md-4" style="margin-top: 10px;">
 											<div class="card flex-fill">
 												<div class="card-body py-4">
 													<div class="row">
 														<div class="col-8">
-															<h3 class="mb-2">67</h3>
-															<div class="mb-0">Pending Orders</div>
+															<h3 class="mb-2">4</h3>
+															<div class="mb-0">Labratorist</div>
 														</div>
 														<div class="col-4 ml-auto text-right">
 															<div class="d-inline-block mt-2">
-																<i class="feather-lg text-success" data-feather="shopping-cart"></i>
+																<i class="feather-lg text-success" data-feather="users"></i>
 															</div>
 														</div>
 													</div>
 												</div>
 											</div>
 										</div>
-								</div>
+										<hr>
+										<div class="col-md-4" style="margin-top: 10px; margin-left: 10px;">
+											<div class="card flex-fill">
+												<div class="card-body py-4">
+													<div class="row">
+														<div class="col-8">
+															<h3 class="mb-2">2</h3>
+															<div class="mb-0">Operations</div>
+														</div>
+														<div class="col-4 ml-auto text-right">
+															<div class="d-inline-block mt-2">
+																<i class="feather-lg text-danger" data-feather="users"></i>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-4" style="margin-top: 10px;">
+											<div class="card flex-fill">
+												<div class="card-body py-4">
+													<div class="row">
+														<div class="col-8">
+															<h3 class="mb-2"> 20</h3>
+															<div class="mb-0">Treatment</div>
+														</div>
+														<div class="col-4 ml-auto text-right">
+															<div class="d-inline-block mt-2">
+																<i class="feather-lg text-danger" data-feather="users"></i>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-3" style="margin-top: 10px;">
+											<div class="card flex-fill">
+												<div class="card-body py-4">
+													<div class="row">
+														<div class="col-8">
+															<h3 class="mb-2">423</h3>
+															<div class="mb-0">Total Patient</div>
+														</div>
+														<div class="col-4 ml-auto text-right">
+															<div class="d-inline-block mt-2">
+																<i class="feather-lg text-success" data-feather="users"></i>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
 
+
+
+
+
+									</div>
+								</div>
+						</div>
+						</div>
+
+											</div>
+              <div class="col-lg-12 col-md-12" style="margin-top: 10px; margin-left: 10px;">
 								<h5 class="card-title mb-0">Schedule</h5>
 							</div>
-							<div class="p-4 border-bottom">
-								<h2>You have 2 appointments today!</h2>
+							<div class="p-4 border-bottom" style="margin-left: 10px;">
+								<h2>Today appointment !</h2>
 								<p class="mb-0 text-sm">Your next meeting is in 3 hours. Check your <a href="#">schedule</a> to see the details.</p>
 							</div>
-							<div class="card-body">
+							<div class="card-body" style="margin-left: 10px;">
 								<ul class="timeline">
 									<li class="timeline-item">
 										<strong>Chat with Andrew and Marie</strong>
@@ -251,7 +204,7 @@
 									</li>
 								</ul>
 							</div>
-							<div class="row">
+							<div class="row" style="margin-top: 10px;margin-left: 10px;margin-right: 10px">
 									<div class="col-md-12 col-sm-12">
 											<div class="card  card-box">
 													<div class="card-head">
@@ -283,7 +236,7 @@
 												<span class="label label-sm label-success">Influenza</span>
 											</td>
 											<td>101</td>
-											<td>	<a class="btn btn-outline-primary btn-sm" href="{{ ('#') }}">EDIT</a>  <hr>  <a class="btn btn-outline-primary btn-sm" href="{{ ('#') }}">DELETE</a></td>
+											<td>	<a class="btn btn-outline-primary btn-sm" href="{{ ('#') }}">EDIT</a>    <a class="btn btn-outline-primary btn-sm" href="{{ ('#') }}">DELETE</a></td>
 										</tr>
 										<tr>
 											<td>2</td>
@@ -294,7 +247,7 @@
 												<span class="label label-sm label-warning"> Cholera </span>
 											</td>
 											<td>105</td>
-											<td>	<a class="btn btn-outline-primary btn-sm" href="{{ ('#') }}">EDIT</a>  <hr>  <a class="btn btn-outline-primary btn-sm" href="{{ ('#') }}">DELETE</a></td>
+											<td>	<a class="btn btn-outline-primary btn-sm" href="{{ ('#') }}">EDIT</a>    <a class="btn btn-outline-primary btn-sm" href="{{ ('#') }}">DELETE</a></td>
 										</tr>
 										<tr>
 											<td>3</td>
@@ -305,7 +258,7 @@
 												<span class="label label-sm label-success ">Amoebiasis</span>
 											</td>
 											<td>106</td>
-												<td>	<a class="btn btn-outline-primary btn-sm" href="{{ ('#') }}">EDIT</a>  <hr>  <a class="btn btn-outline-primary btn-sm" href="{{ ('#') }}">DELETE</a></td>
+												<td>	<a class="btn btn-outline-primary btn-sm" href="{{ ('#') }}">EDIT</a>    <a class="btn btn-outline-primary btn-sm" href="{{ ('#') }}">DELETE</a></td>
 										</tr>
 										<tr>
 											<td>4</td>
@@ -316,7 +269,7 @@
 												<span class="label label-sm label-danger">Jaundice</span>
 											</td>
 											<td>105</td>
-											<td>	<a class="btn btn-outline-primary btn-sm" href="{{ ('#') }}">EDIT</a>  <hr>  <a class="btn btn-outline-primary btn-sm" href="{{ ('#') }}">DELETE</a></td>
+											<td>	<a class="btn btn-outline-primary btn-sm" href="{{ ('#') }}">EDIT</a>    <a class="btn btn-outline-primary btn-sm" href="{{ ('#') }}">DELETE</a></td>
 										</tr>
 											<tr>
 											<td>5</td>
@@ -327,7 +280,7 @@
 												<span class="label label-sm label-success ">Leptospirosis</span>
 											</td>
 											<td>102</td>
-												<td>	<a class="btn btn-outline-primary btn-sm" href="{{ ('#') }}">EDIT</a>  <hr>  <a class="btn btn-outline-primary btn-sm" href="{{ ('#') }}">DELETE</a></td>
+												<td>	<a class="btn btn-outline-primary btn-sm" href="{{ ('#') }}">EDIT</a>    <a class="btn btn-outline-primary btn-sm" href="{{ ('#') }}">DELETE</a></td>
 											</tr>
 											<tr>
 											<td>6</td>
@@ -338,7 +291,7 @@
 												<span class="label label-sm label-warning ">Hepatitis</span>
 											</td>
 											<td>103</td>
-											<td>	<a class="btn btn-outline-primary btn-sm" href="{{ ('#') }}">EDIT</a>  <hr>  <a class="btn btn-outline-primary btn-sm" href="{{ ('#') }}">DELETE</a></td>
+											<td>	<a class="btn btn-outline-primary btn-sm" href="{{ ('#') }}">EDIT</a>    <a class="btn btn-outline-primary btn-sm" href="{{ ('#') }}">DELETE</a></td>
 												</tr>
 													<tr>
 														<td>7</td>
@@ -349,7 +302,7 @@
 												<span class="label label-sm label-success ">Typhoid</span>
 											</td>
 											<td>107</td>
-										<td>	<a class="btn btn-outline-primary btn-sm" href="{{ ('#') }}">EDIT</a>  <hr>  <a class="btn btn-outline-primary btn-sm" href="{{ ('#') }}">DELETE</a></td>
+										<td>	<a class="btn btn-outline-primary btn-sm" href="{{ ('#') }}">EDIT</a>   <a class="btn btn-outline-primary btn-sm" href="{{ ('#') }}">DELETE</a></td>
 										</tr>
 											<tr>
 											<td>8</td>
@@ -360,7 +313,7 @@
 												<span class="label label-sm label-danger">Malaria</span>
 											</td>
 											<td>108</td>
-											<td>	<a class="btn btn-outline-primary btn-sm" href="{{ ('#') }}">EDIT</a>  <hr>  <a class="btn btn-outline-primary btn-sm" href="{{ ('#') }}">DELETE</a></td>
+											<td>	<a class="btn btn-outline-primary btn-sm" href="{{ ('#') }}">EDIT</a>    <a class="btn btn-outline-primary btn-sm" href="{{ ('#') }}">DELETE</a></td>
 									</tr>
 									</tbody>
 								</table>
@@ -370,9 +323,8 @@
 											</div>
 									</div>
 							</div>
-						</div>
-					</div>
-				</div>
+
+
 {{-- 			<div class="row">
 						<div class="col-md-12 col-sm-12">
 								<div class="card  card-box">
@@ -1159,5 +1111,5 @@
 					</div>
 --}}
 
-
+</body>
 @endsection

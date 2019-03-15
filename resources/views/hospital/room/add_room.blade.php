@@ -1,6 +1,5 @@
 @extends('hospital.layout.design')
 @section('content')
-<body>
   <div class="d-table-cell align-middle">
 
     <div class="text-center mt-4">
@@ -51,5 +50,4 @@
 
 </div>
 </div>
-</body>
 @endsection

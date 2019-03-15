@@ -1,32 +1,40 @@
 @extends('hospital.layout.design')
 @section('content')
-  <div class="card-body">
-    			<a class="btn btn-outline-primary btn-sm" href="{{ url('hospital/add_report') }}">Add Report</a>
+
+<div class="card-body">
+    			<a class="btn btn-outline-primary btn-sm" href="{{ url('hospital/add-appointment') }}">Add Appointment</a> <br><br>
     <table id="datatables-basic" class="table table-striped" style="width:100%">
       <thead>
         <tr>
-              <th>Report name</th>
-              <th>Report types</th>
-              <th>Issued on</th>
-              <th>Supervisor name</th>
+              <th>Appointment id</th>
               <th>Patient id</th>
-              <th>Report file upload</th>
+              <th>Patient name</th>
+              <th>Visiting Doctor</th>
+              <th>Visiting time from</th>
+              <th>Visiting time to</th>
+              <th>Disease</th>
+              <th>Remark</th>
               <th>Actions</th>
+
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td>T</td>
-          <td>Architect</td>
-          <td>12/2/2017</td>
-          <td>xyz</td>
-          <td>xyz</td>
-          <td>xyz</td>
-          <td><a href="#">edit</a>         \          <a href="#">delete</a></td>
-        </tr>
 
+          <tr>
+            <td>appointment_id </td>
+            <td>patient_id </td>
+            <td>patient_name </td>
+            <td>visiting_Doctor </td>
+            <td>visiting_time_from </td>
+            <td>visiting_time_to </td>
+            <td>disease </td>
+            <td>remark </td>
+
+            <td>  <a href="{{ url('hospital/edit-appointment') }}">EDIT</a>/
+              <a href="{{ url('#') }}" style="color: #ff1717;">DELETE</a>
+            </td>
+          </tr>
       </tbody>
-
     </table>
         <script>
             document.addEventListener("DOMContentLoaded", function(event) {

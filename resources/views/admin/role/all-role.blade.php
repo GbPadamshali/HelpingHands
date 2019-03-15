@@ -9,7 +9,7 @@
                       <div class="sparkline13-hd">
                           <div class="main-sparkline13-hd">
                               <h1>ALL <span class="table-project-n">ROLE</span></h1>
-                              <button type="button" class="btn btn-custon-rounded-four btn-primary" onclick="location.href='{{ route('ad-roles.create') }}'">ADD ROLE</button>
+                              <button type="button" class="btn btn-custon-rounded-four btn-primary" onclick="location.href='{{ url('/admin/add-role') }}'">ADD ROLE</button>
                           </div>
                       </div>
                       <div class="sparkline13-graph">
@@ -18,29 +18,28 @@
                                   data-cookie-id-table="saveId" data-show-export="false" data-click-to-select="true" data-toolbar="#toolbar">
                                   <thead>
                                       <tr>
-                                          <th data-field="id" data-editable="false">Id
-                                          <th data-field="hospital id" data-editable="false">Hospital Id
-                                          <th data-field="role" data-editable="false">Role</th>
+                                          <th data-field="id">ID</th>
+                                          <th data-field="hospital_id" data-editable="false">Hospital_Id</th>
+                                          <th data-field="department" data-editable="false">Role</th>
                                           <th data-field="description" data-editable="false">Description</th>
                                           <th data-field="action">Action</th>
                                       </tr>
                                   </thead>
                                   <tbody>
-                                    @foreach ($roles as $role)
+
                                       <tr>
-                                        <td>{{ $role->id }}</td>
-                                        <td>{{ $role->hospital_id }}</td>
-                                        <td>{{ $role->role }}</td>
-                                        <td>{{ $role->description }}</td>
+                                          <td>id</td>
+                                          <td>Gov25451</td>
+                                          <td>patient</td>
+                                          <td>explain in details</td>
                                           <td>
-                                            <button type="button" class="btn btn-primary" onclick="location.href='{{ route('ad-roles.edit', $role->id) }}'">Edit</button><hr>
-                                            <button type="button" class="btn btn-danger" onclick="location.href='{{ route('ad-roles.destroy', $role->id) }}'">Delete</button>
+                                            <button type="button" class="btn btn-primary" onclick="location.href='{{ url('#') }}'">Edit</button>
+                                            <button type="button" class="btn btn-danger" onclick="location.href='{{ url('#') }}'">Delete</button>
                                           </td>
                                       </tr>
-                                    @endforeach
+
                                   </tbody>
                               </table>
-                              {{ $roles->links() }}
                           </div>
                       </div>
 

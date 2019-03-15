@@ -1,33 +1,30 @@
 @extends('hospital.layout.design')
 @section('content')
-  <div class="card-body">
-    			<a class="btn btn-outline-primary btn-sm" href="{{ url('hospital/add_report') }}">Add Report</a>
+
+<div class="card-body">
+    			<a class="btn btn-outline-primary btn-sm" href="{{ url('hospital/add-facility') }}">Add Facility</a> <br><br>
     <table id="datatables-basic" class="table table-striped" style="width:100%">
       <thead>
         <tr>
-              <th>Report name</th>
-              <th>Report types</th>
-              <th>Issued on</th>
-              <th>Supervisor name</th>
-              <th>Patient id</th>
-              <th>Report file upload</th>
+              <th>Facilty Name</th>
+              <th>Description</th>
               <th>Actions</th>
+
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td>T</td>
-          <td>Architect</td>
-          <td>12/2/2017</td>
-          <td>xyz</td>
-          <td>xyz</td>
-          <td>xyz</td>
-          <td><a href="#">edit</a>         \          <a href="#">delete</a></td>
-        </tr>
+
+          <tr>
+            <td>facility_name </td>
+            <td>description </td>
+            <td>  <a href="{{ url('hospital/edit-facility') }}">EDIT</a>/
+                  <a href="{{ url('#') }}" style="color: #ff1717;">DELETE</a>
+            </td>
+          </tr>
 
       </tbody>
-
     </table>
+
         <script>
             document.addEventListener("DOMContentLoaded", function(event) {
               // Datatables basic
