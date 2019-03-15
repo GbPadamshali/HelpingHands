@@ -18,10 +18,11 @@ class HospitalDashboardController extends Controller
     public function HospitalDashboard($id)
     {
         // return "Success";
-        $hospital = Hospitals::where('user_id', $id)->first();
-        // $departments['count'] = Department::where('hospital_id', $id)->count();
-        // $doctorCount['count'] = doctor::where('hospital_id', $id)->count();
-        $doctors = doctor::where('hospital_id', $id)->get(3);
-        return view('user.hospital_pages.dashboard1')->with(compact(['hospital', 'doctors']));
+        $data['hospital'] = Hospitals::where('user_id', $id)->first();
+        $data['departments'] = Department::where('hospital_id', $id)->count();
+        $data['doctorCount'] = doctor::where('hospital_id', $id)->count();
+        $data['doctors'] = doctor::where('hospital_id', $id)->get();
+        // return $data;
+        return view('user.hospital_pages.dashboard1')->with(compact(['data']));
     }
 }

@@ -15,7 +15,7 @@
                     data-fsmasterspeed="300" data-fsslotamount="7" data-saveperformance="off"  data-title="Slide" data-param1="" data-param2=""
                     data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
 									<!-- MAIN IMAGE -->
-									<img src="{{ asset($hospital->banner_path) }}"  alt="" data-lazyload="/images/user_images/hospital_img1.jpg" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="3" class="rev-slidebg" data-no-retina>
+									<img src="{{ asset($data['hospital']->banner_path) }}"  alt="" data-lazyload="/images/user_images/hospital_img1.jpg" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="3" class="rev-slidebg" data-no-retina>
 									<!-- LAYERS -->
 									<div class="tp-caption tp-shape tp-shapewrapper " id="slide-100-layer-1"
 									data-x="['center','center','center','center']"
@@ -59,7 +59,7 @@
 										style="z-index: 5; min-width: 720px; max-width: 720px; white-space: normal; font-size: 60px; line-height: 70px;
                             color: rgba(255, 255, 255, 1.00);font-family:'Raleway',sans-serif;border-width:0px;letter-spacing:10px;
                             font-weight:300;">WELCOME<br/>
-							        TO {{ $hospital->name }}</div>
+							        TO {{ $data['hospital']->name }}</div>
 
 
 
@@ -87,7 +87,7 @@
 
 										style="z-index: 6; min-width: 720px; max-width: 720px; white-space: normal; font-size: 17px; line-height: 26px;
                             font-weight: 400; color: rgba(255, 255, 255, 1.00);font-family:'Raleway',sans-serif;border-width:0px;">
-                            {{ $hospital->tag_line }}</div>
+                            {{ $data['hospital']->tag_line }}</div>
 
 									<!-- LAYER NR. 3 -->
 									<div class="tp-caption rev-btn  rs-parallaxlevel-4"
@@ -311,7 +311,7 @@
         <div class="container">
     <div class="section-head text-center ">
                 <h3 class="h3 text-uppercase">What <span class="text-primary"> Patients Says</span></h3>
-      <p>{{ $hospital->description }}</p>
+      <p>{{ $data['hospital']->description }}</p>
     </div>
     <div class="section-content">
       <div class="owl-carousel testimonial-three1 owl-theme owl-btn-3 owl-btn-center-lr owl-dots-black-full">
@@ -479,7 +479,7 @@
 							<div class="">
 								<i class="icon flaticon-bar-chart text-white"></i>
 								{{-- <span class="counter">{{ $departments->count }}</span> --}}
-								<span class="counter">5</span>
+								<span class="counter">{{ $data['departments'] }}</span>
 							</div>
 							<span class="counter-text">DEPARTMENTS</span>
 						</div>
@@ -489,7 +489,7 @@
 							<div class="">
 								<i class="icon flaticon-social text-white"></i>
 								{{-- <span class="counter">{{ $doctorCount->count }}</span> --}}
-								<span class="counter">5</span>
+								<span class="counter">{{ $data['doctorCount'] }}</span>
 							</div>
 							<span class="counter-text">DOCTORS</span>
 						</div>
@@ -517,15 +517,15 @@
         </div>
         <!-- Why Choose Us END -->
         <div class="section-full bg-white content-inner-1 bg-img-fix overlay-black-dark"
-              style="background-image:url({{ $hospital->image_path }});">
+              style="background-image:url({{ $data['hospital']->image_path }});">
                 <div class="container">
                     <div class="section-head text-center text-white">
                         <h3 class="h3 text-uppercase">Available Doctors</h3>
-                        <p>{{ $hospital->description }}</p>
+                        <p>{{ $data['hospital']->description }}</p>
                     </div>
                     <div class="section-content">
                         <div class="owl-carousel blog-carousel owl-btn-3 btn-white owl-btn-center-lr owl-theme">
-                          @foreach ($doctors as $doctor)
+                          @foreach ($data['doctors'] as $doctor)
                             <div class="item">
     							            <div class="dez-box">
     								            <div class="dez-media">

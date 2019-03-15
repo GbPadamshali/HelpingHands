@@ -33,8 +33,12 @@ Route::View('reports', 'user.hospital_layout.reports');
 Route::view('contact-us', 'user.pages.contact_us');
 Route::view('abc-hospital', 'user.hospital_pages.dashboard');
 Route::view('h-contact-us', 'user.hospital_pages.h_contact_us');
-Route::view('booking', 'user.hospital_pages.booking');
+// Route::view('booking', 'user.hospital_pages.booking');
 Route::get('hospital/{id}', 'UserControllers\HospitalDashboardController@HospitalDashboard');
+// Route::view('test/{id}', 'user.hospital_pages.test');
+Route::get('booking/{id}', function(){
+  return view('user.hospital_pages.booking');
+});
 Auth::routes();
 
 // Admin Routes Starts
