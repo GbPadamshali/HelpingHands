@@ -12,13 +12,13 @@
 
 
   <div class="form-group">
-    <label class="form-label">Patient name</label>
+    <label class="form-label">Patient Name</label>
     <input type="text" class="form-control" name="patient_name" id="patient_name" required>
 </div>
 
 
 <div class="form-group">
-  <label class="form-label">Room types</label>
+  <label class="form-label">Room Types</label>
   <select class="form-control" name="room_type" required>
     <option value>Select types...</option>
     {{-- <optgroup label="Department"> --}}
@@ -32,11 +32,11 @@
   </select>
 </div>
    <div class="form-group">
-    <label class="form-label">Allocate date</label>
+    <label class="form-label">Allocate Date</label>
     <input type="datetime-local" class="form-control" name="allocate_date" id="allocate_date" required>
   </div>
   <div class="form-group">
-    <label class="form-label">Allocate up-to</label>
+    <label class="form-label">Allocate Up-To</label>
     <input type="datetime-local" class="form-control" name="allocate_up-to" id="allocate_up-to" required>
   </div>
 

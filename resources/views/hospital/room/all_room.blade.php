@@ -5,12 +5,12 @@
       <table id="datatables-basic" class="table table-striped" style="width:100%">
         <thead>
           <tr>
-                <th>Room no</th>
-                <th>Patient id</th>
+                <th>Room No</th>
+                <th>Patient Id</th>
                 <th>Patient name</th>
-                <th>Room types</th>
-                <th>Allocate date</th>
-                <th>Allocate up-to</th>
+                <th>Room Types</th>
+                <th>Allocate Date</th>
+                <th>Allocate u-To</th>
                 <th>Actions</th>
 
           </tr>

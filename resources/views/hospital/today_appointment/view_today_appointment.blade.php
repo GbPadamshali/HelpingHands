@@ -1,7 +1,7 @@
 @extends('hospital.layout.design')
 @section('content')
   <div class="p-4 border-bottom" style="margin-left: 10px;">
-     <h2>Today appointment !</h2>
+     <h2>Today's Appointment !</h2>
      <p class="mb-0 text-sm">Your today appointment . Check your  to see the details.</p>
    </div>
    <div class="p-4 border-bottom" style="margin-left: 10px;">
@@ -9,9 +9,9 @@
    <p class="mb-0 text-sm">Jay </p>
   <h5>Visiting Doctor</h5>
    <p class="mb-0 text-sm">Dr.aryan</p>
-   <h5>Visiting time from</h5>
+   <h5>Visiting Time From</h5>
    <p class="mb-0 text-sm"> 20/10/2018 6:30</p>
-   <h5>Visiting time to</h5>
+   <h5>Visiting Time To</h5>
    <p class="mb-0 text-sm"> 20/10/2018 7:15</p>
    <h5>Disease</h5>
    <p class="mb-0 text-sm"> Fever</p>

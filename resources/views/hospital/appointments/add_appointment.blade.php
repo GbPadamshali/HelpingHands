@@ -11,15 +11,15 @@
 <center>
   <form id="validation-form" method="post" enctype="multipart/form-data" >
     <div class="form-group">
-      <label class="form-label">Appointment id</label>
+      <label class="form-label">Appointment Id</label>
       <input type="text" class="form-control" name="appointment_id" id="appointment_id"required>
     </div>
     <div class="form-group">
-      <label class="form-label">Patient id</label>
+      <label class="form-label">Patient Id</label>
       <input type="text" class="form-control" name="patient_id" id="patient_id"required>
     </div>
     <div class="form-group">
-      <label class="form-label">Patient name</label>
+      <label class="form-label">Patient Name</label>
       <input type="text" class="form-control" name="patient_name" id="patient_name" required>
   </div>
    <div class="form-group">
@@ -28,11 +28,11 @@
   </div>
 
     <div class="form-group">
-      <label class="form-label">Visiting time from</label>
+      <label class="form-label">Visiting Time From</label>
       <input type="datetime-local" class="form-control" name="visiting_time_from" id="visiting_time_from" required>
     </div>
     <div class="form-group">
-      <label class="form-label">Visiting time to</label>
+      <label class="form-label">Visiting Time To</label>
       <input type="datetime-local" class="form-control" name="visiting_time_to" id="visiting_time_to" required>
     </div>
     <div class="form-group">

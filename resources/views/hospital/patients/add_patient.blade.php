@@ -5,7 +5,7 @@
 
                                  <h3 class="h2">ADD PATIENT </h3>
 
-                               
+
                                      <div class="panel-body">
                                          <form class="col-sm-6">
                                              <div class="form-group">
@@ -37,15 +37,15 @@
                                              </div>  --}}
                                              <div class="form-group">
                                                  <label>Blood group</label>
-                                                 <select class="form-control" >
-                                                     <option>A+</option>
-                                                     <option>AB+</option>
-                                                     <option>O+</option>
-                                                     <option>AB-</option>
-                                                     <option>B+</option>
-                                                     <option>A-</option>
-                                                     <option>B-</option>
-                                                     <option>O-</option>
+                                                 <select class="form-control" name="blood_group" required>
+                                                     <option id="1">A+</option>
+                                                     <option id="2">AB+</option>
+                                                     <option id="3">O+</option>
+                                                     <option id="4">AB-</option>
+                                                     <option id="5">B+</option>
+                                                     <option id="6">A-</option>
+                                                     <option id="7">B-</option>
+                                                     <option id="8">O-</option>
                                                  </select>
                                              </div>
                                              <div class="form-group">

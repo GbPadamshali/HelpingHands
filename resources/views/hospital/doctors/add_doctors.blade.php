@@ -10,12 +10,12 @@
   <form id="validation-form" method="post" enctype="multipart/form-data">
 
     <div class="form-group">
-      <label class="form-label">First name</label>
+      <label class="form-label">First Name</label>
       <input type="text" class="form-control" name="first_name" id="first name" required>
 
     </div>
     <div class="form-group">
-      <label class="form-label">Last name</label>
+      <label class="form-label">Last Name</label>
       <input type="text" class="form-control" name="last_name" id="last name" required>
     </div>
     <div class="form-group">
@@ -46,7 +46,7 @@
       </div>
       </div>
     <div class="form-group">
-      <label class="form-label">Joining date</label>
+      <label class="form-label">Joining Date</label>
       <input type="date" class="form-control" name="joining_date" id="joining date" required>
     </div>
     <div class="form-group">

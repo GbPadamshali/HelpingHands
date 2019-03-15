@@ -7,10 +7,10 @@
       <thead>
         <tr>
               <th>Appointment id</th>
-              <th>Patient name</th>
+              <th>Patient Name</th>
               <th>Visiting Doctor</th>
-              <th>Visiting time from</th>
-              <th>Visiting time to</th>
+              <th>Visiting Time From</th>
+              <th>Visiting Time To</th>
               <th>Disease</th>
               <th>Remark</th>
               <th>Actions</th>

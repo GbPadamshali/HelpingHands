@@ -6,12 +6,12 @@
     <table id="datatables-basic" class="table table-striped" style="width:100%">
       <thead>
         <tr>
-              <th>Appointment id</th>
-              <th>Patient id</th>
-              <th>Patient name</th>
+              <th>Appointment Id</th>
+              <th>Patient Id</th>
+              <th>Patient Name</th>
               <th>Visiting Doctor</th>
-              <th>Visiting time from</th>
-              <th>Visiting time to</th>
+              <th>Visiting Time From</th>
+              <th>Visiting Time To</th>
               <th>Disease</th>
               <th>Remark</th>
               <th>Actions</th>

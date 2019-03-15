@@ -10,11 +10,11 @@
   <form id="validation-form" method="post" enctype="multipart/form-data" >
 
     <div class="form-group">
-      <label class="form-label">Report name</label>
+      <label class="form-label">Report Name</label>
       <input type="text" class="form-control" name="report_name" id="report name" required>
   </div>
   <div class="form-group">
-    <label class="form-label">Report types</label>
+    <label class="form-label">Report Types</label>
     <select class="form-control" name="report types"  required>
       <option value>Select types...</option>
       {{-- <optgroup label="Department"> --}}
@@ -39,13 +39,13 @@
   </div>
 
     <div class="form-group">
-      <label class="form-label">Supervisor name</label>
+      <label class="form-label">Supervisor Name</label>
       <input type="text" class="form-control" name="supervisor" id="supervisor" required>
     </div>
     <div class="form-group">
 
     <div class="form-group">
-      <label class="form-label">Report file upload</label>
+      <label class="form-label">Report File Upload</label>
       <div>
         <input type="file" class="validation-file" name="file"  id="file" required>
       </div>

@@ -7,9 +7,9 @@
       <thead>
         <tr>
               <th>Event Name</th>
-              <th>Event type</th>
-              <th>Event date</th>
-              <th>Event banner</th>
+              <th>Event Type</th>
+              <th>Event Date</th>
+              <th>Event Banner</th>
               <th>Actions</th>
 
         </tr>

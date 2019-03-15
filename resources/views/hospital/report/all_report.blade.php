@@ -5,11 +5,11 @@
     <table id="datatables-basic" class="table table-striped" style="width:100%">
       <thead>
         <tr>
-              <th>Report name</th>
-              <th>Report types</th>
-              <th>Issued on</th>
-              <th>Supervisor name</th>
-              <th>Patient id</th>
+              <th>Patient Id</th>
+              <th>Report Name</th>
+              <th>Report Types</th>
+              <th>Issued On</th>
+              <th>Supervisor Name</th>
               <th>Report file upload</th>
               <th>Actions</th>
         </tr>
