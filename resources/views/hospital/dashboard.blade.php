@@ -178,7 +178,7 @@
 							</div>
 							<div class="p-4 border-bottom" style="margin-left: 10px;">
 								<h2>Today appointment !</h2>
-								<p class="mb-0 text-sm">Your next meeting is in 3 hours. Check your <a href="#">schedule</a> to see the details.</p>
+								<p class="mb-0 text-sm">Your next meeting is in 3 hours. Check your  to see the details.</p>
 							</div>
 							<div class="card-body" style="margin-left: 10px;">
 								<ul class="timeline">
@@ -500,7 +500,7 @@
 								</div>
 							</div>
 						</div>
-						
+
 						<div class="col-12 col-md-6 col-xl d-flex">
 							<div class="card flex-fill">
 								<div class="card-body py-4">
