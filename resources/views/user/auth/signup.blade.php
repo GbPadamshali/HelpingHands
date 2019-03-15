@@ -77,7 +77,7 @@
                         <input type="checkbox"/>
                         <label>I agree to the <a href="#">Terms of Service </a>& <a href="#">Privacy Policy </label>
                         </label> --}}
-                        <div class="form-group text-left "> <a class="site-button outline gray" data-toggle="tab" href="#login">Back</a>
+                        <div class="form-group text-left "> <a class="site-button outline gray" href="{{ asset('user-login-page') }}">Back</a>
                             <button class="site-button pull-right">Submit</button>
                         </div>
                     </form>

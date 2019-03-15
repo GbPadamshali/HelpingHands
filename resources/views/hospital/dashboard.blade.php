@@ -177,28 +177,28 @@
 								<h5 class="card-title mb-0">Schedule</h5>
 							</div>
 							<div class="p-4 border-bottom" style="margin-left: 10px;">
-								<h2>Today appointment !</h2>
-								<p class="mb-0 text-sm">Your next meeting is in 3 hours. Check your <a href="#">schedule</a> to see the details.</p>
+								<h2>Today's Appointment !</h2>
+								<p class="mb-0 text-sm">Your next meeting is in 3 hours. Check your schedule to see the details.</p>
 							</div>
 							<div class="card-body" style="margin-left: 10px;">
 								<ul class="timeline">
 									<li class="timeline-item">
-										<strong>Chat with Andrew and Marie</strong>
+										<strong>Andrew and Marie</strong>
 										<span class="float-right text-muted text-sm">45m ago</span>
 										<p>Nam pretium turpis et arcu. Duis arcu tortor, suscipit eget, imperdiet nec, imperdiet iaculis, ipsum...</p>
 									</li>
 									<li class="timeline-item">
-										<strong>The big launch</strong>
+										<strong>Robert Stokins</strong>
 										<span class="float-right text-muted text-sm">2h ago</span>
 										<p>Sed aliquam ultrices mauris. Integer ante arcu, accumsan a, consectetuer eget, posuere ut, mauris...</p>
 									</li>
 									<li class="timeline-item">
-										<strong>Coffee break</strong>
+										<strong>Ruth Gibbs</strong>
 										<span class="float-right text-muted text-sm">3h ago</span>
 										<p>Curabitur ligula sapien, tincidunt non, euismod vitae, posuere imperdiet, leo. Maecenas malesuada. Praesent congue erat at massa...</p>
 									</li>
 									<li class="timeline-item">
-										<strong>Conference call with Andrew</strong>
+										<strong>Andrew Jhonson</strong>
 										<span class="float-right text-muted text-sm">5h ago</span>
 										<p>Aenean posuere, tortor sed cursus feugiat, nunc augue blandit nunc, eu sollicitudin urna dolor sagittis lacus...</p>
 									</li>
@@ -500,7 +500,7 @@
 								</div>
 							</div>
 						</div>
-						
+
 						<div class="col-12 col-md-6 col-xl d-flex">
 							<div class="card flex-fill">
 								<div class="card-body py-4">

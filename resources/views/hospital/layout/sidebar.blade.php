@@ -1,8 +1,9 @@
 <nav class="sidebar sidebar-sticky">
   <div class="sidebar-content  js-simplebar">
     <a class="sidebar-brand" href="{{ url('hospital/dashboard') }}">
-      <img src="{{ asset('images/user_images/logo.png') }}" style="height: 80px; width: 100px;" alt=""/>
-      <span class="align-middle">HelpingHands</span>
+      <img src="{{ asset('images/user_images/hospital_logo/logo1.png') }}" style="height: 80px; width: 100px;" alt=""/>
+    </br>
+      <span class="align-middle">ABC Hospital</span>
     </a>
 
     <ul class="sidebar-nav">

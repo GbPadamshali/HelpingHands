@@ -67,9 +67,9 @@
                             {{-- <a data-toggle="tab" href="#forgot-password" class="m-l15"><i class="fa fa-unlock-alt"></i> Forgot Password</a> </div> --}}
                     </form>
 										<hr>
-                    <div class="bg-primary p-a15 "> <a data-toggle="tab" href="{{ url('user-signup-page') }}" class="text-white">Create an account</a> </div>
+                    <div class="bg-primary p-a15 "> <a href="{{ url('user-signup-page') }}" class="text-white">Create an account</a> </div>
                 </div>
-                <div id="forgot-password" class="tab-pane fade ">
+                {{-- <div id="forgot-password" class="tab-pane fade ">
                     <form class="p-a30 dez-form m-t100 text-center"> {{ csrf_field() }}
                         <h3 class="form-title m-t0">Forget Password ?</h3>
                         <div class="dez-separator-outer m-b5">
@@ -83,8 +83,8 @@
                             <button class="site-button pull-right">Submit</button>
                         </div>
                     </form>
-                </div>
-                <div id="developement-1" class="tab-pane fade">
+                </div> --}}
+                {{-- <div id="developement-1" class="tab-pane fade">
                     <form class="p-a30 dez-form text-center"> {{ csrf_field() }}
                         <h3 class="form-title m-t0">Sign Up</h3>
                         <div class="dez-separator-outer m-b5">
@@ -121,7 +121,7 @@
                             <button class="site-button pull-right">Submit</button>
                         </div>
                     </form>
-                </div>
+                </div> --}}
             </div>
         </div>
     </div>
