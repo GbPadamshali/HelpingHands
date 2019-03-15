@@ -33,7 +33,7 @@
                                           <td>patient</td>
                                           <td>explain in details</td>
                                           <td>
-                                            <button type="button" class="btn btn-primary" onclick="location.href='{{ url('#') }}'">Edit</button>
+                                            <button type="button" class="btn btn-primary" onclick="location.href='{{ url('#') }}'">Edit</button><Hr>
                                             <button type="button" class="btn btn-danger" onclick="location.href='{{ url('#') }}'">Delete</button>
                                           </td>
                                       </tr>

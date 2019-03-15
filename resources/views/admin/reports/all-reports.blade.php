@@ -33,8 +33,8 @@
                                           <td>Report are commmented</td>
                                           <td>PENDING</td>
                                           <td>
-                                            <button type="button" class="btn btn-primary" onclick="location.href='{{ url('#') }}'">Reply</button>
-                                            <button type="button" class="btn btn-secondary" onclick="location.href='{{ url('#') }}'">Refuse</button>
+                                            <button type="button" class="btn btn-primary" onclick="location.href='{{ url('#') }}'">Reply</button><Hr>
+                                            <button type="button" class="btn btn-secondary" onclick="location.href='{{ url('#') }}'">Refuse</button><Hr>
                                             <button type="button" class="btn btn-danger" onclick="location.href='{{ url('#') }}'">Delete</button>
                                           </td>
                                       </tr>
