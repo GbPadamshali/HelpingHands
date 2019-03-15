@@ -40,7 +40,7 @@
                                           <td><img src="{{ asset($team->logo_path) }}" width="100px" alt="No Logo Found"></td>
                                           <td>{{ $team->tournament_id }}</td>
                                           <td>
-                                            <button type="button" class="btn btn-primary" onclick="location.href='{{ route('teams.show', $team->id) }}'">Edit</button>
+                                            <button type="button" class="btn btn-primary" onclick="location.href='{{ route('teams.show', $team->id) }}'">Edit</button><hr>
                                             <button type="button" class="btn btn-danger" onclick="location.href='{{ route('teams.destroy', $team->id) }}'">Delete</button>
                                           </td>
                                       </tr>
