@@ -46,16 +46,20 @@
             <div class="tab-content nav">
                 <div id="developement-1" >
                     <form class="p-a30 dez-form text-center"> {{ csrf_field() }}
+												<img src="{{ asset('images/user_images/logo.png') }}" style="width: 150px; height: 150px;"></img>
                         <h3 class="form-title m-t0">Sign Up</h3>
                         <div class="dez-separator-outer m-b5">
                             <div class="dez-separator bg-primary style-liner"></div>
                         </div>
                         <p>Enter your personal details below: </p>
                         <div class="form-group">
-                            <input name="name" required="" class="form-control" placeholder="Full Name" type="text"/>
+                            <input name="name" required class="form-control" placeholder="Full Name" type="text"/>
                         </div>
                         <div class="form-group">
-                            <input name="email" required="" class="form-control" placeholder="Email Id" type="text"/>
+                            <input name="email" required class="form-control" placeholder="Email Id" type="text"/>
+                        </div>
+												<div class="form-group">
+                            <input name="mobile" required class="form-control" placeholder="Mobile Number" type="text"/>
                         </div>
                         {{-- <div class="form-group">
                             <input name="dzName" required="" class="form-control" placeholder="Address" type="text"/>
@@ -68,15 +72,16 @@
                             <input name="dzName" required="" class="form-control" placeholder="User Name" type="text"/>
                         </div> --}}
                         <div class="form-group">
-                            <input name="password" required="" class="form-control" placeholder="Password" type="password"/>
+                            <input name="password" required class="form-control" placeholder="Password" type="password"/>
                         </div>
                         <div class="">
-                            <input name="dzName" required="" class="form-control" placeholder="Re-type Your Password" type="password"/>
+                            <input name="dzName" required class="form-control" placeholder="Re-type Your Password" type="password"/>
                         </div>
                         {{-- <label class="m-b30">
                         <input type="checkbox"/>
                         <label>I agree to the <a href="#">Terms of Service </a>& <a href="#">Privacy Policy </label>
                         </label> --}}
+											<br>
                         <div class="form-group text-left "> <a class="site-button outline gray" href="{{ asset('user-login-page') }}">Back</a>
                             <button class="site-button pull-right">Submit</button>
                         </div>

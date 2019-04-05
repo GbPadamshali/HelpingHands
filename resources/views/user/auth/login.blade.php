@@ -46,6 +46,7 @@
             <div class="tab-content nav">
                 <div id="login" class="tab-pane active text-center">
                     <form class="p-a30 dez-form  m-t100" method="post" action="#"> {{ csrf_field() }}
+											<img src="{{ asset('images/user_images/logo.png') }}" style="width: 150px; height: 150px;"></img>
                         <h3 class="form-title m-t0">Log In</h3>
                         <div class="dez-separator-outer m-b5">
                             <div class="dez-separator bg-primary style-liner"></div>
@@ -67,7 +68,7 @@
                             {{-- <a data-toggle="tab" href="#forgot-password" class="m-l15"><i class="fa fa-unlock-alt"></i> Forgot Password</a> </div> --}}
                     </form>
 										<hr>
-                    <div class="bg-primary p-a15 "> <a href="{{ url('user-signup-page') }}" class="text-white">Create an account</a> </div>
+                    <div class="site-button dz-xs-flex"> <a href="{{ url('user-signup-page') }}" class="text-white">Create an account</a> </div>
                 </div>
                 {{-- <div id="forgot-password" class="tab-pane fade ">
                     <form class="p-a30 dez-form m-t100 text-center"> {{ csrf_field() }}

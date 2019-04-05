@@ -89,7 +89,7 @@
 										data-whitespace="nowrap"
 
 										data-type="button"
-										data-actions='[{"event":"click","action":"scrollbelow","offset":"px","delay":""}]'
+										data-actions='[{"event":"click","action":"px","delay":""}]'
 										data-responsive_offset="off"
 										data-responsive="off"
 										data-frames='[{"from":"y:20px;sX:0.9;sY:0.9;opacity:0;","speed":1000,"to":"o:1;","delay":900,"ease":"Power4.easeOut"},{"delay":"wait","speed":300,"to":"opacity:0;","ease":"nothing"},{"frame":"hover","speed":"0","ease":"Linear.easeNone","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgba(0, 0, 0, 1.00);bg:rgba(238, 238, 238, 1.00);bs:solid;"}]'
