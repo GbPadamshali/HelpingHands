@@ -49,6 +49,9 @@
 ============================================ -->
 <link rel="stylesheet" href="{{ asset('css/admin_css/calendar/fullcalendar.min.css') }}">
 <link rel="stylesheet" href="{{ asset('css/admin_css/calendar/fullcalendar.print.min.css') }}">
+<!-- forms CSS
+============================================ -->
+<link rel="stylesheet" href="{{ asset('css/admin_css/form/all-type-forms.css') }}">
 <!-- style CSS
 ============================================ -->
 <link rel="stylesheet" href="{{ asset('css/admin_css/style.css') }}">

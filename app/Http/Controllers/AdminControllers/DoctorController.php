@@ -2,10 +2,16 @@
 
 namespace App\Http\Controllers\AdminControllers;
 
+use File;
 use Auth;
+use Image;
 use App\doctor;
 use Illuminate\Http\Request;
+use Illuminate\Http\UploadedFile;
 use App\Http\Controllers\Controller;
+use Intervention\Image\ImageManager;
+use Illuminate\Support\Facades\Input;
+use Illuminate\Filesystem\Filesystem;
 
 class DoctorController extends Controller
 {

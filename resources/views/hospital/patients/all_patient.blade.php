@@ -2,42 +2,41 @@
 @section('content')
 
 <div class="card-body">
-    			<a class="btn btn-outline-primary btn-sm" href="{{ url('hospital/add-patient') }}">Add patient</a> <br><br>
+    			<a class="btn btn-outline-primary btn-sm" href="{{ route('ho-patients.create') }}">Add patient</a> <br><br>
     <table id="datatables-basic" class="table table-striped" style="width:100%">
       <thead>
         <tr>
-              <th>First Name</th>
-              <th>Last Name</th>
-              <th>Email</th>
-              <th>Mobile</th>
-              <th>Blood group</th>
-              <th>Alerigies</th>
-              <th>Disease</th>
-              <th>Medical History</th>
-              <th>Actions</th>
-
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Email</th>
+          <th>Mobile</th>
+          <th>Blood group</th>
+          <th>Alerigies</th>
+          <th>Disease</th>
+          <th>Medical History</th>
+          <th>Actions</th>
         </tr>
       </thead>
       <tbody>
-
+        @foreach ($patients as $patient)
           <tr>
-            <td>first_name </td>
-            <td> last_name </td>
-            <td> email </td>
-            <td>mobile </td>
-            <td>blood_group </td>
-            <td>alerigies </td>
-            <td>disease </td>
-            <td>medical_history </td>
-
-            <td>  <a href="{{ url('hospital/edit-patient') }}">EDIT</a>/
-              <a href="{{ url('#') }}" style="color: #ff1717;">DELETE</a>
+            <td>{{ $patient->first_name }}</td>
+            <td>{{ $patient->last_name }}</td>
+            <td>{{ $patient->email }}</td>
+            <td>{{ $patient->mobile }}</td>
+            <td>{{ $patient->blood_group }}</td>
+            <td>{{ $patient->allergies }}</td>
+            <td>{{ $patient->diseases }}</td>
+            <td>{{ $patient->medical_history }}</td>
+            <td>
+              <a href="{{ route('ho-patients.edit', $patient->id) }}">EDIT</a>/
+              <a href="{{ route('ho-patients.destroy', $patient->id) }}" style="color: #ff1717;">DELETE</a>
             </td>
           </tr>
-
+        @endforeach
       </tbody>
     </table>
-
+      {{ $patients->links() }}
         <script>
             document.addEventListener("DOMContentLoaded", function(event) {
               // Datatables basic

@@ -1,35 +1,34 @@
 @extends('hospital.layout.design')
 @section('content')
   <div class="card-body">
-      			<a class="btn btn-outline-primary btn-sm" href="{{ url('hospital/add-room') }}">Add Room</a> <br><br>
+      			<a class="btn btn-outline-primary btn-sm" href="{{ route('ho-rooms.create') }}">Add Room</a> <br><br>
       <table id="datatables-basic" class="table table-striped" style="width:100%">
         <thead>
           <tr>
-                <th>Room no</th>
-                <th>Patient id</th>
-                <th>Patient name</th>
-                <th>Room types</th>
-                <th>Allocate date</th>
-                <th>Allocate up-to</th>
-                <th>Actions</th>
-
+            <th>Patient Id</th>
+            <th>Patient Name</th>
+            <th>Room No</th>
+            <th>Room Types</th>
+            <th>Allocation From</th>
+            <th>Allocation To</th>
+            <th>Actions</th>
           </tr>
         </thead>
         <tbody>
-
-            <tr>
-              <td> room_no </td>
-              <td>patient_id </td>
-              <td>patient_name </td>
-              <td>room_types </td>
-              <td>allocate_date </td>
-              <td>allocate_up-to </td>
-           <td>
-                <a href="{{ url('hospital/edit-room') }}">EDIT</a>/
-                <a href="{{ url('#') }}" style="color: #ff1717;">DELETE</a>
-              </td>
-            </tr>
-
+            @foreach ($rooms as $room)
+              <tr>
+                <td>{{ $room->patient_id }}</td>
+                <td>{{ $room->patient_name }}</td>
+                <td>{{ $room->room_no }}</td>
+                <td>{{ $room->room_type }}</td>
+                <td>{{ $room->allocation_from }}</td>
+                <td>{{ $room->allocation_to }}</td>
+                <td>
+                  <a href="{{ route('ho-rooms.edit', $room->id) }}">EDIT</a>/
+                  <a href="{{ route('ho-rooms.destroy', $room->id) }}" style="color: #ff1717;">DELETE</a>
+                </td>
+              </tr>
+            @endforeach
         </tbody>
       </table>
 

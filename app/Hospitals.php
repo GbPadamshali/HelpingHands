@@ -17,8 +17,9 @@ class Hospitals extends Model
   protected $dates = ['deleted_at'];
 
   protected $fillable = [
-    'hospital_id', 'hospital_name', 'hospital_reg_id', 'type',
-    'hospital_image', 'image_path', 'hospital_banner', 'banner_path',
-    'address', 'landmark', 'area', 'city', 'state', 'country', 'pincode',
+    'user_id', 'reg_no', 'name', 'email', 'contact_no', 'tag_line',
+    'description', 'type', 'image_name', 'image_path', 'banner_name',
+    'banner_path', 'logo_Name', 'logo_path', 'address', 'landmark',
+    'area', 'city', 'state', 'country', 'pincode', 'slug',
   ];
 }

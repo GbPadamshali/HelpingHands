@@ -20,7 +20,7 @@
   <link rel="shortcut icon" type="image/x-icon" href="{{ asset('images/user_images/hospital_favicons/favicon-32x32.png') }}" />
   <link rel="shortcut icon" type="image/x-icon" href="{{ asset('images/user_images/hospital_favicons/favicon-96x96.png') }}" />
 	<!-- PAGE TITLE HERE -->
-	<title>ABC - Multispeciality Hospital</title>
+	<title>{{ $data->name }}</title>
 
 	<!-- MOBILE SPECIFIC -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -43,11 +43,11 @@
 </head>
 
 <body id='bg'>
-  @include('user.hospital_layout.header')
+  @include('user.hospital_layout.header1')
 
   @yield('content')
 
-	@include('user.hospital_layout.footer')
+	@include('user.hospital_layout.footer1')
 
 	<!-- scroll top button -->
 	<button class="scroltop fa fa-chevron-up" ></button>

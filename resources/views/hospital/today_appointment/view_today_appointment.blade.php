@@ -1,22 +1,22 @@
 @extends('hospital.layout.design')
 @section('content')
   <div class="p-4 border-bottom" style="margin-left: 10px;">
-     <h2>Today appointment !</h2>
-     <p class="mb-0 text-sm">Your today appointment . Check your  to see the details.</p>
+     <h2>{{ $appointment->patient_name }}</h2>
+     <p class="mb-0 text-sm">Your today appointment . Check your to see the details.</p>
    </div>
    <div class="p-4 border-bottom" style="margin-left: 10px;">
-   <h5>Patient Name</h5>
-   <p class="mb-0 text-sm">Jay </p>
+   <h5>Patient name</h5>
+   <p class="mb-0 text-sm">{{ $appointment->patient_name }}</p><br>
   <h5>Visiting Doctor</h5>
-   <p class="mb-0 text-sm">Dr.aryan</p>
-   <h5>Visiting time from</h5>
-   <p class="mb-0 text-sm"> 20/10/2018 6:30</p>
-   <h5>Visiting time to</h5>
-   <p class="mb-0 text-sm"> 20/10/2018 7:15</p>
+   <p class="mb-0 text-sm">{{ $appointment->visiting_doctor }}</p><br>
+   <h5>Visiting Time From</h5>
+   <p class="mb-0 text-sm">{{ $appointment->visiting_from }}</p><br>
+   <h5>Visiting Time To</h5>
+   <p class="mb-0 text-sm">{{ $appointment->visiting_to }}</p><br>
    <h5>Disease</h5>
-   <p class="mb-0 text-sm"> Fever</p>
+   <p class="mb-0 text-sm">{{ $appointment->diseases }}</p><br>
    <h5>Remark</h5>
-   <p1 class="mb-0 text-sm"> Body is hot</p>
+   <p1 class="mb-0 text-sm">{{ $appointment->remark }}</p><br>
     </div>
 {{--<ul class="list-group list-group-unbordered">
        <li class="list-group-item">
