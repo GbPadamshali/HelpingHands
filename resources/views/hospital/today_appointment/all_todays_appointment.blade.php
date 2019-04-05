@@ -2,7 +2,7 @@
 @section('content')
 
 <div class="card-body">
-    			<a class="btn btn-outline-primary btn-sm" href="{{ url('hospital/add-appointment') }}">Add Appointment</a> <br><br>
+    			{{-- <a class="btn btn-outline-primary btn-sm" href="{{ url('hospital/add-appointment') }}">Add Appointment</a> <br><br> --}}
     <table id="datatables-basic" class="table table-striped" style="width:100%">
       <thead>
         <tr>
@@ -18,24 +18,26 @@
         </tr>
       </thead>
       <tbody>
-
+        @foreach ($appointments as $appointment)
           <tr>
-            <td>appointment_id </td>
-            <td>patient_name </td>
-            <td>visiting_Doctor </td>
-            <td>visiting_time_from </td>
-            <td>visiting_time_to </td>
-            <td>disease </td>
-            <td>remark </td>
-
+            <td>{{ $appointment->id }}</td>
+            <td>{{ $appointment->patient_name }}</td>
+            <td>{{ $appointment->visiting_doctor }}</td>
+            <td>{{ $appointment->visiting_from }}</td>
+            <td>{{ $appointment->visiting_to }}</td>
+            <td>{{ $appointment->diseases }}</td>
+            <td>{{ $appointment->remark }}</td>
             <td>
-                  <a   href="{{ url('hospital/view-today-appointment') }}"class="btn btn-success">Taken</a>
-                  <a  class="btn btn-success">Process</a>
-                  <a  class="btn btn-warning">Cancel</a>
+                  <a href="{{ url('ho-admin/ho-today-appointments/'.$appointment->id.'/taken') }}" class="btn btn-success">Taken</a>
+                  <a class="btn btn-success" href="{{ url('ho-admin/ho-today-appointments/'.$appointment->id.'/inprocess') }}">Process</a>
+                  <a class="btn btn-warning" href="{{ route('ho-appointments.destroy', $appointment->id) }}">Cancel</a>
+                  <a href="{{ url('ho-admin/ho-today-appointments/'.$appointment->id.'/view') }}" class="btn btn-warning">view</a>
             </td>
           </tr>
+        @endforeach
       </tbody>
     </table>
+    {{ $appointments->links() }}
         <script>
             document.addEventListener("DOMContentLoaded", function(event) {
               // Datatables basic

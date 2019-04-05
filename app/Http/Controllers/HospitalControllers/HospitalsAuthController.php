@@ -21,9 +21,9 @@ class HospitalsAuthController extends Controller
       $input = $request->except('_token');
       $input['type'] = 'HOSPITAL_ADMIN';
       if (Auth::attempt($input)) {
-        return redirect('hospital/dashboard');
+        return redirect('ho-admin/dashboard');
       }
-      return redirect('hospital/login')->with('error', 'Please check your credentials and try again');
+      return redirect('ho-admin/login')->with('error', 'Please check your credentials and try again');
     }
 
     // function for showing registration form

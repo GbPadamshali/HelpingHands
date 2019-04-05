@@ -2,34 +2,33 @@
 @section('content')
 
 <div class="card-body">
-    			<a class="btn btn-outline-primary btn-sm" href="{{ url('hospital/add-upcoming-event') }}">Add Event</a> <br><br>
+    <a class="btn btn-outline-primary btn-sm" href="{{ route('ho-events.create') }}">Add Event</a> <br><br>
     <table id="datatables-basic" class="table table-striped" style="width:100%">
       <thead>
         <tr>
-              <th>Event Name</th>
-              <th>Event type</th>
-              <th>Event date</th>
-              <th>Event banner</th>
-              <th>Actions</th>
-
+          <th>Event Name</th>
+          <th>Event type</th>
+          <th>Event date</th>
+          <th>Event banner</th>
+          <th>Actions</th>
         </tr>
       </thead>
       <tbody>
-
-          <tr>
-            <td>event_name </td>
-            <td>event_type </td>
-            <td>event_date </td>
-            <td>event_banner</td>
-           <td>
-              <a href="{{ url('hospital/edit-upcoming-event') }}">EDIT</a>/
-              <a href="{{ url('#') }}" style="color: #ff1717;">DELETE</a>
-            </td>
-          </tr>
-
+          @foreach ($events as $event)
+            <tr>
+              <td>{{ $event->event_name }}</td>
+              <td>{{ $event->event_type }}</td>
+              <td>{{ $event->event_date }}</td>
+              <td><img src="{{ asset($event->banner_path) }}" style="width: 100px;"></td>
+             <td>
+                <a href="{{ route('ho-events.edit', $event->id) }}">EDIT</a>/
+                <a href="{{ route('ho-events.destroy', $event->id) }}" style="color: #ff1717;">DELETE</a>
+              </td>
+            </tr>
+          @endforeach
       </tbody>
     </table>
-
+      {{ $events->links() }}
         <script>
             document.addEventListener("DOMContentLoaded", function(event) {
               // Datatables basic

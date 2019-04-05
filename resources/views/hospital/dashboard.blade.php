@@ -29,7 +29,7 @@
 												<div class="card-body py-4">
 													<div class="row">
 														<div class="col-8">
-															<h3 class="mb-2">15</h3>
+															<h3 class="mb-2">{{ $data['doctors'] }}</h3>
 															<div class="mb-0">Active Doctors</div>
 														</div>
 														<div class="col-4 ml-auto text-right">
@@ -46,7 +46,7 @@
 												<div class="card-body py-4">
 													<div class="row">
 														<div class="col-8">
-															<h3 class="mb-2">12</h3>
+															<h3 class="mb-2">{{ $data['pharmachist'] }}</h3>
 															<div class="mb-0">Pharmachist</div>
 														</div>
 														<div class="col-4 ml-auto text-right">
@@ -64,7 +64,7 @@
 												<div class="card-body py-4">
 													<div class="row">
 														<div class="col-8">
-															<h3 class="mb-2">6</h3>
+															<h3 class="mb-2">{{ $data['receptionist'] }}</h3>
 															<div class="mb-0">Receptionist</div>
 														</div>
 														<div class="col-4 ml-auto text-right">
@@ -81,7 +81,7 @@
 												<div class="card-body py-4">
 													<div class="row">
 														<div class="col-8">
-															<h3 class="mb-2"> 20</h3>
+															<h3 class="mb-2">{{ $data['nurses'] }}</h3>
 															<div class="mb-0">Active Nurses</div>
 														</div>
 														<div class="col-4 ml-auto text-right">
@@ -98,7 +98,7 @@
 												<div class="card-body py-4">
 													<div class="row">
 														<div class="col-8">
-															<h3 class="mb-2">4</h3>
+															<h3 class="mb-2">{{ $data['other'] }}</h3>
 															<div class="mb-0">Labratorist</div>
 														</div>
 														<div class="col-4 ml-auto text-right">
@@ -182,12 +182,14 @@
 							</div>
 							<div class="card-body" style="margin-left: 10px;">
 								<ul class="timeline">
-									<li class="timeline-item">
-										<strong>Chat with Andrew and Marie</strong>
-										<span class="float-right text-muted text-sm">45m ago</span>
-										<p>Nam pretium turpis et arcu. Duis arcu tortor, suscipit eget, imperdiet nec, imperdiet iaculis, ipsum...</p>
-									</li>
-									<li class="timeline-item">
+									@foreach ($data['appointment'] as $appointment)
+										<li class="timeline-item">
+											<strong>{{ $appointment->patient_name }}</strong>
+											<span class="float-right text-muted text-sm">{{ $appointment->visiting_from }}</span>
+											<p>{{ $appointment->remark }}</p>
+										</li>
+									@endforeach
+									{{-- <li class="timeline-item">
 										<strong>The big launch</strong>
 										<span class="float-right text-muted text-sm">2h ago</span>
 										<p>Sed aliquam ultrices mauris. Integer ante arcu, accumsan a, consectetuer eget, posuere ut, mauris...</p>
@@ -201,7 +203,7 @@
 										<strong>Conference call with Andrew</strong>
 										<span class="float-right text-muted text-sm">5h ago</span>
 										<p>Aenean posuere, tortor sed cursus feugiat, nunc augue blandit nunc, eu sollicitudin urna dolor sagittis lacus...</p>
-									</li>
+									</li> --}}
 								</ul>
 							</div>
 							<div class="row" style="margin-top: 10px;margin-left: 10px;margin-right: 10px">
@@ -500,7 +502,7 @@
 								</div>
 							</div>
 						</div>
-						
+
 						<div class="col-12 col-md-6 col-xl d-flex">
 							<div class="card flex-fill">
 								<div class="card-body py-4">

@@ -10,9 +10,14 @@
 						<!-- START REVOLUTION SLIDER 5.3.0.2 fullscreen mode -->
 						<div id="rev_slider_1175_1" class="rev_slider fullscreenbanner" style="display:none;" data-version="5.3.0.2">
 							<ul>	<!-- SLIDE  -->
-								<li data-index="rs-3239" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="default"  data-thumb="images/user_images/main-slider/slide6.jpg"  data-rotate="0"  data-fstransition="fade" data-fsmasterspeed="300" data-fsslotamount="7" data-saveperformance="off"  data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+								<li data-index="rs-3239" data-transition="fade" data-slotamount="default" data-hideafterloop="0"
+                  data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="default"
+                  data-thumb="images/user_images/main-slider/slide6.jpg"  data-rotate="0" data-fstransition="fade"
+                  data-fsmasterspeed="300" data-fsslotamount="7" data-saveperformance="off"  data-title="Slide" data-param1=""
+                  data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
 									<!-- MAIN IMAGE -->
 									<img src="{{ asset('/images/user_images/hospital_img1.jpg') }}"  alt=""  data-lazyload="/images/user_images/hospital_img1.jpg" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="3" class="rev-slidebg" data-no-retina>
+                  {{-- <a href="{{ url($data['hospital']->slug) }}">Make An Appointment</a> --}}
 									<!-- LAYERS -->
 									<div class="tp-caption tp-shape tp-shapewrapper " id="slide-100-layer-1"
 									data-x="['center','center','center','center']"
@@ -37,24 +42,25 @@
 										 id="slide-3239-layer-1"
 										 data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
 										 data-y="['middle','middle','middle','middle']" data-voffset="['-70','-70','-70','-100']"
-													data-fontsize="['60','60','40','20']"
-										data-lineheight="['70','70','50','30']"
-										data-width="['720','640','480','300']"
-										data-height="none"
-										data-whitespace="normal"
+										 data-fontsize="['60','60','40','20']"
+										 data-lineheight="['70','70','50','30']"
+										 data-width="['720','640','480','300']"
+										 data-height="none"
+										 data-whitespace="normal"
 
-										data-type="text"
-										data-responsive_offset="off"
-										data-responsive="off"
-										data-frames='[{"from":"y:20px;sX:0.9;sY:0.9;opacity:0;","speed":1000,"to":"o:1;","delay":500,"ease":"Power4.easeOut"},{"delay":"wait","speed":300,"to":"opacity:0;","ease":"nothing"}]'
-										data-textAlign="['center','center','center','center']"
-										data-paddingtop="[0,0,0,0]"
-										data-paddingright="[0,0,0,0]"
-										data-paddingbottom="[0,0,0,0]"
-										data-paddingleft="[0,0,0,0]"
+										 data-type="text"
+										 data-responsive_offset="off"
+										 data-responsive="off"
+										 data-frames='[{"from":"y:20px;sX:0.9;sY:0.9;opacity:0;","speed":1000,"to":"o:1;","delay":500,"ease":"Power4.easeOut"},{"delay":"wait","speed":300,"to":"opacity:0;","ease":"nothing"}]'
+										 data-textAlign="['center','center','center','center']"
+										 data-paddingtop="[0,0,0,0]"
+										 data-paddingright="[0,0,0,0]"
+										 data-paddingbottom="[0,0,0,0]"
+										 data-paddingleft="[0,0,0,0]"
 
-										style="z-index: 5; min-width: 720px; max-width: 720px; white-space: normal; font-size: 60px; line-height: 70px;  color: rgba(255, 255, 255, 1.00);font-family:'Raleway',sans-serif;border-width:0px;letter-spacing:10px; font-weight:300;">WELCOME<br/>
-							 TO ABC HOSPITAL</div>
+										 style="z-index: 5; min-width: 720px; max-width: 720px; white-space: normal; font-size: 60px; line-height: 70px;
+                            color: rgba(255, 255, 255, 1.00);font-family:'Raleway',sans-serif;border-width:0px;letter-spacing:10px; font-weight:300;">WELCOME<br/>
+							             TO ABC HOSPITAL</div>
 
 
 
@@ -64,23 +70,26 @@
 										 id="slide-3239-layer-2"
 										 data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
 										 data-y="['middle','middle','middle','middle']" data-voffset="['44','57','39','0']"
-													data-fontsize="['17','17','17','15']"
-										data-lineheight="['26','26','26','24']"
-										data-width="['720','480','480','300']"
-										data-height="none"
-										data-whitespace="normal"
+										 data-fontsize="['17','17','17','15']"
+										 data-lineheight="['26','26','26','24']"
+										 data-width="['720','480','480','300']"
+										 data-height="none"
+										 data-whitespace="normal"
 
-										data-type="text"
-										data-responsive_offset="off"
-										data-responsive="off"
-										data-frames='[{"from":"y:10px;sX:0.9;sY:0.9;opacity:0;","speed":1000,"to":"o:1;","delay":700,"ease":"Power4.easeOut"},{"delay":"wait","speed":300,"to":"opacity:0;","ease":"nothing"}]'
-										data-textAlign="['center','center','center','center']"
-										data-paddingtop="[0,0,0,0]"
-										data-paddingright="[0,0,0,0]"
-										data-paddingbottom="[0,0,0,0]"
-										data-paddingleft="[0,0,0,0]"
+										 data-type="text"
+										 data-responsive_offset="off"
+										 data-responsive="off"
+										 data-frames='[{"from":"y:10px;sX:0.9;sY:0.9;opacity:0;","speed":1000,"to":"o:1;","delay":700,"ease":"Power4.easeOut"},{"delay":"wait","speed":300,"to":"opacity:0;","ease":"nothing"}]'
+										 data-textAlign="['center','center','center','center']"
+										 data-paddingtop="[0,0,0,0]"
+										 data-paddingright="[0,0,0,0]"
+										 data-paddingbottom="[0,0,0,0]"
+										 data-paddingleft="[0,0,0,0]"
 
-										style="z-index: 6; min-width: 720px; max-width: 720px; white-space: normal; font-size: 17px; line-height: 26px; font-weight: 400; color: rgba(255, 255, 255, 1.00);font-family:'Raleway',sans-serif;border-width:0px;">Post-ironic authentic drinking vinegar chambray quinoa. VHS letterpress sriracha, tacos skateboard migas farm-to-table artisan kombucha.  </div>
+										 style="z-index: 6; min-width: 720px; max-width: 720px; white-space: normal; font-size: 17px; line-height: 26px; font-weight: 400;
+                          color: rgba(255, 255, 255, 1.00);font-family:'Raleway',sans-serif;border-width:0px;">
+                          Post-ironic authentic drinking vinegar chambray quinoa. VHS letterpress sriracha, tacos skateboard migas farm-to-table artisan kombucha.
+                  </div>
 
 									<!-- LAYER NR. 3 -->
 									<div class="tp-caption rev-btn  rs-parallaxlevel-4"
@@ -92,7 +101,8 @@
 										data-whitespace="nowrap"
 
 										data-type="button"
-										data-actions='[{"event":"click","action":"scrollbelow","offset":"px","delay":""}]'
+										data-actions='[{"event":"click","action":"{{ url($data['hospital']->slug) }}","offset":"px","delay":""}]'
+                    {{-- data-actions='[{"action":"{{ url($data['hospital']->slug) }}","delay":"2s"}]' --}}
 										data-responsive_offset="off"
 										data-responsive="off"
 										data-frames='[{"from":"y:20px;sX:0.9;sY:0.9;opacity:0;","speed":1000,"to":"o:1;","delay":900,"ease":"Power4.easeOut"},{"delay":"wait","speed":300,"to":"opacity:0;","ease":"nothing"},{"frame":"hover","speed":"0","ease":"Linear.easeNone","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgba(0, 0, 0, 1.00);bg:rgba(238, 238, 238, 1.00);bs:solid;"}]'
@@ -102,10 +112,15 @@
 										data-paddingbottom="[0,0,0,0]"
 										data-paddingleft="[30,30,30,30]"
 
-										style="z-index: 7; white-space: nowrap; font-size: 15px; line-height: 40px; font-weight: 700; color: rgba(0, 0, 0, 1.00);font-family:'Raleway',sans-serif;background-color:rgba(255, 255, 255, 1.00);border-color:rgba(0, 0, 0, 1.00);border-width:0px;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;">Make An Appointment </div>
+										style="z-index: 7; white-space: nowrap; font-size: 15px; line-height: 40px; font-weight: 700; color: rgba(0, 0, 0, 1.00);
+                          font-family:'Raleway',sans-serif;background-color:rgba(255, 255, 255, 1.00);border-color:rgba(0, 0, 0, 1.00);border-width:0px;
+                          outline: 'none'; box-shadow:'none';box-sizing:'border-box';-moz-box-sizing:'border-box';-webkit-box-sizing:'border-box';cursor:'pointer';">
+                    {{-- <a href="{{ url($data['hospital']->slug) }}">Make An Appointment</a> --}}
+                    Make An Appointment
+                  </div>
 								</li>
 								<!-- SLIDE  -->
-								<li data-index="rs-3240" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="default"  data-thumb="images/user_images/main-slider/slide9.jpg"  data-rotate="0"  data-saveperformance="off"  data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+								{{-- <li data-index="rs-3240" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="default"  data-thumb="images/user_images/main-slider/slide9.jpg"  data-rotate="0"  data-saveperformance="off"  data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
 									<!-- MAIN IMAGE -->
 									<img src="{{ asset('/images/user_images/hospital_img1.jpg') }}"  alt=""  data-lazyload="/images/user_images/hospital_img1.jpg" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="3" class="rev-slidebg" data-no-retina>
 									<!-- LAYERS -->
@@ -194,7 +209,10 @@
 										data-paddingbottom="[0,0,0,0]"
 										data-paddingleft="[30,30,30,30]"
 
-										style="z-index: 10; white-space: nowrap; font-size: 15px; line-height: 40px; font-weight: 700; color: rgba(0, 0, 0, 1.00);font-family:'Raleway',sans-serif;background-color:rgba(255, 255, 255, 1.00);border-color:rgba(0, 0, 0, 1.00);border-width:0px;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;">READ MORE </div>
+										style="z-index: 10; white-space: nowrap; font-size: 15px; line-height: 40px; font-weight: 700; color: rgba(0, 0, 0, 1.00);
+                      font-family:'Raleway',sans-serif;background-color:rgba(255, 255, 255, 1.00);border-color:rgba(0, 0, 0, 1.00);border-width:0px;
+                      outline:'none';box-shadow:'none';box-sizing:'border-box';-moz-box-sizing:'border-box';
+                      -webkit-box-sizing:border-box;cursor:pointer;">READ MORE </div>
 								</li>
 								<!-- SLIDE  -->
 								<li data-index="rs-3241" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="default"  data-thumb="images/main-slider/slide10.jpg"  data-rotate="0"  data-saveperformance="off"  data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
@@ -286,8 +304,11 @@
 										data-paddingbottom="[0,0,0,0]"
 										data-paddingleft="[30,30,30,30]"
 
-										style="z-index: 13; white-space: nowrap; font-size: 15px; line-height: 40px; font-weight: 700; color: rgba(0, 0, 0, 1.00);font-family:'Raleway',sans-serif;background-color:rgba(255, 255, 255, 1.00);border-color:rgba(0, 0, 0, 1.00);border-width:0px;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;">READ MORE </div>
-								</li>
+										style="z-index: 13; white-space: nowrap; font-size: 15px; line-height: 40px; font-weight: 700;
+                    color: rgba(0, 0, 0, 1.00);font-family:'Raleway',sans-serif;background-color:rgba(255, 255, 255, 1.00);
+                    border-color:rgba(0, 0, 0, 1.00);border-width:0px;outline:none;box-shadow:none;box-sizing:border-box;
+                    -moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;">READ MORE </div>
+								</li> --}}
 							</ul>
 							<div class="tp-bannertimer" style="height: 8px; background-color: rgba(255, 255, 255, 0.25);"></div>
 						</div>

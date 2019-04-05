@@ -34,7 +34,7 @@
 									{{-- <div class="text-center">
 										<img src="{{ asset('images/hospital_images/avatars/avatar.jpg') }}" alt="Andrew Jones" class="img-fluid rounded-circle" width="132" height="132" />
 									</div> --}}
-									<form>
+									<form method="post" action="{{ url('ho-admin/login') }}"> {{ Csrf_field() }}
 										<div class="form-group">
 											<label>Email</label>
 											<input class="form-control form-control-lg" type="email" name="email" placeholder="Enter your email" required />
@@ -53,7 +53,8 @@
 											</div>
 										</div> --}}
 										<div class="text-center mt-3">
-											<a href="{{ url('/hospital/dashboard') }}" class="btn btn-lg btn-primary">Sign in</a>
+											<input type="submit" value="Sign In" class="btn btn-lg btn-primary">
+											{{-- <a href="{{ url('/hospital/dashboard') }}" class="btn btn-lg btn-primary">Sign in</a> --}}
 											<!-- <button type="submit" class="btn btn-lg btn-primary">Sign in</button> -->
 										{{-- </div>
                     <div class="text-center mt-3">

@@ -2,46 +2,43 @@
 @section('content')
 <div class="d-table-cell align-middle">
 
+<div class="card-body">
   <div class="text-center mt-4">
     <h3 class="h2">EDIT ROOM </h3>
-
   </div>
-<div class="card-body">
-<form id="validation-form" method="post" enctype="multipart/form-data" >
-
-
-
+  <form id="validation-form" action="{{ route('ho-rooms.update', $room->id) }}" method="post" enctype="multipart/form-data" >
+    {{ csrf_field() }}
+  <div class="form-group">
+    <label class="form-label">Patient id</label>
+    <input type="text" class="form-control" name="patient_id" id="patient_id" value="{{ $room->patient_id }}" disabled>
+  </div>
   <div class="form-group">
     <label class="form-label">Patient name</label>
-    <input type="text" class="form-control" name="patient_name" id="patient_name" required>
-</div>
-
-
-<div class="form-group">
-  <label class="form-label">Room types</label>
-  <select class="form-control" name="room_type" required>
-    <option value>Select types...</option>
-    {{-- <optgroup label="Department"> --}}
-    <option value="Deluxe Room" id="1">Deluxe Room</option>)
-    <option value="Semi-Deluxe Room" id="2">Semi-Deluxe Room</option>
-    <option value="Isolation Room" id="3">Isolation Room</option>
-    <option value="ICU" id="4">ICU</option>
+    <input type="text" class="form-control" name="patient_name" id="patient_name" required value="{{ $room->patient_name }}">
+  </div>
+  <div class="form-group">
+    <label class="form-label">Room types</label>
+    <select class="form-control" name="room_type" required>
+      <option selected disabled>Select types...</option>
+      {{-- <optgroup label="Department"> --}}
+      <option value="Deluxe Room">Deluxe Room</option>)
+      <option value="Semi-Deluxe Room">Semi-Deluxe Room</option>
+      <option value="Isolation Room">Isolation Room</option>
+      <option value="ICU">ICU</option>
 
     {{-- </optgroup> --}}
 
-  </select>
-</div>
+    </select>
+  </div>
    <div class="form-group">
-    <label class="form-label">Allocate date</label>
-    <input type="datetime-local" class="form-control" name="allocate_date" id="allocate_date" required>
+    <label class="form-label">Allocation from</label>
+    <input type="datetime-local" class="form-control" name="allocation_from" id="allocation_from" value="{{ $room->allocation_from }}" required>
   </div>
   <div class="form-group">
-    <label class="form-label">Allocate up-to</label>
-    <input type="datetime-local" class="form-control" name="allocate_up-to" id="allocate_up-to" required>
+    <label class="form-label">Allocation to</label>
+    <input type="datetime-local" class="form-control" name="allocation_to" id="allocation_to" value="{{ $room->allocation_to }}">
   </div>
-
-
-    <button type="submit" class="btn btn-primary">Submit</button>
+  <input type="submit" class="btn btn-primary" value="Submit">
 </form>
 
 </div>

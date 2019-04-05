@@ -50,7 +50,7 @@
       <textarea class="form-control" name="address">{{ $doctor->address }}</textarea>
     </div>
     <div class="form-group">
-      <label class="form-label">photo</label>
+      <label class="form-label">Image</label>
       <div>
         <input type="file" class="validation-file form-control" name="image">
       </div>

@@ -2,7 +2,7 @@
 @section('content')
 
 <div class="card-body">
-    			<a class="btn btn-outline-primary btn-sm" href="{{ url('hospital/add-service') }}">Add Service</a> <br><br>
+    			<a class="btn btn-outline-primary btn-sm" href="{{ route('ho-services.create') }}">Add Service</a> <br><br>
     <table id="datatables-basic" class="table table-striped" style="width:100%">
       <thead>
         <tr>
@@ -13,18 +13,21 @@
         </tr>
       </thead>
       <tbody>
-
+        @foreach ($services as $service)
           <tr>
-            <td>service_name </td>
-            <td>description </td>
-            <td>  <a href="{{ url('hospital/edit-service') }}">EDIT</a>/
-                  <a href="{{ url('#') }}" style="color: #ff1717;">DELETE</a>
+            <td>{{ $service->service }}</td>
+            <td>{{ $service->description }}</td>
+            <td>
+              <a href="{{ route('ho-services.edit', $service->id) }}">EDIT</a>/
+              <a href="{{ route('ho-services.destroy', $service->id) }}" style="color: #ff1717;">DELETE</a>
             </td>
           </tr>
+        @endforeach
+
 
       </tbody>
     </table>
-
+    {{ $services->links() }}
         <script>
             document.addEventListener("DOMContentLoaded", function(event) {
               // Datatables basic

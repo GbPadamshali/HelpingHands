@@ -2,40 +2,43 @@
 @section('content')
 
 <div class="card-body">
-    			<a class="btn btn-outline-primary btn-sm" href="{{ url('hospital/add-appointment') }}">Add Appointment</a> <br><br>
+    			<a class="btn btn-outline-primary btn-sm" href="{{ route('ho-appointments.create') }}">Add Appointment</a> <br><br>
     <table id="datatables-basic" class="table table-striped" style="width:100%">
       <thead>
         <tr>
-              <th>Appointment id</th>
-              <th>Patient id</th>
-              <th>Patient name</th>
-              <th>Visiting Doctor</th>
-              <th>Visiting time from</th>
-              <th>Visiting time to</th>
-              <th>Disease</th>
-              <th>Remark</th>
-              <th>Actions</th>
-
+          <th>Appointment id</th>
+          <th>Patient id</th>
+          <th>Patient name</th>
+          <th>Visiting Doctor</th>
+          <th>Visiting Date</th>
+          <th>Visiting time from</th>
+          <th>Visiting time to</th>
+          <th>Disease</th>
+          <th>Remark</th>
+          <th>Actions</th>
         </tr>
       </thead>
       <tbody>
-
+        @foreach ($appointments as $appointment)
           <tr>
-            <td>appointment_id </td>
-            <td>patient_id </td>
-            <td>patient_name </td>
-            <td>visiting_Doctor </td>
-            <td>visiting_time_from </td>
-            <td>visiting_time_to </td>
-            <td>disease </td>
-            <td>remark </td>
-
-            <td>  <a href="{{ url('hospital/edit-appointment') }}">EDIT</a>/
-              <a href="{{ url('#') }}" style="color: #ff1717;">DELETE</a>
+            <td>{{ $appointment->appointment_id }}</td>
+            <td>{{ $appointment->patient_id }}</td>
+            <td>{{ $appointment->patient_name }}</td>
+            <td>{{ $appointment->visiting_doctor }}</td>
+            <td>{{ $appointment->visiting_date }}</td>
+            <td>{{ $appointment->visiting_from }}</td>
+            <td>{{ $appointment->visiting_to }}</td>
+            <td>{{ $appointment->diseases }}</td>
+            <td>{{ $appointment->remark }}</td>
+            <td>
+              <a href="{{ route('ho-appointments.edit', $appointment->id) }}">EDIT</a>/
+              <a href="{{ route('ho-appointments.destroy', $appointment->id) }}" style="color: #ff1717;">DELETE</a>
             </td>
           </tr>
+        @endforeach
       </tbody>
     </table>
+    {{ $appointments->links() }}
         <script>
             document.addEventListener("DOMContentLoaded", function(event) {
               // Datatables basic
