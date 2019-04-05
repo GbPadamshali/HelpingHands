@@ -20,7 +20,7 @@
       <input type="text" class="form-control" name="patient_id" id="patient_id" required>
     </div>
     <div class="form-group">
-      <label class="form-label">Patient name</label>
+      <label class="form-label">Patient Name</label>
       <input type="text" class="form-control" name="patient_name" id="patient_name" required>
     </div>
     <div class="form-group">

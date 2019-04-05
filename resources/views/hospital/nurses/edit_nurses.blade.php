@@ -11,12 +11,12 @@
     {{ csrf_field() }}
     <input type="hidden" value="1" name="staff_role"/>
     <div class="form-group">
-      <label class="form-label">First name</label>
+      <label class="form-label">First Name</label>
       <input type="text" class="form-control" name="first_name" id="first_name" value="{{ $nurse->first_name }}" required>
 
     </div>
     <div class="form-group">
-      <label class="form-label">Last name</label>
+      <label class="form-label">Last Name</label>
       <input type="text" class="form-control" name="last_name" id="last_name" value="{{ $nurse->last_name }}" required>
     </div>
     <div class="form-group">
@@ -34,7 +34,7 @@
     </div>
 
     <div class="form-group">
-      <label class="form-label">Joining date</label>
+      <label class="form-label">Joining Date</label>
       <input type="date" class="form-control" name="joining_date" id="joining_date" value="{{ $nurse->joining_date }}" disabled required>
     </div>
     <div class="form-group">
@@ -42,7 +42,7 @@
       <input type="text" class="form-control" name="qualification" id="qualification" value="{{ $nurse->qualification }}" required>
     </div>
     <div class="form-group">
-      <label class="form-label">Left date</label>
+      <label class="form-label">Left Date</label>
       <input type="date" class="form-control" name="left_date" id="left_date" value="{{ $nurse->left_date }}" disabled>
     </div>
     <div class="form-group">

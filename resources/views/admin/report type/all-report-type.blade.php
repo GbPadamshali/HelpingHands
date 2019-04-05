@@ -29,7 +29,7 @@
                                           <td>thyroid</td>
                                           <td>description are to be added in details</td>
                                           <td>
-                                            <button type="button" class="btn btn-primary" onclick="location.href='{{ url('#') }}'">Edit</button>
+                                            <button type="button" class="btn btn-primary" onclick="location.href='{{ url('#') }}'">Edit</button><hr>
                                             <button type="button" class="btn btn-danger" onclick="location.href='{{ url('#') }}'">Delete</button>
                                           </td>
                                       </tr>

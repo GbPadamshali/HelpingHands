@@ -15,7 +15,7 @@
                 </div> --}}
               <div class="col-md-6 col-sm-6 col-lg-3">
                   <div class="dex-box text-primary border-2 counter-box m-b30">
-                      <h1 class="text-uppercase m-a0 p-a15 "><i class="fa fa-group m-r20"></i> <span class="counter">1226</span></h1>
+                      <h1 class="text-uppercase m-a0 p-a15 "><i class="fa fa-group m-r20"></i> <span class="counter">20</span></h1>
                       <h5 class="dez-tilte  text-uppercase m-a0"><span class="dez-tilte-inner skew-title text-white bg-primary p-lr15 p-tb10">Available Appointments</span></h5>
                   </div>
               {{-- </div>

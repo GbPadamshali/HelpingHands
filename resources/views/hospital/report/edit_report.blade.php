@@ -53,7 +53,7 @@
     <div class="form-group">
 
     <div class="form-group">
-      <label class="form-label">Report file upload</label>
+      <label class="form-label">Report File Upload</label>
       <div>
         <input type="file" class="validation-file" name="file"  id="file" value="{{ $report->file_name }}">
       </div>

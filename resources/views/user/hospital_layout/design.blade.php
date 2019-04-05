@@ -18,7 +18,7 @@
 	<link rel="icon" href="{{ asset('images/user_images/hospital_favicons/favicon.ico') }}" type="image/x-icon" />
 	<link rel="shortcut icon" type="image/x-icon" href="{{ asset('images/user_images/hospital_favicons/favicon-16x16.png') }}" />
   <link rel="shortcut icon" type="image/x-icon" href="{{ asset('images/user_images/hospital_favicons/favicon-32x32.png') }}" />
-  <link rel="shortcut icon" type="image/x-icon" href="{{ asset('images/user_images/hospital_favicons/favicon-96x196.png') }}" />
+  <link rel="shortcut icon" type="image/x-icon" href="{{ asset('images/user_images/hospital_favicons/favicon-96x96.png') }}" />
 	<!-- PAGE TITLE HERE -->
 	<title>{{ $data->name }}</title>
 
