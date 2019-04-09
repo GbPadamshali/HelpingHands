@@ -102,57 +102,7 @@ Route::group(['prefix' => 'admin'], function(){
 // Hospital Routes Starts
   Route::group(['prefix' => 'ho-admin'], function(){
     Route::get('/dashboard', 'HospitalControllers\DashboardController@index');
-    // Route::view('/all_doctor', 'hospital.doctors.all_doctors');
-    // Route::view('/add_doctor', 'hospital.doctors.add_doctors');
-    // Route::view('/edit_doctor', 'hospital.doctors.edit_doctors');
-
-    // Route::view('/all_department', 'hospital.Department.all_department');
-    // Route::view('/add_department', 'hospital.Department.add_department');
-    // Route::view('/all_nurses', 'hospital.nurses.all_nurses');
-    // Route::view('/add_nurses', 'hospital.nurses.add_nurses');
-    // Route::view('/edit_nurses', 'hospital.nurses.edit_nurses');
-    // Route::view('/all_recetionist', 'hospital.receptionist.all_recetionist');
-    // Route::view('/add_recetionist', 'hospital.receptionist.add_recetionist');
-    // Route::view('/edit_recetionist', 'hospital.receptionist.edit_recetionist');
-    // Route::view('/all_hospital_staff', 'hospital.hospital_staff.all_hospital_staff');
-    // Route::view('/add_hospital_staff', 'hospital.hospital_staff.add_hospital_staff');
-    // Route::view('/edit_hospital_staff', 'hospital.hospital_staff.edit_hospital_staff');
-    // Route::view('/all_report', 'hospital.report.all_report');
-    // Route::view('/add_report', 'hospital.report.add_report');
-    // Route::view('/edit_report', 'hospital.report.edit_report');
-    // Route::view('/all_sweeper', 'hospital.swiper.all_sweeper');
-    // Route::view('/add_sweeper', 'hospital.swiper.add_sweeper');
-    // Route::view('/edit_sweeper', 'hospital.swiper.edit_sweeper');
-    // Route::view('/all_wardboy', 'hospital.wardboy.all_wardboy');
-    // Route::view('/add_wardboy', 'hospital.wardboy.add_wardboy');
-    // Route::view('/edit_wardboy', 'hospital.wardboy.edit_wardboy');
-    // Route::view('/all_x-ray_technician', 'hospital.x-ray-staff.all_x-ray_staff');
-    // Route::view('/add_x-ray_technician', 'hospital.x-ray-staff.add_x-ray_staff');
-    // Route::view('/edit_x-ray_technician', 'hospital.x-ray-staff.edit_x-ray_staff');
-    // Route::view('/all_pharmacy_staff', 'hospital.pharmacy_staff.all_pharmacy_staff');
-    // Route::view('/add_pharmacy_staff', 'hospital.pharmacy_staff.add_pharmacy_staff');
-    // Route::view('/edit_pharmacy_staff', 'hospital.pharmacy_staff.edit_pharmacy_staff');
-    // Route::view('/add-room', 'hospital.room.add_room');
-    // Route::view('/all-room', 'hospital.room.all_room');
-    // Route::view('/edit-room', 'hospital.room.edit_room');
-    // Route::view('/edit-patient', 'hospital.patients.edit_patient');
-    // Route::view('/add-patient', 'hospital.patients.add_patient');
-    // Route::view('/all-patient', 'hospital.patients.all_patient');
-    // Route::view('/all-upcoming-event', 'hospital.upcoming_events.all_upcoming_event');
-    // Route::view('/add-upcoming-event', 'hospital.upcoming_events.add_upcoming_event');
-    // Route::view('/edit-upcoming-event', 'hospital.upcoming_events.edit_upcoming_event');
-    // Route::view('/all-appointment', 'hospital.appointments.all_appointment');
-    // Route::view('/add-appointment', 'hospital.appointments.add_appointment');
-    // Route::view('/edit-appointment', 'hospital.appointments.edit_appointment');
-    // Route::view('/edit-service', 'hospital.services.edit_service');
-    // Route::view('/all-service', 'hospital.services.all_service');
-    // Route::view('/add-service', 'hospital.services.add_service');
-    // Route::view('/add-facility', 'hospital.facility.add_facility');
-    // Route::view('/all-facility', 'hospital.facility.all_facility');
-    // Route::view('/edit-facility', 'hospital.facility.edit_facility');
-    // Route::view('/all-today-appointment', 'hospital.today_appointment.all_todays_appointment');
-    // Route::view('/view-today-appointment', 'hospital.today_appointment.view_today_appointment');
-
+    
     Route::view('/register', 'hospital.auth.register');
     Route::view('/login', 'hospital.auth.login');
     Route::post('login', 'HospitalControllers\HospitalsAuthController@Login');

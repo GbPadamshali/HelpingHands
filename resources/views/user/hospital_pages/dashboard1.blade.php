@@ -99,7 +99,7 @@
 										data-whitespace="nowrap"
 
 										data-type="button"
-										data-actions='[{"event":"click","action":"scrollbelow","offset":"px","delay":""}]'
+										data-actions='[{"event":"click","action":"px","delay":""}]'
 										data-responsive_offset="off"
 										data-responsive="off"
 										data-frames='[{"from":"y:20px;sX:0.9;sY:0.9;opacity:0;","speed":1000,"to":"o:1;","delay":900,"ease":"Power4.easeOut"},{"delay":"wait","speed":300,"to":"opacity:0;","ease":"nothing"},{"frame":"hover","speed":"0","ease":"Linear.easeNone","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgba(0, 0, 0, 1.00);bg:rgba(238, 238, 238, 1.00);bs:solid;"}]'
@@ -112,7 +112,7 @@
 										style="z-index: 7; white-space: nowrap; font-size: 15px; line-height: 40px; font-weight: 700; color: rgba(0, 0, 0, 1.00);
                               font-family:'Raleway',sans-serif;background-color:rgba(255, 255, 255, 1.00);border-color:rgba(0, 0, 0, 1.00);border-width:0px;
                               outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;">
-                              <a href='#'>Make An Appointment<a> </div>
+                              <a href='{{ url('booking/1') }}'>Make An Appointment<a> </div>
 								</li>
 								<!-- SLIDE  -->
 								{{-- <li data-index="rs-3240" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="default"  data-thumb="images/user_images/main-slider/slide9.jpg"  data-rotate="0"  data-saveperformance="off"  data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">

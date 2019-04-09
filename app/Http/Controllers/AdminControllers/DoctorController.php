@@ -50,23 +50,23 @@ class DoctorController extends Controller
         $input['department_id'] = 1;
 
 
-        // $image_tmp = Input::file('image');
-        // $extension = $request->image->getClientOriginalName();
-        // $filename = now()->timestamp.$extension;
-        // $path = 'images/uploaded_images/doctors/';
-        // $image_path = $path.$filename;
-        //
-        // // Resize images
-        // if (!File::exists(public_path().'/'.$path)) {
-        //   File::makeDirectory(public_path().'/'.$path, 0777, true);
-        //   Image::make($image_tmp)->save($image_path);
-        // }
-        // Image::make($image_tmp)->save($image_path);
-        //
-        // $input['hospital_id'] = Auth::User()->id;
-        // $input['department_id'] = 1;
-        // $input['image_name'] = $filename;
-        // $input['image_path'] = $image_path;
+        $image_tmp = Input::file('image');
+        $extension = $request->image->getClientOriginalName();
+        $filename = now()->timestamp.$extension;
+        $path = 'images/uploaded_images/doctors/';
+        $image_path = $path.$filename;
+
+        // Resize images
+        if (!File::exists(public_path().'/'.$path)) {
+          File::makeDirectory(public_path().'/'.$path, 0777, true);
+          Image::make($image_tmp)->save($image_path);
+        }
+        Image::make($image_tmp)->save($image_path);
+
+        $input['hospital_id'] = Auth::User()->id;
+        $input['department_id'] = 1;
+        $input['image_name'] = $filename;
+        $input['image_path'] = $image_path;
         $doctor = doctor::create($input);
         if (!$doctor) {
           return redirect()->back()->with('error', 'Doctor has been not added successfully!!');
@@ -112,30 +112,30 @@ class DoctorController extends Controller
       $input = $request->except(['_token']);
       // return $input;
       $input['hospital_id'] = $user->id;
-      // $input['department_id'] = 1;
+      $input['department_id'] = 1;
 
-      // $image_tmp = Input::file('image');
-      // $extension = $request->image->getClientOriginalName();
-      // $filename = now()->timestamp.$extension;
-      // $path = 'images/uploaded_images/doctors/';
-      // $image_path = $path.$filename;
-      // if ($request->hasFile('image')) {
-      //   // Resize images
-      //   if (!File::exists(public_path().'/'.$path)) {
-      //     File::makeDirectory(public_path().'/'.$path, 0777, true);
-      //     Image::make($image_tmp)->save($image_path);
-      //   }
-      //   Image::make($image_tmp)->save($image_path);
-      //
-      //   unset($input['image']);
-      //   $input['image_name'] = $filename;
-      //   $input['image_path'] = $image_path;
-      //   // return $input;
-      // } else {
-      //   unset($input['image']);
-      //   $input['image_name'] = $filename;
-      //   $input['image_path'] = $image_path;
-      // }
+      $image_tmp = Input::file('image');
+      $extension = $request->image->getClientOriginalName();
+      $filename = now()->timestamp.$extension;
+      $path = 'images/uploaded_images/doctors/';
+      $image_path = $path.$filename;
+      if ($request->hasFile('image')) {
+        // Resize images
+        if (!File::exists(public_path().'/'.$path)) {
+          File::makeDirectory(public_path().'/'.$path, 0777, true);
+          Image::make($image_tmp)->save($image_path);
+        }
+        Image::make($image_tmp)->save($image_path);
+
+        unset($input['image']);
+        $input['image_name'] = $filename;
+        $input['image_path'] = $image_path;
+        // return $input;
+      } else {
+        unset($input['image']);
+        $input['image_name'] = $filename;
+        $input['image_path'] = $image_path;
+      }
       $doctor = doctor::where('id', $id)->update($input);
       if (!$doctor) {
         return redirect()->back()->with('error', 'Doctor details has not been updated successfully!!!');

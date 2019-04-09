@@ -59,9 +59,9 @@
                     </li>
 
                     <li>
-                        <a title="Matches" href="{{ url('/admin/all-report') }}" aria-expanded="false">
+                        <a title="Matches" href="{{ route('ad-hospital-reports.index') }}" aria-expanded="false">
                           <span class="educate-icon educate-event icon-wrap sub-icon-mg" aria-hidden="true"></span>
-                          <span class="mini-click-non">Hospital-report</span></a>
+                          <span class="mini-click-non">Hospital-Reports</span></a>
                     </li>
                     <li>
                         <a title="Matches" href="{{ url('/admin/all-department') }}" aria-expanded="false">

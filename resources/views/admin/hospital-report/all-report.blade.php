@@ -18,35 +18,35 @@
                                   data-cookie-id-table="saveId" data-show-export="false" data-click-to-select="true" data-toolbar="#toolbar">
                                   <thead>
                                       <tr>
-                                          <th data-field="report name">REPORT NAME</th>
+                                          <th data-field="hospital_id" data-editable="false">Hospital ID</th>
+                                          <th data-field="report_name">REPORT NAME</th>
                                           <th data-field="name" data-editable="false">Name</th>
                                           <th data-field="type" data-editable="false">TYPE</th>
-                                          <th data-field="issued on" data-editable="false">ISSSUEDD ON</th>
-                                          <th data-field="supervisor name" data-editable="false">SUPERVISOR NAME</th>
-                                          <th data-field="patient id" data-editable="false">PATIENT ID</th>
-                                          <th data-field="file" data-editable="false">FILE</th>
+                                          <th data-field="issued_on" data-editable="false">ISSSUEDD ON</th>
+                                          <th data-field="supervisor_name" data-editable="false">SUPERVISOR NAME</th>
+                                          {{-- <th data-field="file" data-editable="false">FILE</th> --}}
                                           <th data-field="action">Action</th>
                                       </tr>
                                   </thead>
                                   <tbody>
-
+                                    @foreach ($reports as $report)
                                       <tr>
-                                          <td>thyroid</td>
-                                          <td>Govinda</td>
-                                          <td>blood report</td>
-                                          <td>26/02/2001</td>
-                                          <td>akash</td>
-                                          <td>2546358</td>
-                                          <td>regular</td>
-
+                                          <td>{{ $report->hospital_id }}</td>
+                                          <td>{{ $report->report_name }}</td>
+                                          <td>{{ $report->patient_name }}</td>
+                                          <td>{{ $report->report_type }}</td>
+                                          <td>{{ $report->issued_on }}</td>
+                                          <td>{{ $report->supervisor_name }}</td>
+                                          {{-- <td>regular</td> --}}
                                           <td>
-                                            <button type="button" class="btn btn-primary" onclick="location.href='{{ url('#') }}'">view</button><Hr>
-                                            <button type="button" class="btn btn-danger" onclick="location.href='{{ url('#') }}'">Download</button>
+                                            <a class="btn btn-primary" href='{{ url('#') }}'>View</a><Hr>
+                                            <a href="{{ url($report->file_path) }}" class="btn btn-danger" download>Download</a>
                                           </td>
                                       </tr>
-
+                                    @endforeach
                                   </tbody>
                               </table>
+                              {{ $reports->links() }}
                           </div>
                       </div>
 

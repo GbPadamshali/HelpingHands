@@ -21,7 +21,7 @@ class HospitalReportController extends Controller
     public function index()
     {
         $reports = HospitalReport::paginate('2');
-        return view('admin.hospital-report.all-report');
+        return view('admin.hospital-report.all-report')->with(compact('reports'));
     }
 
     /**
@@ -31,7 +31,7 @@ class HospitalReportController extends Controller
      */
     public function create()
     {
-        // return view('admin.hospital-report.add-report');
+        return view('admin.hospital-report.add-report');
     }
 
     /**

@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers\UserControllers;
+
 use File;
 use Image;
 use App\doctor;
