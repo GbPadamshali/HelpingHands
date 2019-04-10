@@ -3,11 +3,11 @@
 namespace App\Http\Controllers\AdminControllers;
 
 use Auth;
-use App\Department;
+use App\ReportType;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
-class DepartmentController extends Controller
+class ReportTypeController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,8 +16,8 @@ class DepartmentController extends Controller
      */
     public function index()
     {
-        $departments = Department::paginate(2);
-        return view('admin.departments.all-department')->with(compact('departments'));
+        $reports = ReportType::paginate(1);
+        return view('admin.report_type.all-report-type')->with(compact('reports'));
     }
 
     /**
@@ -27,7 +27,7 @@ class DepartmentController extends Controller
      */
     public function create()
     {
-        return view('admin.departments.add-department');
+        return view('admin.report_type.add-report-type');
     }
 
     /**
@@ -40,12 +40,12 @@ class DepartmentController extends Controller
     {
         $user = Auth::User();
         $input = $request->all();
-        $department = Department::create($input);
+        $report = ReportType::create($input);
 
-        if (!$department) {
-          return redirect()->back()->with('error', 'Requested department has not been added successfully!!!');
+        if (!$report) {
+          return redirect()->back()->with('error', 'Requested Report Type has not been added successfully!!!');
         } else {
-          return redirect('admin/ad-departments')->with('success', 'Requested department has been added successfully!!!');
+          return redirect('admin/ad-report-types')->with('success', 'Requested Report Type has been added successfully!!!');
         }
 
     }
@@ -69,8 +69,8 @@ class DepartmentController extends Controller
      */
     public function edit($id)
     {
-        $department = Department::where('id', $id)->first();
-        return view('admin.departments.edit-department')->with(compact('department'));
+        $report = ReportType::where('id', $id)->first();
+        return view('admin.report_type.edit-report-type')->with(compact('report'));
     }
 
     /**
@@ -84,13 +84,14 @@ class DepartmentController extends Controller
     {
         $user = Auth::User();
         $input = $request->except('_token');
-        $department = Department::where('id', $id)->update($input);
+        $report = ReportType::where('id', $id)->update($input);
 
-        if (!$department) {
-          return redirect()->back()->with('error', 'Requested department has not been updated successfully!!!');
+        if (!$report) {
+          return redirect()->back()->with('error', 'Requested Report Type has not been updated successfully!!!');
         } else {
-          return redirect('admin/ad-departments')->with('success', 'Requested department has been updated successfully!!!');
+          return redirect('admin/ad-report-types')->with('success', 'Requested Report Type has been updated successfully!!!');
         }
+
 
     }
 
@@ -102,7 +103,7 @@ class DepartmentController extends Controller
      */
     public function destroy($id)
     {
-        $department = Department::where('id', $id)->delete();
-        return redirect()->back()->with('success', 'Requested department has been deleted successfully!!!');
+        $report = ReportType::where('id', $id)->delete();
+        return redirect()->back()->with('success', 'Requested Report Type has been deleted successfully!!!');
     }
 }

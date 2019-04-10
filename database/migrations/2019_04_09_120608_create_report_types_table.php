@@ -15,7 +15,10 @@ class CreateReportTypesTable extends Migration
     {
         Schema::create('report_types', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('report_name');
+            $table->text('description')->nullable();
             $table->timestamps();
+            $table->SoftDeletes();
         });
     }
 

@@ -4,7 +4,7 @@
       <div class="content-error">
         <div class="hpanel">
                     <div class="panel-body">
-                        <form action="{{ url('#') }}" id="loginForm" method="post" enctype="multipart/form-data">
+                        <form action="{{ route('ad-report-types.update', $report->id) }}" id="loginForm" method="post" enctype="multipart/form-data">
                           {{ csrf_field() }}
                           <div class="text-left">
                             <h3><u>EDIT REPORT TYPE</u></h3>
@@ -12,11 +12,11 @@
                             <div class="row">
                               <div class="form-group col-lg-6">
                                   <label>Report Name</label>
-                                  <input class="form-control"report name="name" id="report name" required>
+                                  <input class="form-control"name="report_name" value="{{ $report->report_name }}" id="report name" required>
                               </div>
                                 <div class="form-group col-lg-6">
                                     <label>Description</label>
-                                    <input class="form-control" name="description" id="description" required>
+                                    <input class="form-control" name="description" id="description" value="{{ $report->description }}" required>
                                 </div>
                             </div>
                             <div class="text-center">

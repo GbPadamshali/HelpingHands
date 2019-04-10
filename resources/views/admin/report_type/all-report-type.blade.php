@@ -9,7 +9,7 @@
                       <div class="sparkline13-hd">
                           <div class="main-sparkline13-hd">
                               <h1>ALL <span class="table-project-n">REPORT TYPE</span></h1>
-                              <button type="button" class="btn btn-custon-rounded-four btn-primary" onclick="location.href='{{ url('/admin/add-report') }}'">ADD REPORT TYPE </button>
+                              <a class="btn btn-custon-rounded-four btn-primary" href='{{ route('ad-report-types.create') }}'>ADD REPORT TYPE </a>
                           </div>
                       </div>
                       <div class="sparkline13-graph">
@@ -24,18 +24,19 @@
                                       </tr>
                                   </thead>
                                   <tbody>
-
+                                    @foreach ($reports as $report)
                                       <tr>
-                                          <td>thyroid</td>
-                                          <td>description are to be added in details</td>
+                                          <td>{{ $report->report_name }}</td>
+                                          <td>{{ $report->description }}</td>
                                           <td>
-                                            <button type="button" class="btn btn-primary" onclick="location.href='{{ url('#') }}'">Edit</button><hr>
-                                            <button type="button" class="btn btn-danger" onclick="location.href='{{ url('#') }}'">Delete</button>
+                                            <button type="button" class="btn btn-primary" onclick="location.href='{{ route('ad-report-types.edit', $report->id) }}'">Edit</button><hr>
+                                            <button type="button" class="btn btn-danger" onclick="location.href='{{ route('ad-report-types.destroy', $report->id) }}'">Delete</button>
                                           </td>
                                       </tr>
-
+                                    @endforeach
                                   </tbody>
                               </table>
+                              {{ $reports->links() }}
                           </div>
                       </div>
 

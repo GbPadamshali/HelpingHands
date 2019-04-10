@@ -21,7 +21,7 @@
   <link rel="shortcut icon" type="image/x-icon" href="{{ asset('/images/user_images/favicons/favicon96x96.png') }}" />
 
 	<!-- PAGE TITLE HERE -->
-	<title>Helping Hands | Login</title>
+	<title>HelpingHands | Login</title>
 
 	<!-- MOBILE SPECIFIC -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -45,7 +45,7 @@
         <div class="login-form relative z-index3 ">
             <div class="tab-content nav">
                 <div id="login" class="tab-pane active text-center">
-                    <form class="p-a30 dez-form  m-t100" method="post" action="#"> {{ csrf_field() }}
+                    <form class="p-a30 dez-form  m-t100" method="post" enctype="multipart/form-data" action="{{ url('/login-post') }}"> {{ csrf_field() }}
 											<img src="{{ asset('images/user_images/logo.png') }}" style="width: 150px; height: 150px;"></img>
                         <h3 class="form-title m-t0">Log In</h3>
                         <div class="dez-separator-outer m-b5">
@@ -53,10 +53,10 @@
                         </div>
                         <p>Enter your e-mail address and your password. </p>
                         <div class="form-group">
-                            <input name="dzName" required="" class="form-control" placeholder="User Name" type="text"/>
+                            <input name="email" required class="form-control" placeholder="Email ID" type="text"/>
                         </div>
                         <div class="form-group">
-                            <input name="dzName" required="" class="form-control " placeholder="Type Password" type="password"/>
+                            <input name="password" required="" class="form-control " placeholder="Type Password" type="password"/>
                         </div>
                         <div class="form-group text-left">
                             {{-- <button class="site-button dz-xs-flex">login</button> --}}

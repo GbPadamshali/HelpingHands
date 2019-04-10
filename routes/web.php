@@ -17,8 +17,10 @@
 
 Route::permanentRedirect('/', '/dashboard');
 
-Route::view('user-login-page', 'user.auth.login');
-Route::view('user-signup-page', 'user.auth.signup');
+Route::get('/login', 'UserControllers\UserAuthController@ShowLoginForm');
+Route::post('/login-post', 'UserControllers\UserAuthController@Login');
+Route::get('/sign-up', 'UserControllers\UserAuthController@ShowRegistrationForm');
+Route::post('/sign-up-post', 'UserControllers\UserAuthController@Register');
 Route::view('dashboard', 'user.dashboard');
 Route::view('faq', 'user.pages.faq');
 Route::view('services', 'user.pages.services');
@@ -39,7 +41,7 @@ Route::get('hospital/{id}', 'UserControllers\HospitalDashboardController@Hospita
 Route::get('booking/{id}', function(){
   return view('user.hospital_pages.booking');
 });
-Auth::routes();
+// Auth::routes();
 
 // Admin Routes Starts
 // Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'admin']], function(){
@@ -95,6 +97,7 @@ Route::group(['prefix' => 'admin'], function(){
     Route::resource('ad-roles', 'AdminControllers\RoleController');
     Route::resource('ad-hospital-reports', 'AdminControllers\HospitalReportController');
     Route::resource('ad-upcoming-events', 'AdminControllers\UpComingEventsController');
+    Route::resource('ad-report-types', 'AdminControllers\ReportTypeController');
   });
 });
 // Admin Routes end
@@ -102,7 +105,7 @@ Route::group(['prefix' => 'admin'], function(){
 // Hospital Routes Starts
   Route::group(['prefix' => 'ho-admin'], function(){
     Route::get('/dashboard', 'HospitalControllers\DashboardController@index');
-    
+
     Route::view('/register', 'hospital.auth.register');
     Route::view('/login', 'hospital.auth.login');
     Route::post('login', 'HospitalControllers\HospitalsAuthController@Login');

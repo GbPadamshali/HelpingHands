@@ -8,18 +8,28 @@
                     <div class="dez-topbar-left">
                         <ul class="social-line text-center pull-right">
                             <li><a href="javascript:void(0);"><i class="fa fa-phone"></i> <span>+0 123-456-7890</span> </a></li>
-                            <li><a href="{{ url('/dashboard') }}"><i class="fa fa-clock-o"></i> <span>helpinghands.com</span></a></li>
+                            <li><a href="{{ url('/dashboard') }}"><i class="fa fa-globe"></i> <span>helpinghands.com</span></a></li>
+                            {{-- @if (exists($user)) --}}
+                              {{-- @isset($user) --}}
+                                  {{-- <li><a href="#"><i class="fa fa-user"></i> <span>{{ Auth::User()->name }}</span></a></li> --}}
+                              {{-- @endisset --}}
+
+                            {{-- @endif --}}
                             {{-- <li><a href="javascript:void(0);"><i class="fa fa-envelope-o"></i> <span>Mon - Fri: 08.00 - 17.00</span></a></li> --}}
                         </ul>
                     </div>
-                    {{-- <div class="dez-topbar-right">
+                    <div class="dez-topbar-right">
                         <ul class="social-line text-center pull-right">
-                            <li><a href="javascript:void(0);" class="fa fa-facebook"></a></li>
+                            {{-- <li><a href="javascript:void(0);" class="fa fa-facebook"></a></li>
                             <li><a href="javascript:void(0);" class="fa fa-twitter"></a></li>
                             <li><a href="javascript:void(0);" class="fa fa-linkedin"></a></li>
-                            <li><a href="javascript:void(0);" class="fa fa-google-plus"></a></li>
+                            <li><a href="javascript:void(0);" class="fa fa-google-plus"></a></li> --}}
+                            @if (Auth::check())
+                              <li><a href="#"><i class="fa fa-user"></i>  {{ Auth::User()->name }}</a></li>
+                              <li><a href="logout"><i class="fa fa-lock"></i>  Logout</a></li>
+                            @endif
                         </ul>
-                    </div> --}}
+                    </div>
                 </div>
             </div>
         </div>
