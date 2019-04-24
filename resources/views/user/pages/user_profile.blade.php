@@ -46,8 +46,8 @@
             <div class="tab-content nav">
                 <div id="developement-1" >
                     <form class="p-a30 dez-form text-center" method="post" enctype="multipart/form-data" action="{{ url('/sign-up-post') }}"> {{ csrf_field() }}
-												<img src="{{ asset('images/user_images/logo.png') }}" style="width: 150px; height: 150px;"></img>
-                        <h3 class="form-title m-t0">Sign Up</h3>
+												{{-- <img src="{{ asset('images/user_images/logo.png') }}" style="width: 150px; height: 150px;"></img> --}}
+                        <h3 class="form-title m-t0">Edit Profile</h3>
                         <div class="dez-separator-outer m-b5">
                             <div class="dez-separator bg-primary style-liner"></div>
                         </div>
