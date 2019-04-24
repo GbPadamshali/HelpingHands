@@ -55,17 +55,12 @@
               <div class="col-md-6">
                 <div class="form-group">
                   <div class="input-group">
-                    <input name="first_name" type="text" required class="form-control" placeholder="First Name">
+                    <input name="patient_name" type="text" required class="form-control" placeholder="Full Name">
                   </div>
                 </div>
               </div>
-              <div class="col-md-6">
-                <div class="form-group">
-                  <div class="input-group">
-                    <input name="last_name" type="text" required class="form-control" placeholder="Last Name">
-                  </div>
-                </div>
-              </div>
+              <br>
+
               <div class="col-md-6">
                 <div class="form-group">
                   <div class="input-group">

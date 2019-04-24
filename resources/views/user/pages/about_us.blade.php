@@ -1,5 +1,20 @@
 @extends('user.layout.design')
 @section('content')
+
+
+  <!-- Alert box closable -->
+  <div class="p-a30 bg-white m-b30">
+      <div class="section-head inner-haed">
+          <h2 class="text-uppercase">Alert box closable</h2>
+      </div>
+      <div class="section-content">
+          <div class="alert alert-success"> <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a> <strong>Success!</strong> This alert box could indicate a successful or positive action. </div>
+          <div class="alert alert-info"> <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a> <strong>Info!</strong> This alert box could indicate a neutral informative change or action. </div>
+          <div class="alert alert-warning"> <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a> <strong>Warning!</strong> This alert box could indicate a warning that might need attention. </div>
+          <div class="alert alert-danger"> <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a> <strong>Danger!</strong> This alert box could indicate a dangerous or potentially negative action. </div>
+      </div>
+  </div>
+  <!-- Alert box closable END -->
     <!-- Content -->
     <div class="page-content">
         <!-- inner page banner -->
