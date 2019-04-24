@@ -1,9 +1,5 @@
-
 @extends('user.hospital_layout.design')
 @section('content')
-
-
-
   <div class="section-full bg-white content-inner">
       <div class="container">
           <div class="row">
