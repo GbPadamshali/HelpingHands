@@ -8,7 +8,7 @@
                           {{ csrf_field() }}
                           <div class="text-left">
                             <h3><u>ADD DOCTOR</u></h3>
-                          </di>
+                          </div>
                             <div class="row">
                                 <div class="form-group col-lg-6">
                                     <label>First Name</label>
