@@ -18,7 +18,7 @@
           </div>
           <div class="form-group col-lg-10" style=" margin-left: 20px;">
             <label class="form-label">Email</label>
-            <input type="text" class="form-control" name="email" id="email" required>
+            <input type="email" class="form-control" name="email" id="email" required>
          </div>
          <div class="form-group col-lg-5" style=" margin-left: 20px;">
            <label class="form-label">Birthdate</label>

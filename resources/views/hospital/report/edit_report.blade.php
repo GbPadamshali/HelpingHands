@@ -51,7 +51,7 @@
             <div class="form-group col-lg-5" >
               <label class="form-label">Report File Upload</label>
               <div>
-                <input type="file" class="validation-file" name="file"  id="file" value="{{ $report->file_name }}">
+                <input type="file" class="validation-file" name="file" accept=".csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel,.docx,.pdf,text/plain"  id="file" value="{{ $report->file_name }}">
               </div>
             </div>
             <input type="submit" value="Submit" class="btn btn-primary" style=" margin-left: 500px; margin-bottom:20px;" />
